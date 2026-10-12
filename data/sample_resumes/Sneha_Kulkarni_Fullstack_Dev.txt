@@ -1,0 +1,28 @@
+Sneha Kulkarni
+Email: sneha.kulkarni@email.com | Phone: +91 91234 56789 | Location: Hyderabad, India
+LinkedIn: https://linkedin.com/in/sneha-kulkarni-fullstack | GitHub: https://github.com/snehakulkarni
+
+PROFESSIONAL SUMMARY
+Full Stack Engineer with 3 years of hands-on experience building responsive web apps with React, TypeScript, Python, and Node.js.
+
+TECHNICAL SKILLS
+Python, JavaScript, TypeScript, React, Next.js, Node.js, Express.js, HTML/CSS, REST API, MongoDB, PostgreSQL, Docker, Git, CI/CD
+
+EDUCATION
+B.Tech in Computer Science
+JNTU Hyderabad | CGPA: 9.1/10 | Graduated: 2021
+
+WORK EXPERIENCE
+Full Stack Developer | CloudTech Labs (Aug 2021 - Present)
+• Architected modular React/Next.js frontend user interfaces with Tailwind CSS and Redux Toolkit.
+• Built scalable Node.js and Python FastAPI backend microservices connecting to MongoDB and PostgreSQL.
+• Implemented end-to-end user authentication with JWT tokens and OAuth2.
+
+KEY PROJECTS
+E-Commerce Platform with Real-time Analytics
+• Developed full-stack SaaS storefront serving 25,000 monthly active users with React and Node.js.
+• Containerized app with Docker and deployed to production with GitHub Actions CI/CD.
+
+CERTIFICATIONS & AWARDS
+• Meta Certified Front-End Developer
+• AWS Certified Cloud Practitioner

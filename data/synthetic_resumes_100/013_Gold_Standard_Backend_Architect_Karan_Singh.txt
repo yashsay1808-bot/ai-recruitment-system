@@ -1,0 +1,19 @@
+Karan Singh
+Email: karan.singh@domain.com | Phone: +91 93611 68878 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/karan-singh | GitHub: https://github.com/karan-singh
+
+PROFESSIONAL SUMMARY
+Backend Microservices Architect with 6.0 years of experience. Focus in Golang, Python, Microservices, gRPC, Docker. Architected event-driven microservices processing 180,000 requests/minute with zero data loss.
+
+TECHNICAL SKILLS
+Golang, Python, Microservices, gRPC, Docker, Kubernetes, PostgreSQL, Redis
+
+WORK EXPERIENCE
+Backend Microservices Architect | TechCorp Enterprise Systems (2022 - Present)
+• Architected event-driven microservices processing 180,000 requests/minute with zero data loss.
+• Orchestrated continuous deployment and monitoring with CI/CD and Docker.
+• Mentored junior engineers and improved automated test coverage.
+
+EDUCATION
+B.Tech / B.E. in Computer Science & Engineering
+VTU University | Graduated 2021

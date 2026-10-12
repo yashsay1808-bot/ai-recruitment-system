@@ -1,0 +1,11 @@
+Manoj Raman
+WORK EXPERIENCE
+Full-Stack Engineer | PixelForge Studios (Feb 2022 - Present)
+• Containerised the stack with Docker and deployed on AWS with GitHub Actions, cutting release time to 20 minutes.
+• Containerised the stack with Docker and deployed on AWS with GitHub Actions, cutting release time to 20 minutes.
+• Containerised the stack with Docker and deployed on AWS with GitHub Actions, cutting release time to 20 minutes.
+• Containerised the stack with Docker and deployed on AWS
+SKILLS
+Redis, Tailwind CSS, OpenAI API, REST API, Vector Database, PostgreSQL
+SKILLS
+Redis, Tailwind CSS, OpenAI API, REST API, Vector Database, PostgreSQL

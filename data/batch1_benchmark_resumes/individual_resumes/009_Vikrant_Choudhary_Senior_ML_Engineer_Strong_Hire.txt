@@ -1,0 +1,36 @@
+Vikrant Choudhary
+Email: vikrant.choudhary@mailbox.in | Phone: +91 95075 93022 | Location: Gurugram, India
+LinkedIn: https://linkedin.com/in/vikrant-choudhary | GitHub: https://github.com/vchoudhary
+
+PROFESSIONAL SUMMARY
+Senior Machine Learning Engineer with 5.5 years of production experience across e-commerce and mobility. Deep hands-on expertise in PyTorch, TensorFlow, FastAPI, Docker. Known for measurable impact on latency, reliability and cost, and for mentoring engineers.
+
+TECHNICAL SKILLS
+PyTorch, TensorFlow, FastAPI, Docker, AWS, Hugging Face, MLOps, Scikit-Learn, SQL, Python, Pandas, NumPy, Airflow, CI/CD, Machine Learning
+
+EDUCATION
+B.Tech in Computer Science and Engineering
+Vellore Institute of Technology | CGPA: 8.4/10 | Graduated: 2021
+
+WORK EXPERIENCE
+Senior Machine Learning Engineer | Basalt Mobility (Oct 2023 - Present)
+• Designed a feature store on PostgreSQL and Redis with point-in-time correctness; online feature reads at 3 ms p99.
+• Reduced AWS GPU spend by 36% (about $31k per month) through INT8 quantization, dynamic batching and spot-instance training.
+• Implemented drift and data-quality monitoring with Prometheus and Evidently that caught 11 silent regressions before reaching 40,000 daily users.
+• Deployed RoBERTa ONNX models with FastAPI and Triton serving 80k daily requests at 45 ms p95 latency on AWS ECS.
+
+Machine Learning Engineer | Pelican Health Data (Apr 2021 - Oct 2023)
+• Cut training time for a 340M-parameter PyTorch model by 52% using mixed precision, gradient checkpointing and DDP on 16 GPUs.
+• Shipped a TensorFlow Serving to PyTorch migration for 14 legacy models with zero downtime and a 33% latency improvement.
+• Led a squad of 5 engineers, introduced PyTest-based model contracts and lifted coverage of the training stack to 84%.
+
+KEY PROJECTS
+Edge Anomaly Detector
+• LSTM autoencoder in PyTorch quantised to INT8 and deployed to ARM devices; 95% precision on 400,000 sensor windows.
+
+Semantic Resume Search
+• RAG pipeline using sentence-transformers, FAISS and a FastAPI backend; returns results in under 62 ms across 40,000 documents.
+
+CERTIFICATIONS & AWARDS
+• NVIDIA DLI: Fundamentals of Deep Learning
+• Runner-up, Google Cloud Hackathon India 2024

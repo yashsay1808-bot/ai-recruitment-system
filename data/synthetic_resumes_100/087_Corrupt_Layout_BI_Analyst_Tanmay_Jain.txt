@@ -1,0 +1,19 @@
+Tanmay Jain
+Email: tanmay.jain@domain.com | Phone: +91 93946 84364 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/tanmay-jain | GitHub: https://github.com/tanmay-jain
+
+PROFESSIONAL SUMMARY
+Senior Business Intelligence & Data Analyst with 2.0 years of experience. Focus in SQL, Python. Corrupt layout: overlapping timelines, unparseable tables and missing section headers.
+
+TECHNICAL SKILLS
+SQL, Python
+
+WORK EXPERIENCE
+Senior Business Intelligence & Data Analyst | TechCorp Enterprise Systems (2022 - Present)
+• Corrupt layout: overlapping timelines, unparseable tables and missing section headers.
+• Orchestrated continuous deployment and monitoring with CI/CD and Docker.
+• Mentored junior engineers and improved automated test coverage.
+
+EDUCATION
+B.Tech / B.E. in Computer Science & Engineering
+VTU University | Graduated 2021

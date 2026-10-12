@@ -1,0 +1,36 @@
+Deepa Gowda
+Email: deepa.gowda@mailbox.in | Phone: +91 72060 11818 | Location: Kolkata, India
+LinkedIn: https://linkedin.com/in/deepa-gowda | GitHub: https://github.com/dgowda-dev
+
+PROFESSIONAL SUMMARY
+Cloud DevOps Lead with 5.5 years of experience delivering production systems. Skilled in AWS, Azure, Terraform, Kubernetes, Docker, Helm. Consistent record of measurable gains in latency, throughput, reliability and cost.
+
+TECHNICAL SKILLS
+AWS, Azure, Terraform, Kubernetes, Docker, Helm, ArgoCD, Jenkins, GitHub Actions, CI/CD, Prometheus, Grafana, Ansible, Linux, Bash, Python, Git, Istio, Vault, ELK Stack, Packer
+
+EDUCATION
+B.E. in Information Science and Engineering
+Anna University, Chennai | CGPA: 9.3/10 | Graduated: 2020
+
+WORK EXPERIENCE
+Cloud DevOps Lead | CloudNest Technologies (Apr 2023 - Present)
+• Codified 25 environments in Terraform modules, cutting provisioning time from 4 days to 15 minutes.
+• Led migration of 9 services to Kubernetes on AWS EKS, improving deployment frequency from 12 per month to 4 per day.
+• Built GitHub Actions and ArgoCD pipelines that reduced release time from 8 hours to 15 minutes with zero-downtime rollouts.
+• Sustained 99.9% uptime across 8,000 requests per second at peak with multi-AZ failover.
+• Reduced cloud spend by 31% (about $25k per month) through right-sizing, spot instances and autoscaling policies.
+
+DevOps Engineer | Orbitron Labs (Apr 2021 - Apr 2023)
+• Sustained 99.99% uptime across 35,000 requests per second at peak with multi-AZ failover.
+• Reduced cloud spend by 18% (about $25k per month) through right-sizing, spot instances and autoscaling policies.
+• Designed Prometheus and Grafana observability covering 25 services; improved MTTR from 4 hours to 20 minutes.
+
+KEY PROJECTS
+Internal Developer Platform
+• Built a self-service Terraform and Helm platform used by 120 engineers, reducing environment requests by 42%.
+Policy-as-Code Pipeline
+• Added OPA checks to CI/CD that blocked 18 misconfigurations per quarter.
+
+CERTIFICATIONS & AWARDS
+• HashiCorp Terraform Associate
+• Internal Engineering Excellence Award, 2024

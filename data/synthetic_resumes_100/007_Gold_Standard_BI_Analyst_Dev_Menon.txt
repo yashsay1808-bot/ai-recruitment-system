@@ -1,0 +1,19 @@
+Dev Menon
+Email: dev.menon@domain.com | Phone: +91 90520 13905 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/dev-menon | GitHub: https://github.com/dev-menon
+
+PROFESSIONAL SUMMARY
+Senior Business Intelligence & Data Analyst with 4.6 years of experience. Focus in SQL, Python, Tableau, Power BI, Pandas. Automated weekly cohort churn reports using complex SQL window functions and Pandas.
+
+TECHNICAL SKILLS
+SQL, Python, Tableau, Power BI, Pandas, NumPy, Business Intelligence, Data Warehousing
+
+WORK EXPERIENCE
+Senior Business Intelligence & Data Analyst | TechCorp Enterprise Systems (2022 - Present)
+• Automated weekly cohort churn reports using complex SQL window functions and Pandas.
+• Orchestrated continuous deployment and monitoring with CI/CD and Docker.
+• Mentored junior engineers and improved automated test coverage.
+
+EDUCATION
+B.Tech / B.E. in Computer Science & Engineering
+VTU University | Graduated 2021

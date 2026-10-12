@@ -1,0 +1,31 @@
+Harpreet Gill
+Email: harpreet.gill@mailbox.in | Phone: +91 92157 22109 | Location: Chandigarh, India
+LinkedIn: https://linkedin.com/in/harpreet-gill | GitHub: https://github.com/harpreet-gill
+
+PROFESSIONAL SUMMARY
+Visionary Global Principal AI & Quantum Architect and Full Stack Blockchain Ninja with 7 months of experience. Passionate about disrupting the world with cutting-edge, next-gen, synergistic technologies; expert in every framework and a 10x thought leader.
+
+TECHNICAL SKILLS
+Scikit-Learn, Edge AI, Rust, Swift, Docker, Kotlin, Snowflake, Scala, Large Language Models, React, Flutter, Salesforce, Blockchain, Airflow, SAP, Azure, Unity, Microservices, AR/VR, GCP, Prometheus, DataOps, FastAPI, Metaverse, Deep Learning, MLflow, Cybersecurity, AGI, Hugging Face, Serverless, C++, Generative AI, MongoDB, Web3, Vue.js, MLOps, Terraform, Robotic Process Automation, Neural Networks, Redis, TensorFlow, Solidity, PyTorch, Machine Learning, AWS, 5G
+
+EDUCATION
+Bachelor of Engineering in Computer Science
+Amrita School of Engineering, Coimbatore | Percentage: 66% | Graduated: 2026
+
+WORK EXPERIENCE
+Global Principal AI & Quantum Architect | SynergyWorks Global (Mar 2026 - Present)
+• Drove transformational disruption by orchestrating holistic next-generation digital ecosystems.
+• Architected revolutionary quantum-ready blockchain intelligence paradigms at planetary scale.
+• Spearheaded world-changing next-gen AI disruptive solutions across the entire enterprise ecosystem.
+
+KEY PROJECTS
+MNIST Digit Classifier (forked)
+• Forked a standard MNIST tutorial repository and added a README; no original commits.
+
+AI Quantum Blockchain Metaverse Platform
+• Revolutionary next-gen platform using Kotlin, Unity, AWS, TensorFlow, Prometheus, Salesforce. Next-gen AI solution.
+
+CERTIFICATIONS & AWARDS
+• Quantum Computing for Everyone (online course)
+• Blockchain Basics (Udemy)
+• Participation certificate, college tech fest

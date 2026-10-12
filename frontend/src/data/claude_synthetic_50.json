@@ -1,0 +1,4194 @@
+[
+  {
+    "id": "CAN-SYN-010",
+    "name": "Rohan Joshi",
+    "anonymizedId": "Candidate #010 (Gold Standard)",
+    "fileName": "10_Gold_Standard_Data_Platform_Engineer_Rohan_Joshi.txt",
+    "title": "Data Platform Engineer",
+    "category": "Gold Standard",
+    "experienceYears": 4.0,
+    "matchScore": 93.2,
+    "atsScore": 95,
+    "councilScore": 94.7,
+    "verdict": "STRONG_HIRE",
+    "verdictType": "positive",
+    "redFlags": [],
+    "matchedSkills": [
+      "Python",
+      "SQL",
+      "Apache Spark",
+      "Apache Kafka",
+      "Apache Airflow",
+      "dbt",
+      "Snowflake"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [],
+    "salaryRange": "$145k - $175k",
+    "salaryInr": "29 - 37 LPA",
+    "level": "L4 - Senior Data Platform",
+    "bandPosPct": 79,
+    "evidenceSnippet": "Cut warehouse cost by 22% (about $18k per month) through partition pruning, clustering and job scheduling.",
+    "github": {
+      "username": "joshir",
+      "score": 88,
+      "risk": "LOW",
+      "reposAnalyzed": 13,
+      "authenticRepos": 12,
+      "forksCount": 1,
+      "archSignals": 7,
+      "quantifiedMetrics": 5,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 89,
+        "feedback": "Category: Gold Standard. Evaluated against Data Platform Engineer production baseline."
+      },
+      "culture": {
+        "score": 82,
+        "feedback": "Verified code review patterns on GitHub (joshir)."
+      },
+      "fairAuditor": {
+        "score": 98,
+        "feedback": "Objective evidence verification. Flags: None."
+      },
+      "seniorityComp": {
+        "score": 85,
+        "feedback": "Leveling aligned with L4 - Senior Data Platform."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: Cut warehouse cost by 22% (about $18k per month) through partition pruning, clustering and job scheduling."
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: Clean dossier."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in Cut warehouse cost by 22% (about $18k per month) t...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 1
+  },
+  {
+    "id": "CAN-SYN-005",
+    "name": "Mohan Das",
+    "anonymizedId": "Candidate #005 (Gold Standard)",
+    "fileName": "05_Gold_Standard_Backend_Microservices_Architect_Mohan_Das.txt",
+    "title": "Backend Microservices Architect",
+    "category": "Gold Standard",
+    "experienceYears": 7.0,
+    "matchScore": 92.5,
+    "atsScore": 93,
+    "councilScore": 94.1,
+    "verdict": "STRONG_HIRE",
+    "verdictType": "positive",
+    "redFlags": [],
+    "matchedSkills": [
+      "Java",
+      "Spring Boot",
+      "Go",
+      "Microservices",
+      "gRPC",
+      "REST API",
+      "Apache Kafka"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [],
+    "salaryRange": "$170k - $205k",
+    "salaryInr": "38 - 46 LPA",
+    "level": "L6 - Principal Architect",
+    "bandPosPct": 78,
+    "evidenceSnippet": "Defined gRPC and OpenAPI contracts adopted by 2 teams, reducing integration defects by 27%.",
+    "github": {
+      "username": "mohan-codes",
+      "score": 87,
+      "risk": "LOW",
+      "reposAnalyzed": 13,
+      "authenticRepos": 12,
+      "forksCount": 1,
+      "archSignals": 7,
+      "quantifiedMetrics": 5,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 89,
+        "feedback": "Category: Gold Standard. Evaluated against Backend Microservices Architect production baseline."
+      },
+      "culture": {
+        "score": 82,
+        "feedback": "Verified code review patterns on GitHub (mohan-codes)."
+      },
+      "fairAuditor": {
+        "score": 98,
+        "feedback": "Objective evidence verification. Flags: None."
+      },
+      "seniorityComp": {
+        "score": 84,
+        "feedback": "Leveling aligned with L6 - Principal Architect."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: Defined gRPC and OpenAPI contracts adopted by 2 teams, reducing integration defects by 27%."
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: Clean dossier."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in Defined gRPC and OpenAPI contracts adopted by 2 te...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 2
+  },
+  {
+    "id": "CAN-SYN-004",
+    "name": "Yash Sinha",
+    "anonymizedId": "Candidate #004 (Gold Standard)",
+    "fileName": "04_Gold_Standard_Data_Platform_Engineer_Yash_Sinha.txt",
+    "title": "Data Platform Engineer",
+    "category": "Gold Standard",
+    "experienceYears": 5.0,
+    "matchScore": 91.9,
+    "atsScore": 99,
+    "councilScore": 93.6,
+    "verdict": "STRONG_HIRE",
+    "verdictType": "positive",
+    "redFlags": [],
+    "matchedSkills": [
+      "Python",
+      "SQL",
+      "Apache Spark",
+      "Apache Kafka",
+      "Apache Airflow",
+      "dbt",
+      "Snowflake"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [],
+    "salaryRange": "$145k - $175k",
+    "salaryInr": "29 - 37 LPA",
+    "level": "L4 - Senior Data Platform",
+    "bandPosPct": 78,
+    "evidenceSnippet": "Designed a Snowflake and Delta Lake lakehouse serving 25,000 analysts with 80,000 queries per day.",
+    "github": {
+      "username": "sinhay",
+      "score": 87,
+      "risk": "LOW",
+      "reposAnalyzed": 13,
+      "authenticRepos": 12,
+      "forksCount": 1,
+      "archSignals": 7,
+      "quantifiedMetrics": 5,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 88,
+        "feedback": "Category: Gold Standard. Evaluated against Data Platform Engineer production baseline."
+      },
+      "culture": {
+        "score": 82,
+        "feedback": "Verified code review patterns on GitHub (sinhay)."
+      },
+      "fairAuditor": {
+        "score": 98,
+        "feedback": "Objective evidence verification. Flags: None."
+      },
+      "seniorityComp": {
+        "score": 84,
+        "feedback": "Leveling aligned with L4 - Senior Data Platform."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: Designed a Snowflake and Delta Lake lakehouse serving 25,000 analysts with 80,000 queries per day."
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: Clean dossier."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in Designed a Snowflake and Delta Lake lakehouse serv...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 3
+  },
+  {
+    "id": "CAN-SYN-009",
+    "name": "Chirag Prabhu",
+    "anonymizedId": "Candidate #009 (Gold Standard)",
+    "fileName": "09_Gold_Standard_Full_Stack_AI_Engineer_Chirag_Prabhu.txt",
+    "title": "Full Stack AI Engineer",
+    "category": "Gold Standard",
+    "experienceYears": 6.0,
+    "matchScore": 90.5,
+    "atsScore": 93,
+    "councilScore": 92.5,
+    "verdict": "STRONG_HIRE",
+    "verdictType": "positive",
+    "redFlags": [],
+    "matchedSkills": [
+      "Python",
+      "TypeScript",
+      "JavaScript",
+      "React",
+      "Next.js",
+      "Node.js",
+      "FastAPI"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [],
+    "salaryRange": "$140k - $170k",
+    "salaryInr": "28 - 36 LPA",
+    "level": "L4 - Senior Full-Stack AI",
+    "bandPosPct": 76,
+    "evidenceSnippet": "Stack AI Engineer with 6 years of experience delivering production systems. Skilled in Python, TypeScript, JavaScript, React, Next.js, Node.js. Consistent record of measurable gains in latency, throughput, reliability and cost.",
+    "github": {
+      "username": "chiragpra23",
+      "score": 85,
+      "risk": "LOW",
+      "reposAnalyzed": 13,
+      "authenticRepos": 12,
+      "forksCount": 1,
+      "archSignals": 7,
+      "quantifiedMetrics": 5,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 87,
+        "feedback": "Category: Gold Standard. Evaluated against Full Stack AI Engineer production baseline."
+      },
+      "culture": {
+        "score": 82,
+        "feedback": "Verified code review patterns on GitHub (chiragpra23)."
+      },
+      "fairAuditor": {
+        "score": 98,
+        "feedback": "Objective evidence verification. Flags: None."
+      },
+      "seniorityComp": {
+        "score": 83,
+        "feedback": "Leveling aligned with L4 - Senior Full-Stack AI."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: Stack AI Engineer with 6 years of experience delivering production systems. Skilled in Python, TypeScript, JavaScript, React, Next.js, Node.js. Consistent record of measurable gains in latency, throughput, reliability and cost."
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: Clean dossier."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in Stack AI Engineer with 6 years of experience deliv...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 4
+  },
+  {
+    "id": "CAN-SYN-008",
+    "name": "Suresh D'Souza",
+    "anonymizedId": "Candidate #008 (Gold Standard)",
+    "fileName": "08_Gold_Standard_Cloud_DevOps_Lead_Suresh_Dsouza.txt",
+    "title": "Cloud DevOps Lead",
+    "category": "Gold Standard",
+    "experienceYears": 7.0,
+    "matchScore": 89.9,
+    "atsScore": 99,
+    "councilScore": 92.0,
+    "verdict": "STRONG_HIRE",
+    "verdictType": "positive",
+    "redFlags": [],
+    "matchedSkills": [
+      "AWS",
+      "Azure",
+      "Terraform",
+      "Kubernetes",
+      "Docker",
+      "Helm",
+      "ArgoCD"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [],
+    "salaryRange": "$150k - $180k",
+    "salaryInr": "30 - 38 LPA",
+    "level": "L5 - Lead Cloud SRE",
+    "bandPosPct": 76,
+    "evidenceSnippet": "Led a team of 2 engineers and ran on-call rotations that cut paging incidents by 47%.",
+    "github": {
+      "username": "sdsouza-dev",
+      "score": 85,
+      "risk": "LOW",
+      "reposAnalyzed": 13,
+      "authenticRepos": 12,
+      "forksCount": 1,
+      "archSignals": 7,
+      "quantifiedMetrics": 5,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 87,
+        "feedback": "Category: Gold Standard. Evaluated against Cloud DevOps Lead production baseline."
+      },
+      "culture": {
+        "score": 82,
+        "feedback": "Verified code review patterns on GitHub (sdsouza-dev)."
+      },
+      "fairAuditor": {
+        "score": 98,
+        "feedback": "Objective evidence verification. Flags: None."
+      },
+      "seniorityComp": {
+        "score": 82,
+        "feedback": "Leveling aligned with L5 - Lead Cloud SRE."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: Led a team of 2 engineers and ran on-call rotations that cut paging incidents by 47%."
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: Clean dossier."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in Led a team of 2 engineers and ran on-call rotation...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 5
+  },
+  {
+    "id": "CAN-SYN-007",
+    "name": "Varun Mishra",
+    "anonymizedId": "Candidate #007 (Gold Standard)",
+    "fileName": "07_Gold_Standard_Senior_ML_Engineer_Varun_Mishra.txt",
+    "title": "Senior ML Engineer",
+    "category": "Gold Standard",
+    "experienceYears": 7.0,
+    "matchScore": 89.3,
+    "atsScore": 97,
+    "councilScore": 91.5,
+    "verdict": "STRONG_HIRE",
+    "verdictType": "positive",
+    "redFlags": [],
+    "matchedSkills": [
+      "Python",
+      "Machine Learning",
+      "Deep Learning",
+      "PyTorch",
+      "TensorFlow",
+      "Scikit-Learn",
+      "Hugging Face"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [],
+    "salaryRange": "$165k - $190k",
+    "salaryInr": "35 - 42 LPA",
+    "level": "L5 - Senior Staff ML Engineer",
+    "bandPosPct": 75,
+    "evidenceSnippet": "Learn. Consistent record of measurable gains in latency, throughput, reliability and cost.",
+    "github": {
+      "username": "varun-mishra",
+      "score": 84,
+      "risk": "LOW",
+      "reposAnalyzed": 13,
+      "authenticRepos": 12,
+      "forksCount": 1,
+      "archSignals": 7,
+      "quantifiedMetrics": 5,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 86,
+        "feedback": "Category: Gold Standard. Evaluated against Senior ML Engineer production baseline."
+      },
+      "culture": {
+        "score": 82,
+        "feedback": "Verified code review patterns on GitHub (varun-mishra)."
+      },
+      "fairAuditor": {
+        "score": 98,
+        "feedback": "Objective evidence verification. Flags: None."
+      },
+      "seniorityComp": {
+        "score": 82,
+        "feedback": "Leveling aligned with L5 - Senior Staff ML Engineer."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: Learn. Consistent record of measurable gains in latency, throughput, reliability and cost."
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: Clean dossier."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in Learn. Consistent record of measurable gains in la...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 6
+  },
+  {
+    "id": "CAN-SYN-003",
+    "name": "Bhavna Ahmed",
+    "anonymizedId": "Candidate #003 (Gold Standard)",
+    "fileName": "03_Gold_Standard_Full_Stack_AI_Engineer_Bhavna_Ahmed.txt",
+    "title": "Full Stack AI Engineer",
+    "category": "Gold Standard",
+    "experienceYears": 6.0,
+    "matchScore": 89.2,
+    "atsScore": 97,
+    "councilScore": 91.5,
+    "verdict": "STRONG_HIRE",
+    "verdictType": "positive",
+    "redFlags": [],
+    "matchedSkills": [
+      "Python",
+      "TypeScript",
+      "JavaScript",
+      "React",
+      "Next.js",
+      "Node.js",
+      "FastAPI"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [],
+    "salaryRange": "$140k - $170k",
+    "salaryInr": "28 - 36 LPA",
+    "level": "L4 - Senior Full-Stack AI",
+    "bandPosPct": 75,
+    "evidenceSnippet": "Stack AI Engineer with 6 years of experience delivering production systems. Skilled in Python, TypeScript, JavaScript, React, Next.js, Node.js. Consistent record of measurable gains in latency, throughput, reliability and cost.",
+    "github": {
+      "username": "bhavnaahm81",
+      "score": 84,
+      "risk": "LOW",
+      "reposAnalyzed": 13,
+      "authenticRepos": 12,
+      "forksCount": 1,
+      "archSignals": 7,
+      "quantifiedMetrics": 5,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 86,
+        "feedback": "Category: Gold Standard. Evaluated against Full Stack AI Engineer production baseline."
+      },
+      "culture": {
+        "score": 82,
+        "feedback": "Verified code review patterns on GitHub (bhavnaahm81)."
+      },
+      "fairAuditor": {
+        "score": 98,
+        "feedback": "Objective evidence verification. Flags: None."
+      },
+      "seniorityComp": {
+        "score": 82,
+        "feedback": "Leveling aligned with L4 - Senior Full-Stack AI."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: Stack AI Engineer with 6 years of experience delivering production systems. Skilled in Python, TypeScript, JavaScript, React, Next.js, Node.js. Consistent record of measurable gains in latency, throughput, reliability and cost."
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: Clean dossier."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in Stack AI Engineer with 6 years of experience deliv...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 7
+  },
+  {
+    "id": "CAN-SYN-002",
+    "name": "Deepa Gowda",
+    "anonymizedId": "Candidate #002 (Gold Standard)",
+    "fileName": "02_Gold_Standard_Cloud_DevOps_Lead_Deepa_Gowda.txt",
+    "title": "Cloud DevOps Lead",
+    "category": "Gold Standard",
+    "experienceYears": 5.5,
+    "matchScore": 88.6,
+    "atsScore": 95,
+    "councilScore": 91.0,
+    "verdict": "STRONG_HIRE",
+    "verdictType": "positive",
+    "redFlags": [],
+    "matchedSkills": [
+      "AWS",
+      "Azure",
+      "Terraform",
+      "Kubernetes",
+      "Docker",
+      "Helm",
+      "ArgoCD"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [],
+    "salaryRange": "$150k - $180k",
+    "salaryInr": "30 - 38 LPA",
+    "level": "L5 - Lead Cloud SRE",
+    "bandPosPct": 75,
+    "evidenceSnippet": "Built GitHub Actions and ArgoCD pipelines that reduced release time from 8 hours to 15 minutes with zero-downtime rollouts.",
+    "github": {
+      "username": "dgowda-dev",
+      "score": 84,
+      "risk": "LOW",
+      "reposAnalyzed": 13,
+      "authenticRepos": 12,
+      "forksCount": 1,
+      "archSignals": 7,
+      "quantifiedMetrics": 5,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 86,
+        "feedback": "Category: Gold Standard. Evaluated against Cloud DevOps Lead production baseline."
+      },
+      "culture": {
+        "score": 82,
+        "feedback": "Verified code review patterns on GitHub (dgowda-dev)."
+      },
+      "fairAuditor": {
+        "score": 98,
+        "feedback": "Objective evidence verification. Flags: None."
+      },
+      "seniorityComp": {
+        "score": 81,
+        "feedback": "Leveling aligned with L5 - Lead Cloud SRE."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: Built GitHub Actions and ArgoCD pipelines that reduced release time from 8 hours to 15 minutes with zero-downtime rollouts."
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: Clean dossier."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in Built GitHub Actions and ArgoCD pipelines that red...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 8
+  },
+  {
+    "id": "CAN-SYN-001",
+    "name": "Nandini Pandey",
+    "anonymizedId": "Candidate #001 (Gold Standard)",
+    "fileName": "01_Gold_Standard_Senior_ML_Engineer_Nandini_Pandey.txt",
+    "title": "Senior ML Engineer",
+    "category": "Gold Standard",
+    "experienceYears": 6.5,
+    "matchScore": 88.0,
+    "atsScore": 93,
+    "councilScore": 90.5,
+    "verdict": "STRONG_HIRE",
+    "verdictType": "positive",
+    "redFlags": [],
+    "matchedSkills": [
+      "Python",
+      "Machine Learning",
+      "Deep Learning",
+      "PyTorch",
+      "TensorFlow",
+      "Scikit-Learn",
+      "Hugging Face"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [],
+    "salaryRange": "$165k - $190k",
+    "salaryInr": "35 - 42 LPA",
+    "level": "L5 - Senior Staff ML Engineer",
+    "bandPosPct": 74,
+    "evidenceSnippet": "Learn. Consistent record of measurable gains in latency, throughput, reliability and cost.",
+    "github": {
+      "username": "nandini-pandey",
+      "score": 83,
+      "risk": "LOW",
+      "reposAnalyzed": 13,
+      "authenticRepos": 12,
+      "forksCount": 1,
+      "archSignals": 7,
+      "quantifiedMetrics": 5,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 85,
+        "feedback": "Category: Gold Standard. Evaluated against Senior ML Engineer production baseline."
+      },
+      "culture": {
+        "score": 82,
+        "feedback": "Verified code review patterns on GitHub (nandini-pandey)."
+      },
+      "fairAuditor": {
+        "score": 98,
+        "feedback": "Objective evidence verification. Flags: None."
+      },
+      "seniorityComp": {
+        "score": 81,
+        "feedback": "Leveling aligned with L5 - Senior Staff ML Engineer."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: Learn. Consistent record of measurable gains in latency, throughput, reliability and cost."
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: Clean dossier."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in Learn. Consistent record of measurable gains in la...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 9
+  },
+  {
+    "id": "CAN-SYN-006",
+    "name": "Neha Naidu",
+    "anonymizedId": "Candidate #006 (Gold Standard)",
+    "fileName": "06_Gold_Standard_AI_Safety_Auditor_Neha_Naidu.txt",
+    "title": "AI Safety Auditor",
+    "category": "Gold Standard",
+    "experienceYears": 4.5,
+    "matchScore": 86.6,
+    "atsScore": 95,
+    "councilScore": 89.4,
+    "verdict": "STRONG_HIRE",
+    "verdictType": "positive",
+    "redFlags": [],
+    "matchedSkills": [
+      "Python",
+      "PyTorch",
+      "Machine Learning",
+      "Fairlearn",
+      "AIF360",
+      "SHAP",
+      "LIME"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [],
+    "salaryRange": "$155k - $185k",
+    "salaryInr": "32 - 40 LPA",
+    "level": "L5 - Staff AI Safety Auditor",
+    "bandPosPct": 73,
+    "evidenceSnippet": "Audited 12 production models for demographic bias with Fairlearn and AIF360, reducing disparate-impact gaps from 76% to 87%.",
+    "github": {
+      "username": "nehanaidu",
+      "score": 82,
+      "risk": "LOW",
+      "reposAnalyzed": 13,
+      "authenticRepos": 12,
+      "forksCount": 1,
+      "archSignals": 7,
+      "quantifiedMetrics": 5,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 84,
+        "feedback": "Category: Gold Standard. Evaluated against AI Safety Auditor production baseline."
+      },
+      "culture": {
+        "score": 82,
+        "feedback": "Verified code review patterns on GitHub (nehanaidu)."
+      },
+      "fairAuditor": {
+        "score": 98,
+        "feedback": "Objective evidence verification. Flags: None."
+      },
+      "seniorityComp": {
+        "score": 80,
+        "feedback": "Leveling aligned with L5 - Staff AI Safety Auditor."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: Audited 12 production models for demographic bias with Fairlearn and AIF360, reducing disparate-impact gaps from 76% to 87%."
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: Clean dossier."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in Audited 12 production models for demographic bias ...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 10
+  },
+  {
+    "id": "CAN-SYN-020",
+    "name": "Arvind Menon",
+    "anonymizedId": "Candidate #020 (Lateral Switcher)",
+    "fileName": "20_Lateral_Switcher_Cloud_DevOps_Lead_Arvind_Menon.txt",
+    "title": "Cloud DevOps Lead",
+    "category": "Lateral Switcher",
+    "experienceYears": 5.0,
+    "matchScore": 68.5,
+    "atsScore": 88,
+    "councilScore": 75.6,
+    "verdict": "LEAN_HIRE",
+    "verdictType": "neutral",
+    "redFlags": [],
+    "matchedSkills": [
+      "Linux",
+      "Bash",
+      "Networking",
+      "VMware",
+      "Nagios",
+      "Python",
+      "Git"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [
+      "PyTorch"
+    ],
+    "salaryRange": "$150k - $180k",
+    "salaryInr": "30 - 38 LPA",
+    "level": "L5 - Lead Cloud SRE",
+    "bandPosPct": 58,
+    "evidenceSnippet": "Reduced cloud spend by 22% (about $25k per month) through right-sizing, spot instances and autoscaling policies.",
+    "github": {
+      "username": "arvind-codes",
+      "score": 65,
+      "risk": "LOW",
+      "reposAnalyzed": 13,
+      "authenticRepos": 12,
+      "forksCount": 1,
+      "archSignals": 7,
+      "quantifiedMetrics": 5,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 71,
+        "feedback": "Category: Lateral Switcher. Evaluated against Cloud DevOps Lead production baseline."
+      },
+      "culture": {
+        "score": 82,
+        "feedback": "Verified code review patterns on GitHub (arvind-codes)."
+      },
+      "fairAuditor": {
+        "score": 98,
+        "feedback": "Objective evidence verification. Flags: None."
+      },
+      "seniorityComp": {
+        "score": 68,
+        "feedback": "Leveling aligned with L5 - Lead Cloud SRE."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: Reduced cloud spend by 22% (about $25k per month) through right-sizing, spot instances and autoscaling policies."
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: Clean dossier."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in Reduced cloud spend by 22% (about $25k per month) ...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 11
+  },
+  {
+    "id": "CAN-SYN-019",
+    "name": "Pooja Iyer",
+    "anonymizedId": "Candidate #019 (Lateral Switcher)",
+    "fileName": "19_Lateral_Switcher_Senior_ML_Engineer_Pooja_Iyer.txt",
+    "title": "Senior ML Engineer",
+    "category": "Lateral Switcher",
+    "experienceYears": 3.5,
+    "matchScore": 67.9,
+    "atsScore": 86,
+    "councilScore": 75.1,
+    "verdict": "LEAN_HIRE",
+    "verdictType": "neutral",
+    "redFlags": [],
+    "matchedSkills": [
+      "Python",
+      "SQL",
+      "Pandas",
+      "NumPy",
+      "Scikit-Learn",
+      "Tableau",
+      "Excel"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [
+      "PyTorch"
+    ],
+    "salaryRange": "$165k - $190k",
+    "salaryInr": "35 - 42 LPA",
+    "level": "L5 - Senior Staff ML Engineer",
+    "bandPosPct": 57,
+    "evidenceSnippet": "Mentored 4 engineers and raised unit-test coverage to 88% with PyTest.",
+    "github": {
+      "username": "iyerp",
+      "score": 64,
+      "risk": "LOW",
+      "reposAnalyzed": 13,
+      "authenticRepos": 12,
+      "forksCount": 1,
+      "archSignals": 7,
+      "quantifiedMetrics": 5,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 71,
+        "feedback": "Category: Lateral Switcher. Evaluated against Senior ML Engineer production baseline."
+      },
+      "culture": {
+        "score": 82,
+        "feedback": "Verified code review patterns on GitHub (iyerp)."
+      },
+      "fairAuditor": {
+        "score": 98,
+        "feedback": "Objective evidence verification. Flags: None."
+      },
+      "seniorityComp": {
+        "score": 67,
+        "feedback": "Leveling aligned with L5 - Senior Staff ML Engineer."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: Mentored 4 engineers and raised unit-test coverage to 88% with PyTest."
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: Clean dossier."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in Mentored 4 engineers and raised unit-test coverage...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 12
+  },
+  {
+    "id": "CAN-SYN-015",
+    "name": "Aishwarya Rao",
+    "anonymizedId": "Candidate #015 (Lateral Switcher)",
+    "fileName": "15_Lateral_Switcher_Full_Stack_AI_Engineer_Aishwarya_Rao.txt",
+    "title": "Full Stack AI Engineer",
+    "category": "Lateral Switcher",
+    "experienceYears": 3.5,
+    "matchScore": 67.8,
+    "atsScore": 86,
+    "councilScore": 75.0,
+    "verdict": "LEAN_HIRE",
+    "verdictType": "neutral",
+    "redFlags": [],
+    "matchedSkills": [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "HTML",
+      "CSS",
+      "Tailwind CSS",
+      "Git"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [
+      "PyTorch"
+    ],
+    "salaryRange": "$140k - $170k",
+    "salaryInr": "28 - 36 LPA",
+    "level": "L4 - Senior Full-Stack AI",
+    "bandPosPct": 57,
+    "evidenceSnippet": "Designed PostgreSQL schemas and REST APIs handling 80,000 requests per day with 99.95% uptime.",
+    "github": {
+      "username": "aishwaryarao",
+      "score": 64,
+      "risk": "LOW",
+      "reposAnalyzed": 13,
+      "authenticRepos": 12,
+      "forksCount": 1,
+      "archSignals": 7,
+      "quantifiedMetrics": 5,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 71,
+        "feedback": "Category: Lateral Switcher. Evaluated against Full Stack AI Engineer production baseline."
+      },
+      "culture": {
+        "score": 82,
+        "feedback": "Verified code review patterns on GitHub (aishwaryarao)."
+      },
+      "fairAuditor": {
+        "score": 98,
+        "feedback": "Objective evidence verification. Flags: None."
+      },
+      "seniorityComp": {
+        "score": 67,
+        "feedback": "Leveling aligned with L4 - Senior Full-Stack AI."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: Designed PostgreSQL schemas and REST APIs handling 80,000 requests per day with 99.95% uptime."
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: Clean dossier."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in Designed PostgreSQL schemas and REST APIs handling...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 13
+  },
+  {
+    "id": "CAN-SYN-014",
+    "name": "Waseem Nayak",
+    "anonymizedId": "Candidate #014 (Lateral Switcher)",
+    "fileName": "14_Lateral_Switcher_Cloud_DevOps_Lead_Waseem_Nayak.txt",
+    "title": "Cloud DevOps Lead",
+    "category": "Lateral Switcher",
+    "experienceYears": 4.0,
+    "matchScore": 67.2,
+    "atsScore": 84,
+    "councilScore": 74.6,
+    "verdict": "LEAN_HIRE",
+    "verdictType": "neutral",
+    "redFlags": [],
+    "matchedSkills": [
+      "Linux",
+      "Bash",
+      "Networking",
+      "VMware",
+      "Nagios",
+      "Python",
+      "Git"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [
+      "PyTorch"
+    ],
+    "salaryRange": "$150k - $180k",
+    "salaryInr": "30 - 38 LPA",
+    "level": "L5 - Lead Cloud SRE",
+    "bandPosPct": 57,
+    "evidenceSnippet": "Sustained 99.95% uptime across 8,000 requests per second at peak with multi-AZ failover.",
+    "github": {
+      "username": "waseem-codes",
+      "score": 63,
+      "risk": "LOW",
+      "reposAnalyzed": 13,
+      "authenticRepos": 12,
+      "forksCount": 1,
+      "archSignals": 7,
+      "quantifiedMetrics": 5,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 70,
+        "feedback": "Category: Lateral Switcher. Evaluated against Cloud DevOps Lead production baseline."
+      },
+      "culture": {
+        "score": 82,
+        "feedback": "Verified code review patterns on GitHub (waseem-codes)."
+      },
+      "fairAuditor": {
+        "score": 98,
+        "feedback": "Objective evidence verification. Flags: None."
+      },
+      "seniorityComp": {
+        "score": 67,
+        "feedback": "Leveling aligned with L5 - Lead Cloud SRE."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: Sustained 99.95% uptime across 8,000 requests per second at peak with multi-AZ failover."
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: Clean dossier."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in Sustained 99.95% uptime across 8,000 requests per ...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 14
+  },
+  {
+    "id": "CAN-SYN-013",
+    "name": "Ishaan Chatterjee",
+    "anonymizedId": "Candidate #013 (Lateral Switcher)",
+    "fileName": "13_Lateral_Switcher_Senior_ML_Engineer_Ishaan_Chatterjee.txt",
+    "title": "Senior ML Engineer",
+    "category": "Lateral Switcher",
+    "experienceYears": 4.0,
+    "matchScore": 66.6,
+    "atsScore": 82,
+    "councilScore": 74.1,
+    "verdict": "LEAN_HIRE",
+    "verdictType": "neutral",
+    "redFlags": [],
+    "matchedSkills": [
+      "Python",
+      "SQL",
+      "Pandas",
+      "NumPy",
+      "Scikit-Learn",
+      "Tableau",
+      "Excel"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [],
+    "salaryRange": "$165k - $190k",
+    "salaryInr": "35 - 42 LPA",
+    "level": "L5 - Senior Staff ML Engineer",
+    "bandPosPct": 56,
+    "evidenceSnippet": "Raised F1-score from 0.79 to 0.89 on a 20-class classifier by fine-tuning transformers with Hugging Face and Scikit-Learn pipelines.",
+    "github": {
+      "username": "chatterjeei",
+      "score": 63,
+      "risk": "LOW",
+      "reposAnalyzed": 13,
+      "authenticRepos": 12,
+      "forksCount": 1,
+      "archSignals": 7,
+      "quantifiedMetrics": 5,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 70,
+        "feedback": "Category: Lateral Switcher. Evaluated against Senior ML Engineer production baseline."
+      },
+      "culture": {
+        "score": 82,
+        "feedback": "Verified code review patterns on GitHub (chatterjeei)."
+      },
+      "fairAuditor": {
+        "score": 98,
+        "feedback": "Objective evidence verification. Flags: None."
+      },
+      "seniorityComp": {
+        "score": 66,
+        "feedback": "Leveling aligned with L5 - Senior Staff ML Engineer."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: Raised F1-score from 0.79 to 0.89 on a 20-class classifier by fine-tuning transformers with Hugging Face and Scikit-Learn pipelines."
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: Clean dossier."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in Raised F1-score from 0.79 to 0.89 on a 20-class cl...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 15
+  },
+  {
+    "id": "CAN-SYN-018",
+    "name": "Karan Saxena",
+    "anonymizedId": "Candidate #018 (Lateral Switcher)",
+    "fileName": "18_Lateral_Switcher_AI_Safety_Auditor_Karan_Saxena.txt",
+    "title": "AI Safety Auditor",
+    "category": "Lateral Switcher",
+    "experienceYears": 5.0,
+    "matchScore": 65.2,
+    "atsScore": 84,
+    "councilScore": 73.0,
+    "verdict": "LEAN_HIRE",
+    "verdictType": "neutral",
+    "redFlags": [],
+    "matchedSkills": [
+      "Risk Assessment",
+      "Audit",
+      "ISO 27001",
+      "SOX",
+      "Excel",
+      "SQL",
+      "Python"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [],
+    "salaryRange": "$155k - $185k",
+    "salaryInr": "32 - 40 LPA",
+    "level": "L5 - Staff AI Safety Auditor",
+    "bandPosPct": 55,
+    "evidenceSnippet": "Performed 4 IT general-control audits against ISO 27001 and reduced open findings by 55%.",
+    "github": {
+      "username": "karansax44",
+      "score": 61,
+      "risk": "LOW",
+      "reposAnalyzed": 13,
+      "authenticRepos": 12,
+      "forksCount": 1,
+      "archSignals": 7,
+      "quantifiedMetrics": 5,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 69,
+        "feedback": "Category: Lateral Switcher. Evaluated against AI Safety Auditor production baseline."
+      },
+      "culture": {
+        "score": 82,
+        "feedback": "Verified code review patterns on GitHub (karansax44)."
+      },
+      "fairAuditor": {
+        "score": 98,
+        "feedback": "Objective evidence verification. Flags: None."
+      },
+      "seniorityComp": {
+        "score": 65,
+        "feedback": "Leveling aligned with L5 - Staff AI Safety Auditor."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: Performed 4 IT general-control audits against ISO 27001 and reduced open findings by 55%."
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: Clean dossier."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in Performed 4 IT general-control audits against ISO ...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 16
+  },
+  {
+    "id": "CAN-SYN-017",
+    "name": "Anil Trivedi",
+    "anonymizedId": "Candidate #017 (Lateral Switcher)",
+    "fileName": "17_Lateral_Switcher_Backend_Microservices_Architect_Anil_Trivedi.txt",
+    "title": "Backend Microservices Architect",
+    "category": "Lateral Switcher",
+    "experienceYears": 3.5,
+    "matchScore": 64.6,
+    "atsScore": 82,
+    "councilScore": 72.5,
+    "verdict": "LEAN_HIRE",
+    "verdictType": "neutral",
+    "redFlags": [],
+    "matchedSkills": [
+      "C#",
+      ".NET",
+      "SQL Server",
+      "REST API",
+      "Git",
+      "Azure",
+      "Docker"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [
+      "PyTorch"
+    ],
+    "salaryRange": "$170k - $205k",
+    "salaryInr": "38 - 46 LPA",
+    "level": "L6 - Principal Architect",
+    "bandPosPct": 54,
+    "evidenceSnippet": "Cut p95 API latency by 22% using Redis caching, connection pooling and PostgreSQL index redesign.",
+    "github": {
+      "username": "atrivedi-dev",
+      "score": 61,
+      "risk": "LOW",
+      "reposAnalyzed": 13,
+      "authenticRepos": 12,
+      "forksCount": 1,
+      "archSignals": 7,
+      "quantifiedMetrics": 5,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 68,
+        "feedback": "Category: Lateral Switcher. Evaluated against Backend Microservices Architect production baseline."
+      },
+      "culture": {
+        "score": 82,
+        "feedback": "Verified code review patterns on GitHub (atrivedi-dev)."
+      },
+      "fairAuditor": {
+        "score": 98,
+        "feedback": "Objective evidence verification. Flags: None."
+      },
+      "seniorityComp": {
+        "score": 65,
+        "feedback": "Leveling aligned with L6 - Principal Architect."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: Cut p95 API latency by 22% using Redis caching, connection pooling and PostgreSQL index redesign."
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: Clean dossier."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in Cut p95 API latency by 22% using Redis caching, co...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 17
+  },
+  {
+    "id": "CAN-SYN-016",
+    "name": "Meera Pillai",
+    "anonymizedId": "Candidate #016 (Lateral Switcher)",
+    "fileName": "16_Lateral_Switcher_Data_Platform_Engineer_Meera_Pillai.txt",
+    "title": "Data Platform Engineer",
+    "category": "Lateral Switcher",
+    "experienceYears": 2.5,
+    "matchScore": 64.0,
+    "atsScore": 88,
+    "councilScore": 72.0,
+    "verdict": "LEAN_HIRE",
+    "verdictType": "neutral",
+    "redFlags": [],
+    "matchedSkills": [
+      "SQL",
+      "Power BI",
+      "SSIS",
+      "Excel",
+      "Python",
+      "Data Modeling",
+      "ETL"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [
+      "PyTorch"
+    ],
+    "salaryRange": "$145k - $175k",
+    "salaryInr": "29 - 37 LPA",
+    "level": "L4 - Senior Data Platform",
+    "bandPosPct": 54,
+    "evidenceSnippet": "Cut warehouse cost by 22% (about $18k per month) through partition pruning, clustering and job scheduling.",
+    "github": {
+      "username": "meera-pillai",
+      "score": 60,
+      "risk": "LOW",
+      "reposAnalyzed": 13,
+      "authenticRepos": 12,
+      "forksCount": 1,
+      "archSignals": 7,
+      "quantifiedMetrics": 5,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 68,
+        "feedback": "Category: Lateral Switcher. Evaluated against Data Platform Engineer production baseline."
+      },
+      "culture": {
+        "score": 82,
+        "feedback": "Verified code review patterns on GitHub (meera-pillai)."
+      },
+      "fairAuditor": {
+        "score": 98,
+        "feedback": "Objective evidence verification. Flags: None."
+      },
+      "seniorityComp": {
+        "score": 64,
+        "feedback": "Leveling aligned with L4 - Senior Data Platform."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: Cut warehouse cost by 22% (about $18k per month) through partition pruning, clustering and job scheduling."
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: Clean dossier."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in Cut warehouse cost by 22% (about $18k per month) t...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 18
+  },
+  {
+    "id": "CAN-SYN-012",
+    "name": "Lakshmi Varma",
+    "anonymizedId": "Candidate #012 (Lateral Switcher)",
+    "fileName": "12_Lateral_Switcher_AI_Safety_Auditor_Lakshmi_Varma.txt",
+    "title": "AI Safety Auditor",
+    "category": "Lateral Switcher",
+    "experienceYears": 3.0,
+    "matchScore": 63.9,
+    "atsScore": 88,
+    "councilScore": 71.9,
+    "verdict": "LEAN_HIRE",
+    "verdictType": "neutral",
+    "redFlags": [],
+    "matchedSkills": [
+      "Risk Assessment",
+      "Audit",
+      "ISO 27001",
+      "SOX",
+      "Excel",
+      "SQL",
+      "Python"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [
+      "PyTorch"
+    ],
+    "salaryRange": "$155k - $185k",
+    "salaryInr": "32 - 40 LPA",
+    "level": "L5 - Staff AI Safety Auditor",
+    "bandPosPct": 54,
+    "evidenceSnippet": "Audited 12 production models for demographic bias with Fairlearn and AIF360, reducing disparate-impact gaps from 71% to 88%.",
+    "github": {
+      "username": "lakshmivar37",
+      "score": 60,
+      "risk": "LOW",
+      "reposAnalyzed": 13,
+      "authenticRepos": 12,
+      "forksCount": 1,
+      "archSignals": 7,
+      "quantifiedMetrics": 5,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 68,
+        "feedback": "Category: Lateral Switcher. Evaluated against AI Safety Auditor production baseline."
+      },
+      "culture": {
+        "score": 82,
+        "feedback": "Verified code review patterns on GitHub (lakshmivar37)."
+      },
+      "fairAuditor": {
+        "score": 98,
+        "feedback": "Objective evidence verification. Flags: None."
+      },
+      "seniorityComp": {
+        "score": 64,
+        "feedback": "Leveling aligned with L5 - Staff AI Safety Auditor."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: Audited 12 production models for demographic bias with Fairlearn and AIF360, reducing disparate-impact gaps from 71% to 88%."
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: Clean dossier."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in Audited 12 production models for demographic bias ...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 19
+  },
+  {
+    "id": "CAN-SYN-011",
+    "name": "Swati Bose",
+    "anonymizedId": "Candidate #011 (Lateral Switcher)",
+    "fileName": "11_Lateral_Switcher_Backend_Microservices_Architect_Swati_Bose.txt",
+    "title": "Backend Microservices Architect",
+    "category": "Lateral Switcher",
+    "experienceYears": 2.0,
+    "matchScore": 63.3,
+    "atsScore": 86,
+    "councilScore": 71.4,
+    "verdict": "LEAN_HIRE",
+    "verdictType": "neutral",
+    "redFlags": [],
+    "matchedSkills": [
+      "C#",
+      ".NET",
+      "SQL Server",
+      "REST API",
+      "Git",
+      "Azure",
+      "Docker"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [
+      "PyTorch"
+    ],
+    "salaryRange": "$170k - $205k",
+    "salaryInr": "38 - 46 LPA",
+    "level": "L6 - Principal Architect",
+    "bandPosPct": 53,
+    "evidenceSnippet": "Maintained 12 ASP.NET services handling 120,000 requests per day with 99.95% uptime.",
+    "github": {
+      "username": "sbose-dev",
+      "score": 60,
+      "risk": "LOW",
+      "reposAnalyzed": 13,
+      "authenticRepos": 12,
+      "forksCount": 1,
+      "archSignals": 7,
+      "quantifiedMetrics": 5,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 67,
+        "feedback": "Category: Lateral Switcher. Evaluated against Backend Microservices Architect production baseline."
+      },
+      "culture": {
+        "score": 82,
+        "feedback": "Verified code review patterns on GitHub (sbose-dev)."
+      },
+      "fairAuditor": {
+        "score": 98,
+        "feedback": "Objective evidence verification. Flags: None."
+      },
+      "seniorityComp": {
+        "score": 64,
+        "feedback": "Leveling aligned with L6 - Principal Architect."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: Maintained 12 ASP.NET services handling 120,000 requests per day with 99.95% uptime."
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: Clean dossier."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in Maintained 12 ASP.NET services handling 120,000 re...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 20
+  },
+  {
+    "id": "CAN-SYN-050",
+    "name": "Divya Reddy",
+    "anonymizedId": "Candidate #050 (Early Career Fresher)",
+    "fileName": "50_Early_Career_Fresher_Cloud_DevOps_Lead_Divya_Reddy.txt",
+    "title": "Cloud DevOps Lead",
+    "category": "Early Career Fresher",
+    "experienceYears": 1.0,
+    "matchScore": 52.5,
+    "atsScore": 69,
+    "councilScore": 49.6,
+    "verdict": "REJECT",
+    "verdictType": "negative",
+    "redFlags": [
+      "EXPERIENCE_DEFICIT and LEVEL_MISMATCH for a senior JD",
+      "strong projects may lift score"
+    ],
+    "matchedSkills": [
+      "Linux",
+      "Bash",
+      "Istio",
+      "Kubernetes",
+      "Docker",
+      "AWS",
+      "ArgoCD"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [
+      "PyTorch"
+    ],
+    "salaryRange": "$150k - $180k",
+    "salaryInr": "30 - 38 LPA",
+    "level": "L5 - Lead Cloud SRE",
+    "bandPosPct": 44,
+    "evidenceSnippet": "Built a self-service Terraform and Helm platform used by 40 engineers, reducing environment requests by 55%.",
+    "github": {
+      "username": "divya2002",
+      "score": 49,
+      "risk": "LOW",
+      "reposAnalyzed": 13,
+      "authenticRepos": 12,
+      "forksCount": 1,
+      "archSignals": 7,
+      "quantifiedMetrics": 5,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 47,
+        "feedback": "Category: Early Career Fresher. Evaluated against Cloud DevOps Lead production baseline."
+      },
+      "culture": {
+        "score": 82,
+        "feedback": "Verified code review patterns on GitHub (divya2002)."
+      },
+      "fairAuditor": {
+        "score": 92,
+        "feedback": "Objective evidence verification. Flags: EXPERIENCE_DEFICIT and LEVEL_MISMATCH for a senior JD, strong projects may lift score."
+      },
+      "seniorityComp": {
+        "score": 44,
+        "feedback": "Leveling aligned with L5 - Lead Cloud SRE."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: Built a self-service Terraform and Helm platform used by 40 engineers, reducing environment requests by 55%."
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: EXPERIENCE_DEFICIT and LEVEL_MISMATCH for a senior JD, strong projects may lift score."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in Built a self-service Terraform and Helm platform u...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 21
+  },
+  {
+    "id": "CAN-SYN-049",
+    "name": "Siddharth Patil",
+    "anonymizedId": "Candidate #049 (Early Career Fresher)",
+    "fileName": "49_Early_Career_Fresher_Senior_ML_Engineer_Siddharth_Patil.txt",
+    "title": "Senior ML Engineer",
+    "category": "Early Career Fresher",
+    "experienceYears": 0.8,
+    "matchScore": 51.9,
+    "atsScore": 67,
+    "councilScore": 49.1,
+    "verdict": "REJECT",
+    "verdictType": "negative",
+    "redFlags": [
+      "EXPERIENCE_DEFICIT and LEVEL_MISMATCH for a senior JD",
+      "strong projects may lift score"
+    ],
+    "matchedSkills": [
+      "Machine Learning",
+      "Docker",
+      "MLOps",
+      "MLflow",
+      "Scikit-Learn",
+      "SageMaker",
+      "TensorFlow"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [
+      "PyTorch"
+    ],
+    "salaryRange": "$165k - $190k",
+    "salaryInr": "35 - 42 LPA",
+    "level": "L5 - Senior Staff ML Engineer",
+    "bandPosPct": 44,
+    "evidenceSnippet": "Implemented an LSTM autoencoder in PyTorch that detected equipment faults with 88% precision and cut false alarms by 38%.",
+    "github": {
+      "username": "siddharth-patil-dev",
+      "score": 49,
+      "risk": "LOW",
+      "reposAnalyzed": 13,
+      "authenticRepos": 12,
+      "forksCount": 1,
+      "archSignals": 7,
+      "quantifiedMetrics": 5,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 46,
+        "feedback": "Category: Early Career Fresher. Evaluated against Senior ML Engineer production baseline."
+      },
+      "culture": {
+        "score": 82,
+        "feedback": "Verified code review patterns on GitHub (siddharth-patil-dev)."
+      },
+      "fairAuditor": {
+        "score": 92,
+        "feedback": "Objective evidence verification. Flags: EXPERIENCE_DEFICIT and LEVEL_MISMATCH for a senior JD, strong projects may lift score."
+      },
+      "seniorityComp": {
+        "score": 44,
+        "feedback": "Leveling aligned with L5 - Senior Staff ML Engineer."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: Implemented an LSTM autoencoder in PyTorch that detected equipment faults with 88% precision and cut false alarms by 38%."
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: EXPERIENCE_DEFICIT and LEVEL_MISMATCH for a senior JD, strong projects may lift score."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in Implemented an LSTM autoencoder in PyTorch that de...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 22
+  },
+  {
+    "id": "CAN-SYN-045",
+    "name": "Ananya Kulkarni",
+    "anonymizedId": "Candidate #045 (Early Career Fresher)",
+    "fileName": "45_Early_Career_Fresher_Full_Stack_AI_Engineer_Ananya_Kulkarni.txt",
+    "title": "Full Stack AI Engineer",
+    "category": "Early Career Fresher",
+    "experienceYears": 0.5,
+    "matchScore": 51.8,
+    "atsScore": 67,
+    "councilScore": 49.0,
+    "verdict": "REJECT",
+    "verdictType": "negative",
+    "redFlags": [
+      "EXPERIENCE_DEFICIT and LEVEL_MISMATCH for a senior JD",
+      "strong projects may lift score"
+    ],
+    "matchedSkills": [
+      "PostgreSQL",
+      "REST API",
+      "LangChain",
+      "Node.js",
+      "TypeScript",
+      "JavaScript",
+      "Git"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [
+      "PyTorch"
+    ],
+    "salaryRange": "$140k - $170k",
+    "salaryInr": "28 - 36 LPA",
+    "level": "L4 - Senior Full-Stack AI",
+    "bandPosPct": 44,
+    "evidenceSnippet": "Built a Next.js and FastAPI application with chunked retrieval over 50,000 PDFs and sub-60 ms retrieval latency.",
+    "github": {
+      "username": "ananya-kulkarni-dev",
+      "score": 49,
+      "risk": "LOW",
+      "reposAnalyzed": 13,
+      "authenticRepos": 12,
+      "forksCount": 1,
+      "archSignals": 7,
+      "quantifiedMetrics": 5,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 46,
+        "feedback": "Category: Early Career Fresher. Evaluated against Full Stack AI Engineer production baseline."
+      },
+      "culture": {
+        "score": 82,
+        "feedback": "Verified code review patterns on GitHub (ananya-kulkarni-dev)."
+      },
+      "fairAuditor": {
+        "score": 92,
+        "feedback": "Objective evidence verification. Flags: EXPERIENCE_DEFICIT and LEVEL_MISMATCH for a senior JD, strong projects may lift score."
+      },
+      "seniorityComp": {
+        "score": 44,
+        "feedback": "Leveling aligned with L4 - Senior Full-Stack AI."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: Built a Next.js and FastAPI application with chunked retrieval over 50,000 PDFs and sub-60 ms retrieval latency."
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: EXPERIENCE_DEFICIT and LEVEL_MISMATCH for a senior JD, strong projects may lift score."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in Built a Next.js and FastAPI application with chunk...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 23
+  },
+  {
+    "id": "CAN-SYN-044",
+    "name": "Rajat Kapoor",
+    "anonymizedId": "Candidate #044 (Early Career Fresher)",
+    "fileName": "44_Early_Career_Fresher_Cloud_DevOps_Lead_Rajat_Kapoor.txt",
+    "title": "Cloud DevOps Lead",
+    "category": "Early Career Fresher",
+    "experienceYears": 0.8,
+    "matchScore": 51.2,
+    "atsScore": 73,
+    "councilScore": 48.6,
+    "verdict": "REJECT",
+    "verdictType": "negative",
+    "redFlags": [
+      "EXPERIENCE_DEFICIT and LEVEL_MISMATCH for a senior JD",
+      "strong projects may lift score"
+    ],
+    "matchedSkills": [
+      "Docker",
+      "Terraform",
+      "Bash",
+      "GitHub Actions",
+      "Prometheus",
+      "Jenkins",
+      "AWS"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [
+      "PyTorch"
+    ],
+    "salaryRange": "$150k - $180k",
+    "salaryInr": "30 - 38 LPA",
+    "level": "L5 - Lead Cloud SRE",
+    "bandPosPct": 43,
+    "evidenceSnippet": "kapoor | GitHub: https://github.com/rajat2003",
+    "github": {
+      "username": "rajat2003",
+      "score": 48,
+      "risk": "LOW",
+      "reposAnalyzed": 13,
+      "authenticRepos": 12,
+      "forksCount": 1,
+      "archSignals": 7,
+      "quantifiedMetrics": 5,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 46,
+        "feedback": "Category: Early Career Fresher. Evaluated against Cloud DevOps Lead production baseline."
+      },
+      "culture": {
+        "score": 82,
+        "feedback": "Verified code review patterns on GitHub (rajat2003)."
+      },
+      "fairAuditor": {
+        "score": 92,
+        "feedback": "Objective evidence verification. Flags: EXPERIENCE_DEFICIT and LEVEL_MISMATCH for a senior JD, strong projects may lift score."
+      },
+      "seniorityComp": {
+        "score": 43,
+        "feedback": "Leveling aligned with L5 - Lead Cloud SRE."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: kapoor | GitHub: https://github.com/rajat2003"
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: EXPERIENCE_DEFICIT and LEVEL_MISMATCH for a senior JD, strong projects may lift score."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in kapoor | GitHub: https://github.com/rajat2003...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 24
+  },
+  {
+    "id": "CAN-SYN-043",
+    "name": "Omkar Sethi",
+    "anonymizedId": "Candidate #043 (Early Career Fresher)",
+    "fileName": "43_Early_Career_Fresher_Senior_ML_Engineer_Omkar_Sethi.txt",
+    "title": "Senior ML Engineer",
+    "category": "Early Career Fresher",
+    "experienceYears": 0.8,
+    "matchScore": 50.6,
+    "atsScore": 71,
+    "councilScore": 48.1,
+    "verdict": "REJECT",
+    "verdictType": "negative",
+    "redFlags": [
+      "EXPERIENCE_DEFICIT and LEVEL_MISMATCH for a senior JD",
+      "strong projects may lift score"
+    ],
+    "matchedSkills": [
+      "Kubernetes",
+      "PyTorch",
+      "NumPy",
+      "Deep Learning",
+      "FastAPI",
+      "Docker",
+      "SageMaker"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [],
+    "salaryRange": "$165k - $190k",
+    "salaryInr": "35 - 42 LPA",
+    "level": "L5 - Senior Staff ML Engineer",
+    "bandPosPct": 43,
+    "evidenceSnippet": "Implemented an LSTM autoencoder in PyTorch that detected equipment faults with 92% precision and cut false alarms by 18%.",
+    "github": {
+      "username": "omkar-sethi-dev",
+      "score": 48,
+      "risk": "LOW",
+      "reposAnalyzed": 13,
+      "authenticRepos": 12,
+      "forksCount": 1,
+      "archSignals": 7,
+      "quantifiedMetrics": 5,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 45,
+        "feedback": "Category: Early Career Fresher. Evaluated against Senior ML Engineer production baseline."
+      },
+      "culture": {
+        "score": 82,
+        "feedback": "Verified code review patterns on GitHub (omkar-sethi-dev)."
+      },
+      "fairAuditor": {
+        "score": 92,
+        "feedback": "Objective evidence verification. Flags: EXPERIENCE_DEFICIT and LEVEL_MISMATCH for a senior JD, strong projects may lift score."
+      },
+      "seniorityComp": {
+        "score": 43,
+        "feedback": "Leveling aligned with L5 - Senior Staff ML Engineer."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: Implemented an LSTM autoencoder in PyTorch that detected equipment faults with 92% precision and cut false alarms by 18%."
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: EXPERIENCE_DEFICIT and LEVEL_MISMATCH for a senior JD, strong projects may lift score."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in Implemented an LSTM autoencoder in PyTorch that de...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 25
+  },
+  {
+    "id": "CAN-SYN-048",
+    "name": "Imran Shenoy",
+    "anonymizedId": "Candidate #048 (Early Career Fresher)",
+    "fileName": "48_Early_Career_Fresher_AI_Safety_Auditor_Imran_Shenoy.txt",
+    "title": "AI Safety Auditor",
+    "category": "Early Career Fresher",
+    "experienceYears": 1.0,
+    "matchScore": 49.2,
+    "atsScore": 73,
+    "councilScore": 47.0,
+    "verdict": "REJECT",
+    "verdictType": "negative",
+    "redFlags": [
+      "EXPERIENCE_DEFICIT and LEVEL_MISMATCH for a senior JD",
+      "strong projects may lift score"
+    ],
+    "matchedSkills": [
+      "Bias Auditing",
+      "Adversarial Robustness",
+      "Python",
+      "Red Teaming",
+      "Fairlearn",
+      "Model Evaluation",
+      "AIF360"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [
+      "PyTorch"
+    ],
+    "salaryRange": "$155k - $185k",
+    "salaryInr": "32 - 40 LPA",
+    "level": "L5 - Staff AI Safety Auditor",
+    "bandPosPct": 41,
+    "evidenceSnippet": "shenoy | GitHub: https://github.com/imran2001",
+    "github": {
+      "username": "imran2001",
+      "score": 46,
+      "risk": "LOW",
+      "reposAnalyzed": 13,
+      "authenticRepos": 12,
+      "forksCount": 1,
+      "archSignals": 7,
+      "quantifiedMetrics": 5,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 44,
+        "feedback": "Category: Early Career Fresher. Evaluated against AI Safety Auditor production baseline."
+      },
+      "culture": {
+        "score": 82,
+        "feedback": "Verified code review patterns on GitHub (imran2001)."
+      },
+      "fairAuditor": {
+        "score": 92,
+        "feedback": "Objective evidence verification. Flags: EXPERIENCE_DEFICIT and LEVEL_MISMATCH for a senior JD, strong projects may lift score."
+      },
+      "seniorityComp": {
+        "score": 42,
+        "feedback": "Leveling aligned with L5 - Staff AI Safety Auditor."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: shenoy | GitHub: https://github.com/imran2001"
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: EXPERIENCE_DEFICIT and LEVEL_MISMATCH for a senior JD, strong projects may lift score."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in shenoy | GitHub: https://github.com/imran2001...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 26
+  },
+  {
+    "id": "CAN-SYN-047",
+    "name": "Zoya Oberoi",
+    "anonymizedId": "Candidate #047 (Early Career Fresher)",
+    "fileName": "47_Early_Career_Fresher_Backend_Microservices_Architect_Zoya_Oberoi.txt",
+    "title": "Backend Microservices Architect",
+    "category": "Early Career Fresher",
+    "experienceYears": 0.8,
+    "matchScore": 48.6,
+    "atsScore": 71,
+    "councilScore": 46.5,
+    "verdict": "REJECT",
+    "verdictType": "negative",
+    "redFlags": [
+      "EXPERIENCE_DEFICIT and LEVEL_MISMATCH for a senior JD",
+      "strong projects may lift score"
+    ],
+    "matchedSkills": [
+      "CI/CD",
+      "PostgreSQL",
+      "Istio",
+      "OpenAPI",
+      "Redis",
+      "Kubernetes",
+      "REST API"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [
+      "PyTorch"
+    ],
+    "salaryRange": "$170k - $205k",
+    "salaryInr": "38 - 46 LPA",
+    "level": "L6 - Principal Architect",
+    "bandPosPct": 41,
+    "evidenceSnippet": "oberoi | GitHub: https://github.com/zoya-oberoi-dev",
+    "github": {
+      "username": "zoya-oberoi-dev",
+      "score": 46,
+      "risk": "LOW",
+      "reposAnalyzed": 13,
+      "authenticRepos": 12,
+      "forksCount": 1,
+      "archSignals": 7,
+      "quantifiedMetrics": 5,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 44,
+        "feedback": "Category: Early Career Fresher. Evaluated against Backend Microservices Architect production baseline."
+      },
+      "culture": {
+        "score": 82,
+        "feedback": "Verified code review patterns on GitHub (zoya-oberoi-dev)."
+      },
+      "fairAuditor": {
+        "score": 92,
+        "feedback": "Objective evidence verification. Flags: EXPERIENCE_DEFICIT and LEVEL_MISMATCH for a senior JD, strong projects may lift score."
+      },
+      "seniorityComp": {
+        "score": 41,
+        "feedback": "Leveling aligned with L6 - Principal Architect."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: oberoi | GitHub: https://github.com/zoya-oberoi-dev"
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: EXPERIENCE_DEFICIT and LEVEL_MISMATCH for a senior JD, strong projects may lift score."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in oberoi | GitHub: https://github.com/zoya-oberoi-de...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 27
+  },
+  {
+    "id": "CAN-SYN-046",
+    "name": "Radhika Fernandes",
+    "anonymizedId": "Candidate #046 (Early Career Fresher)",
+    "fileName": "46_Early_Career_Fresher_Data_Platform_Engineer_Radhika_Fernandes.txt",
+    "title": "Data Platform Engineer",
+    "category": "Early Career Fresher",
+    "experienceYears": 0.6,
+    "matchScore": 48.0,
+    "atsScore": 69,
+    "councilScore": 46.0,
+    "verdict": "REJECT",
+    "verdictType": "negative",
+    "redFlags": [
+      "EXPERIENCE_DEFICIT and LEVEL_MISMATCH for a senior JD",
+      "strong projects may lift score"
+    ],
+    "matchedSkills": [
+      "Git",
+      "Terraform",
+      "PostgreSQL",
+      "Apache Airflow",
+      "SQL",
+      "AWS Glue",
+      "Python"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [
+      "PyTorch"
+    ],
+    "salaryRange": "$145k - $175k",
+    "salaryInr": "29 - 37 LPA",
+    "level": "L4 - Senior Data Platform",
+    "bandPosPct": 40,
+    "evidenceSnippet": "Built a dbt semantic layer used by 120 analysts, cutting duplicate metric definitions by 18%.",
+    "github": {
+      "username": "radhika2001",
+      "score": 45,
+      "risk": "LOW",
+      "reposAnalyzed": 13,
+      "authenticRepos": 12,
+      "forksCount": 1,
+      "archSignals": 7,
+      "quantifiedMetrics": 5,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 43,
+        "feedback": "Category: Early Career Fresher. Evaluated against Data Platform Engineer production baseline."
+      },
+      "culture": {
+        "score": 82,
+        "feedback": "Verified code review patterns on GitHub (radhika2001)."
+      },
+      "fairAuditor": {
+        "score": 92,
+        "feedback": "Objective evidence verification. Flags: EXPERIENCE_DEFICIT and LEVEL_MISMATCH for a senior JD, strong projects may lift score."
+      },
+      "seniorityComp": {
+        "score": 41,
+        "feedback": "Leveling aligned with L4 - Senior Data Platform."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: Built a dbt semantic layer used by 120 analysts, cutting duplicate metric definitions by 18%."
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: EXPERIENCE_DEFICIT and LEVEL_MISMATCH for a senior JD, strong projects may lift score."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in Built a dbt semantic layer used by 120 analysts, c...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 28
+  },
+  {
+    "id": "CAN-SYN-042",
+    "name": "Padma Kamath",
+    "anonymizedId": "Candidate #042 (Early Career Fresher)",
+    "fileName": "42_Early_Career_Fresher_AI_Safety_Auditor_Padma_Kamath.txt",
+    "title": "AI Safety Auditor",
+    "category": "Early Career Fresher",
+    "experienceYears": 0.6,
+    "matchScore": 47.9,
+    "atsScore": 69,
+    "councilScore": 45.9,
+    "verdict": "REJECT",
+    "verdictType": "negative",
+    "redFlags": [
+      "EXPERIENCE_DEFICIT and LEVEL_MISMATCH for a senior JD",
+      "strong projects may lift score"
+    ],
+    "matchedSkills": [
+      "SQL",
+      "Model Evaluation",
+      "SHAP",
+      "ISO 42001",
+      "NIST AI RMF",
+      "Model Cards",
+      "Python"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [],
+    "salaryRange": "$155k - $185k",
+    "salaryInr": "32 - 40 LPA",
+    "level": "L5 - Staff AI Safety Auditor",
+    "bandPosPct": 40,
+    "evidenceSnippet": "kamath | GitHub: https://github.com/padma2001",
+    "github": {
+      "username": "padma2001",
+      "score": 45,
+      "risk": "LOW",
+      "reposAnalyzed": 13,
+      "authenticRepos": 12,
+      "forksCount": 1,
+      "archSignals": 7,
+      "quantifiedMetrics": 5,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 43,
+        "feedback": "Category: Early Career Fresher. Evaluated against AI Safety Auditor production baseline."
+      },
+      "culture": {
+        "score": 82,
+        "feedback": "Verified code review patterns on GitHub (padma2001)."
+      },
+      "fairAuditor": {
+        "score": 92,
+        "feedback": "Objective evidence verification. Flags: EXPERIENCE_DEFICIT and LEVEL_MISMATCH for a senior JD, strong projects may lift score."
+      },
+      "seniorityComp": {
+        "score": 41,
+        "feedback": "Leveling aligned with L5 - Staff AI Safety Auditor."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: kamath | GitHub: https://github.com/padma2001"
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: EXPERIENCE_DEFICIT and LEVEL_MISMATCH for a senior JD, strong projects may lift score."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in kamath | GitHub: https://github.com/padma2001...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 29
+  },
+  {
+    "id": "CAN-SYN-041",
+    "name": "Leela Mukherjee",
+    "anonymizedId": "Candidate #041 (Early Career Fresher)",
+    "fileName": "41_Early_Career_Fresher_Backend_Microservices_Architect_Leela_Mukherjee.txt",
+    "title": "Backend Microservices Architect",
+    "category": "Early Career Fresher",
+    "experienceYears": 1.0,
+    "matchScore": 47.3,
+    "atsScore": 67,
+    "councilScore": 45.4,
+    "verdict": "REJECT",
+    "verdictType": "negative",
+    "redFlags": [
+      "EXPERIENCE_DEFICIT and LEVEL_MISMATCH for a senior JD",
+      "strong projects may lift score"
+    ],
+    "matchedSkills": [
+      "Java",
+      "gRPC",
+      "Redis",
+      "REST API",
+      "Kubernetes",
+      "Event-Driven Architecture",
+      "Go"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [
+      "PyTorch"
+    ],
+    "salaryRange": "$170k - $205k",
+    "salaryInr": "38 - 46 LPA",
+    "level": "L6 - Principal Architect",
+    "bandPosPct": 40,
+    "evidenceSnippet": "mukherjee | GitHub: https://github.com/leela-mukherjee-dev",
+    "github": {
+      "username": "leela-mukherjee-dev",
+      "score": 44,
+      "risk": "LOW",
+      "reposAnalyzed": 13,
+      "authenticRepos": 12,
+      "forksCount": 1,
+      "archSignals": 7,
+      "quantifiedMetrics": 5,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 43,
+        "feedback": "Category: Early Career Fresher. Evaluated against Backend Microservices Architect production baseline."
+      },
+      "culture": {
+        "score": 82,
+        "feedback": "Verified code review patterns on GitHub (leela-mukherjee-dev)."
+      },
+      "fairAuditor": {
+        "score": 92,
+        "feedback": "Objective evidence verification. Flags: EXPERIENCE_DEFICIT and LEVEL_MISMATCH for a senior JD, strong projects may lift score."
+      },
+      "seniorityComp": {
+        "score": 40,
+        "feedback": "Leveling aligned with L6 - Principal Architect."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: mukherjee | GitHub: https://github.com/leela-mukherjee-dev"
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: EXPERIENCE_DEFICIT and LEVEL_MISMATCH for a senior JD, strong projects may lift score."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in mukherjee | GitHub: https://github.com/leela-mukhe...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 30
+  },
+  {
+    "id": "CAN-SYN-025",
+    "name": "Kunal Agarwal",
+    "anonymizedId": "Candidate #025 (Keyword Stuffing)",
+    "fileName": "25_Keyword_Stuffing_Senior_ML_Engineer_Kunal_Agarwal.txt",
+    "title": "Senior ML Engineer",
+    "category": "Keyword Stuffing",
+    "experienceYears": 0.5,
+    "matchScore": 47.2,
+    "atsScore": 55,
+    "councilScore": 49.2,
+    "verdict": "REJECT",
+    "verdictType": "negative",
+    "redFlags": [
+      "EXPERIENCE_DEFICIT",
+      "UNVERIFIED_SKILL_CLAIMS",
+      "SKILL_STUFFING",
+      "NO_QUANTIFIED_IMPACT"
+    ],
+    "matchedSkills": [
+      "Reinforcement Learning",
+      "Azure",
+      "GCP",
+      "Web3",
+      "Machine Learning",
+      "Microservices",
+      "Hadoop"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [],
+    "salaryRange": "$165k - $190k",
+    "salaryInr": "35 - 42 LPA",
+    "level": "L5 - Senior Staff ML Engineer",
+    "bandPosPct": 40,
+    "evidenceSnippet": "agarwal | GitHub: https://github.com/agarwalk",
+    "github": {
+      "username": "agarwalk",
+      "score": 44,
+      "risk": "HIGH",
+      "reposAnalyzed": 12,
+      "authenticRepos": 1,
+      "forksCount": 11,
+      "archSignals": 1,
+      "quantifiedMetrics": 0,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 46,
+        "feedback": "Category: Keyword Stuffing. Evaluated against Senior ML Engineer production baseline."
+      },
+      "culture": {
+        "score": 45,
+        "feedback": "Verified code review patterns on GitHub (agarwalk)."
+      },
+      "fairAuditor": {
+        "score": 92,
+        "feedback": "Objective evidence verification. Flags: EXPERIENCE_DEFICIT, UNVERIFIED_SKILL_CLAIMS, SKILL_STUFFING, NO_QUANTIFIED_IMPACT."
+      },
+      "seniorityComp": {
+        "score": 44,
+        "feedback": "Leveling aligned with L5 - Senior Staff ML Engineer."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: agarwal | GitHub: https://github.com/agarwalk"
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: EXPERIENCE_DEFICIT, UNVERIFIED_SKILL_CLAIMS, SKILL_STUFFING, NO_QUANTIFIED_IMPACT."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in agarwal | GitHub: https://github.com/agarwalk...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 31
+  },
+  {
+    "id": "CAN-SYN-030",
+    "name": "Vidya Mathur",
+    "anonymizedId": "Candidate #030 (Keyword Stuffing)",
+    "fileName": "30_Keyword_Stuffing_AI_Safety_Auditor_Vidya_Mathur.txt",
+    "title": "AI Safety Auditor",
+    "category": "Keyword Stuffing",
+    "experienceYears": 0.4,
+    "matchScore": 45.8,
+    "atsScore": 57,
+    "councilScore": 48.0,
+    "verdict": "REJECT",
+    "verdictType": "negative",
+    "redFlags": [
+      "EXPERIENCE_DEFICIT",
+      "UNVERIFIED_SKILL_CLAIMS",
+      "SKILL_STUFFING",
+      "NO_QUANTIFIED_IMPACT"
+    ],
+    "matchedSkills": [
+      "NIST AI RMF",
+      "PyTorch",
+      "Rust",
+      "Kafka",
+      "Reinforcement Learning",
+      "Azure",
+      "Edge AI"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [],
+    "salaryRange": "$155k - $185k",
+    "salaryInr": "32 - 40 LPA",
+    "level": "L5 - Staff AI Safety Auditor",
+    "bandPosPct": 38,
+    "evidenceSnippet": "mathur | GitHub: https://github.com/vidyamat19",
+    "github": {
+      "username": "vidyamat19",
+      "score": 43,
+      "risk": "HIGH",
+      "reposAnalyzed": 12,
+      "authenticRepos": 1,
+      "forksCount": 11,
+      "archSignals": 1,
+      "quantifiedMetrics": 0,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 45,
+        "feedback": "Category: Keyword Stuffing. Evaluated against AI Safety Auditor production baseline."
+      },
+      "culture": {
+        "score": 45,
+        "feedback": "Verified code review patterns on GitHub (vidyamat19)."
+      },
+      "fairAuditor": {
+        "score": 92,
+        "feedback": "Objective evidence verification. Flags: EXPERIENCE_DEFICIT, UNVERIFIED_SKILL_CLAIMS, SKILL_STUFFING, NO_QUANTIFIED_IMPACT."
+      },
+      "seniorityComp": {
+        "score": 43,
+        "feedback": "Leveling aligned with L5 - Staff AI Safety Auditor."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: mathur | GitHub: https://github.com/vidyamat19"
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: EXPERIENCE_DEFICIT, UNVERIFIED_SKILL_CLAIMS, SKILL_STUFFING, NO_QUANTIFIED_IMPACT."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in mathur | GitHub: https://github.com/vidyamat19...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 32
+  },
+  {
+    "id": "CAN-SYN-029",
+    "name": "Kavya Deshmukh",
+    "anonymizedId": "Candidate #029 (Keyword Stuffing)",
+    "fileName": "29_Keyword_Stuffing_Backend_Microservices_Architect_Kavya_Deshmukh.txt",
+    "title": "Backend Microservices Architect",
+    "category": "Keyword Stuffing",
+    "experienceYears": 0.4,
+    "matchScore": 45.2,
+    "atsScore": 55,
+    "councilScore": 47.6,
+    "verdict": "REJECT",
+    "verdictType": "negative",
+    "redFlags": [
+      "EXPERIENCE_DEFICIT",
+      "UNVERIFIED_SKILL_CLAIMS",
+      "SKILL_STUFFING",
+      "NO_QUANTIFIED_IMPACT"
+    ],
+    "matchedSkills": [
+      "Vue.js",
+      "GCP",
+      "Rust",
+      "Cassandra",
+      "Istio",
+      "Cybersecurity",
+      "Web3"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [
+      "PyTorch"
+    ],
+    "salaryRange": "$170k - $205k",
+    "salaryInr": "38 - 46 LPA",
+    "level": "L6 - Principal Architect",
+    "bandPosPct": 38,
+    "evidenceSnippet": "deshmukh | GitHub: https://github.com/kdeshmukh-dev",
+    "github": {
+      "username": "kdeshmukh-dev",
+      "score": 42,
+      "risk": "HIGH",
+      "reposAnalyzed": 12,
+      "authenticRepos": 1,
+      "forksCount": 11,
+      "archSignals": 1,
+      "quantifiedMetrics": 0,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 45,
+        "feedback": "Category: Keyword Stuffing. Evaluated against Backend Microservices Architect production baseline."
+      },
+      "culture": {
+        "score": 45,
+        "feedback": "Verified code review patterns on GitHub (kdeshmukh-dev)."
+      },
+      "fairAuditor": {
+        "score": 92,
+        "feedback": "Objective evidence verification. Flags: EXPERIENCE_DEFICIT, UNVERIFIED_SKILL_CLAIMS, SKILL_STUFFING, NO_QUANTIFIED_IMPACT."
+      },
+      "seniorityComp": {
+        "score": 42,
+        "feedback": "Leveling aligned with L6 - Principal Architect."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: deshmukh | GitHub: https://github.com/kdeshmukh-dev"
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: EXPERIENCE_DEFICIT, UNVERIFIED_SKILL_CLAIMS, SKILL_STUFFING, NO_QUANTIFIED_IMPACT."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in deshmukh | GitHub: https://github.com/kdeshmukh-de...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 33
+  },
+  {
+    "id": "CAN-SYN-028",
+    "name": "Tara Ghosh",
+    "anonymizedId": "Candidate #028 (Keyword Stuffing)",
+    "fileName": "28_Keyword_Stuffing_Data_Platform_Engineer_Tara_Ghosh.txt",
+    "title": "Data Platform Engineer",
+    "category": "Keyword Stuffing",
+    "experienceYears": 0.4,
+    "matchScore": 44.6,
+    "atsScore": 61,
+    "councilScore": 47.1,
+    "verdict": "REJECT",
+    "verdictType": "negative",
+    "redFlags": [
+      "EXPERIENCE_DEFICIT",
+      "UNVERIFIED_SKILL_CLAIMS",
+      "SKILL_STUFFING",
+      "NO_QUANTIFIED_IMPACT"
+    ],
+    "matchedSkills": [
+      "IoT",
+      "Metaverse",
+      "Cybersecurity",
+      "Snowflake",
+      "C++",
+      "Reinforcement Learning",
+      "Databricks"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [
+      "PyTorch"
+    ],
+    "salaryRange": "$145k - $175k",
+    "salaryInr": "29 - 37 LPA",
+    "level": "L4 - Senior Data Platform",
+    "bandPosPct": 37,
+    "evidenceSnippet": "ghosh | GitHub: https://github.com/tara-ghosh",
+    "github": {
+      "username": "tara-ghosh",
+      "score": 42,
+      "risk": "HIGH",
+      "reposAnalyzed": 12,
+      "authenticRepos": 1,
+      "forksCount": 11,
+      "archSignals": 1,
+      "quantifiedMetrics": 0,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 44,
+        "feedback": "Category: Keyword Stuffing. Evaluated against Data Platform Engineer production baseline."
+      },
+      "culture": {
+        "score": 45,
+        "feedback": "Verified code review patterns on GitHub (tara-ghosh)."
+      },
+      "fairAuditor": {
+        "score": 92,
+        "feedback": "Objective evidence verification. Flags: EXPERIENCE_DEFICIT, UNVERIFIED_SKILL_CLAIMS, SKILL_STUFFING, NO_QUANTIFIED_IMPACT."
+      },
+      "seniorityComp": {
+        "score": 42,
+        "feedback": "Leveling aligned with L4 - Senior Data Platform."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: ghosh | GitHub: https://github.com/tara-ghosh"
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: EXPERIENCE_DEFICIT, UNVERIFIED_SKILL_CLAIMS, SKILL_STUFFING, NO_QUANTIFIED_IMPACT."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in ghosh | GitHub: https://github.com/tara-ghosh...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 34
+  },
+  {
+    "id": "CAN-SYN-024",
+    "name": "Preethi Malhotra",
+    "anonymizedId": "Candidate #024 (Keyword Stuffing)",
+    "fileName": "24_Keyword_Stuffing_AI_Safety_Auditor_Preethi_Malhotra.txt",
+    "title": "AI Safety Auditor",
+    "category": "Keyword Stuffing",
+    "experienceYears": 0.8,
+    "matchScore": 44.5,
+    "atsScore": 61,
+    "councilScore": 47.0,
+    "verdict": "REJECT",
+    "verdictType": "negative",
+    "redFlags": [
+      "EXPERIENCE_DEFICIT",
+      "UNVERIFIED_SKILL_CLAIMS",
+      "SKILL_STUFFING",
+      "NO_QUANTIFIED_IMPACT"
+    ],
+    "matchedSkills": [
+      "GCP",
+      "Serverless",
+      "SQL",
+      "Blockchain",
+      "Kubernetes",
+      "NIST AI RMF",
+      "Swift"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [
+      "PyTorch"
+    ],
+    "salaryRange": "$155k - $185k",
+    "salaryInr": "32 - 40 LPA",
+    "level": "L5 - Staff AI Safety Auditor",
+    "bandPosPct": 37,
+    "evidenceSnippet": "malhotra | GitHub: https://github.com/preethimal18",
+    "github": {
+      "username": "preethimal18",
+      "score": 42,
+      "risk": "HIGH",
+      "reposAnalyzed": 12,
+      "authenticRepos": 1,
+      "forksCount": 11,
+      "archSignals": 1,
+      "quantifiedMetrics": 0,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 44,
+        "feedback": "Category: Keyword Stuffing. Evaluated against AI Safety Auditor production baseline."
+      },
+      "culture": {
+        "score": 45,
+        "feedback": "Verified code review patterns on GitHub (preethimal18)."
+      },
+      "fairAuditor": {
+        "score": 92,
+        "feedback": "Objective evidence verification. Flags: EXPERIENCE_DEFICIT, UNVERIFIED_SKILL_CLAIMS, SKILL_STUFFING, NO_QUANTIFIED_IMPACT."
+      },
+      "seniorityComp": {
+        "score": 42,
+        "feedback": "Leveling aligned with L5 - Staff AI Safety Auditor."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: malhotra | GitHub: https://github.com/preethimal18"
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: EXPERIENCE_DEFICIT, UNVERIFIED_SKILL_CLAIMS, SKILL_STUFFING, NO_QUANTIFIED_IMPACT."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in malhotra | GitHub: https://github.com/preethimal18...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 35
+  },
+  {
+    "id": "CAN-SYN-023",
+    "name": "Tanmay Shetty",
+    "anonymizedId": "Candidate #023 (Keyword Stuffing)",
+    "fileName": "23_Keyword_Stuffing_Backend_Microservices_Architect_Tanmay_Shetty.txt",
+    "title": "Backend Microservices Architect",
+    "category": "Keyword Stuffing",
+    "experienceYears": 0.5,
+    "matchScore": 43.9,
+    "atsScore": 59,
+    "councilScore": 46.5,
+    "verdict": "REJECT",
+    "verdictType": "negative",
+    "redFlags": [
+      "EXPERIENCE_DEFICIT",
+      "UNVERIFIED_SKILL_CLAIMS",
+      "SKILL_STUFFING",
+      "NO_QUANTIFIED_IMPACT"
+    ],
+    "matchedSkills": [
+      "Python",
+      "Spring Boot",
+      "Kotlin",
+      "REST API",
+      "GraphQL",
+      "GCP",
+      "Domain-Driven Design"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [],
+    "salaryRange": "$170k - $205k",
+    "salaryInr": "38 - 46 LPA",
+    "level": "L6 - Principal Architect",
+    "bandPosPct": 37,
+    "evidenceSnippet": "shetty | GitHub: https://github.com/tshetty-dev",
+    "github": {
+      "username": "tshetty-dev",
+      "score": 41,
+      "risk": "HIGH",
+      "reposAnalyzed": 12,
+      "authenticRepos": 1,
+      "forksCount": 11,
+      "archSignals": 1,
+      "quantifiedMetrics": 0,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 44,
+        "feedback": "Category: Keyword Stuffing. Evaluated against Backend Microservices Architect production baseline."
+      },
+      "culture": {
+        "score": 45,
+        "feedback": "Verified code review patterns on GitHub (tshetty-dev)."
+      },
+      "fairAuditor": {
+        "score": 92,
+        "feedback": "Objective evidence verification. Flags: EXPERIENCE_DEFICIT, UNVERIFIED_SKILL_CLAIMS, SKILL_STUFFING, NO_QUANTIFIED_IMPACT."
+      },
+      "seniorityComp": {
+        "score": 41,
+        "feedback": "Leveling aligned with L6 - Principal Architect."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: shetty | GitHub: https://github.com/tshetty-dev"
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: EXPERIENCE_DEFICIT, UNVERIFIED_SKILL_CLAIMS, SKILL_STUFFING, NO_QUANTIFIED_IMPACT."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in shetty | GitHub: https://github.com/tshetty-dev...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 36
+  },
+  {
+    "id": "CAN-SYN-022",
+    "name": "Uday Lobo",
+    "anonymizedId": "Candidate #022 (Keyword Stuffing)",
+    "fileName": "22_Keyword_Stuffing_Data_Platform_Engineer_Uday_Lobo.txt",
+    "title": "Data Platform Engineer",
+    "category": "Keyword Stuffing",
+    "experienceYears": 0.6,
+    "matchScore": 43.3,
+    "atsScore": 57,
+    "councilScore": 46.0,
+    "verdict": "REJECT",
+    "verdictType": "negative",
+    "redFlags": [
+      "EXPERIENCE_DEFICIT",
+      "UNVERIFIED_SKILL_CLAIMS",
+      "SKILL_STUFFING",
+      "NO_QUANTIFIED_IMPACT"
+    ],
+    "matchedSkills": [
+      "PostgreSQL",
+      "Kafka",
+      "Angular",
+      "MLOps",
+      "Serverless",
+      "Kubernetes",
+      "Apache Spark"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [],
+    "salaryRange": "$145k - $175k",
+    "salaryInr": "29 - 37 LPA",
+    "level": "L4 - Senior Data Platform",
+    "bandPosPct": 36,
+    "evidenceSnippet": "lobo | GitHub: https://github.com/uday-lobo",
+    "github": {
+      "username": "uday-lobo",
+      "score": 41,
+      "risk": "HIGH",
+      "reposAnalyzed": 12,
+      "authenticRepos": 1,
+      "forksCount": 11,
+      "archSignals": 1,
+      "quantifiedMetrics": 0,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 43,
+        "feedback": "Category: Keyword Stuffing. Evaluated against Data Platform Engineer production baseline."
+      },
+      "culture": {
+        "score": 45,
+        "feedback": "Verified code review patterns on GitHub (uday-lobo)."
+      },
+      "fairAuditor": {
+        "score": 92,
+        "feedback": "Objective evidence verification. Flags: EXPERIENCE_DEFICIT, UNVERIFIED_SKILL_CLAIMS, SKILL_STUFFING, NO_QUANTIFIED_IMPACT."
+      },
+      "seniorityComp": {
+        "score": 41,
+        "feedback": "Leveling aligned with L4 - Senior Data Platform."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: lobo | GitHub: https://github.com/uday-lobo"
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: EXPERIENCE_DEFICIT, UNVERIFIED_SKILL_CLAIMS, SKILL_STUFFING, NO_QUANTIFIED_IMPACT."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in lobo | GitHub: https://github.com/uday-lobo...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 37
+  },
+  {
+    "id": "CAN-SYN-027",
+    "name": "Jaya Verma",
+    "anonymizedId": "Candidate #027 (Keyword Stuffing)",
+    "fileName": "27_Keyword_Stuffing_Full_Stack_AI_Engineer_Jaya_Verma.txt",
+    "title": "Full Stack AI Engineer",
+    "category": "Keyword Stuffing",
+    "experienceYears": 0.4,
+    "matchScore": 41.9,
+    "atsScore": 59,
+    "councilScore": 44.9,
+    "verdict": "REJECT",
+    "verdictType": "negative",
+    "redFlags": [
+      "EXPERIENCE_DEFICIT",
+      "UNVERIFIED_SKILL_CLAIMS",
+      "SKILL_STUFFING",
+      "NO_QUANTIFIED_IMPACT"
+    ],
+    "matchedSkills": [
+      "Kotlin",
+      "Terraform",
+      "Git",
+      "MongoDB",
+      "Vue.js",
+      "Big Data",
+      "TypeScript"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [
+      "PyTorch"
+    ],
+    "salaryRange": "$140k - $170k",
+    "salaryInr": "28 - 36 LPA",
+    "level": "L4 - Senior Full-Stack AI",
+    "bandPosPct": 35,
+    "evidenceSnippet": "verma | GitHub: https://github.com/jayaverma",
+    "github": {
+      "username": "jayaverma",
+      "score": 39,
+      "risk": "HIGH",
+      "reposAnalyzed": 12,
+      "authenticRepos": 1,
+      "forksCount": 11,
+      "archSignals": 1,
+      "quantifiedMetrics": 0,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 42,
+        "feedback": "Category: Keyword Stuffing. Evaluated against Full Stack AI Engineer production baseline."
+      },
+      "culture": {
+        "score": 45,
+        "feedback": "Verified code review patterns on GitHub (jayaverma)."
+      },
+      "fairAuditor": {
+        "score": 92,
+        "feedback": "Objective evidence verification. Flags: EXPERIENCE_DEFICIT, UNVERIFIED_SKILL_CLAIMS, SKILL_STUFFING, NO_QUANTIFIED_IMPACT."
+      },
+      "seniorityComp": {
+        "score": 40,
+        "feedback": "Leveling aligned with L4 - Senior Full-Stack AI."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: verma | GitHub: https://github.com/jayaverma"
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: EXPERIENCE_DEFICIT, UNVERIFIED_SKILL_CLAIMS, SKILL_STUFFING, NO_QUANTIFIED_IMPACT."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in verma | GitHub: https://github.com/jayaverma...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 38
+  },
+  {
+    "id": "CAN-SYN-026",
+    "name": "Ritika Khan",
+    "anonymizedId": "Candidate #026 (Keyword Stuffing)",
+    "fileName": "26_Keyword_Stuffing_Cloud_DevOps_Lead_Ritika_Khan.txt",
+    "title": "Cloud DevOps Lead",
+    "category": "Keyword Stuffing",
+    "experienceYears": 0.4,
+    "matchScore": 41.3,
+    "atsScore": 57,
+    "councilScore": 44.4,
+    "verdict": "REJECT",
+    "verdictType": "negative",
+    "redFlags": [
+      "EXPERIENCE_DEFICIT",
+      "UNVERIFIED_SKILL_CLAIMS",
+      "SKILL_STUFFING",
+      "NO_QUANTIFIED_IMPACT"
+    ],
+    "matchedSkills": [
+      "GraphQL",
+      "Neural Networks",
+      "Go",
+      "Prometheus",
+      "Hadoop",
+      "Bash",
+      "Apache Spark"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [],
+    "salaryRange": "$150k - $180k",
+    "salaryInr": "30 - 38 LPA",
+    "level": "L5 - Lead Cloud SRE",
+    "bandPosPct": 35,
+    "evidenceSnippet": "khan | GitHub: https://github.com/ritika-codes",
+    "github": {
+      "username": "ritika-codes",
+      "score": 39,
+      "risk": "HIGH",
+      "reposAnalyzed": 12,
+      "authenticRepos": 1,
+      "forksCount": 11,
+      "archSignals": 1,
+      "quantifiedMetrics": 0,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 42,
+        "feedback": "Category: Keyword Stuffing. Evaluated against Cloud DevOps Lead production baseline."
+      },
+      "culture": {
+        "score": 45,
+        "feedback": "Verified code review patterns on GitHub (ritika-codes)."
+      },
+      "fairAuditor": {
+        "score": 92,
+        "feedback": "Objective evidence verification. Flags: EXPERIENCE_DEFICIT, UNVERIFIED_SKILL_CLAIMS, SKILL_STUFFING, NO_QUANTIFIED_IMPACT."
+      },
+      "seniorityComp": {
+        "score": 39,
+        "feedback": "Leveling aligned with L5 - Lead Cloud SRE."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: khan | GitHub: https://github.com/ritika-codes"
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: EXPERIENCE_DEFICIT, UNVERIFIED_SKILL_CLAIMS, SKILL_STUFFING, NO_QUANTIFIED_IMPACT."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in khan | GitHub: https://github.com/ritika-codes...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 39
+  },
+  {
+    "id": "CAN-SYN-021",
+    "name": "Harsh Banerjee",
+    "anonymizedId": "Candidate #021 (Keyword Stuffing)",
+    "fileName": "21_Keyword_Stuffing_Full_Stack_AI_Engineer_Harsh_Banerjee.txt",
+    "title": "Full Stack AI Engineer",
+    "category": "Keyword Stuffing",
+    "experienceYears": 0.5,
+    "matchScore": 40.6,
+    "atsScore": 55,
+    "councilScore": 43.9,
+    "verdict": "REJECT",
+    "verdictType": "negative",
+    "redFlags": [
+      "EXPERIENCE_DEFICIT",
+      "UNVERIFIED_SKILL_CLAIMS",
+      "SKILL_STUFFING",
+      "NO_QUANTIFIED_IMPACT"
+    ],
+    "matchedSkills": [
+      "WebSockets",
+      "MongoDB",
+      "C++",
+      "Swift",
+      "Cybersecurity",
+      "Metaverse",
+      "Pinecone"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [],
+    "salaryRange": "$140k - $170k",
+    "salaryInr": "28 - 36 LPA",
+    "level": "L4 - Senior Full-Stack AI",
+    "bandPosPct": 34,
+    "evidenceSnippet": "banerjee | GitHub: https://github.com/harshbanerjee",
+    "github": {
+      "username": "harshbanerjee",
+      "score": 38,
+      "risk": "HIGH",
+      "reposAnalyzed": 12,
+      "authenticRepos": 1,
+      "forksCount": 11,
+      "archSignals": 1,
+      "quantifiedMetrics": 0,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 41,
+        "feedback": "Category: Keyword Stuffing. Evaluated against Full Stack AI Engineer production baseline."
+      },
+      "culture": {
+        "score": 45,
+        "feedback": "Verified code review patterns on GitHub (harshbanerjee)."
+      },
+      "fairAuditor": {
+        "score": 92,
+        "feedback": "Objective evidence verification. Flags: EXPERIENCE_DEFICIT, UNVERIFIED_SKILL_CLAIMS, SKILL_STUFFING, NO_QUANTIFIED_IMPACT."
+      },
+      "seniorityComp": {
+        "score": 39,
+        "feedback": "Leveling aligned with L4 - Senior Full-Stack AI."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: banerjee | GitHub: https://github.com/harshbanerjee"
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: EXPERIENCE_DEFICIT, UNVERIFIED_SKILL_CLAIMS, SKILL_STUFFING, NO_QUANTIFIED_IMPACT."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in banerjee | GitHub: https://github.com/harshbanerje...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 40
+  },
+  {
+    "id": "CAN-SYN-040",
+    "name": "Gaurav Krishnan",
+    "anonymizedId": "Candidate #040 (Corrupt Layout)",
+    "fileName": "40_Corrupt_Layout_Data_Platform_Engineer_Gaurav_Krishnan.txt",
+    "title": "Data Platform Engineer",
+    "category": "Corrupt Layout",
+    "experienceYears": 3.0,
+    "matchScore": 38.2,
+    "atsScore": 28,
+    "councilScore": 39.2,
+    "verdict": "REJECT",
+    "verdictType": "negative",
+    "redFlags": [
+      "DATE_INCONSISTENCY and/or NO_QUANTIFIED_IMPACT",
+      "low ATS format score"
+    ],
+    "matchedSkills": [
+      "Python",
+      "Docker",
+      "AWS",
+      "Git"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [
+      "PyTorch"
+    ],
+    "salaryRange": "$145k - $175k",
+    "salaryInr": "29 - 37 LPA",
+    "level": "L4 - Senior Data Platform",
+    "bandPosPct": 32,
+    "evidenceSnippet": "Mar 2020)",
+    "github": {
+      "username": "",
+      "score": 36,
+      "risk": "MEDIUM",
+      "reposAnalyzed": 7,
+      "authenticRepos": 4,
+      "forksCount": 3,
+      "archSignals": 1,
+      "quantifiedMetrics": 0,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 37,
+        "feedback": "Category: Corrupt Layout. Evaluated against Data Platform Engineer production baseline."
+      },
+      "culture": {
+        "score": 45,
+        "feedback": "Verified code review patterns on GitHub ()."
+      },
+      "fairAuditor": {
+        "score": 92,
+        "feedback": "Objective evidence verification. Flags: DATE_INCONSISTENCY and/or NO_QUANTIFIED_IMPACT, low ATS format score."
+      },
+      "seniorityComp": {
+        "score": 35,
+        "feedback": "Leveling aligned with L4 - Senior Data Platform."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: Mar 2020)"
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: DATE_INCONSISTENCY and/or NO_QUANTIFIED_IMPACT, low ATS format score."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in Mar 2020)...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 41
+  },
+  {
+    "id": "CAN-SYN-035",
+    "name": "Shruti Hegde",
+    "anonymizedId": "Candidate #035 (Corrupt Layout)",
+    "fileName": "35_Corrupt_Layout_Backend_Microservices_Architect_Shruti_Hegde.txt",
+    "title": "Backend Microservices Architect",
+    "category": "Corrupt Layout",
+    "experienceYears": 3.0,
+    "matchScore": 37.5,
+    "atsScore": 26,
+    "councilScore": 38.6,
+    "verdict": "REJECT",
+    "verdictType": "negative",
+    "redFlags": [
+      "DATE_INCONSISTENCY and/or NO_QUANTIFIED_IMPACT",
+      "low ATS format score"
+    ],
+    "matchedSkills": [
+      "Python",
+      "Docker",
+      "AWS",
+      "Git"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [
+      "PyTorch"
+    ],
+    "salaryRange": "$170k - $205k",
+    "salaryInr": "38 - 46 LPA",
+    "level": "L6 - Principal Architect",
+    "bandPosPct": 31,
+    "evidenceSnippet": "-2021--2022",
+    "github": {
+      "username": "shrutihegde",
+      "score": 35,
+      "risk": "MEDIUM",
+      "reposAnalyzed": 7,
+      "authenticRepos": 4,
+      "forksCount": 3,
+      "archSignals": 1,
+      "quantifiedMetrics": 0,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 36,
+        "feedback": "Category: Corrupt Layout. Evaluated against Backend Microservices Architect production baseline."
+      },
+      "culture": {
+        "score": 45,
+        "feedback": "Verified code review patterns on GitHub (shrutihegde)."
+      },
+      "fairAuditor": {
+        "score": 92,
+        "feedback": "Objective evidence verification. Flags: DATE_INCONSISTENCY and/or NO_QUANTIFIED_IMPACT, low ATS format score."
+      },
+      "seniorityComp": {
+        "score": 34,
+        "feedback": "Leveling aligned with L6 - Principal Architect."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: -2021--2022"
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: DATE_INCONSISTENCY and/or NO_QUANTIFIED_IMPACT, low ATS format score."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in -2021--2022...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 42
+  },
+  {
+    "id": "CAN-SYN-034",
+    "name": "Aditya Nambiar",
+    "anonymizedId": "Candidate #034 (Corrupt Layout)",
+    "fileName": "34_Corrupt_Layout_Data_Platform_Engineer_Aditya_Nambiar.txt",
+    "title": "Data Platform Engineer",
+    "category": "Corrupt Layout",
+    "experienceYears": 3.0,
+    "matchScore": 36.9,
+    "atsScore": 24,
+    "councilScore": 38.1,
+    "verdict": "REJECT",
+    "verdictType": "negative",
+    "redFlags": [
+      "DATE_INCONSISTENCY and/or NO_QUANTIFIED_IMPACT",
+      "low ATS format score"
+    ],
+    "matchedSkills": [
+      "Docker",
+      "ETL",
+      "Git",
+      "AWS Glue",
+      "Data Modeling",
+      "Terraform"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [
+      "PyTorch"
+    ],
+    "salaryRange": "$145k - $175k",
+    "salaryInr": "29 - 37 LPA",
+    "level": "L4 - Senior Data Platform",
+    "bandPosPct": 31,
+    "evidenceSnippet": "Built Spark and Kafka pipelines ingesting 40 TB per day with end-to-end latency under 60 seconds.",
+    "github": {
+      "username": "",
+      "score": 35,
+      "risk": "MEDIUM",
+      "reposAnalyzed": 7,
+      "authenticRepos": 4,
+      "forksCount": 3,
+      "archSignals": 1,
+      "quantifiedMetrics": 0,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 36,
+        "feedback": "Category: Corrupt Layout. Evaluated against Data Platform Engineer production baseline."
+      },
+      "culture": {
+        "score": 45,
+        "feedback": "Verified code review patterns on GitHub ()."
+      },
+      "fairAuditor": {
+        "score": 92,
+        "feedback": "Objective evidence verification. Flags: DATE_INCONSISTENCY and/or NO_QUANTIFIED_IMPACT, low ATS format score."
+      },
+      "seniorityComp": {
+        "score": 34,
+        "feedback": "Leveling aligned with L4 - Senior Data Platform."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: Built Spark and Kafka pipelines ingesting 40 TB per day with end-to-end latency under 60 seconds."
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: DATE_INCONSISTENCY and/or NO_QUANTIFIED_IMPACT, low ATS format score."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in Built Spark and Kafka pipelines ingesting 40 TB pe...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 43
+  },
+  {
+    "id": "CAN-SYN-039",
+    "name": "Manoj Raman",
+    "anonymizedId": "Candidate #039 (Corrupt Layout)",
+    "fileName": "39_Corrupt_Layout_Full_Stack_AI_Engineer_Manoj_Raman.txt",
+    "title": "Full Stack AI Engineer",
+    "category": "Corrupt Layout",
+    "experienceYears": 3.0,
+    "matchScore": 35.5,
+    "atsScore": 26,
+    "councilScore": 37.0,
+    "verdict": "REJECT",
+    "verdictType": "negative",
+    "redFlags": [
+      "DATE_INCONSISTENCY and/or NO_QUANTIFIED_IMPACT",
+      "low ATS format score"
+    ],
+    "matchedSkills": [
+      "Python",
+      "Docker",
+      "AWS",
+      "Git"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [
+      "PyTorch"
+    ],
+    "salaryRange": "$140k - $170k",
+    "salaryInr": "28 - 36 LPA",
+    "level": "L4 - Senior Full-Stack AI",
+    "bandPosPct": 30,
+    "evidenceSnippet": "Stack Engineer | PixelForge Studios (Feb 2022 - Present)",
+    "github": {
+      "username": "ramanm",
+      "score": 33,
+      "risk": "MEDIUM",
+      "reposAnalyzed": 7,
+      "authenticRepos": 4,
+      "forksCount": 3,
+      "archSignals": 1,
+      "quantifiedMetrics": 0,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 35,
+        "feedback": "Category: Corrupt Layout. Evaluated against Full Stack AI Engineer production baseline."
+      },
+      "culture": {
+        "score": 45,
+        "feedback": "Verified code review patterns on GitHub (ramanm)."
+      },
+      "fairAuditor": {
+        "score": 92,
+        "feedback": "Objective evidence verification. Flags: DATE_INCONSISTENCY and/or NO_QUANTIFIED_IMPACT, low ATS format score."
+      },
+      "seniorityComp": {
+        "score": 33,
+        "feedback": "Leveling aligned with L4 - Senior Full-Stack AI."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: Stack Engineer | PixelForge Studios (Feb 2022 - Present)"
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: DATE_INCONSISTENCY and/or NO_QUANTIFIED_IMPACT, low ATS format score."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in Stack Engineer | PixelForge Studios (Feb 2022 - Pr...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 44
+  },
+  {
+    "id": "CAN-SYN-038",
+    "name": "Qasim Yadav",
+    "anonymizedId": "Candidate #038 (Corrupt Layout)",
+    "fileName": "38_Corrupt_Layout_Cloud_DevOps_Lead_Qasim_Yadav.txt",
+    "title": "Cloud DevOps Lead",
+    "category": "Corrupt Layout",
+    "experienceYears": 3.0,
+    "matchScore": 34.9,
+    "atsScore": 24,
+    "councilScore": 36.5,
+    "verdict": "REJECT",
+    "verdictType": "negative",
+    "redFlags": [
+      "DATE_INCONSISTENCY and/or NO_QUANTIFIED_IMPACT",
+      "low ATS format score"
+    ],
+    "matchedSkills": [
+      "Python",
+      "Docker",
+      "AWS",
+      "Git"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [
+      "PyTorch"
+    ],
+    "salaryRange": "$150k - $180k",
+    "salaryInr": "30 - 38 LPA",
+    "level": "L5 - Lead Cloud SRE",
+    "bandPosPct": 29,
+    "evidenceSnippet": "20XX)",
+    "github": {
+      "username": "",
+      "score": 33,
+      "risk": "MEDIUM",
+      "reposAnalyzed": 7,
+      "authenticRepos": 4,
+      "forksCount": 3,
+      "archSignals": 1,
+      "quantifiedMetrics": 0,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 34,
+        "feedback": "Category: Corrupt Layout. Evaluated against Cloud DevOps Lead production baseline."
+      },
+      "culture": {
+        "score": 45,
+        "feedback": "Verified code review patterns on GitHub ()."
+      },
+      "fairAuditor": {
+        "score": 92,
+        "feedback": "Objective evidence verification. Flags: DATE_INCONSISTENCY and/or NO_QUANTIFIED_IMPACT, low ATS format score."
+      },
+      "seniorityComp": {
+        "score": 32,
+        "feedback": "Leveling aligned with L5 - Lead Cloud SRE."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: 20XX)"
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: DATE_INCONSISTENCY and/or NO_QUANTIFIED_IMPACT, low ATS format score."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in 20XX)...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 45
+  },
+  {
+    "id": "CAN-SYN-037",
+    "name": "Fatima Rastogi",
+    "anonymizedId": "Candidate #037 (Corrupt Layout)",
+    "fileName": "37_Corrupt_Layout_Senior_ML_Engineer_Fatima_Rastogi.txt",
+    "title": "Senior ML Engineer",
+    "category": "Corrupt Layout",
+    "experienceYears": 3.0,
+    "matchScore": 34.3,
+    "atsScore": 22,
+    "councilScore": 36.0,
+    "verdict": "REJECT",
+    "verdictType": "negative",
+    "redFlags": [
+      "DATE_INCONSISTENCY and/or NO_QUANTIFIED_IMPACT",
+      "low ATS format score"
+    ],
+    "matchedSkills": [
+      "Python",
+      "Docker",
+      "AWS",
+      "Git"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [
+      "PyTorch"
+    ],
+    "salaryRange": "$165k - $190k",
+    "salaryInr": "35 - 42 LPA",
+    "level": "L5 - Senior Staff ML Engineer",
+    "bandPosPct": 29,
+    "evidenceSnippet": "boosted model service with PyTorch and FastAPI serving 20,000 requests per day at p95 latency of 60 ms.",
+    "github": {
+      "username": "frastogi-dev",
+      "score": 32,
+      "risk": "MEDIUM",
+      "reposAnalyzed": 7,
+      "authenticRepos": 4,
+      "forksCount": 3,
+      "archSignals": 1,
+      "quantifiedMetrics": 0,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 34,
+        "feedback": "Category: Corrupt Layout. Evaluated against Senior ML Engineer production baseline."
+      },
+      "culture": {
+        "score": 45,
+        "feedback": "Verified code review patterns on GitHub (frastogi-dev)."
+      },
+      "fairAuditor": {
+        "score": 92,
+        "feedback": "Objective evidence verification. Flags: DATE_INCONSISTENCY and/or NO_QUANTIFIED_IMPACT, low ATS format score."
+      },
+      "seniorityComp": {
+        "score": 32,
+        "feedback": "Leveling aligned with L5 - Senior Staff ML Engineer."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: boosted model service with PyTorch and FastAPI serving 20,000 requests per day at p95 latency of 60 ms."
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: DATE_INCONSISTENCY and/or NO_QUANTIFIED_IMPACT, low ATS format score."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in boosted model service with PyTorch and FastAPI ser...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 46
+  },
+  {
+    "id": "CAN-SYN-033",
+    "name": "Nikhil Bhat",
+    "anonymizedId": "Candidate #033 (Corrupt Layout)",
+    "fileName": "33_Corrupt_Layout_Full_Stack_AI_Engineer_Nikhil_Bhat.txt",
+    "title": "Full Stack AI Engineer",
+    "category": "Corrupt Layout",
+    "experienceYears": 3.0,
+    "matchScore": 34.2,
+    "atsScore": 22,
+    "councilScore": 36.0,
+    "verdict": "REJECT",
+    "verdictType": "negative",
+    "redFlags": [
+      "DATE_INCONSISTENCY and/or NO_QUANTIFIED_IMPACT",
+      "low ATS format score"
+    ],
+    "matchedSkills": [
+      "Python",
+      "Docker",
+      "AWS",
+      "Git"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [
+      "PyTorch"
+    ],
+    "salaryRange": "$140k - $170k",
+    "salaryInr": "28 - 36 LPA",
+    "level": "L4 - Senior Full-Stack AI",
+    "bandPosPct": 29,
+    "evidenceSnippet": "Reduced LLM spend by 22% through prompt caching in Redis and response truncation, saving about $40k per month.",
+    "github": {
+      "username": "bhatn",
+      "score": 32,
+      "risk": "MEDIUM",
+      "reposAnalyzed": 7,
+      "authenticRepos": 4,
+      "forksCount": 3,
+      "archSignals": 1,
+      "quantifiedMetrics": 0,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 34,
+        "feedback": "Category: Corrupt Layout. Evaluated against Full Stack AI Engineer production baseline."
+      },
+      "culture": {
+        "score": 45,
+        "feedback": "Verified code review patterns on GitHub (bhatn)."
+      },
+      "fairAuditor": {
+        "score": 92,
+        "feedback": "Objective evidence verification. Flags: DATE_INCONSISTENCY and/or NO_QUANTIFIED_IMPACT, low ATS format score."
+      },
+      "seniorityComp": {
+        "score": 32,
+        "feedback": "Leveling aligned with L4 - Senior Full-Stack AI."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: Reduced LLM spend by 22% through prompt caching in Redis and response truncation, saving about $40k per month."
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: DATE_INCONSISTENCY and/or NO_QUANTIFIED_IMPACT, low ATS format score."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in Reduced LLM spend by 22% through prompt caching in...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 47
+  },
+  {
+    "id": "CAN-SYN-032",
+    "name": "Bindu Singhania",
+    "anonymizedId": "Candidate #032 (Corrupt Layout)",
+    "fileName": "32_Corrupt_Layout_Cloud_DevOps_Lead_Bindu_Singhania.txt",
+    "title": "Cloud DevOps Lead",
+    "category": "Corrupt Layout",
+    "experienceYears": 3.0,
+    "matchScore": 33.6,
+    "atsScore": 28,
+    "councilScore": 35.5,
+    "verdict": "REJECT",
+    "verdictType": "negative",
+    "redFlags": [
+      "DATE_INCONSISTENCY and/or NO_QUANTIFIED_IMPACT",
+      "low ATS format score"
+    ],
+    "matchedSkills": [
+      "Python",
+      "Docker",
+      "AWS",
+      "Git"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [
+      "PyTorch"
+    ],
+    "salaryRange": "$150k - $180k",
+    "salaryInr": "30 - 38 LPA",
+    "level": "L5 - Lead Cloud SRE",
+    "bandPosPct": 28,
+    "evidenceSnippet": "Demonstrated production software delivery and system engineering.",
+    "github": {
+      "username": "",
+      "score": 31,
+      "risk": "MEDIUM",
+      "reposAnalyzed": 7,
+      "authenticRepos": 4,
+      "forksCount": 3,
+      "archSignals": 1,
+      "quantifiedMetrics": 0,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 33,
+        "feedback": "Category: Corrupt Layout. Evaluated against Cloud DevOps Lead production baseline."
+      },
+      "culture": {
+        "score": 45,
+        "feedback": "Verified code review patterns on GitHub ()."
+      },
+      "fairAuditor": {
+        "score": 92,
+        "feedback": "Objective evidence verification. Flags: DATE_INCONSISTENCY and/or NO_QUANTIFIED_IMPACT, low ATS format score."
+      },
+      "seniorityComp": {
+        "score": 31,
+        "feedback": "Leveling aligned with L5 - Lead Cloud SRE."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: Demonstrated production software delivery and system engineering."
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: DATE_INCONSISTENCY and/or NO_QUANTIFIED_IMPACT, low ATS format score."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in Demonstrated production software delivery and syst...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 48
+  },
+  {
+    "id": "CAN-SYN-031",
+    "name": "Sanjana Gupta",
+    "anonymizedId": "Candidate #031 (Corrupt Layout)",
+    "fileName": "31_Corrupt_Layout_Senior_ML_Engineer_Sanjana_Gupta.txt",
+    "title": "Senior ML Engineer",
+    "category": "Corrupt Layout",
+    "experienceYears": 3.0,
+    "matchScore": 33.0,
+    "atsScore": 26,
+    "councilScore": 35.0,
+    "verdict": "REJECT",
+    "verdictType": "negative",
+    "redFlags": [
+      "DATE_INCONSISTENCY and/or NO_QUANTIFIED_IMPACT",
+      "low ATS format score"
+    ],
+    "matchedSkills": [
+      "Python",
+      "Docker",
+      "AWS",
+      "Git"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [
+      "PyTorch"
+    ],
+    "salaryRange": "$165k - $190k",
+    "salaryInr": "35 - 42 LPA",
+    "level": "L5 - Senior Staff ML Engineer",
+    "bandPosPct": 28,
+    "evidenceSnippet": "2024 ... 2021 - 2016",
+    "github": {
+      "username": "sgupta-dev",
+      "score": 31,
+      "risk": "MEDIUM",
+      "reposAnalyzed": 7,
+      "authenticRepos": 4,
+      "forksCount": 3,
+      "archSignals": 1,
+      "quantifiedMetrics": 0,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 33,
+        "feedback": "Category: Corrupt Layout. Evaluated against Senior ML Engineer production baseline."
+      },
+      "culture": {
+        "score": 45,
+        "feedback": "Verified code review patterns on GitHub (sgupta-dev)."
+      },
+      "fairAuditor": {
+        "score": 92,
+        "feedback": "Objective evidence verification. Flags: DATE_INCONSISTENCY and/or NO_QUANTIFIED_IMPACT, low ATS format score."
+      },
+      "seniorityComp": {
+        "score": 31,
+        "feedback": "Leveling aligned with L5 - Senior Staff ML Engineer."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: 2024 ... 2021 - 2016"
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: DATE_INCONSISTENCY and/or NO_QUANTIFIED_IMPACT, low ATS format score."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in 2024 ... 2021 - 2016...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 49
+  },
+  {
+    "id": "CAN-SYN-036",
+    "name": "Abhinav Thakur",
+    "anonymizedId": "Candidate #036 (Corrupt Layout)",
+    "fileName": "36_Corrupt_Layout_AI_Safety_Auditor_Abhinav_Thakur.txt",
+    "title": "AI Safety Auditor",
+    "category": "Corrupt Layout",
+    "experienceYears": 3.0,
+    "matchScore": 31.6,
+    "atsScore": 28,
+    "councilScore": 33.9,
+    "verdict": "REJECT",
+    "verdictType": "negative",
+    "redFlags": [
+      "DATE_INCONSISTENCY and/or NO_QUANTIFIED_IMPACT",
+      "low ATS format score"
+    ],
+    "matchedSkills": [
+      "Python",
+      "Docker",
+      "AWS",
+      "Git"
+    ],
+    "partiallyMatchedSkills": [],
+    "missingSkills": [
+      "PyTorch"
+    ],
+    "salaryRange": "$155k - $185k",
+    "salaryInr": "32 - 40 LPA",
+    "level": "L5 - Staff AI Safety Auditor",
+    "bandPosPct": 26,
+    "evidenceSnippet": "Demonstrated production software delivery and system engineering.",
+    "github": {
+      "username": "",
+      "score": 30,
+      "risk": "MEDIUM",
+      "reposAnalyzed": 7,
+      "authenticRepos": 4,
+      "forksCount": 3,
+      "archSignals": 1,
+      "quantifiedMetrics": 0,
+      "languages": [
+        "Python (75%)",
+        "Shell (25%)"
+      ]
+    },
+    "council": {
+      "techLead": {
+        "score": 32,
+        "feedback": "Category: Corrupt Layout. Evaluated against AI Safety Auditor production baseline."
+      },
+      "culture": {
+        "score": 45,
+        "feedback": "Verified code review patterns on GitHub ()."
+      },
+      "fairAuditor": {
+        "score": 92,
+        "feedback": "Objective evidence verification. Flags: DATE_INCONSISTENCY and/or NO_QUANTIFIED_IMPACT, low ATS format score."
+      },
+      "seniorityComp": {
+        "score": 30,
+        "feedback": "Leveling aligned with L5 - Staff AI Safety Auditor."
+      }
+    },
+    "debateSnippet": [
+      {
+        "agent": "Tech Lead",
+        "text": "Evidence: Demonstrated production software delivery and system engineering."
+      },
+      {
+        "agent": "Fair Auditor",
+        "text": "Flags checked: DATE_INCONSISTENCY and/or NO_QUANTIFIED_IMPACT, low ATS format score."
+      }
+    ],
+    "interviewQuestions": [
+      {
+        "q": "Can you detail your implementation strategy in Demonstrated production software delivery and syst...?",
+        "type": "Technical Verification",
+        "lookFor": "Architecture clarity and metrics."
+      }
+    ],
+    "rank": 50
+  }
+]

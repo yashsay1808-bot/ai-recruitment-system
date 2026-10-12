@@ -1,0 +1,28 @@
+Ritika Khan
+Email: ritika.khan@mailbox.in | Phone: +91 77440 86145 | Location: Chennai, India
+LinkedIn: https://linkedin.com/in/ritika-khan | GitHub: https://github.com/ritika-codes
+
+PROFESSIONAL SUMMARY
+Visionary Cloud DevOps Lead and Full Stack Quantum Blockchain Ninja with 0.4 years of experience. Passionate about disrupting the world with cutting-edge, next-gen, synergistic technologies and always learning new things.
+
+TECHNICAL SKILLS
+GraphQL, Neural Networks, Go, Prometheus, Hadoop, Bash, Apache Spark, Reinforcement Learning, Vault, Redis, Quantum Computing, Kubernetes, Helm, Grafana, Serverless, Big Data, CI/CD, GitHub Actions, Java, PyTorch, GCP, Kotlin, MLOps, Computer Vision, Linux, Azure, Git, AGI, Rust, Blockchain, ELK Stack, MongoDB, DevOps
+
+EDUCATION
+Bachelor of Engineering (Computer Science)
+NSUT Delhi | Percentage: 61% | Passed: 2025
+
+WORK EXPERIENCE
+Cloud DevOps Lead (Self-Appointed) | SynergyWorks (Jun 2026 - Present)
+• Involved in development and deployment activities.
+• Worked on AI and cloud stuff.
+• Handled several projects using latest technologies.
+
+PROJECTS
+AI Blockchain Platform
+• Revolutionary platform using GCP, GitHub Actions, Rust, Go, PyTorch.
+• Next-gen AI solution.
+
+CERTIFICATIONS
+• Online course certificate (Udemy)
+• Prompt Engineering Masterclass

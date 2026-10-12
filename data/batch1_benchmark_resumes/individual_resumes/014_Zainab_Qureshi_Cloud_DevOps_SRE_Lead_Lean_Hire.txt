@@ -1,0 +1,33 @@
+Zainab Qureshi
+Email: zainab.qureshi@mailbox.in | Phone: +91 98866 36090 | Location: Lucknow, India
+LinkedIn: https://linkedin.com/in/zainab-qureshi | GitHub: https://github.com/zainabqu79
+
+PROFESSIONAL SUMMARY
+DevOps Engineer with 3 years of experience building and operating production systems in Kubernetes, Docker, AWS. Solid engineering fundamentals and a steady record of delivery; currently deepening skills in adjacent areas to move into a senior SRE role.
+
+TECHNICAL SKILLS
+Kubernetes, Docker, AWS, CI/CD, Linux, Prometheus, Grafana, Istio, Jenkins, Azure, Datadog, ArgoCD
+
+EDUCATION
+B.E. in Information Science and Engineering
+PES University, Bengaluru | CGPA: 8.2/10 | Graduated: 2022
+
+WORK EXPERIENCE
+DevOps Engineer | Marlow Insurance Tech (Jan 2025 - Present)
+• Created Grafana dashboards and Prometheus alerts for 20 services, cutting mean time to detect by 45%.
+• Maintained 45 services on Kubernetes with Helm charts and Jenkins pipelines, reaching 99.95% uptime.
+• Trimmed AWS spend by 14% by removing idle resources and introducing scheduled scaling.
+
+Junior DevOps Engineer | Alderwood Systems (Oct 2023 - Jan 2025)
+• Participated in on-call rotation and authored 10 runbooks that reduced escalations by 25%.
+• Automated server patching and log rotation with Bash and Ansible across 80 Linux hosts.
+
+KEY PROJECTS
+Cost Optimiser
+• Python and AWS Cost Explorer tooling that recommends right-sizing and saved 91% of monthly spend.
+
+Open-Source: tf-policy-pack
+• Maintainer of Terraform and OPA policy bundles for AWS guardrails adopted by 11 organisations; 180 GitHub stars.
+
+CERTIFICATIONS & AWARDS
+• AWS Certified Solutions Architect - Professional

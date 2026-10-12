@@ -1,0 +1,32 @@
+Lakshmi Varma
+Email: lakshmi.varma@mailbox.in | Phone: +91 90803 77420 | Location: Mumbai, India
+LinkedIn: https://linkedin.com/in/lakshmi-varma | GitHub: https://github.com/lakshmivar37
+
+PROFESSIONAL SUMMARY
+IT Compliance Auditor with 3 years of experience, recently transitioning into Responsible AI Analyst work. Completed hands-on projects and certifications in Fairlearn, NIST AI RMF, Model Cards and now seeking a role that applies this background to production systems.
+
+TECHNICAL SKILLS
+Risk Assessment, Audit, ISO 27001, SOX, Excel, SQL, Python, Fairlearn, NIST AI RMF, Model Cards, Git, Red Teaming
+
+EDUCATION
+B.Tech in Information Technology
+Anna University, Chennai | CGPA: 8.1/10 | Graduated: 2022
+
+WORK EXPERIENCE
+Responsible AI Analyst (Transition Role) | Quantiva Systems (Dec 2025 - Present)
+• Audited 12 production models for demographic bias with Fairlearn and AIF360, reducing disparate-impact gaps from 71% to 88%.
+• Led red-team exercises on LLM applications and documented 9 jailbreak and prompt-injection classes with reproducible test suites.
+
+IT Compliance Auditor | Cobalt Insurance Tech (Oct 2023 - Dec 2025)
+• Performed 6 IT general-control audits against ISO 27001 and reduced open findings by 42%.
+• Built SQL-based control tests covering 100,000 transactions.
+
+KEY PROJECTS
+LLM Red-Team Benchmark
+• Compiled 50,000 adversarial prompts with automated scoring and a public leaderboard.
+Bias Audit Toolkit
+• Open-sourced a Fairlearn-based audit pipeline evaluated on 20,000 loan records, flagging 18 protected-group gaps.
+
+CERTIFICATIONS
+• NIST AI RMF Foundations
+• Completed a career-transition bootcamp

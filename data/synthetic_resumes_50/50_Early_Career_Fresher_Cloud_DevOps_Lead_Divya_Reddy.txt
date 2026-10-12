@@ -1,0 +1,28 @@
+Divya Reddy
+Email: divya.reddy@mailbox.in | Phone: +91 87922 70828 | Location: Kolkata, India
+LinkedIn: https://linkedin.com/in/divya-reddy | GitHub: https://github.com/divya2002
+
+OBJECTIVE
+Recent graduate eager to start a career as a DevOps Engineer. Built academic and personal projects in Linux, Bash, Istio and keen to learn production engineering practices.
+
+TECHNICAL SKILLS
+Linux, Bash, Istio, Kubernetes, Docker, AWS, ArgoCD, Ansible, Azure, Grafana, Python
+
+EDUCATION
+B.Tech in Information Technology
+Manipal Institute of Technology | CGPA: 9.0/10 | Graduated: 2025
+
+INTERNSHIP EXPERIENCE
+DevOps Engineer Intern | Nimbus Analytics (Aug 2025 - Aug 2026)
+• Contributed to a team service as a trainee, writing tests and documentation under a mentor.
+• Assisted senior engineers with debugging, code reviews and small feature tickets.
+
+ACADEMIC PROJECTS
+Internal Developer Platform
+• Built a self-service Terraform and Helm platform used by 40 engineers, reducing environment requests by 55%.
+Disaster Recovery Automation
+• Automated cross-region failover with Terraform and Ansible, achieving RTO of 15 minutes.
+
+CERTIFICATIONS
+• AWS Certified Cloud Practitioner
+• Finalist, College Hackathon 2025

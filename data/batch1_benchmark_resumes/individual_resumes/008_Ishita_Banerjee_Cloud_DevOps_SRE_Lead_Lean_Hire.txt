@@ -1,0 +1,34 @@
+Ishita Banerjee
+Email: ishita.banerjee@mailbox.in | Phone: +91 91496 80241 | Location: Kolkata, India
+LinkedIn: https://linkedin.com/in/ishita-banerjee | GitHub: https://github.com/banerjee-i
+
+PROFESSIONAL SUMMARY
+DevOps Engineer with 3.5 years of experience building and operating production systems in Docker, Terraform, AWS. Solid engineering fundamentals and a steady record of delivery; currently deepening skills in adjacent areas to move into a senior SRE role.
+
+TECHNICAL SKILLS
+Docker, Terraform, AWS, CI/CD, Linux, Prometheus, Grafana, Bash, ArgoCD, Ansible, Azure, Git
+
+EDUCATION
+B.Tech in Information Technology
+BITS Pilani | CGPA: 8.6/10 | Graduated: 2023
+
+WORK EXPERIENCE
+Site Reliability Engineer | Marlow Insurance Tech (Sep 2024 - Present)
+• Participated in on-call rotation and authored 14 runbooks that reduced escalations by 25%.
+• Trimmed AWS spend by 17% by removing idle resources and introducing scheduled scaling.
+• Automated server patching and log rotation with Bash and Ansible across 160 Linux hosts.
+
+Software Engineer | Banyan Data Works (Apr 2023 - Sep 2024)
+• Wrote Terraform for VPC, EKS and RDS stacks; reduced environment setup from 3 days to 3 hours.
+• Containerised 12 legacy applications with Docker and moved them to a CI/CD pipeline, shrinking release time from 4 hours to 45 minutes.
+
+KEY PROJECTS
+Observability Stack
+• Prometheus, Thanos and Grafana stack ingesting 80,000 samples per second with SLO burn-rate alerting.
+
+GitOps Migration
+• Migrated 45 services from Jenkins to ArgoCD and GitHub Actions with progressive delivery on Kubernetes.
+
+CERTIFICATIONS & AWARDS
+• Certified Kubernetes Security Specialist (CKS)
+• Finalist, Kaggle Days India 2025

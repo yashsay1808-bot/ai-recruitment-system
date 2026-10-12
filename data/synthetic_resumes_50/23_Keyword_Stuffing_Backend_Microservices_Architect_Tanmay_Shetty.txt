@@ -1,0 +1,28 @@
+Tanmay Shetty
+Email: tanmay.shetty@mailbox.in | Phone: +91 88002 35995 | Location: Gurugram, India
+LinkedIn: https://linkedin.com/in/tanmay-shetty | GitHub: https://github.com/tshetty-dev
+
+PROFESSIONAL SUMMARY
+Visionary Backend Microservices Architect and Full Stack Quantum Blockchain Ninja with 0.5 years of experience. Passionate about disrupting the world with cutting-edge, next-gen, synergistic technologies and always learning new things.
+
+TECHNICAL SKILLS
+Python, Spring Boot, Kotlin, REST API, GraphQL, GCP, Domain-Driven Design, Java, Hadoop, Git, Cybersecurity, OpenAPI, Angular, Docker, Serverless, PyTorch, PostgreSQL, MongoDB, AWS, gRPC, DevOps, Go, Microservices, Quantum Computing, CI/CD, AGI, Redis, Generative AI, CQRS, Apache Spark, Rust, Cassandra, Big Data, Neural Networks, IoT
+
+EDUCATION
+Bachelor of Engineering (Computer Science)
+College of Engineering Pune | Percentage: 67% | Passed: 2025
+
+WORK EXPERIENCE
+Backend Microservices Architect (Self-Appointed) | SynergyWorks (Apr 2026 - Present)
+• Worked on AI and cloud stuff.
+• Involved in development and deployment activities.
+• Helped the team with various technologies.
+
+PROJECTS
+AI Blockchain Platform
+• Revolutionary platform using OpenAPI, Docker, Spring Boot, AWS, DevOps.
+• Next-gen AI solution.
+
+CERTIFICATIONS
+• Online course certificate (Udemy)
+• Prompt Engineering Masterclass

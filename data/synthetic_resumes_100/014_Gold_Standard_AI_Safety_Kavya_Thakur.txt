@@ -1,0 +1,19 @@
+Kavya Thakur
+Email: kavya.thakur@domain.com | Phone: +91 99654 46463 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/kavya-thakur | GitHub: https://github.com/kavya-thakur
+
+PROFESSIONAL SUMMARY
+AI Safety, Governance & Alignment Auditor with 4.3 years of experience. Focus in AI Safety, Model Evaluation, Red Teaming, Bias Auditing, Python. Standardized fairness and demographic parity testing framework compliant with ISO 42001.
+
+TECHNICAL SKILLS
+AI Safety, Model Evaluation, Red Teaming, Bias Auditing, Python, LLM Evaluation, PyTorch, Explainable AI
+
+WORK EXPERIENCE
+AI Safety, Governance & Alignment Auditor | TechCorp Enterprise Systems (2022 - Present)
+• Standardized fairness and demographic parity testing framework compliant with ISO 42001.
+• Orchestrated continuous deployment and monitoring with CI/CD and Docker.
+• Mentored junior engineers and improved automated test coverage.
+
+EDUCATION
+B.Tech / B.E. in Computer Science & Engineering
+VTU University | Graduated 2021

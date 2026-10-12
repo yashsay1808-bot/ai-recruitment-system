@@ -1,0 +1,36 @@
+Mustafa Ansari
+Email: mustafa.ansari@mailbox.in | Phone: +91 93527 19641 | Location: Mumbai, India
+LinkedIn: https://linkedin.com/in/mustafa-ansari | GitHub: https://github.com/ansari-m
+
+PROFESSIONAL SUMMARY
+Senior Machine Learning Engineer with 5 years of production experience across SaaS and streaming. Deep hands-on expertise in PyTorch, TensorFlow, FastAPI, Docker. Known for measurable impact on latency, reliability and cost, and for mentoring engineers.
+
+TECHNICAL SKILLS
+PyTorch, TensorFlow, FastAPI, Docker, AWS, Hugging Face, MLOps, Scikit-Learn, Pandas, Natural Language Processing, CI/CD, SQL, Deep Learning, ONNX, MLflow
+
+EDUCATION
+B.Tech in Information Technology
+NIT Warangal | CGPA: 8.5/10 | Graduated: 2020
+
+WORK EXPERIENCE
+Senior Machine Learning Engineer | Basalt Mobility (Jan 2024 - Present)
+• Cut training time for a 1.2B-parameter PyTorch model by 61% using mixed precision, gradient checkpointing and DDP on 8 GPUs.
+• Implemented drift and data-quality monitoring with Prometheus and Evidently that caught 7 silent regressions before reaching 40,000 daily users.
+• Led a squad of 4 engineers, introduced PyTest-based model contracts and lifted coverage of the training stack to 91%.
+• Designed a feature store on PostgreSQL and Redis with point-in-time correctness; online feature reads at 4 ms p99.
+
+Machine Learning Engineer | Skyloom Technologies (Oct 2021 - Jan 2024)
+• Deployed RoBERTa ONNX models with FastAPI and Triton serving 210k daily requests at 45 ms p95 latency on AWS ECS.
+• Raised macro-F1 from 0.83 to 0.94 on a 12-class ticket classifier by fine-tuning Hugging Face transformers with focal loss and error-driven data curation.
+• Reduced AWS GPU spend by 36% (about $22k per month) through INT8 quantization, dynamic batching and spot-instance training.
+
+KEY PROJECTS
+Edge Anomaly Detector
+• LSTM autoencoder in PyTorch quantised to INT8 and deployed to ARM devices; 95% precision on 400,000 sensor windows.
+
+Churn Prediction Platform
+• Scikit-Learn and LightGBM pipelines tracked with MLflow, orchestrated by Airflow and served with Docker on AWS.
+
+CERTIFICATIONS & AWARDS
+• Databricks Machine Learning Associate
+• Winner, Inter-College Hackathon 2023

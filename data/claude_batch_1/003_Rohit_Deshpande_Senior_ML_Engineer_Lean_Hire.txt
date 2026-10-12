@@ -1,0 +1,33 @@
+Rohit Deshpande
+Email: rohit.deshpande@mailbox.in | Phone: +91 96600 48578 | Location: Pune, India
+LinkedIn: https://linkedin.com/in/rohit-deshpande | GitHub: https://github.com/rohitdev1
+
+PROFESSIONAL SUMMARY
+Machine Learning Engineer with 2.5 years of experience building and operating production systems in PyTorch, FastAPI, Docker. Solid engineering fundamentals and a steady record of delivery; currently deepening skills in adjacent areas to move into a senior Machine Learning Engineer role.
+
+TECHNICAL SKILLS
+PyTorch, FastAPI, Docker, AWS, Hugging Face, MLOps, Scikit-Learn, Kubernetes, NumPy, Redis, Pandas, Natural Language Processing
+
+EDUCATION
+B.E. in Computer Science (AI & ML)
+Manipal Institute of Technology | CGPA: 8.1/10 | Graduated: 2022
+
+WORK EXPERIENCE
+Machine Learning Engineer | Kinetica Labs (Apr 2025 - Present)
+• Collaborated with 4 backend engineers to expose model endpoints behind an API gateway with 99.9% availability.
+• Improved offline evaluation by adding 5 slice-level metrics, which exposed a 15% accuracy gap on a minority segment.
+• Wrote feature pipelines in Pandas and SQL processing 2M rows nightly with data-validation checks.
+
+Software Engineer | Pelican Health Data (Apr 2024 - Apr 2025)
+• Containerised training and inference with Docker and moved jobs to AWS Batch, reducing monthly compute cost by 22%.
+• Fine-tuned a BERT classifier with PyTorch, improving F1 from 0.75 to 0.84 on an internal support dataset.
+
+KEY PROJECTS
+Churn Prediction Platform
+• Scikit-Learn and LightGBM pipelines tracked with MLflow, orchestrated by Airflow and served with Docker on AWS.
+
+Realtime Fraud Scoring
+• XGBoost and PyTorch ensemble behind FastAPI on AWS ECS, Kafka ingestion, scoring 80,000 events per second with p99 of 85 ms.
+
+CERTIFICATIONS & AWARDS
+• TensorFlow Developer Certificate

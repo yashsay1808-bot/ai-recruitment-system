@@ -1,0 +1,19 @@
+Waseem Patel
+Email: waseem.patel@domain.com | Phone: +91 92705 44741 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/waseem-patel | GitHub: https://github.com/waseem-patel
+
+PROFESSIONAL SUMMARY
+Backend Microservices Architect with 2.0 years of experience. Focus in Golang, Python. Corrupt layout: overlapping timelines, unparseable tables and missing section headers.
+
+TECHNICAL SKILLS
+Golang, Python
+
+WORK EXPERIENCE
+Backend Microservices Architect | TechCorp Enterprise Systems (2022 - Present)
+• Corrupt layout: overlapping timelines, unparseable tables and missing section headers.
+• Orchestrated continuous deployment and monitoring with CI/CD and Docker.
+• Mentored junior engineers and improved automated test coverage.
+
+EDUCATION
+B.Tech / B.E. in Computer Science & Engineering
+VTU University | Graduated 2021

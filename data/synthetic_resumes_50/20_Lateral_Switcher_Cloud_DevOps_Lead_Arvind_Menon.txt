@@ -1,0 +1,32 @@
+Arvind Menon
+Email: arvind.menon@mailbox.in | Phone: +91 87304 25950 | Location: Kochi, India
+LinkedIn: https://linkedin.com/in/arvind-menon | GitHub: https://github.com/arvind-codes
+
+PROFESSIONAL SUMMARY
+Systems Administrator with 5 years of experience, recently transitioning into DevOps Engineer work. Completed hands-on projects and certifications in Linux, CI/CD, Grafana and now seeking a role that applies this background to production systems.
+
+TECHNICAL SKILLS
+Linux, Bash, Networking, VMware, Nagios, Python, Git, Docker, CI/CD, Grafana, Terraform, ArgoCD
+
+EDUCATION
+B.E. in Electronics and Communication
+Manipal Institute of Technology | CGPA: 8.8/10 | Graduated: 2019
+
+WORK EXPERIENCE
+DevOps Engineer (Transition Role) | BlueHarbor Software (Aug 2025 - Present)
+• Reduced cloud spend by 22% (about $25k per month) through right-sizing, spot instances and autoscaling policies.
+• Sustained 99.9% uptime across 12,000 requests per second at peak with multi-AZ failover.
+
+Systems Administrator | Nimbus Analytics (Oct 2021 - Aug 2025)
+• Administered 4 Linux servers with 99.99% uptime and automated patching with Bash and Ansible.
+• Managed on-premise virtualisation for 120 users and cut ticket backlog by 42%.
+
+KEY PROJECTS
+Policy-as-Code Pipeline
+• Added OPA checks to CI/CD that blocked 12 misconfigurations per quarter.
+Internal Developer Platform
+• Built a self-service Terraform and Helm platform used by 350 engineers, reducing environment requests by 42%.
+
+CERTIFICATIONS
+• AWS Certified Cloud Practitioner
+• Completed a career-transition bootcamp

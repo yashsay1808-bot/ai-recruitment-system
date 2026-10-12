@@ -1,0 +1,28 @@
+Rohit Verma
+Email: rohit.verma.tech@mailbox.in | Phone: +91 90000 11122 | Location: Hyderabad, India
+LinkedIn: https://linkedin.com/in/rohit-verma-nextgen
+
+PROFESSIONAL SUMMARY
+Visionary AI Architect and Full Stack Quantum Blockchain Ninja with 0.3 years of experience (4 months). Passionate about disrupting the world with cutting-edge, next-gen, synergistic technologies and always learning new things.
+
+TECHNICAL SKILLS
+Quantum Computing, Blockchain, Web3, Kubernetes, K8s, PyTorch, TensorFlow, Deep Learning, Machine Learning, Natural Language Processing, Large Language Models, Generative AI, Computer Vision, Reinforcement Learning, Apache Kafka, Apache Spark, Terraform, AWS, Azure, Google Cloud, Rust, Go, Scala, Docker, Hadoop, MLOps, DevOps, Microservices, Python, Java, C++, Angular, React, MongoDB, GraphQL
+
+EDUCATION
+Higher Secondary School Certificate (Class 12 - Science)
+Sunrise Junior College, Hyderabad | Percentage: 62% | Passed: 2025
+
+WORK EXPERIENCE
+Intern | StartupX (Jun 2026 - Sep 2026)
+• Worked on AI and blockchain stuff.
+• Helped the team with various technologies.
+• Learned about quantum computing and Kubernetes.
+
+PROJECTS
+AI Quantum Blockchain Platform
+• Revolutionary platform using quantum computing, blockchain, deep learning and Kubernetes.
+• Next-gen AI solution.
+
+CERTIFICATIONS
+• Quantum Computing for Everyone (online course)
+• Blockchain Basics (online course)

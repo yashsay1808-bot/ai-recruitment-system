@@ -1,0 +1,32 @@
+Ishaan Chatterjee
+Email: ishaan.chatterjee@mailbox.in | Phone: +91 80796 50809 | Location: Noida, India
+LinkedIn: https://linkedin.com/in/ishaan-chatterjee | GitHub: https://github.com/chatterjeei
+
+PROFESSIONAL SUMMARY
+Data Analyst with 4 years of experience, recently transitioning into Machine Learning Engineer work. Completed hands-on projects and certifications in TensorFlow, SQL, Kubernetes and now seeking a role that applies this background to production systems.
+
+TECHNICAL SKILLS
+Python, SQL, Pandas, NumPy, Scikit-Learn, Tableau, Excel, Statistics, Git, TensorFlow, Kubernetes, Docker, PyTorch, SageMaker
+
+EDUCATION
+B.Tech in Information Technology
+NSUT Delhi | CGPA: 7.8/10 | Graduated: 2020
+
+WORK EXPERIENCE
+Machine Learning Engineer (Transition Role) | Cobalt Insurance Tech (Nov 2025 - Present)
+• Raised F1-score from 0.79 to 0.89 on a 20-class classifier by fine-tuning transformers with Hugging Face and Scikit-Learn pipelines.
+• Built and deployed a gradient-boosted model service with TensorFlow and FastAPI serving 80,000 requests per day at p95 latency of 45 ms.
+
+Data Analyst | Meridian Health Tech (Oct 2022 - Nov 2025)
+• Built 4 Tableau dashboards used by 9,000 stakeholders and automated weekly reporting in Python and SQL, saving 3 hours per week.
+• Developed a churn-propensity model in Scikit-Learn with 95% precision on 20,000 customer records.
+
+KEY PROJECTS
+Semantic Search Engine
+• Designed a RAG pipeline with sentence embeddings and a FastAPI backend returning results in under 45 ms over 100,000 documents.
+Real-Time Anomaly Detection
+• Implemented an LSTM autoencoder in PyTorch that detected equipment faults with 94% precision and cut false alarms by 31%.
+
+CERTIFICATIONS
+• Machine Learning Specialization (Coursera)
+• Completed a career-transition bootcamp

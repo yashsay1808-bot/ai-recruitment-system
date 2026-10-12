@@ -1,0 +1,19 @@
+Suresh Fernandes
+Email: suresh.fernandes@domain.com | Phone: +91 95947 50306 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/suresh-fernandes | GitHub: https://github.com/suresh-fernandes
+
+PROFESSIONAL SUMMARY
+Backend Microservices Architect with 0.4 years of experience. Focus in Golang, Python, Microservices, gRPC, Docker. Claimed mastery across 17 enterprise technologies in 4 months total tenure; untouched forks.
+
+TECHNICAL SKILLS
+Golang, Python, Microservices, gRPC, Docker, Kubernetes, PostgreSQL, Redis, Kafka, Linux, Quantum Computing, Blockchain, CUDA, Kubernetes Master, Solidity, Rust, Hadoop
+
+WORK EXPERIENCE
+Backend Microservices Architect | TechCorp Enterprise Systems (2022 - Present)
+• Claimed mastery across 17 enterprise technologies in 4 months total tenure; untouched forks.
+• Orchestrated continuous deployment and monitoring with CI/CD and Docker.
+• Mentored junior engineers and improved automated test coverage.
+
+EDUCATION
+B.Tech / B.E. in Computer Science & Engineering
+VTU University | Graduated 2021

@@ -1,0 +1,24 @@
+Kavita Mehta
+Email: kavita.fake.email@example.com
+Phone: +1 555-0199
+Location: San Francisco, CA
+
+SUMMARY
+Self-proclaimed 10x Rockstar Developer with 5 months of total experience. Master of all software technologies including Deep Learning, Quantum Computing, Distributed Systems, Kubernetes, Blockchain, PyTorch, React, Rust, and AWS.
+
+SKILLS
+Python, Machine Learning, Deep Learning, Natural Language Processing, PyTorch, TensorFlow, Kubernetes, Docker, AWS, React, Rust, Blockchain, Solidity, C++, Java, Scikit-Learn
+
+WORK EXPERIENCE
+Junior Software Intern | TechStartup Inc. (Nov 2025 - Present | 5 months)
+• Did programming tasks and attended daily standups.
+• Looked at machine learning code and helped with some bug fixes.
+• Used Docker sometimes.
+
+EDUCATION
+High School Diploma
+City Academy, 2024
+
+PROJECTS
+• AI Crypto Robot: Wrote a script that prints crypto prices.
+• Calculator App: Basic calculator built with Python.

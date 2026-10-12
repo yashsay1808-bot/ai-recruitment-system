@@ -1,0 +1,19 @@
+Tara Kapoor
+Email: tara.kapoor@domain.com | Phone: +91 91169 89840 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/tara-kapoor | GitHub: https://github.com/tara-kapoor
+
+PROFESSIONAL SUMMARY
+AI Safety, Governance & Alignment Auditor with 2.8 years of experience. Focus in AI Safety, Model Evaluation, Red Teaming, Bias Auditing, Git. Maintained production AI Safety and Model Evaluation pipelines. Adjacent skills transitioning to AI Safety, Governance & Alignment Auditor.
+
+TECHNICAL SKILLS
+AI Safety, Model Evaluation, Red Teaming, Bias Auditing, Git, Linux
+
+WORK EXPERIENCE
+AI Safety, Governance & Alignment Auditor | TechCorp Enterprise Systems (2022 - Present)
+• Maintained production AI Safety and Model Evaluation pipelines. Adjacent skills transitioning to AI Safety, Governance & Alignment Auditor.
+• Orchestrated continuous deployment and monitoring with CI/CD and Docker.
+• Mentored junior engineers and improved automated test coverage.
+
+EDUCATION
+B.Tech / B.E. in Computer Science & Engineering
+VTU University | Graduated 2021

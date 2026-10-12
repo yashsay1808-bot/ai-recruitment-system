@@ -1,0 +1,36 @@
+Bhavna Ahmed
+Email: bhavna.ahmed@mailbox.in | Phone: +91 75791 35753 | Location: Ahmedabad, India
+LinkedIn: https://linkedin.com/in/bhavna-ahmed | GitHub: https://github.com/bhavnaahm81
+
+PROFESSIONAL SUMMARY
+Full-Stack AI Engineer with 6 years of experience delivering production systems. Skilled in Python, TypeScript, JavaScript, React, Next.js, Node.js. Consistent record of measurable gains in latency, throughput, reliability and cost.
+
+TECHNICAL SKILLS
+Python, TypeScript, JavaScript, React, Next.js, Node.js, FastAPI, PostgreSQL, Docker, REST API, LangChain, OpenAI API, RAG, Vector Database, Redis, Git, AWS, Tailwind CSS, Pinecone, Prompt Engineering, WebSockets
+
+EDUCATION
+B.Tech in Information Technology
+Delhi Technological University | CGPA: 8.7/10 | Graduated: 2019
+
+WORK EXPERIENCE
+Full-Stack AI Engineer | Vertex Mobility (Jul 2023 - Present)
+• Designed PostgreSQL schemas and REST APIs handling 120,000 requests per day with 99.99% uptime.
+• Implemented evaluation harnesses that tracked answer accuracy from 80% to 92% across 12 regression suites.
+• Collaborated with 2 designers and data scientists to ship 6 AI features in two quarters.
+• Built a React and Next.js front end with streaming responses that raised task completion by 31% for 120 monthly active users.
+• Shipped a RAG-powered assistant with LangChain, FastAPI and a vector database answering 8,000 queries per day at p95 latency of 60 ms.
+
+Full-Stack Engineer | Northwind Telecom (Oct 2020 - Jul 2023)
+• Reduced LLM spend by 42% through prompt caching in Redis and response truncation, saving about $40k per month.
+• Collaborated with 5 designers and data scientists to ship 18 AI features in two quarters.
+• Shipped a RAG-powered assistant with LangChain, FastAPI and a vector database answering 20,000 queries per day at p95 latency of 85 ms.
+
+KEY PROJECTS
+Document Q&A Platform
+• Built a Next.js and FastAPI application with chunked retrieval over 400,000 PDFs and sub-140 ms retrieval latency.
+Realtime Collaboration Tool
+• Implemented WebSocket collaboration in Node.js supporting 25,000 concurrent editors.
+
+CERTIFICATIONS & AWARDS
+• Meta Front-End Developer Certificate
+• Internal Engineering Excellence Award, 2025

@@ -1,0 +1,32 @@
+Anil Trivedi
+Email: anil.trivedi@mailbox.in | Phone: +91 97899 34225 | Location: Gurugram, India
+LinkedIn: https://linkedin.com/in/anil-trivedi | GitHub: https://github.com/atrivedi-dev
+
+PROFESSIONAL SUMMARY
+.NET Developer with 3.5 years of experience, recently transitioning into Backend Engineer work. Completed hands-on projects and certifications in Microservices, AWS, CI/CD and now seeking a role that applies this background to production systems.
+
+TECHNICAL SKILLS
+C#, .NET, SQL Server, REST API, Git, Azure, Docker, Microservices, AWS, CI/CD, Spring Boot
+
+EDUCATION
+B.E. in Computer Science and Engineering
+NSUT Delhi | CGPA: 8.8/10 | Graduated: 2021
+
+WORK EXPERIENCE
+Backend Engineer (Transition Role) | Aurora Payments (Nov 2025 - Present)
+• Cut p95 API latency by 22% using Redis caching, connection pooling and PostgreSQL index redesign.
+• Authored architecture decision records and mentored 4 engineers on domain-driven design.
+
+.NET Developer | Meridian Health Tech (Apr 2023 - Nov 2025)
+• Maintained 12 ASP.NET services handling 12,000 requests per day with 99.95% uptime.
+• Optimised SQL Server queries and reduced report latency by 38%.
+
+KEY PROJECTS
+Service Mesh Migration
+• Moved 18 services to Istio mTLS with zero customer-visible downtime.
+API Gateway and Rate Limiter
+• Built a Go gateway with token-bucket limits protecting services from 25x traffic spikes.
+
+CERTIFICATIONS
+• Oracle Certified Java Associate
+• Completed a career-transition bootcamp
