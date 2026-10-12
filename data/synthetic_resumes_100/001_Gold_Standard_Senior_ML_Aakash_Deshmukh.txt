@@ -1,0 +1,19 @@
+Aakash Deshmukh
+Email: aakash.deshmukh@domain.com | Phone: +91 91824 13278 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/aakash-deshmukh | GitHub: https://github.com/aakash-deshmukh
+
+PROFESSIONAL SUMMARY
+Senior Machine Learning Engineer with 4.5 years of experience. Focus in Python, PyTorch, TensorFlow, FastAPI, Docker. Served 95,000 requests/day at p95 latency under 68ms on AWS ECS.
+
+TECHNICAL SKILLS
+Python, PyTorch, TensorFlow, FastAPI, Docker, AWS, Hugging Face, MLOps
+
+WORK EXPERIENCE
+Senior Machine Learning Engineer | TechCorp Enterprise Systems (2022 - Present)
+• Served 95,000 requests/day at p95 latency under 68ms on AWS ECS.
+• Orchestrated continuous deployment and monitoring with CI/CD and Docker.
+• Mentored junior engineers and improved automated test coverage.
+
+EDUCATION
+B.Tech / B.E. in Computer Science & Engineering
+VTU University | Graduated 2021

@@ -1,0 +1,19 @@
+Vidya Mukherjee
+Email: vidya.mukherjee@domain.com | Phone: +91 92103 96474 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/vidya-mukherjee | GitHub: https://github.com/vidya-mukherjee
+
+PROFESSIONAL SUMMARY
+Full-Stack AI Application Engineer with 2.0 years of experience. Focus in React, TypeScript. Corrupt layout: overlapping timelines, unparseable tables and missing section headers.
+
+TECHNICAL SKILLS
+React, TypeScript
+
+WORK EXPERIENCE
+Full-Stack AI Application Engineer | TechCorp Enterprise Systems (2022 - Present)
+• Corrupt layout: overlapping timelines, unparseable tables and missing section headers.
+• Orchestrated continuous deployment and monitoring with CI/CD and Docker.
+• Mentored junior engineers and improved automated test coverage.
+
+EDUCATION
+B.Tech / B.E. in Computer Science & Engineering
+VTU University | Graduated 2021

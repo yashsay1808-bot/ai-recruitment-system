@@ -1,0 +1,29 @@
+id,file,candidate,role,archetype,github,expected
+001,001_Arvind_Subramanian_Cloud_DevOps_SRE_Lead_Lean_Hire.txt,Arvind Subramanian,Cloud DevOps & SRE Lead,mid,arvindsu19,HIRE/LEAN_HIRE (70-84%)
+002,002_Meghna_Bhattacharya_Cloud_DevOps_SRE_Lead_Strong_Hire.txt,Meghna Bhattacharya,Cloud DevOps & SRE Lead,gold,meghnabhattacharya,STRONG_HIRE (90-98%)
+003,003_Rohit_Deshpande_Senior_ML_Engineer_Lean_Hire.txt,Rohit Deshpande,Senior Machine Learning Engineer,mid,rohitdev1,HIRE/LEAN_HIRE (70-84%)
+004,004_Fatima_Sheikh_Senior_ML_Engineer_Lean_Hire.txt,Fatima Sheikh,Senior Machine Learning Engineer,mid,fatima-sheikh,HIRE/LEAN_HIRE (70-84%)
+005,005_Kiran_Naidu_Senior_ML_Engineer_Reject_BuzzwordExaggerator.txt,Kiran Naidu,Senior Machine Learning Engineer,stuff,kiran-naidu,"REJECT (40-60%) with SKILL_STUFFING, UNVERIFIED_SKILL_CLAIMS, EXPERIENCE_DEFICIT"
+006,006_Tanvi_Kulshreshtha_Cloud_DevOps_SRE_Lead_Reject_BuzzwordExaggerator.txt,Tanvi Kulshreshtha,Cloud DevOps & SRE Lead,stuff,tkulshreshtha,"REJECT (40-60%) with SKILL_STUFFING, UNVERIFIED_SKILL_CLAIMS, EXPERIENCE_DEFICIT"
+007,007_Sandeep_Rajagopal_Cloud_DevOps_SRE_Lead_Strong_Hire.txt,Sandeep Rajagopal,Cloud DevOps & SRE Lead,gold,srajagopal,STRONG_HIRE (90-98%)
+008,008_Ishita_Banerjee_Cloud_DevOps_SRE_Lead_Lean_Hire.txt,Ishita Banerjee,Cloud DevOps & SRE Lead,mid,banerjee-i,HIRE/LEAN_HIRE (70-84%)
+009,009_Vikrant_Choudhary_Senior_ML_Engineer_Strong_Hire.txt,Vikrant Choudhary,Senior Machine Learning Engineer,gold,vchoudhary,STRONG_HIRE (90-98%)
+010,010_Lavanya_Murthy_Senior_ML_Engineer_Strong_Hire.txt,Lavanya Murthy,Senior Machine Learning Engineer,gold,lavanyamu51,STRONG_HIRE (90-98%)
+011,011_Harpreet_Gill_Senior_ML_Engineer_Reject_BuzzwordExaggerator.txt,Harpreet Gill,Senior Machine Learning Engineer,stuff,harpreet-gill,"REJECT (40-60%) with SKILL_STUFFING, UNVERIFIED_SKILL_CLAIMS, EXPERIENCE_DEFICIT"
+012,012_Anushka_Varghese_Cloud_DevOps_SRE_Lead_Lean_Hire.txt,Anushka Varghese,Cloud DevOps & SRE Lead,mid,anushkavarghese,HIRE/LEAN_HIRE (70-84%)
+013,013_Pranav_Joshi_Cloud_DevOps_SRE_Lead_ATS_Parse_Warning.txt,Pranav Joshi,Cloud DevOps & SRE Lead,chrono_2c,pranavdev8,"REJECT / parse warning (20-45%) DATE_INCONSISTENCY (overlapping full-time, two continents)"
+014,014_Zainab_Qureshi_Cloud_DevOps_SRE_Lead_Lean_Hire.txt,Zainab Qureshi,Cloud DevOps & SRE Lead,mid,zainabqu79,HIRE/LEAN_HIRE (70-84%)
+015,015_Devendra_Rawat_Senior_ML_Engineer_Reject_BuzzwordExaggerator.txt,Devendra Rawat,Senior Machine Learning Engineer,stuff,devendra-rawat,"REJECT (40-60%) with SKILL_STUFFING, UNVERIFIED_SKILL_CLAIMS, EXPERIENCE_DEFICIT"
+016,016_Nithya_Ramesh_Cloud_DevOps_SRE_Lead_Lean_Hire.txt,Nithya Ramesh,Cloud DevOps & SRE Lead,mid,nithya-ramesh,HIRE/LEAN_HIRE (70-84%)
+017,017_Kabir_Malhotra_Senior_ML_Engineer_Lean_Hire.txt,Kabir Malhotra,Senior Machine Learning Engineer,mid,kabirma43,HIRE/LEAN_HIRE (70-84%)
+018,018_Shalini_Pandit_Cloud_DevOps_SRE_Lead_Reject_BuzzwordExaggerator.txt,Shalini Pandit,Cloud DevOps & SRE Lead,stuff,shalinipa19,"REJECT (40-60%) with SKILL_STUFFING, UNVERIFIED_SKILL_CLAIMS, EXPERIENCE_DEFICIT"
+019,019_Abhishek_Tiwari_Senior_ML_Engineer_ATS_Parse_Warning.txt,Abhishek Tiwari,Senior Machine Learning Engineer,chrono_inv,tiwari-a,REJECT / parse warning (20-45%) DATE_INCONSISTENCY
+020,020_Gayathri_Venkatesh_Senior_ML_Engineer_Lean_Hire.txt,Gayathri Venkatesh,Senior Machine Learning Engineer,mid,gayathri-venkatesh,HIRE/LEAN_HIRE (70-84%)
+A1,A1_Mustafa_Ansari_Senior_ML_Engineer_Strong_Hire.txt,Mustafa Ansari,Senior Machine Learning Engineer,gold,ansari-m,STRONG_HIRE (95%+)
+A2,A2_Rhea_Dcruz_Senior_ML_Engineer_Strong_Hire.txt,Rhea D'Cruz,Senior Machine Learning Engineer,gold,dcruz-r,STRONG_HIRE (95%+)
+A3,A3_Tejas_Kamble_Full_Stack_AI_Engineer_Strong_Hire.txt,Tejas Kamble,Full-Stack AI Engineer,gold,tejas-kamble,STRONG_HIRE (95%+)
+B1,B1_Bhuvana_Shankar_Senior_ML_Engineer_Reject_BuzzwordExaggerator.txt,Bhuvana Shankar,Senior Machine Learning Engineer,stuff,bhuvanadev3,REJECT with SKILL_STUFFING / UNVERIFIED_SKILL_CLAIMS / EXPERIENCE_DEFICIT
+B2,B2_Dhruv_Saxena_Full_Stack_AI_Engineer_Reject_BuzzwordExaggerator.txt,Dhruv Saxena,Full-Stack AI Engineer,stuff,dhruvsa49,REJECT with SKILL_STUFFING / UNVERIFIED_SKILL_CLAIMS / EXPERIENCE_DEFICIT
+B3,B3_Ojaswini_Patwardhan_Senior_ML_Engineer_Reject_BuzzwordExaggerator.txt,Ojaswini Patwardhan,Senior Machine Learning Engineer,stuff,ojaswini-patwardhan,REJECT with SKILL_STUFFING / UNVERIFIED_SKILL_CLAIMS / EXPERIENCE_DEFICIT
+C1,C1_Yuvraj_Bedi_Senior_ML_Engineer_ATS_Parse_Warning.txt,Yuvraj Bedi,Senior Machine Learning Engineer,chrono_inv,yuvrajbedi,DATE_INCONSISTENCY: Jul 2026 - Jan 2024
+C2,C2_Sowmya_Hebbar_Cloud_DevOps_SRE_Lead_ATS_Parse_Warning.txt,Sowmya Hebbar,Cloud DevOps & SRE Lead,missing_edu,sowmyahebbar,Missing EDUCATION and incomplete contact; strong experience

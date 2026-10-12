@@ -1,0 +1,19 @@
+Manish Chatterjee
+Email: manish.chatterjee@domain.com | Phone: +91 94119 82512 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/manish-chatterjee | GitHub: https://github.com/manish-chatterjee
+
+PROFESSIONAL SUMMARY
+Full-Stack AI Application Engineer with 0.4 years of experience. Focus in React, TypeScript, Python, FastAPI, Next.js. Claimed mastery across 17 enterprise technologies in 4 months total tenure; untouched forks.
+
+TECHNICAL SKILLS
+React, TypeScript, Python, FastAPI, Next.js, LangChain, PostgreSQL, Docker, TailwindCSS, Redis, Quantum Computing, Blockchain, CUDA, Kubernetes Master, Solidity, Rust, Hadoop
+
+WORK EXPERIENCE
+Full-Stack AI Application Engineer | TechCorp Enterprise Systems (2022 - Present)
+• Claimed mastery across 17 enterprise technologies in 4 months total tenure; untouched forks.
+• Orchestrated continuous deployment and monitoring with CI/CD and Docker.
+• Mentored junior engineers and improved automated test coverage.
+
+EDUCATION
+B.Tech / B.E. in Computer Science & Engineering
+VTU University | Graduated 2021

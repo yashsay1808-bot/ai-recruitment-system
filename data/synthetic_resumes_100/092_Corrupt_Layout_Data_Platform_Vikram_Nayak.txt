@@ -1,0 +1,19 @@
+Vikram Nayak
+Email: vikram.nayak@domain.com | Phone: +91 97787 82063 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/vikram-nayak | GitHub: https://github.com/vikram-nayak
+
+PROFESSIONAL SUMMARY
+Data Platform & Distributed Systems Engineer with 2.0 years of experience. Focus in Python, Apache Spark. Corrupt layout: overlapping timelines, unparseable tables and missing section headers.
+
+TECHNICAL SKILLS
+Python, Apache Spark
+
+WORK EXPERIENCE
+Data Platform & Distributed Systems Engineer | TechCorp Enterprise Systems (2022 - Present)
+• Corrupt layout: overlapping timelines, unparseable tables and missing section headers.
+• Orchestrated continuous deployment and monitoring with CI/CD and Docker.
+• Mentored junior engineers and improved automated test coverage.
+
+EDUCATION
+B.Tech / B.E. in Computer Science & Engineering
+VTU University | Graduated 2021

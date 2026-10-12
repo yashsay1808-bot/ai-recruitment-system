@@ -1,0 +1,34 @@
+Gayathri Venkatesh
+Email: gayathri.venkatesh@mailbox.in | Phone: +91 99400 22329 | Location: Chennai, India
+LinkedIn: https://linkedin.com/in/gayathri-venkatesh | GitHub: https://github.com/gayathri-venkatesh
+
+PROFESSIONAL SUMMARY
+Machine Learning Engineer with 4 years of experience building and operating production systems in PyTorch, TensorFlow, FastAPI. Solid engineering fundamentals and a steady record of delivery; currently deepening skills in adjacent areas to move into a senior Machine Learning Engineer role.
+
+TECHNICAL SKILLS
+PyTorch, TensorFlow, FastAPI, Docker, AWS, Scikit-Learn, ONNX, Redis, Airflow, Git, Machine Learning
+
+EDUCATION
+B.Tech in Information Technology
+NIT Trichy | CGPA: 9.1/10 | Graduated: 2020
+
+WORK EXPERIENCE
+Senior Machine Learning Engineer | Kinetica Labs (Jun 2024 - Present)
+• Wrote feature pipelines in Pandas and SQL processing 5M rows nightly with data-validation checks.
+• Containerised training and inference with Docker and moved jobs to AWS Batch, reducing monthly compute cost by 14%.
+• Improved offline evaluation by adding 6 slice-level metrics, which exposed a 15% accuracy gap on a minority segment.
+
+Junior Machine Learning Engineer | Prismatic Media (Oct 2022 - Jun 2024)
+• Automated experiment tracking with MLflow and a Jenkins pipeline, cutting manual retraining effort by 12 hours per week.
+• Fine-tuned a BERT classifier with PyTorch, improving F1 from 0.75 to 0.87 on an internal support dataset.
+
+KEY PROJECTS
+Churn Prediction Platform
+• Scikit-Learn and LightGBM pipelines tracked with MLflow, orchestrated by Airflow and served with Docker on AWS.
+
+Edge Anomaly Detector
+• LSTM autoencoder in PyTorch quantised to INT8 and deployed to ARM devices; 93% precision on 120,000 sensor windows.
+
+CERTIFICATIONS & AWARDS
+• Deep Learning Specialization (DeepLearning.AI)
+• Runner-up, Google Cloud Hackathon India 2022

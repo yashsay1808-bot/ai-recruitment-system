@@ -1,0 +1,19 @@
+Karan Singh
+Email: karan.singh@domain.com | Phone: +91 96916 88172 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/karan-singh | GitHub: https://github.com/karan-singh
+
+PROFESSIONAL SUMMARY
+Senior Business Intelligence & Data Analyst with 2.8 years of experience. Focus in SQL, Python, Tableau, Power BI, Git. Maintained production SQL and Python pipelines. Adjacent skills transitioning to Senior Business Intelligence & Data Analyst.
+
+TECHNICAL SKILLS
+SQL, Python, Tableau, Power BI, Git, Linux
+
+WORK EXPERIENCE
+Senior Business Intelligence & Data Analyst | TechCorp Enterprise Systems (2022 - Present)
+• Maintained production SQL and Python pipelines. Adjacent skills transitioning to Senior Business Intelligence & Data Analyst.
+• Orchestrated continuous deployment and monitoring with CI/CD and Docker.
+• Mentored junior engineers and improved automated test coverage.
+
+EDUCATION
+B.Tech / B.E. in Computer Science & Engineering
+VTU University | Graduated 2021

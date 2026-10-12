@@ -1,0 +1,32 @@
+Swati Bose
+Email: swati.bose@mailbox.in | Phone: +91 90137 93176 | Location: Ahmedabad, India
+LinkedIn: https://linkedin.com/in/swati-bose | GitHub: https://github.com/sbose-dev
+
+PROFESSIONAL SUMMARY
+.NET Developer with 2 years of experience, recently transitioning into Backend Engineer work. Completed hands-on projects and certifications in Redis, Spring Boot, Git and now seeking a role that applies this background to production systems.
+
+TECHNICAL SKILLS
+C#, .NET, SQL Server, REST API, Git, Azure, Docker, Redis, Spring Boot, AWS, Apache Kafka
+
+EDUCATION
+B.Tech in Computer Science (AI & ML)
+VIT Vellore | CGPA: 7.4/10 | Graduated: 2023
+
+WORK EXPERIENCE
+Backend Engineer (Transition Role) | Meridian Health Tech (Oct 2025 - Present)
+• Authored architecture decision records and mentored 5 engineers on domain-driven design.
+• Authored architecture decision records and mentored 5 engineers on domain-driven design.
+
+.NET Developer | Zenith Retail Tech (Oct 2024 - Oct 2025)
+• Maintained 12 ASP.NET services handling 120,000 requests per day with 99.95% uptime.
+• Optimised SQL Server queries and reduced report latency by 42%.
+
+KEY PROJECTS
+Payments Orchestrator
+• Implemented a saga-based payment flow in Spring Boot and Kafka processing 12,000 transactions per second.
+Service Mesh Migration
+• Moved 6 services to Istio mTLS with zero customer-visible downtime.
+
+CERTIFICATIONS
+• Oracle Certified Java Associate
+• Completed a career-transition bootcamp

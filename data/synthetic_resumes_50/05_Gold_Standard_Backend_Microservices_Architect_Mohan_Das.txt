@@ -1,0 +1,36 @@
+Mohan Das
+Email: mohan.das@mailbox.in | Phone: +91 75393 83292 | Location: Ahmedabad, India
+LinkedIn: https://linkedin.com/in/mohan-das | GitHub: https://github.com/mohan-codes
+
+PROFESSIONAL SUMMARY
+Backend Microservices Architect with 7 years of experience delivering production systems. Skilled in Java, Spring Boot, Go, Microservices, gRPC, REST API. Consistent record of measurable gains in latency, throughput, reliability and cost.
+
+TECHNICAL SKILLS
+Java, Spring Boot, Go, Microservices, gRPC, REST API, Apache Kafka, PostgreSQL, Redis, Docker, Kubernetes, OpenAPI, Event-Driven Architecture, AWS, Git, CI/CD, Istio, Cassandra, Domain-Driven Design, Python
+
+EDUCATION
+B.E. in Electronics and Communication
+NSUT Delhi | CGPA: 7.9/10 | Graduated: 2019
+
+WORK EXPERIENCE
+Backend Microservices Architect | Meridian Health Tech (Aug 2022 - Present)
+• Defined gRPC and OpenAPI contracts adopted by 2 teams, reducing integration defects by 27%.
+• Decomposed a monolith into 25 Spring Boot and Go microservices handling 8,000 requests per second at p99 latency of 110 ms.
+• Designed multi-region failover that met an RTO of 8 minutes and RPO under one minute.
+• Cut p95 API latency by 18% using Redis caching, connection pooling and PostgreSQL index redesign.
+• Rolled out Kubernetes and Istio with canary releases, achieving 99.99% availability across 6 services.
+
+Backend Engineer | Kestrel Data (Oct 2019 - Aug 2022)
+• Introduced Kafka event streaming and the outbox pattern, processing 8 million events per day with exactly-once semantics.
+• Defined gRPC and OpenAPI contracts adopted by 6 teams, reducing integration defects by 55%.
+• Authored architecture decision records and mentored 6 engineers on domain-driven design.
+
+KEY PROJECTS
+Payments Orchestrator
+• Implemented a saga-based payment flow in Spring Boot and Kafka processing 250,000 transactions per second.
+Service Mesh Migration
+• Moved 25 services to Istio mTLS with zero customer-visible downtime.
+
+CERTIFICATIONS & AWARDS
+• Oracle Certified Java Associate
+• Internal Engineering Excellence Award, 2025

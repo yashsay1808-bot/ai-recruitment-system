@@ -1,0 +1,19 @@
+Vidya Mukherjee
+Email: vidya.mukherjee@domain.com | Phone: +91 97573 59735 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/vidya-mukherjee | GitHub: https://github.com/vidya-mukherjee
+
+PROFESSIONAL SUMMARY
+Senior Machine Learning Engineer with 3.8 years of experience. Focus in Python, PyTorch, TensorFlow, FastAPI, Git. Maintained production Python and PyTorch pipelines. Adjacent skills transitioning to Senior Machine Learning Engineer.
+
+TECHNICAL SKILLS
+Python, PyTorch, TensorFlow, FastAPI, Git, Linux
+
+WORK EXPERIENCE
+Senior Machine Learning Engineer | TechCorp Enterprise Systems (2022 - Present)
+• Maintained production Python and PyTorch pipelines. Adjacent skills transitioning to Senior Machine Learning Engineer.
+• Orchestrated continuous deployment and monitoring with CI/CD and Docker.
+• Mentored junior engineers and improved automated test coverage.
+
+EDUCATION
+B.Tech / B.E. in Computer Science & Engineering
+VTU University | Graduated 2021

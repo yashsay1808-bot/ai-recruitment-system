@@ -1,0 +1,28 @@
+Kavya Deshmukh
+Email: kavya.deshmukh@mailbox.in | Phone: +91 99222 71447 | Location: Kolkata, India
+LinkedIn: https://linkedin.com/in/kavya-deshmukh | GitHub: https://github.com/kdeshmukh-dev
+
+PROFESSIONAL SUMMARY
+Dynamic AI guru and Backend Microservices Architect leveraging synergy, paradigm shifts and best-in-class solutions. Proficient in everything. 0.4 years of experience building revolutionary platforms.
+
+TECHNICAL SKILLS
+Vue.js, GCP, Rust, Cassandra, Istio, Cybersecurity, Web3, Domain-Driven Design, Terraform, CI/CD, Hadoop, Java, MLOps, Azure, TensorFlow, Neural Networks, Docker, DevOps, Apache Kafka, AWS, Angular, RabbitMQ, Kotlin, Redis, Generative AI, PostgreSQL, gRPC, CQRS, OpenAPI, Spring Boot, Go, Blockchain
+
+EDUCATION
+Bachelor of Engineering (Computer Science)
+VIT Vellore | Percentage: 68% | Passed: 2025
+
+WORK EXPERIENCE
+Backend Microservices Architect (Self-Appointed) | NextGen Ventures (Jun 2026 - Present)
+• Learned about Kubernetes, blockchain and machine learning.
+• Part of a team building a next-generation platform.
+• Helped the team with various technologies.
+
+PROJECTS
+AI Quantum Platform
+• Revolutionary platform using PostgreSQL, Spring Boot, AWS, Cassandra, Go.
+• Next-gen AI solution.
+
+CERTIFICATIONS
+• Online course certificate (Udemy)
+• Prompt Engineering Masterclass

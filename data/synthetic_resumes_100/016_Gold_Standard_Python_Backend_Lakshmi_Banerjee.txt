@@ -1,0 +1,19 @@
+Lakshmi Banerjee
+Email: lakshmi.banerjee@domain.com | Phone: +91 96924 54597 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/lakshmi-banerjee | GitHub: https://github.com/lakshmi-banerjee
+
+PROFESSIONAL SUMMARY
+Python Backend & API Developer with 4.9 years of experience. Focus in Python, FastAPI, Django, PostgreSQL, Redis. Optimized PostgreSQL queries through proper indexing and connection pooling with asyncpg.
+
+TECHNICAL SKILLS
+Python, FastAPI, Django, PostgreSQL, Redis, Celery, Docker, Linux
+
+WORK EXPERIENCE
+Python Backend & API Developer | TechCorp Enterprise Systems (2022 - Present)
+• Optimized PostgreSQL queries through proper indexing and connection pooling with asyncpg.
+• Orchestrated continuous deployment and monitoring with CI/CD and Docker.
+• Mentored junior engineers and improved automated test coverage.
+
+EDUCATION
+B.Tech / B.E. in Computer Science & Engineering
+VTU University | Graduated 2021

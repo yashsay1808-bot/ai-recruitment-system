@@ -1,0 +1,19 @@
+Arun Hegde
+Email: arun.hegde@domain.com | Phone: +91 93657 28289 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/arun-hegde | GitHub: https://github.com/arun-hegde
+
+PROFESSIONAL SUMMARY
+Full-Stack AI Application Engineer with 5.1 years of experience. Focus in React, TypeScript, Python, FastAPI, Next.js. Achieved 95% unit test code coverage across React frontend and Python API layer.
+
+TECHNICAL SKILLS
+React, TypeScript, Python, FastAPI, Next.js, LangChain, PostgreSQL, Docker
+
+WORK EXPERIENCE
+Full-Stack AI Application Engineer | TechCorp Enterprise Systems (2022 - Present)
+• Achieved 95% unit test code coverage across React frontend and Python API layer.
+• Orchestrated continuous deployment and monitoring with CI/CD and Docker.
+• Mentored junior engineers and improved automated test coverage.
+
+EDUCATION
+B.Tech / B.E. in Computer Science & Engineering
+VTU University | Graduated 2021

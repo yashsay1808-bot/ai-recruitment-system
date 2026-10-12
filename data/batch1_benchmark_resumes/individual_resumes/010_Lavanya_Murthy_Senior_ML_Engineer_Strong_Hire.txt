@@ -1,0 +1,36 @@
+Lavanya Murthy
+Email: lavanya.murthy@mailbox.in | Phone: +91 91929 41479 | Location: Mysuru, India
+LinkedIn: https://linkedin.com/in/lavanya-murthy | GitHub: https://github.com/lavanyamu51
+
+PROFESSIONAL SUMMARY
+Senior Machine Learning Engineer with 6.5 years of production experience across e-commerce and enterprise software. Deep hands-on expertise in PyTorch, TensorFlow, FastAPI, Docker. Known for measurable impact on latency, reliability and cost, and for mentoring engineers.
+
+TECHNICAL SKILLS
+PyTorch, TensorFlow, FastAPI, Docker, AWS, Hugging Face, MLOps, Scikit-Learn, Pandas, Airflow, SQL, Natural Language Processing, CI/CD, Redis, Python
+
+EDUCATION
+M.Tech in Computer Science
+NIT Warangal | CGPA: 9.1/10 | Graduated: 2020
+
+WORK EXPERIENCE
+Senior Machine Learning Engineer | Copperleaf Payments (Apr 2023 - Present)
+• Cut training time for a 1.2B-parameter PyTorch model by 44% using mixed precision, gradient checkpointing and DDP on 8 GPUs.
+• Raised macro-F1 from 0.83 to 0.94 on a 12-class ticket classifier by fine-tuning Hugging Face transformers with focal loss and error-driven data curation.
+• Reduced AWS GPU spend by 32% (about $22k per month) through INT8 quantization, dynamic batching and spot-instance training.
+• Led a squad of 4 engineers, introduced PyTest-based model contracts and lifted coverage of the training stack to 91%.
+
+Machine Learning Engineer | Quillpoint Software (Apr 2020 - Apr 2023)
+• Shipped a TensorFlow Serving to PyTorch migration for 6 legacy models with zero downtime and a 24% latency improvement.
+• Designed a feature store on PostgreSQL and Redis with point-in-time correctness; online feature reads at 4 ms p99.
+• Deployed RoBERTa ONNX models with FastAPI and Triton serving 120k daily requests at 48 ms p95 latency on AWS ECS.
+
+KEY PROJECTS
+LLM Eval Harness
+• Evaluation framework for Hugging Face models with 120,000 test prompts, CI regression gates and Grafana dashboards.
+
+Open-Source: onnx-batching-utils
+• Maintainer of a PyTorch-to-ONNX export and dynamic-batching helper (pytorch + FastAPI + Triton) with 180 GitHub stars and 19 external contributors.
+
+CERTIFICATIONS & AWARDS
+• NVIDIA DLI: Fundamentals of Deep Learning
+• Open Source Contributor Award 2022

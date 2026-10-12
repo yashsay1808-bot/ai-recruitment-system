@@ -1,0 +1,28 @@
+Rajat Kapoor
+Email: rajat.kapoor@mailbox.in | Phone: +91 75068 86585 | Location: Pune, India
+LinkedIn: https://linkedin.com/in/rajat-kapoor | GitHub: https://github.com/rajat2003
+
+OBJECTIVE
+Recent graduate eager to start a career as a DevOps Engineer. Built academic and personal projects in Docker, Terraform, Bash and keen to learn production engineering practices.
+
+TECHNICAL SKILLS
+Docker, Terraform, Bash, GitHub Actions, Prometheus, Jenkins, AWS, Azure, Git, Helm, Grafana
+
+EDUCATION
+B.Tech in Information Technology
+SJCE Mysuru | CGPA: 8.0/10 | Graduated: 2026
+
+INTERNSHIP EXPERIENCE
+DevOps Engineer Intern | Stratus Networks (Nov 2025 - Aug 2026)
+• Contributed to a team service as a trainee, writing tests and documentation under a mentor.
+• Assisted senior engineers with debugging, code reviews and small feature tickets.
+
+ACADEMIC PROJECTS
+Disaster Recovery Automation
+• Automated cross-region failover with Terraform and Ansible, achieving RTO of 10 minutes.
+Policy-as-Code Pipeline
+• Added OPA checks to CI/CD that blocked 12 misconfigurations per quarter.
+
+CERTIFICATIONS
+• AWS Certified Cloud Practitioner
+• Finalist, College Hackathon 2025

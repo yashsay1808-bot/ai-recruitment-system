@@ -1,0 +1,33 @@
+Arvind Subramanian
+Email: arvind.subramanian@mailbox.in | Phone: +91 97685 35905 | Location: Chennai, India
+LinkedIn: https://linkedin.com/in/arvind-subramanian | GitHub: https://github.com/arvindsu19
+
+PROFESSIONAL SUMMARY
+DevOps Engineer with 3.5 years of experience building and operating production systems in Kubernetes, Docker, Terraform. Solid engineering fundamentals and a steady record of delivery; currently deepening skills in adjacent areas to move into a senior SRE role.
+
+TECHNICAL SKILLS
+Kubernetes, Docker, Terraform, AWS, CI/CD, Linux, GitHub Actions, Datadog, Bash, Python, Vault
+
+EDUCATION
+B.E. in Computer Science (AI & ML)
+Vellore Institute of Technology | CGPA: 7.8/10 | Graduated: 2023
+
+WORK EXPERIENCE
+Site Reliability Engineer | Pelican Health Data (Sep 2024 - Present)
+• Trimmed AWS spend by 17% by removing idle resources and introducing scheduled scaling.
+• Created Grafana dashboards and Prometheus alerts for 35 services, cutting mean time to detect by 38%.
+• Wrote Terraform for VPC, EKS and RDS stacks; reduced environment setup from 3 days to 3 hours.
+
+Associate DevOps Engineer | Redwater Energy Tech (Apr 2023 - Sep 2024)
+• Containerised 12 legacy applications with Docker and moved them to a CI/CD pipeline, shrinking release time from 4 hours to 35 minutes.
+• Maintained 60 services on Kubernetes with Helm charts and Jenkins pipelines, reaching 99.9% uptime.
+
+KEY PROJECTS
+Open-Source: tf-policy-pack
+• Maintainer of Terraform and OPA policy bundles for AWS guardrails adopted by 6 organisations; 1400 GitHub stars.
+
+Chaos and DR Toolkit
+• Automated game-day scenarios with Litmus and Terraform; validated RTO of 12 minutes across 19 regions.
+
+CERTIFICATIONS & AWARDS
+• Google Cloud Professional DevOps Engineer

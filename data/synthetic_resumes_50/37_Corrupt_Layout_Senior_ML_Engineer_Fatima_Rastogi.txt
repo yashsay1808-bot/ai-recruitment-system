@@ -1,0 +1,11 @@
+Fatima Rastogi
+Email: fatima@mailbox.in  â€“  Pune
+
+WORK EXPERIENCE
+Machine Learning Engineer | BlueHarbor Software (2021 â€“ 2023)
+Ã¢â‚¬Â¢ Built and deployed a gradient-boosted model service with PyTorch and FastAPI serving 20,000 requests per day at p95 latency of 60 ms.
+Ã¢â‚¬Â¢ ï¿½ï¿½ï¿½ unreadable block ï¿½ï¿½ï¿½
+Ã¢â‚¬Â¢ Introduced drift monitoring that caught 6 data-quality regressions bef
+
+SKILLS
+SQL, Hugging Face, Pandas, NumPy, TensorFlow, Scikit-Learn

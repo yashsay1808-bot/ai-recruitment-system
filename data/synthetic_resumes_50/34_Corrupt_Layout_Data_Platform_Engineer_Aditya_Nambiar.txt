@@ -1,0 +1,11 @@
+Aditya Nambiar
+GitHub: https://github.com/
+
+WORK EXPERIENCE
+Data Engineer | Vertex Mobility (Mar 2027 - Aug 2024)
+• Built Spark and Kafka pipelines ingesting 40 TB per day with end-to-end latency under 60 seconds.
+Senior Data Engineer | Finovate Systems (Jun 2019 - Dec 2018)
+• Designed a Snowflake and Delta Lake lakehouse serving 9,000 analysts with 35,000 queries per day.
+
+TECHNICAL SKILLS
+Docker, ETL, Git, AWS Glue, Data Modeling, Terraform

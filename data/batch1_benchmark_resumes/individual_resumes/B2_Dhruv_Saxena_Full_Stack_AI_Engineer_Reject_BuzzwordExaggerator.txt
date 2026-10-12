@@ -1,0 +1,31 @@
+Dhruv Saxena
+Email: dhruv.saxena@mailbox.in | Phone: +91 95765 23765 | Location: Noida, India
+LinkedIn: https://linkedin.com/in/dhruv-saxena | GitHub: https://github.com/dhruvsa49
+
+PROFESSIONAL SUMMARY
+Results-driven rockstar and Global AI & Quantum Evangelist leveraging synergy and paradigm shifts. Proficient in everything from Quantum Computing to Web3. 8 months (internship only) of experience building revolutionary world-changing platforms.
+
+TECHNICAL SKILLS
+Cybersecurity, PostgreSQL, Generative AI, LangChain, Neural Networks, Computer Vision, DataOps, 5G, TypeScript, Neo4j, Tailwind CSS, IoT, Go, Kotlin, Rust, Angular, PyTorch, TensorFlow, Docker, FastAPI, Kubernetes, Metaverse, Blockchain, Redis, MLOps, Scala, Edge AI, SAP, Robotic Process Automation, Python, RAG, Solidity, Unity, Snowflake, AGI, Kafka, MongoDB, OpenAI API, React, GraphQL, Azure, AWS, Reinforcement Learning, Prometheus, Node.js, Flutter, Hadoop, DevOps, Microservices
+
+EDUCATION
+Bachelor of Engineering in Computer Science
+College of Engineering Pune | Percentage: 62% | Graduated: 2026
+
+WORK EXPERIENCE
+Global Principal AI & Quantum Architect (Intern) | SynergyWorks Global (Feb 2026 - Present)
+• Spearheaded world-changing next-gen AI disruptive solutions across the entire enterprise ecosystem.
+• Led visionary cross-functional synergies to unlock exponential AI-driven value for global stakeholders.
+• Drove transformational disruption by orchestrating holistic next-generation digital ecosystems.
+
+KEY PROJECTS
+MNIST Digit Classifier (forked)
+• Forked a standard MNIST tutorial repository and added a README; no original commits.
+
+AI Quantum Blockchain Metaverse Platform
+• Revolutionary next-gen platform using Kotlin, MongoDB, Snowflake, RAG, Generative AI, Redis. Next-gen AI solution.
+
+CERTIFICATIONS & AWARDS
+• Quantum Computing for Everyone (online course)
+• Blockchain Basics (Udemy)
+• Participation certificate, college tech fest

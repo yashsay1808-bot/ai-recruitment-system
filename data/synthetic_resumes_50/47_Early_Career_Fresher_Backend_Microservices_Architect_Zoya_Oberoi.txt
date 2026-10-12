@@ -1,0 +1,28 @@
+Zoya Oberoi
+Email: zoya.oberoi@mailbox.in | Phone: +91 85635 72319 | Location: Noida, India
+LinkedIn: https://linkedin.com/in/zoya-oberoi | GitHub: https://github.com/zoya-oberoi-dev
+
+OBJECTIVE
+Recent graduate eager to start a career as a Backend Engineer. Built academic and personal projects in CI/CD, PostgreSQL, Istio and keen to learn production engineering practices.
+
+TECHNICAL SKILLS
+CI/CD, PostgreSQL, Istio, OpenAPI, Redis, Kubernetes, REST API, Microservices, Java, gRPC, Spring Boot
+
+EDUCATION
+B.Tech in Information Technology
+NIT Karnataka, Surathkal | CGPA: 8.9/10 | Graduated: 2026
+
+INTERNSHIP EXPERIENCE
+Backend Engineer Intern | Meridian Health Tech (Nov 2025 - Aug 2026)
+• Contributed to a team service as a trainee, writing tests and documentation under a mentor.
+• Assisted senior engineers with debugging, code reviews and small feature tickets.
+
+ACADEMIC PROJECTS
+Payments Orchestrator
+• Implemented a saga-based payment flow in Spring Boot and Kafka processing 12,000 transactions per second.
+Service Mesh Migration
+• Moved 18 services to Istio mTLS with zero customer-visible downtime.
+
+CERTIFICATIONS
+• AWS Certified Developer Associate (in progress)
+• Finalist, College Hackathon 2025

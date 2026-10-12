@@ -1,0 +1,19 @@
+Kavya Thakur
+Email: kavya.thakur@domain.com | Phone: +91 91040 60432 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/kavya-thakur | GitHub: https://github.com/kavya-thakur
+
+PROFESSIONAL SUMMARY
+Python Backend & API Developer with 2.0 years of experience. Focus in Python, FastAPI, Django, PostgreSQL, Git. Maintained production Python and FastAPI pipelines. Adjacent skills transitioning to Python Backend & API Developer.
+
+TECHNICAL SKILLS
+Python, FastAPI, Django, PostgreSQL, Git, Linux
+
+WORK EXPERIENCE
+Python Backend & API Developer | TechCorp Enterprise Systems (2022 - Present)
+• Maintained production Python and FastAPI pipelines. Adjacent skills transitioning to Python Backend & API Developer.
+• Orchestrated continuous deployment and monitoring with CI/CD and Docker.
+• Mentored junior engineers and improved automated test coverage.
+
+EDUCATION
+B.Tech / B.E. in Computer Science & Engineering
+VTU University | Graduated 2021

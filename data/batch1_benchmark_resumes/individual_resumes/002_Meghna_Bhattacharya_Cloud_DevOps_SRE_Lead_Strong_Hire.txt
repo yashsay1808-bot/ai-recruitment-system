@@ -1,0 +1,36 @@
+Meghna Bhattacharya
+Email: meghna.bhattacharya@mailbox.in | Phone: +91 92142 71401 | Location: Kolkata, India
+LinkedIn: https://linkedin.com/in/meghna-bhattacharya | GitHub: https://github.com/meghnabhattacharya
+
+PROFESSIONAL SUMMARY
+Cloud DevOps & SRE Lead with 7 years of production experience across SaaS and mobility. Deep hands-on expertise in Kubernetes, Docker, Terraform, AWS. Known for measurable impact on latency, reliability and cost, and for mentoring engineers.
+
+TECHNICAL SKILLS
+Kubernetes, Docker, Terraform, AWS, CI/CD, Linux, Prometheus, Grafana, Git, Bash, Vault, Jenkins, Istio, ArgoCD, Python
+
+EDUCATION
+B.E. in Computer Science (AI & ML)
+Jadavpur University | CGPA: 7.8/10 | Graduated: 2018
+
+WORK EXPERIENCE
+Cloud DevOps & SRE Lead | Orchid Logistics Tech (Dec 2022 - Present)
+• Scaled ingress to 110,000 requests per second using Envoy and autoscaled HPA policies tuned with load tests.
+• Mentored 6 engineers and ran incident reviews that cut Sev-1 incidents by 46% year over year.
+• Hardened Linux base images and Kubernetes policies (OPA, Falco), closing 210 CVEs and passing SOC 2 audits with zero findings.
+• Operated 180 microservices on EKS with Terraform and ArgoCD, sustaining 99.995% SLA and p95 API latency below 46 ms.
+
+DevOps Engineer | Fernhill Retail Cloud (Oct 2019 - Dec 2022)
+• Reduced cloud spend by 31% ($48k per month) via right-sizing, Karpenter autoscaling and committed-use planning.
+• Designed GitHub Actions and Jenkins CI/CD with canary and blue-green releases; deployment frequency rose from 8 per week to 40 per day.
+• Codified 12 environments as Terraform modules, cutting provisioning from 7 days to 18 minutes with policy-as-code guardrails.
+
+KEY PROJECTS
+Observability Stack
+• Prometheus, Thanos and Grafana stack ingesting 80,000 samples per second with SLO burn-rate alerting.
+
+Chaos and DR Toolkit
+• Automated game-day scenarios with Litmus and Terraform; validated RTO of 12 minutes across 19 regions.
+
+CERTIFICATIONS & AWARDS
+• Certified Kubernetes Administrator (CKA)
+• Employee of the Year, Engineering 2024

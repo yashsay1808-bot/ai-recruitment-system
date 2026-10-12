@@ -1,0 +1,19 @@
+Rahul Rastogi
+Email: rahul.rastogi@domain.com | Phone: +91 98317 89818 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/rahul-rastogi | GitHub: https://github.com/rahul-rastogi
+
+PROFESSIONAL SUMMARY
+AI Safety, Governance & Alignment Auditor with 0.4 years of experience. Focus in AI Safety, Model Evaluation, Red Teaming, Bias Auditing, Python. Claimed mastery across 17 enterprise technologies in 4 months total tenure; untouched forks.
+
+TECHNICAL SKILLS
+AI Safety, Model Evaluation, Red Teaming, Bias Auditing, Python, LLM Evaluation, PyTorch, Explainable AI, Fairness Metrics, ISO 42001, Quantum Computing, Blockchain, CUDA, Kubernetes Master, Solidity, Rust, Hadoop
+
+WORK EXPERIENCE
+AI Safety, Governance & Alignment Auditor | TechCorp Enterprise Systems (2022 - Present)
+• Claimed mastery across 17 enterprise technologies in 4 months total tenure; untouched forks.
+• Orchestrated continuous deployment and monitoring with CI/CD and Docker.
+• Mentored junior engineers and improved automated test coverage.
+
+EDUCATION
+B.Tech / B.E. in Computer Science & Engineering
+VTU University | Graduated 2021

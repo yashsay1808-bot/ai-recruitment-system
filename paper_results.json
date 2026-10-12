@@ -1,0 +1,786 @@
+{
+ "env": {
+  "python": "3.11.9",
+  "sentence_transformers_installed": false,
+  "n_resumes": 12,
+  "jd_required": [
+   "AWS",
+   "CI/CD",
+   "Deep Learning",
+   "Docker",
+   "FastAPI",
+   "Flask",
+   "Git",
+   "Hugging Face",
+   "Machine Learning",
+   "Natural Language Processing",
+   "NumPy",
+   "Pandas",
+   "PyTorch",
+   "Python",
+   "REST API",
+   "Scikit-Learn",
+   "TensorFlow"
+  ],
+  "ontology_skills": 79
+ },
+ "latency_ms_per_resume": {
+  "parse": 18.007179101308186,
+  "rank": 3.7828882535298667,
+  "council": 7.793923219045003,
+  "total": 29.583990573883053
+ },
+ "kendall_tau_baseline_vs_proposed": 0.6666666666666666,
+ "rows": [
+  {
+   "file": "Test_Case_1_Gold_Standard_Pass.txt",
+   "rank": 1,
+   "proposed": 88.1,
+   "baseline": 100.0,
+   "council": 91.4,
+   "verdict": "STRONG_HIRE",
+   "confidence": 89.4,
+   "human_review": false,
+   "flags": [],
+   "years": 3.0,
+   "agents": {
+    "tech_lead": 88.8,
+    "culture_retention": 78.0,
+    "fair_auditor": 98.8,
+    "seniority_comp": 100.0
+   },
+   "tech_metrics": {
+    "required_skill_coverage": 0.971,
+    "required_skills_listed": 17,
+    "required_skills_evidenced": 16,
+    "unevidenced_skill_ratio": 0.087,
+    "architecture_signals": 3,
+    "craftsmanship_signals": 5,
+    "quantified_impacts": 9,
+    "projects_with_deployment_evidence": 2,
+    "repo_maturity_index": 1.0,
+    "missing_required_skills": []
+   },
+   "breakdown": {
+    "overall_score": 88.1,
+    "technical_skills": 100.0,
+    "semantic_jd": 52.6,
+    "experience": 90.0,
+    "education": 100.0,
+    "projects": 90.6,
+    "certifications": 100.0,
+    "resume_quality": 100.0
+   },
+   "ats": 100.0,
+   "baseline_rank": 1
+  },
+  {
+   "file": "Rahul_Nair_ML_Engineer.pdf",
+   "rank": 2,
+   "proposed": 82.3,
+   "baseline": 88.2,
+   "council": 83.2,
+   "verdict": "STRONG_HIRE",
+   "confidence": 88.3,
+   "human_review": false,
+   "flags": [],
+   "years": 2.5,
+   "agents": {
+    "tech_lead": 73.3,
+    "culture_retention": 81.0,
+    "fair_auditor": 85.3,
+    "seniority_comp": 100.0
+   },
+   "tech_metrics": {
+    "required_skill_coverage": 0.882,
+    "required_skills_listed": 16,
+    "required_skills_evidenced": 14,
+    "unevidenced_skill_ratio": 0.2,
+    "architecture_signals": 3,
+    "craftsmanship_signals": 1,
+    "quantified_impacts": 4,
+    "projects_with_deployment_evidence": 0,
+    "repo_maturity_index": 0.55,
+    "missing_required_skills": [
+     "Flask"
+    ]
+   },
+   "breakdown": {
+    "overall_score": 82.3,
+    "technical_skills": 97.1,
+    "semantic_jd": 43.5,
+    "experience": 87.5,
+    "education": 100.0,
+    "projects": 69.4,
+    "certifications": 100.0,
+    "resume_quality": 92.0
+   },
+   "ats": 92.0,
+   "baseline_rank": 2
+  },
+  {
+   "file": "Test_Case_3_Lateral_Partial_Match.txt",
+   "rank": 3,
+   "proposed": 61.3,
+   "baseline": 47.1,
+   "council": 76.0,
+   "verdict": "LEAN_HIRE",
+   "confidence": 83.7,
+   "human_review": false,
+   "flags": [
+    "REQUIRED_SKILLS_MISSING"
+   ],
+   "years": 4.0,
+   "agents": {
+    "tech_lead": 69.3,
+    "culture_retention": 78.0,
+    "fair_auditor": 64.7,
+    "seniority_comp": 100.0
+   },
+   "tech_metrics": {
+    "required_skill_coverage": 0.471,
+    "required_skills_listed": 8,
+    "required_skills_evidenced": 8,
+    "unevidenced_skill_ratio": 0.071,
+    "architecture_signals": 5,
+    "craftsmanship_signals": 5,
+    "quantified_impacts": 5,
+    "projects_with_deployment_evidence": 0,
+    "repo_maturity_index": 0.383,
+    "missing_required_skills": [
+     "Deep Learning",
+     "FastAPI",
+     "Hugging Face",
+     "Natural Language Processing",
+     "NumPy",
+     "Pandas",
+     "PyTorch",
+     "Scikit-Learn",
+     "TensorFlow"
+    ]
+   },
+   "breakdown": {
+    "overall_score": 61.3,
+    "technical_skills": 55.9,
+    "semantic_jd": 12.5,
+    "experience": 95.0,
+    "education": 96.0,
+    "projects": 62.4,
+    "certifications": 90.0,
+    "resume_quality": 92.0
+   },
+   "ats": 92.0,
+   "baseline_rank": 4
+  },
+  {
+   "file": "Sneha_Kulkarni_Fullstack_Dev.txt",
+   "rank": 4,
+   "proposed": 56.0,
+   "baseline": 41.2,
+   "council": 66.2,
+   "verdict": "LEAN_HIRE",
+   "confidence": 75.3,
+   "human_review": true,
+   "flags": [
+    "REQUIRED_SKILLS_MISSING"
+   ],
+   "years": 5.0,
+   "agents": {
+    "tech_lead": 52.0,
+    "culture_retention": 78.0,
+    "fair_auditor": 49.8,
+    "seniority_comp": 100.0
+   },
+   "tech_metrics": {
+    "required_skill_coverage": 0.412,
+    "required_skills_listed": 7,
+    "required_skills_evidenced": 7,
+    "unevidenced_skill_ratio": 0.0,
+    "architecture_signals": 3,
+    "craftsmanship_signals": 3,
+    "quantified_impacts": 1,
+    "projects_with_deployment_evidence": 1,
+    "repo_maturity_index": 0.467,
+    "missing_required_skills": [
+     "Deep Learning",
+     "Flask",
+     "Hugging Face",
+     "Machine Learning",
+     "Natural Language Processing",
+     "NumPy",
+     "Pandas",
+     "PyTorch",
+     "Scikit-Learn",
+     "TensorFlow"
+    ]
+   },
+   "breakdown": {
+    "overall_score": 56.0,
+    "technical_skills": 44.1,
+    "semantic_jd": 9.0,
+    "experience": 100.0,
+    "education": 100.0,
+    "projects": 49.7,
+    "certifications": 100.0,
+    "resume_quality": 75.0
+   },
+   "ats": 75.0,
+   "baseline_rank": 6
+  },
+  {
+   "file": "Vikram_Singh_Cloud_DevOps.docx",
+   "rank": 5,
+   "proposed": 50.1,
+   "baseline": 29.4,
+   "council": 61.5,
+   "verdict": "REJECT",
+   "confidence": 81.1,
+   "human_review": false,
+   "flags": [
+    "REQUIRED_SKILLS_MISSING"
+   ],
+   "years": 4.0,
+   "agents": {
+    "tech_lead": 50.7,
+    "culture_retention": 78.0,
+    "fair_auditor": 46.9,
+    "seniority_comp": 82.0
+   },
+   "tech_metrics": {
+    "required_skill_coverage": 0.235,
+    "required_skills_listed": 5,
+    "required_skills_evidenced": 3,
+    "unevidenced_skill_ratio": 0.455,
+    "architecture_signals": 4,
+    "craftsmanship_signals": 3,
+    "quantified_impacts": 2,
+    "projects_with_deployment_evidence": 1,
+    "repo_maturity_index": 0.467,
+    "missing_required_skills": [
+     "Deep Learning",
+     "FastAPI",
+     "Flask",
+     "Hugging Face",
+     "Machine Learning",
+     "Natural Language Processing",
+     "NumPy",
+     "Pandas",
+     "PyTorch",
+     "REST API",
+     "Scikit-Learn",
+     "TensorFlow"
+    ]
+   },
+   "breakdown": {
+    "overall_score": 50.1,
+    "technical_skills": 29.4,
+    "semantic_jd": 10.2,
+    "experience": 95.0,
+    "education": 100.0,
+    "projects": 47.4,
+    "certifications": 100.0,
+    "resume_quality": 75.0
+   },
+   "ats": 75.0,
+   "baseline_rank": 9
+  },
+  {
+   "file": "Kavita_Mehta_Buzzword_Flawed.txt",
+   "rank": 6,
+   "proposed": 47.4,
+   "baseline": 52.9,
+   "council": 48.1,
+   "verdict": "REJECT",
+   "confidence": 71.6,
+   "human_review": false,
+   "flags": [
+    "EXPERIENCE_DEFICIT",
+    "REQUIRED_SKILLS_MISSING"
+   ],
+   "years": 1.0,
+   "agents": {
+    "tech_lead": 37.6,
+    "culture_retention": 62.0,
+    "fair_auditor": 34.3,
+    "seniority_comp": 70.0
+   },
+   "tech_metrics": {
+    "required_skill_coverage": 0.441,
+    "required_skills_listed": 9,
+    "required_skills_evidenced": 6,
+    "unevidenced_skill_ratio": 0.333,
+    "architecture_signals": 2,
+    "craftsmanship_signals": 0,
+    "quantified_impacts": 1,
+    "projects_with_deployment_evidence": 0,
+    "repo_maturity_index": 0.0,
+    "missing_required_skills": [
+     "CI/CD",
+     "FastAPI",
+     "Flask",
+     "Git",
+     "Hugging Face",
+     "NumPy",
+     "Pandas",
+     "REST API"
+    ]
+   },
+   "breakdown": {
+    "overall_score": 47.4,
+    "technical_skills": 52.9,
+    "semantic_jd": 27.0,
+    "experience": 40.0,
+    "education": 80.0,
+    "projects": 47.4,
+    "certifications": 40.0,
+    "resume_quality": 54.0
+   },
+   "ats": 54.0,
+   "baseline_rank": 3
+  },
+  {
+   "file": "Aarav_Sharma_Backend_Dev.docx",
+   "rank": 7,
+   "proposed": 46.1,
+   "baseline": 35.3,
+   "council": 66.2,
+   "verdict": "LEAN_HIRE",
+   "confidence": 74.4,
+   "human_review": true,
+   "flags": [
+    "REQUIRED_SKILLS_MISSING"
+   ],
+   "years": 1.5,
+   "agents": {
+    "tech_lead": 55.9,
+    "culture_retention": 78.0,
+    "fair_auditor": 44.2,
+    "seniority_comp": 100.0
+   },
+   "tech_metrics": {
+    "required_skill_coverage": 0.324,
+    "required_skills_listed": 6,
+    "required_skills_evidenced": 5,
+    "unevidenced_skill_ratio": 0.231,
+    "architecture_signals": 5,
+    "craftsmanship_signals": 2,
+    "quantified_impacts": 2,
+    "projects_with_deployment_evidence": 1,
+    "repo_maturity_index": 0.467,
+    "missing_required_skills": [
+     "AWS",
+     "CI/CD",
+     "Deep Learning",
+     "Hugging Face",
+     "Machine Learning",
+     "Natural Language Processing",
+     "NumPy",
+     "Pandas",
+     "PyTorch",
+     "Scikit-Learn",
+     "TensorFlow"
+    ]
+   },
+   "breakdown": {
+    "overall_score": 46.1,
+    "technical_skills": 35.3,
+    "semantic_jd": 9.7,
+    "experience": 60.0,
+    "education": 96.0,
+    "projects": 49.7,
+    "certifications": 90.0,
+    "resume_quality": 75.0
+   },
+   "ats": 75.0,
+   "baseline_rank": 7
+  },
+  {
+   "file": "Ananya_Roy_Fresher_Engineer.pdf",
+   "rank": 8,
+   "proposed": 46.1,
+   "baseline": 35.3,
+   "council": 44.1,
+   "verdict": "REJECT",
+   "confidence": 77.6,
+   "human_review": false,
+   "flags": [
+    "EXPERIENCE_DEFICIT",
+    "REQUIRED_SKILLS_MISSING"
+   ],
+   "years": 0.5,
+   "agents": {
+    "tech_lead": 30.9,
+    "culture_retention": 62.0,
+    "fair_auditor": 27.5,
+    "seniority_comp": 70.0
+   },
+   "tech_metrics": {
+    "required_skill_coverage": 0.324,
+    "required_skills_listed": 6,
+    "required_skills_evidenced": 5,
+    "unevidenced_skill_ratio": 0.231,
+    "architecture_signals": 0,
+    "craftsmanship_signals": 1,
+    "quantified_impacts": 1,
+    "projects_with_deployment_evidence": 0,
+    "repo_maturity_index": 0.217,
+    "missing_required_skills": [
+     "AWS",
+     "CI/CD",
+     "Deep Learning",
+     "Docker",
+     "FastAPI",
+     "Flask",
+     "Hugging Face",
+     "Natural Language Processing",
+     "PyTorch",
+     "REST API",
+     "TensorFlow"
+    ]
+   },
+   "breakdown": {
+    "overall_score": 46.1,
+    "technical_skills": 41.2,
+    "semantic_jd": 19.1,
+    "experience": 25.0,
+    "education": 100.0,
+    "projects": 62.4,
+    "certifications": 90.0,
+    "resume_quality": 67.0
+   },
+   "ats": 67.0,
+   "baseline_rank": 8
+  },
+  {
+   "file": "Priya_Patel_Data_Analyst.pdf",
+   "rank": 9,
+   "proposed": 45.3,
+   "baseline": 23.5,
+   "council": 57.4,
+   "verdict": "REJECT",
+   "confidence": 66.9,
+   "human_review": false,
+   "flags": [
+    "REQUIRED_SKILLS_MISSING"
+   ],
+   "years": 2.0,
+   "agents": {
+    "tech_lead": 27.6,
+    "culture_retention": 78.0,
+    "fair_auditor": 48.7,
+    "seniority_comp": 100.0
+   },
+   "tech_metrics": {
+    "required_skill_coverage": 0.176,
+    "required_skills_listed": 4,
+    "required_skills_evidenced": 2,
+    "unevidenced_skill_ratio": 0.2,
+    "architecture_signals": 0,
+    "craftsmanship_signals": 0,
+    "quantified_impacts": 3,
+    "projects_with_deployment_evidence": 0,
+    "repo_maturity_index": 0.217,
+    "missing_required_skills": [
+     "AWS",
+     "CI/CD",
+     "Deep Learning",
+     "Docker",
+     "FastAPI",
+     "Flask",
+     "Hugging Face",
+     "Machine Learning",
+     "Natural Language Processing",
+     "PyTorch",
+     "REST API",
+     "Scikit-Learn",
+     "TensorFlow"
+    ]
+   },
+   "breakdown": {
+    "overall_score": 45.3,
+    "technical_skills": 23.5,
+    "semantic_jd": 7.5,
+    "experience": 85.0,
+    "education": 87.0,
+    "projects": 62.4,
+    "certifications": 90.0,
+    "resume_quality": 67.0
+   },
+   "ats": 67.0,
+   "baseline_rank": 10
+  },
+  {
+   "file": "Test_Case_2_Buzzword_Exaggeration_Fail.txt",
+   "rank": 10,
+   "proposed": 41.6,
+   "baseline": 47.1,
+   "council": 50.3,
+   "verdict": "REJECT",
+   "confidence": 82.5,
+   "human_review": false,
+   "flags": [
+    "EXPERIENCE_DEFICIT",
+    "UNVERIFIED_SKILL_CLAIMS",
+    "SKILL_STUFFING",
+    "REQUIRED_SKILLS_MISSING"
+   ],
+   "years": 0.3,
+   "agents": {
+    "tech_lead": 44.8,
+    "culture_retention": 62.0,
+    "fair_auditor": 32.7,
+    "seniority_comp": 70.0
+   },
+   "tech_metrics": {
+    "required_skill_coverage": 0.265,
+    "required_skills_listed": 8,
+    "required_skills_evidenced": 1,
+    "unevidenced_skill_ratio": 0.897,
+    "architecture_signals": 5,
+    "craftsmanship_signals": 0,
+    "quantified_impacts": 1,
+    "projects_with_deployment_evidence": 1,
+    "repo_maturity_index": 0.417,
+    "missing_required_skills": [
+     "CI/CD",
+     "FastAPI",
+     "Flask",
+     "Git",
+     "Hugging Face",
+     "NumPy",
+     "Pandas",
+     "REST API",
+     "Scikit-Learn"
+    ]
+   },
+   "breakdown": {
+    "overall_score": 41.6,
+    "technical_skills": 47.1,
+    "semantic_jd": 20.8,
+    "experience": 25.0,
+    "education": 52.0,
+    "projects": 47.4,
+    "certifications": 90.0,
+    "resume_quality": 56.0
+   },
+   "ats": 56.0,
+   "baseline_rank": 5
+  },
+  {
+   "file": "Test_Case_4_Corrupt_ATS_Format_Error.txt",
+   "rank": 11,
+   "proposed": 34.0,
+   "baseline": 0.0,
+   "council": 38.5,
+   "verdict": "REJECT",
+   "confidence": 32.8,
+   "human_review": true,
+   "flags": [
+    "NO_QUANTIFIED_IMPACT",
+    "DATE_INCONSISTENCY",
+    "REQUIRED_SKILLS_MISSING"
+   ],
+   "years": 9.0,
+   "agents": {
+    "tech_lead": 0.0,
+    "culture_retention": 79.0,
+    "fair_auditor": 25.0,
+    "seniority_comp": 82.0
+   },
+   "tech_metrics": {
+    "required_skill_coverage": 0.0,
+    "required_skills_listed": 0,
+    "required_skills_evidenced": 0,
+    "unevidenced_skill_ratio": 0.0,
+    "architecture_signals": 0,
+    "craftsmanship_signals": 0,
+    "quantified_impacts": 0,
+    "projects_with_deployment_evidence": 0,
+    "repo_maturity_index": 0.0,
+    "missing_required_skills": [
+     "AWS",
+     "CI/CD",
+     "Deep Learning",
+     "Docker",
+     "FastAPI",
+     "Flask",
+     "Git",
+     "Hugging Face",
+     "Machine Learning",
+     "Natural Language Processing",
+     "NumPy",
+     "Pandas",
+     "PyTorch",
+     "Python",
+     "REST API",
+     "Scikit-Learn",
+     "TensorFlow"
+    ]
+   },
+   "breakdown": {
+    "overall_score": 34.0,
+    "technical_skills": 0.0,
+    "semantic_jd": 2.6,
+    "experience": 100.0,
+    "education": 93.0,
+    "projects": 60.0,
+    "certifications": 40.0,
+    "resume_quality": 23.0
+   },
+   "ats": 23.0,
+   "baseline_rank": 12
+  },
+  {
+   "file": "Edge_Case_Missing_Sections.txt",
+   "rank": 12,
+   "proposed": 28.3,
+   "baseline": 5.9,
+   "council": 27.4,
+   "verdict": "REJECT",
+   "confidence": 43.2,
+   "human_review": true,
+   "flags": [
+    "EXPERIENCE_DEFICIT",
+    "REQUIRED_SKILLS_MISSING"
+   ],
+   "years": 0.0,
+   "agents": {
+    "tech_lead": 2.0,
+    "culture_retention": 62.0,
+    "fair_auditor": 1.2,
+    "seniority_comp": 70.0
+   },
+   "tech_metrics": {
+    "required_skill_coverage": 0.029,
+    "required_skills_listed": 1,
+    "required_skills_evidenced": 0,
+    "unevidenced_skill_ratio": 1.0,
+    "architecture_signals": 0,
+    "craftsmanship_signals": 0,
+    "quantified_impacts": 0,
+    "projects_with_deployment_evidence": 0,
+    "repo_maturity_index": 0.0,
+    "missing_required_skills": [
+     "AWS",
+     "CI/CD",
+     "Deep Learning",
+     "Docker",
+     "FastAPI",
+     "Flask",
+     "Git",
+     "Hugging Face",
+     "Machine Learning",
+     "Natural Language Processing",
+     "NumPy",
+     "Pandas",
+     "PyTorch",
+     "REST API",
+     "Scikit-Learn",
+     "TensorFlow"
+    ]
+   },
+   "breakdown": {
+    "overall_score": 28.3,
+    "technical_skills": 5.9,
+    "semantic_jd": 14.5,
+    "experience": 25.0,
+    "education": 93.0,
+    "projects": 62.4,
+    "certifications": 40.0,
+    "resume_quality": 40.0
+   },
+   "ats": 40.0,
+   "baseline_rank": 11
+  }
+ ],
+ "name_swap_max_delta": {
+  "plain": {
+   "hybrid": 0.0,
+   "council": 0.0
+  },
+  "blind": {
+   "hybrid": 0.0,
+   "council": 0.0
+  }
+ },
+ "ablation": {
+  "no_evidence_weighting": {
+   "verdict_changes": [
+    [
+     "Test_Case_2_Buzzword_Exaggeration_Fail.txt",
+     "REJECT",
+     "LEAN_HIRE"
+    ],
+    [
+     "Vikram_Singh_Cloud_DevOps.docx",
+     "REJECT",
+     "LEAN_HIRE"
+    ]
+   ],
+   "scores_changed": {
+    "Aarav_Sharma_Backend_Dev.docx": [
+     66.2,
+     66.9
+    ],
+    "Ananya_Roy_Fresher_Engineer.pdf": [
+     44.1,
+     44.8
+    ],
+    "Edge_Case_Missing_Sections.txt": [
+     27.4,
+     28.1
+    ],
+    "Kavita_Mehta_Buzzword_Flawed.txt": [
+     48.1,
+     50.3
+    ],
+    "Priya_Patel_Data_Analyst.pdf": [
+     57.4,
+     58.8
+    ],
+    "Rahul_Nair_ML_Engineer.pdf": [
+     83.2,
+     84.6
+    ],
+    "Test_Case_1_Gold_Standard_Pass.txt": [
+     91.4,
+     92.1
+    ],
+    "Test_Case_2_Buzzword_Exaggeration_Fail.txt": [
+     50.3,
+     55.2
+    ],
+    "Vikram_Singh_Cloud_DevOps.docx": [
+     61.5,
+     62.9
+    ]
+   }
+  },
+  "no_flag_gates": {
+   "verdict_changes": [],
+   "scores_changed": {}
+  }
+ },
+ "sensitivity": {
+  "draws": 200,
+  "tau_mean": 0.9693939393939391,
+  "tau_min": 0.8787878787878787,
+  "top1_stable": 1.0,
+  "top3_set_stable": 1.0,
+  "council_verdict_stable": 1.0
+ },
+ "retrieval": {
+  "bm25_only": {
+   "P@3": 0.9166666666666666,
+   "R@3": 1.0
+  },
+  "dense_only": {
+   "P@3": 0.9166666666666666,
+   "R@3": 1.0
+  },
+  "hybrid_0.55": {
+   "P@3": 0.9166666666666666,
+   "R@3": 1.0
+  }
+ }
+}

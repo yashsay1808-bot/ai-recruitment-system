@@ -1,0 +1,218 @@
+/**
+ * Authentication service. Components talk only to `authService`; the provider behind it is chosen by
+ * VITE_AUTH_PROVIDER:
+ *
+ *   local (default)  Accounts are stored in this browser (localStorage) with PBKDF2-hashed passwords and
+ *                    the session lives in sessionStorage. This is a self-contained demo store, not a
+ *                    substitute for a server: anyone with access to the browser profile can read it.
+ *   api              Delegates to the backend (MongoDB Atlas behind it):
+ *                      POST /auth/signup  {name,email,company,role,password}  -> 201 {user}
+ *                      POST /auth/signin  {email,password}                    -> {token,user}
+ *                      GET  /auth/me                                          -> {user}
+ *                      POST /auth/signout
+ *
+ * Public user shape: { id, name, email, company, role }.
+ */
+import { config, isApiMode } from "../config/env";
+import { api, tokenStore, ApiError } from "./apiClient";
+
+export const ROLES = [
+  "Lead Technical Recruiter",
+  "Talent Acquisition Partner",
+  "Engineering Hiring Manager",
+  "HR Business Partner",
+  "Technical Interviewer",
+];
+
+export const MIN_PASSWORD_LENGTH = 8;
+const EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+
+export class AuthError extends Error {}
+
+// Demo account for reviewers/testers. Only exists in the browser-local provider, never against a real backend,
+// and can be switched off with VITE_SEED_DEMO_ACCOUNT=off.
+export const DEMO_ACCOUNT = {
+  name: "Yashashwini",
+  email: "recruiter@techcorp.com",
+  password: "password123",
+  role: "Lead Technical Recruiter",
+  company: "TechCorp Global",
+};
+export const isDemoAccountEnabled = config.seedDemoAccount && !isApiMode(config.authProvider);
+
+export function validateSignUp({ name, email, company, role, password }) {
+  if (!name?.trim()) return "Enter your full name.";
+  if (!EMAIL_RE.test(email?.trim() || "")) return "Enter a valid work email.";
+  if (!company?.trim()) return "Enter your company.";
+  if (!ROLES.includes(role)) return "Choose your role.";
+  if ((password || "").length < MIN_PASSWORD_LENGTH) {
+    return `Password must be at least ${MIN_PASSWORD_LENGTH} characters.`;
+  }
+  return null;
+}
+
+/* -------------------------------------------------------------------------------------------- */
+/* Local provider                                                                                */
+/* -------------------------------------------------------------------------------------------- */
+const USERS_KEY = "ats.users.v1";
+const SESSION_KEY = "ats.session.v1";
+const PBKDF2_ITERATIONS = 200_000;
+
+const readJson = (storage, key, fallback) => {
+  try {
+    const raw = storage.getItem(key);
+    return raw ? JSON.parse(raw) : fallback;
+  } catch {
+    return fallback;
+  }
+};
+const writeJson = (storage, key, value) => {
+  try {
+    storage.setItem(key, JSON.stringify(value));
+    return true;
+  } catch {
+    return false;
+  }
+};
+
+const toHex = (buf) => [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, "0")).join("");
+const fromHex = (hex) => new Uint8Array(hex.match(/.{2}/g).map((h) => parseInt(h, 16)));
+
+async function derive(password, saltBytes, iterations) {
+  if (!globalThis.crypto?.subtle) {
+    throw new AuthError("Secure password hashing needs HTTPS or localhost.");
+  }
+  const key = await crypto.subtle.importKey("raw", new TextEncoder().encode(password), "PBKDF2", false, [
+    "deriveBits",
+  ]);
+  const bits = await crypto.subtle.deriveBits(
+    { name: "PBKDF2", salt: saltBytes, iterations, hash: "SHA-256" },
+    key,
+    256,
+  );
+  return toHex(bits);
+}
+
+const publicUser = ({ id, name, email, company, role }) => ({ id, name, email, company, role });
+const normEmail = (e) => e.trim().toLowerCase();
+
+async function createLocalUser(form) {
+  const users = readJson(localStorage, USERS_KEY, []);
+  const email = normEmail(form.email);
+  if (users.some((u) => u.email === email)) throw new AuthError("An account with this email already exists.");
+
+  const salt = crypto.getRandomValues(new Uint8Array(16));
+  const hash = await derive(form.password, salt, PBKDF2_ITERATIONS);
+  const user = {
+    id: crypto.randomUUID(),
+    name: form.name.trim(),
+    email,
+    company: form.company.trim(),
+    role: form.role,
+    salt: toHex(salt),
+    hash,
+    iterations: PBKDF2_ITERATIONS,
+    createdAt: new Date().toISOString(),
+  };
+  if (!writeJson(localStorage, USERS_KEY, [...users, user])) {
+    throw new AuthError("Could not save your account (browser storage is unavailable).");
+  }
+  return publicUser(user);
+}
+
+// Idempotent: creates the demo account only when it is missing.
+async function ensureDemoAccount() {
+  if (!isDemoAccountEnabled) return;
+  const exists = readJson(localStorage, USERS_KEY, []).some((u) => u.email === DEMO_ACCOUNT.email);
+  if (!exists) {
+    try {
+      await createLocalUser(DEMO_ACCOUNT);
+    } catch {
+      /* storage unavailable: sign-in will simply fail with the normal message */
+    }
+  }
+}
+
+const localProvider = {
+  async signUp(form) {
+    const problem = validateSignUp(form);
+    if (problem) throw new AuthError(problem);
+    await ensureDemoAccount();
+    return createLocalUser(form);
+  },
+
+  async signIn({ email, password }) {
+    await ensureDemoAccount();
+    const user = readJson(localStorage, USERS_KEY, []).find((u) => u.email === normEmail(email || ""));
+    // One message for unknown email and wrong password, so accounts can't be enumerated.
+    const fail = () => new AuthError("Incorrect email or password.");
+    if (!user) throw fail();
+    const hash = await derive(password || "", fromHex(user.salt), user.iterations);
+    if (hash !== user.hash) throw fail();
+
+    const session = { token: toHex(crypto.getRandomValues(new Uint8Array(16))), user: publicUser(user) };
+    writeJson(sessionStorage, SESSION_KEY, session);
+    return session.user;
+  },
+
+  async getSession() {
+    return readJson(sessionStorage, SESSION_KEY, null)?.user || null;
+  },
+
+  async signOut() {
+    try {
+      sessionStorage.removeItem(SESSION_KEY);
+    } catch {
+      /* ignore */
+    }
+  },
+};
+
+/* -------------------------------------------------------------------------------------------- */
+/* API provider (MongoDB Atlas behind the backend)                                               */
+/* -------------------------------------------------------------------------------------------- */
+const asAuthError = (err) => (err instanceof ApiError ? new AuthError(err.message) : err);
+
+const apiProvider = {
+  async signUp(form) {
+    const problem = validateSignUp(form);
+    if (problem) throw new AuthError(problem);
+    try {
+      const res = await api.post("/auth/signup", { ...form, email: normEmail(form.email) });
+      return res.user;
+    } catch (err) {
+      throw asAuthError(err);
+    }
+  },
+
+  async signIn({ email, password }) {
+    try {
+      const res = await api.post("/auth/signin", { email: normEmail(email || ""), password });
+      tokenStore.set(res.token);
+      return res.user;
+    } catch (err) {
+      throw asAuthError(err);
+    }
+  },
+
+  async getSession() {
+    if (!tokenStore.get()) return null;
+    try {
+      return (await api.get("/auth/me")).user;
+    } catch {
+      tokenStore.clear();
+      return null;
+    }
+  },
+
+  async signOut() {
+    try {
+      await api.post("/auth/signout");
+    } catch {
+      /* the token is dropped regardless */
+    }
+    tokenStore.clear();
+  },
+};
+
+export const authService = isApiMode(config.authProvider) ? apiProvider : localProvider;

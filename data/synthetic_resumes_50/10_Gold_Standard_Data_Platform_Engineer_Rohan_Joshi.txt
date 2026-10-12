@@ -1,0 +1,36 @@
+Rohan Joshi
+Email: rohan.joshi@mailbox.in | Phone: +91 77092 32060 | Location: Gurugram, India
+LinkedIn: https://linkedin.com/in/rohan-joshi | GitHub: https://github.com/joshir
+
+PROFESSIONAL SUMMARY
+Data Platform Engineer with 4 years of experience delivering production systems. Skilled in Python, SQL, Apache Spark, Apache Kafka, Apache Airflow, dbt. Consistent record of measurable gains in latency, throughput, reliability and cost.
+
+TECHNICAL SKILLS
+Python, SQL, Apache Spark, Apache Kafka, Apache Airflow, dbt, Snowflake, Delta Lake, AWS Glue, Redshift, Docker, Terraform, Git, Data Modeling, ETL, PostgreSQL, Databricks, Scala, BigQuery
+
+EDUCATION
+B.Tech in Information Technology
+Jadavpur University, Kolkata | CGPA: 8.2/10 | Graduated: 2022
+
+WORK EXPERIENCE
+Senior Data Engineer | Aurora Payments (Jul 2024 - Present)
+• Cut warehouse cost by 22% (about $18k per month) through partition pruning, clustering and job scheduling.
+• Introduced Great Expectations data-quality checks that prevented 12 bad loads per quarter and lifted dataset trust scores by 42%.
+• Migrated 4 legacy ETL jobs to Airflow and dbt, reducing nightly batch runtime from 12 hours to 2 hours.
+• Provisioned the platform with Terraform and Docker and automated deployments through CI/CD.
+• Mentored 5 data engineers and defined data-modelling standards across 9 domains.
+
+Data Engineer | Tessera Media (Oct 2022 - Jul 2024)
+• Introduced Great Expectations data-quality checks that prevented 25 bad loads per quarter and lifted dataset trust scores by 38%.
+• Provisioned the platform with Terraform and Docker and automated deployments through CI/CD.
+• Migrated 18 legacy ETL jobs to Airflow and dbt, reducing nightly batch runtime from 8 hours to 2 hours.
+
+KEY PROJECTS
+Self-Serve Metrics Layer
+• Built a dbt semantic layer used by 2,000 analysts, cutting duplicate metric definitions by 42%.
+Streaming Clickstream Pipeline
+• Processed 12,000 events per second with Kafka and Spark Structured Streaming into Delta Lake.
+
+CERTIFICATIONS & AWARDS
+• Databricks Lakehouse Fundamentals
+• Internal Engineering Excellence Award, 2025

@@ -1,0 +1,32 @@
+Karan Saxena
+Email: karan.saxena@mailbox.in | Phone: +91 80811 92912 | Location: Noida, India
+LinkedIn: https://linkedin.com/in/karan-saxena | GitHub: https://github.com/karansax44
+
+PROFESSIONAL SUMMARY
+IT Compliance Auditor with 5 years of experience, recently transitioning into Responsible AI Analyst work. Completed hands-on projects and certifications in PyTorch, Fairlearn, Adversarial Robustness and now seeking a role that applies this background to production systems.
+
+TECHNICAL SKILLS
+Risk Assessment, Audit, ISO 27001, SOX, Excel, SQL, Python, PyTorch, Fairlearn, Adversarial Robustness, LIME, Model Cards
+
+EDUCATION
+B.Tech in Computer Science (AI & ML)
+BMS College of Engineering, Bengaluru | CGPA: 9.2/10 | Graduated: 2021
+
+WORK EXPERIENCE
+Responsible AI Analyst (Transition Role) | Aurora Payments (Sep 2025 - Present)
+• Led red-team exercises on LLM applications and documented 12 jailbreak and prompt-injection classes with reproducible test suites.
+• Briefed 2 governance committees and trained 120 engineers on responsible-AI practice.
+
+IT Compliance Auditor | Orbitron Labs (Oct 2021 - Sep 2025)
+• Performed 4 IT general-control audits against ISO 27001 and reduced open findings by 55%.
+• Built SQL-based control tests covering 20,000 transactions.
+
+KEY PROJECTS
+LLM Red-Team Benchmark
+• Compiled 400,000 adversarial prompts with automated scoring and a public leaderboard.
+Bias Audit Toolkit
+• Open-sourced a Fairlearn-based audit pipeline evaluated on 400,000 loan records, flagging 6 protected-group gaps.
+
+CERTIFICATIONS
+• NIST AI RMF Foundations
+• Completed a career-transition bootcamp

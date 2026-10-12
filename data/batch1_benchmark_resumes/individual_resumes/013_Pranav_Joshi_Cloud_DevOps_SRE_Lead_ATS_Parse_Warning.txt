@@ -1,0 +1,37 @@
+Pranav Joshi
+Email: pranav.joshi@mailbox.in | Phone: +91 93707 69596 | Location: Nagpur, India
+LinkedIn: https://linkedin.com/in/pranav-joshi | GitHub: https://github.com/pranavdev8
+
+PROFESSIONAL SUMMARY
+Cloud DevOps & SRE Lead with 5 years of production experience across logistics and mobility. Deep hands-on expertise in Kubernetes, Docker, Terraform, AWS. Known for measurable impact on latency, reliability and cost, and for mentoring engineers.
+
+TECHNICAL SKILLS
+Kubernetes, Docker, Terraform, AWS, CI/CD, Linux, Prometheus, Grafana, Jenkins, Datadog, Ansible, ArgoCD, GitHub Actions, Python, Bash
+
+EDUCATION
+B.E. in Information Science and Engineering
+IIT Madras | CGPA: 8.1/10 | Graduated: 2021
+
+WORK EXPERIENCE
+Cloud DevOps & SRE Lead | Lattice Edge Systems (Mar 2023 - Present)
+• Full-time on-site role at the San Jose, USA office, concurrent with the full-time role below in Bengaluru, India.
+• Scaled ingress to 110,000 requests per second using Envoy and autoscaled HPA policies tuned with load tests.
+• Hardened Linux base images and Kubernetes policies (OPA, Falco), closing 120 CVEs and passing SOC 2 audits with zero findings.
+• Built Prometheus and Grafana observability with SLO burn-rate alerts; MTTR fell from 95 to 14 minutes and alert noise dropped 68%.
+• Led multi-region failover on AWS achieving RTO of 8 minutes and RPO under 45 seconds, validated by quarterly game days.
+
+DevOps Engineer | Kinetica Labs (Jan 2022 - Aug 2025)
+• Designed GitHub Actions and Jenkins CI/CD with canary and blue-green releases; deployment frequency rose from 6 per week to 70 per day.
+• Operated 140 microservices on EKS with Terraform and ArgoCD, sustaining 99.99% SLA and p95 API latency below 49 ms.
+• Reduced cloud spend by 36% ($95k per month) via right-sizing, Karpenter autoscaling and committed-use planning.
+
+KEY PROJECTS
+Chaos and DR Toolkit
+• Automated game-day scenarios with Litmus and Terraform; validated RTO of 18 minutes across 6 regions.
+
+GitOps Migration
+• Migrated 260 services from Jenkins to ArgoCD and GitHub Actions with progressive delivery on Kubernetes.
+
+CERTIFICATIONS & AWARDS
+• Certified Kubernetes Administrator (CKA)
+• Winner, Smart India Hackathon 2025

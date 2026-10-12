@@ -1,0 +1,101 @@
+file,candidate,role,category,stated_tenure_years,github_handle,expected_verdict,expected_red_flags
+001_Gold_Standard_Senior_ML_Aakash_Deshmukh.txt,Aakash Deshmukh,Senior Machine Learning Engineer,Gold Standard,4.5,aakash-deshmukh,STRONG_HIRE,none
+002_Gold_Standard_Cloud_DevOps_Ananya_Ghosh.txt,Ananya Ghosh,Cloud DevOps & Site Reliability Lead,Gold Standard,5.8,ananya-ghosh,STRONG_HIRE,none
+003_Gold_Standard_FullStack_AI_Arun_Hegde.txt,Arun Hegde,Full-Stack AI Application Engineer,Gold Standard,5.1,arun-hegde,STRONG_HIRE,none
+004_Gold_Standard_Data_Platform_Bhavna_Joshi.txt,Bhavna Joshi,Data Platform & Distributed Systems Engineer,Gold Standard,6.4,bhavna-joshi,STRONG_HIRE,none
+005_Gold_Standard_Backend_Architect_Chetan_Khan.txt,Chetan Khan,Backend Microservices Architect,Gold Standard,6.0,chetan-khan,STRONG_HIRE,none
+006_Gold_Standard_AI_Safety_Deepa_Lobo.txt,Deepa Lobo,"AI Safety, Governance & Alignment Auditor",Gold Standard,4.3,deepa-lobo,STRONG_HIRE,none
+007_Gold_Standard_BI_Analyst_Dev_Menon.txt,Dev Menon,Senior Business Intelligence & Data Analyst,Gold Standard,4.6,dev-menon,STRONG_HIRE,none
+008_Gold_Standard_Python_Backend_Divya_Naidu.txt,Divya Naidu,Python Backend & API Developer,Gold Standard,4.9,divya-naidu,STRONG_HIRE,none
+009_Gold_Standard_Senior_ML_Gaurav_Oberoi.txt,Gaurav Oberoi,Senior Machine Learning Engineer,Gold Standard,4.5,gaurav-oberoi,STRONG_HIRE,none
+010_Gold_Standard_Cloud_DevOps_Harsh_Patil.txt,Harsh Patil,Cloud DevOps & Site Reliability Lead,Gold Standard,5.8,harsh-patil,STRONG_HIRE,none
+011_Gold_Standard_FullStack_AI_Ishaan_Raman.txt,Ishaan Raman,Full-Stack AI Application Engineer,Gold Standard,5.1,ishaan-raman,STRONG_HIRE,none
+012_Gold_Standard_Data_Platform_Jaya_Saxena.txt,Jaya Saxena,Data Platform & Distributed Systems Engineer,Gold Standard,6.4,jaya-saxena,STRONG_HIRE,none
+013_Gold_Standard_Backend_Architect_Karan_Singh.txt,Karan Singh,Backend Microservices Architect,Gold Standard,6.0,karan-singh,STRONG_HIRE,none
+014_Gold_Standard_AI_Safety_Kavya_Thakur.txt,Kavya Thakur,"AI Safety, Governance & Alignment Auditor",Gold Standard,4.3,kavya-thakur,STRONG_HIRE,none
+015_Gold_Standard_BI_Analyst_Kunal_Yadav.txt,Kunal Yadav,Senior Business Intelligence & Data Analyst,Gold Standard,4.6,kunal-yadav,STRONG_HIRE,none
+016_Gold_Standard_Python_Backend_Lakshmi_Banerjee.txt,Lakshmi Banerjee,Python Backend & API Developer,Gold Standard,4.9,lakshmi-banerjee,STRONG_HIRE,none
+017_Gold_Standard_Senior_ML_Manish_Chatterjee.txt,Manish Chatterjee,Senior Machine Learning Engineer,Gold Standard,4.5,manish-chatterjee,STRONG_HIRE,none
+018_Gold_Standard_Cloud_DevOps_Meera_Dsouza.txt,Meera Dsouza,Cloud DevOps & Site Reliability Lead,Gold Standard,5.8,meera-dsouza,STRONG_HIRE,none
+019_Gold_Standard_FullStack_AI_Mohan_Gowda.txt,Mohan Gowda,Full-Stack AI Application Engineer,Gold Standard,5.1,mohan-gowda,STRONG_HIRE,none
+020_Gold_Standard_Data_Platform_Nandini_Iyer.txt,Nandini Iyer,Data Platform & Distributed Systems Engineer,Gold Standard,6.4,nandini-iyer,STRONG_HIRE,none
+021_Lateral_Switcher_Backend_Architect_Nikhil_Kamath.txt,Nikhil Kamath,Backend Microservices Architect,Lateral Switcher,5.8,nikhil-kamath,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+022_Lateral_Switcher_AI_Safety_Omkar_Krishnan.txt,Omkar Krishnan,"AI Safety, Governance & Alignment Auditor",Lateral Switcher,2.3,omkar-krishnan,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+023_Lateral_Switcher_BI_Analyst_Padma_Malhotra.txt,Padma Malhotra,Senior Business Intelligence & Data Analyst,Lateral Switcher,2.3,padma-malhotra,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+024_Lateral_Switcher_Python_Backend_Pooja_Mishra.txt,Pooja Mishra,Python Backend & API Developer,Lateral Switcher,2.3,pooja-mishra,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+025_Lateral_Switcher_Senior_ML_Pranav_Nambiar.txt,Pranav Nambiar,Senior Machine Learning Engineer,Lateral Switcher,3.3,pranav-nambiar,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+026_Lateral_Switcher_Cloud_DevOps_Preethi_Pandey.txt,Preethi Pandey,Cloud DevOps & Site Reliability Lead,Lateral Switcher,4.3,preethi-pandey,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+027_Lateral_Switcher_FullStack_AI_Radhika_Pillai.txt,Radhika Pillai,Full-Stack AI Application Engineer,Lateral Switcher,3.3,radhika-pillai,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+028_Lateral_Switcher_Data_Platform_Rahul_Rastogi.txt,Rahul Rastogi,Data Platform & Distributed Systems Engineer,Lateral Switcher,2.8,rahul-rastogi,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+029_Lateral_Switcher_Backend_Architect_Rajat_Sethi.txt,Rajat Sethi,Backend Microservices Architect,Lateral Switcher,5.3,rajat-sethi,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+030_Lateral_Switcher_AI_Safety_Ritika_Singhania.txt,Ritika Singhania,"AI Safety, Governance & Alignment Auditor",Lateral Switcher,3.3,ritika-singhania,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+031_Lateral_Switcher_BI_Analyst_Rohan_Trivedi.txt,Rohan Trivedi,Senior Business Intelligence & Data Analyst,Lateral Switcher,2.0,rohan-trivedi,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+032_Lateral_Switcher_Python_Backend_Sanjana_Agarwal.txt,Sanjana Agarwal,Python Backend & API Developer,Lateral Switcher,2.0,sanjana-agarwal,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+033_Lateral_Switcher_Senior_ML_Shreya_Bhat.txt,Shreya Bhat,Senior Machine Learning Engineer,Lateral Switcher,4.3,shreya-bhat,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+034_Lateral_Switcher_Cloud_DevOps_Siddharth_Das.txt,Siddharth Das,Cloud DevOps & Site Reliability Lead,Lateral Switcher,3.8,siddharth-das,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+035_Lateral_Switcher_FullStack_AI_Suresh_Fernandes.txt,Suresh Fernandes,Full-Stack AI Application Engineer,Lateral Switcher,2.8,suresh-fernandes,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+036_Lateral_Switcher_Data_Platform_Swati_Gupta.txt,Swati Gupta,Data Platform & Distributed Systems Engineer,Lateral Switcher,3.8,swati-gupta,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+037_Lateral_Switcher_Backend_Architect_Tanmay_Jain.txt,Tanmay Jain,Backend Microservices Architect,Lateral Switcher,4.8,tanmay-jain,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+038_Lateral_Switcher_AI_Safety_Tara_Kapoor.txt,Tara Kapoor,"AI Safety, Governance & Alignment Auditor",Lateral Switcher,2.8,tara-kapoor,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+039_Lateral_Switcher_BI_Analyst_Uday_Kulkarni.txt,Uday Kulkarni,Senior Business Intelligence & Data Analyst,Lateral Switcher,2.8,uday-kulkarni,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+040_Lateral_Switcher_Python_Backend_Varun_Mathur.txt,Varun Mathur,Python Backend & API Developer,Lateral Switcher,2.0,varun-mathur,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+041_Lateral_Switcher_Senior_ML_Vidya_Mukherjee.txt,Vidya Mukherjee,Senior Machine Learning Engineer,Lateral Switcher,3.8,vidya-mukherjee,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+042_Lateral_Switcher_Cloud_DevOps_Vikram_Nayak.txt,Vikram Nayak,Cloud DevOps & Site Reliability Lead,Lateral Switcher,4.8,vikram-nayak,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+043_Lateral_Switcher_FullStack_AI_Waseem_Patel.txt,Waseem Patel,Full-Stack AI Application Engineer,Lateral Switcher,2.3,waseem-patel,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+044_Lateral_Switcher_Data_Platform_Yash_Prabhu.txt,Yash Prabhu,Data Platform & Distributed Systems Engineer,Lateral Switcher,3.3,yash-prabhu,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+045_Lateral_Switcher_Backend_Architect_Zoya_Reddy.txt,Zoya Reddy,Backend Microservices Architect,Lateral Switcher,5.8,zoya-reddy,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+046_Lateral_Switcher_AI_Safety_Aditi_Shetty.txt,Aditi Shetty,"AI Safety, Governance & Alignment Auditor",Lateral Switcher,2.3,aditi-shetty,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+047_Lateral_Switcher_BI_Analyst_Brijesh_Sinha.txt,Brijesh Sinha,Senior Business Intelligence & Data Analyst,Lateral Switcher,2.3,brijesh-sinha,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+048_Lateral_Switcher_Python_Backend_Chirag_Varma.txt,Chirag Varma,Python Backend & API Developer,Lateral Switcher,2.3,chirag-varma,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+049_Lateral_Switcher_Senior_ML_Farhan_Ahmed.txt,Farhan Ahmed,Senior Machine Learning Engineer,Lateral Switcher,3.3,farhan-ahmed,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+050_Lateral_Switcher_Cloud_DevOps_Hemant_Bose.txt,Hemant Bose,Cloud DevOps & Site Reliability Lead,Lateral Switcher,4.3,hemant-bose,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+051_Lateral_Switcher_FullStack_AI_Aakash_Deshmukh.txt,Aakash Deshmukh,Full-Stack AI Application Engineer,Lateral Switcher,3.3,aakash-deshmukh,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+052_Lateral_Switcher_Data_Platform_Ananya_Ghosh.txt,Ananya Ghosh,Data Platform & Distributed Systems Engineer,Lateral Switcher,2.8,ananya-ghosh,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+053_Lateral_Switcher_Backend_Architect_Arun_Hegde.txt,Arun Hegde,Backend Microservices Architect,Lateral Switcher,5.3,arun-hegde,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+054_Lateral_Switcher_AI_Safety_Bhavna_Joshi.txt,Bhavna Joshi,"AI Safety, Governance & Alignment Auditor",Lateral Switcher,3.3,bhavna-joshi,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+055_Lateral_Switcher_BI_Analyst_Chetan_Khan.txt,Chetan Khan,Senior Business Intelligence & Data Analyst,Lateral Switcher,2.0,chetan-khan,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+056_Lateral_Switcher_Python_Backend_Deepa_Lobo.txt,Deepa Lobo,Python Backend & API Developer,Lateral Switcher,2.0,deepa-lobo,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+057_Lateral_Switcher_Senior_ML_Dev_Menon.txt,Dev Menon,Senior Machine Learning Engineer,Lateral Switcher,4.3,dev-menon,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+058_Lateral_Switcher_Cloud_DevOps_Divya_Naidu.txt,Divya Naidu,Cloud DevOps & Site Reliability Lead,Lateral Switcher,3.8,divya-naidu,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+059_Lateral_Switcher_FullStack_AI_Gaurav_Oberoi.txt,Gaurav Oberoi,Full-Stack AI Application Engineer,Lateral Switcher,2.8,gaurav-oberoi,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+060_Lateral_Switcher_Data_Platform_Harsh_Patil.txt,Harsh Patil,Data Platform & Distributed Systems Engineer,Lateral Switcher,3.8,harsh-patil,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+061_Lateral_Switcher_Backend_Architect_Ishaan_Raman.txt,Ishaan Raman,Backend Microservices Architect,Lateral Switcher,4.8,ishaan-raman,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+062_Lateral_Switcher_AI_Safety_Jaya_Saxena.txt,Jaya Saxena,"AI Safety, Governance & Alignment Auditor",Lateral Switcher,2.8,jaya-saxena,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+063_Lateral_Switcher_BI_Analyst_Karan_Singh.txt,Karan Singh,Senior Business Intelligence & Data Analyst,Lateral Switcher,2.8,karan-singh,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+064_Lateral_Switcher_Python_Backend_Kavya_Thakur.txt,Kavya Thakur,Python Backend & API Developer,Lateral Switcher,2.0,kavya-thakur,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+065_Lateral_Switcher_Senior_ML_Kunal_Yadav.txt,Kunal Yadav,Senior Machine Learning Engineer,Lateral Switcher,3.8,kunal-yadav,LEAN_HIRE,REQUIRED_SKILLS_MISSING
+066_Keyword_Stuffing_Cloud_DevOps_Lakshmi_Banerjee.txt,Lakshmi Banerjee,Cloud DevOps & Site Reliability Lead,Keyword Stuffing,0.4,lakshmi-banerjee,REJECT,EXPERIENCE_DEFICIT; SKILL_STUFFING; UNVERIFIED_SKILL_CLAIMS
+067_Keyword_Stuffing_FullStack_AI_Manish_Chatterjee.txt,Manish Chatterjee,Full-Stack AI Application Engineer,Keyword Stuffing,0.4,manish-chatterjee,REJECT,EXPERIENCE_DEFICIT; SKILL_STUFFING; UNVERIFIED_SKILL_CLAIMS
+068_Keyword_Stuffing_Data_Platform_Meera_Dsouza.txt,Meera Dsouza,Data Platform & Distributed Systems Engineer,Keyword Stuffing,0.4,meera-dsouza,REJECT,EXPERIENCE_DEFICIT; SKILL_STUFFING; UNVERIFIED_SKILL_CLAIMS
+069_Keyword_Stuffing_Backend_Architect_Mohan_Gowda.txt,Mohan Gowda,Backend Microservices Architect,Keyword Stuffing,0.4,mohan-gowda,REJECT,EXPERIENCE_DEFICIT; SKILL_STUFFING; UNVERIFIED_SKILL_CLAIMS
+070_Keyword_Stuffing_AI_Safety_Nandini_Iyer.txt,Nandini Iyer,"AI Safety, Governance & Alignment Auditor",Keyword Stuffing,0.4,nandini-iyer,REJECT,EXPERIENCE_DEFICIT; SKILL_STUFFING; UNVERIFIED_SKILL_CLAIMS
+071_Keyword_Stuffing_BI_Analyst_Nikhil_Kamath.txt,Nikhil Kamath,Senior Business Intelligence & Data Analyst,Keyword Stuffing,0.4,nikhil-kamath,REJECT,EXPERIENCE_DEFICIT; SKILL_STUFFING; UNVERIFIED_SKILL_CLAIMS
+072_Keyword_Stuffing_Python_Backend_Omkar_Krishnan.txt,Omkar Krishnan,Python Backend & API Developer,Keyword Stuffing,0.4,omkar-krishnan,REJECT,EXPERIENCE_DEFICIT; SKILL_STUFFING; UNVERIFIED_SKILL_CLAIMS
+073_Keyword_Stuffing_Senior_ML_Padma_Malhotra.txt,Padma Malhotra,Senior Machine Learning Engineer,Keyword Stuffing,0.4,padma-malhotra,REJECT,EXPERIENCE_DEFICIT; SKILL_STUFFING; UNVERIFIED_SKILL_CLAIMS
+074_Keyword_Stuffing_Cloud_DevOps_Pooja_Mishra.txt,Pooja Mishra,Cloud DevOps & Site Reliability Lead,Keyword Stuffing,0.4,pooja-mishra,REJECT,EXPERIENCE_DEFICIT; SKILL_STUFFING; UNVERIFIED_SKILL_CLAIMS
+075_Keyword_Stuffing_FullStack_AI_Pranav_Nambiar.txt,Pranav Nambiar,Full-Stack AI Application Engineer,Keyword Stuffing,0.4,pranav-nambiar,REJECT,EXPERIENCE_DEFICIT; SKILL_STUFFING; UNVERIFIED_SKILL_CLAIMS
+076_Keyword_Stuffing_Data_Platform_Preethi_Pandey.txt,Preethi Pandey,Data Platform & Distributed Systems Engineer,Keyword Stuffing,0.4,preethi-pandey,REJECT,EXPERIENCE_DEFICIT; SKILL_STUFFING; UNVERIFIED_SKILL_CLAIMS
+077_Keyword_Stuffing_Backend_Architect_Radhika_Pillai.txt,Radhika Pillai,Backend Microservices Architect,Keyword Stuffing,0.4,radhika-pillai,REJECT,EXPERIENCE_DEFICIT; SKILL_STUFFING; UNVERIFIED_SKILL_CLAIMS
+078_Keyword_Stuffing_AI_Safety_Rahul_Rastogi.txt,Rahul Rastogi,"AI Safety, Governance & Alignment Auditor",Keyword Stuffing,0.4,rahul-rastogi,REJECT,EXPERIENCE_DEFICIT; SKILL_STUFFING; UNVERIFIED_SKILL_CLAIMS
+079_Keyword_Stuffing_BI_Analyst_Rajat_Sethi.txt,Rajat Sethi,Senior Business Intelligence & Data Analyst,Keyword Stuffing,0.4,rajat-sethi,REJECT,EXPERIENCE_DEFICIT; SKILL_STUFFING; UNVERIFIED_SKILL_CLAIMS
+080_Keyword_Stuffing_Python_Backend_Ritika_Singhania.txt,Ritika Singhania,Python Backend & API Developer,Keyword Stuffing,0.4,ritika-singhania,REJECT,EXPERIENCE_DEFICIT; SKILL_STUFFING; UNVERIFIED_SKILL_CLAIMS
+081_Keyword_Stuffing_Senior_ML_Rohan_Trivedi.txt,Rohan Trivedi,Senior Machine Learning Engineer,Keyword Stuffing,0.4,rohan-trivedi,REJECT,EXPERIENCE_DEFICIT; SKILL_STUFFING; UNVERIFIED_SKILL_CLAIMS
+082_Keyword_Stuffing_Cloud_DevOps_Sanjana_Agarwal.txt,Sanjana Agarwal,Cloud DevOps & Site Reliability Lead,Keyword Stuffing,0.4,sanjana-agarwal,REJECT,EXPERIENCE_DEFICIT; SKILL_STUFFING; UNVERIFIED_SKILL_CLAIMS
+083_Keyword_Stuffing_FullStack_AI_Shreya_Bhat.txt,Shreya Bhat,Full-Stack AI Application Engineer,Keyword Stuffing,0.4,shreya-bhat,REJECT,EXPERIENCE_DEFICIT; SKILL_STUFFING; UNVERIFIED_SKILL_CLAIMS
+084_Keyword_Stuffing_Data_Platform_Siddharth_Das.txt,Siddharth Das,Data Platform & Distributed Systems Engineer,Keyword Stuffing,0.4,siddharth-das,REJECT,EXPERIENCE_DEFICIT; SKILL_STUFFING; UNVERIFIED_SKILL_CLAIMS
+085_Keyword_Stuffing_Backend_Architect_Suresh_Fernandes.txt,Suresh Fernandes,Backend Microservices Architect,Keyword Stuffing,0.4,suresh-fernandes,REJECT,EXPERIENCE_DEFICIT; SKILL_STUFFING; UNVERIFIED_SKILL_CLAIMS
+086_Corrupt_Layout_AI_Safety_Swati_Gupta.txt,Swati Gupta,"AI Safety, Governance & Alignment Auditor",Corrupt Layout,2.0,swati-gupta,REJECT,FORMAT_CORRUPT; NO_QUANTIFIED_IMPACT
+087_Corrupt_Layout_BI_Analyst_Tanmay_Jain.txt,Tanmay Jain,Senior Business Intelligence & Data Analyst,Corrupt Layout,2.0,tanmay-jain,REJECT,FORMAT_CORRUPT; NO_QUANTIFIED_IMPACT
+088_Corrupt_Layout_Python_Backend_Tara_Kapoor.txt,Tara Kapoor,Python Backend & API Developer,Corrupt Layout,2.0,tara-kapoor,REJECT,FORMAT_CORRUPT; NO_QUANTIFIED_IMPACT
+089_Corrupt_Layout_Senior_ML_Uday_Kulkarni.txt,Uday Kulkarni,Senior Machine Learning Engineer,Corrupt Layout,2.0,uday-kulkarni,REJECT,FORMAT_CORRUPT; NO_QUANTIFIED_IMPACT
+090_Corrupt_Layout_Cloud_DevOps_Varun_Mathur.txt,Varun Mathur,Cloud DevOps & Site Reliability Lead,Corrupt Layout,2.0,varun-mathur,REJECT,FORMAT_CORRUPT; NO_QUANTIFIED_IMPACT
+091_Corrupt_Layout_FullStack_AI_Vidya_Mukherjee.txt,Vidya Mukherjee,Full-Stack AI Application Engineer,Corrupt Layout,2.0,vidya-mukherjee,REJECT,FORMAT_CORRUPT; NO_QUANTIFIED_IMPACT
+092_Corrupt_Layout_Data_Platform_Vikram_Nayak.txt,Vikram Nayak,Data Platform & Distributed Systems Engineer,Corrupt Layout,2.0,vikram-nayak,REJECT,FORMAT_CORRUPT; NO_QUANTIFIED_IMPACT
+093_Corrupt_Layout_Backend_Architect_Waseem_Patel.txt,Waseem Patel,Backend Microservices Architect,Corrupt Layout,2.0,waseem-patel,REJECT,FORMAT_CORRUPT; NO_QUANTIFIED_IMPACT
+094_Corrupt_Layout_AI_Safety_Yash_Prabhu.txt,Yash Prabhu,"AI Safety, Governance & Alignment Auditor",Corrupt Layout,2.0,yash-prabhu,REJECT,FORMAT_CORRUPT; NO_QUANTIFIED_IMPACT
+095_Corrupt_Layout_BI_Analyst_Zoya_Reddy.txt,Zoya Reddy,Senior Business Intelligence & Data Analyst,Corrupt Layout,2.0,zoya-reddy,REJECT,FORMAT_CORRUPT; NO_QUANTIFIED_IMPACT
+096_Early_Career_Fresher_Python_Backend_Aditi_Shetty.txt,Aditi Shetty,Python Backend & API Developer,Early Career Fresher,0.5,aditi-shetty,REJECT,EXPERIENCE_DEFICIT; REQUIRED_SKILLS_MISSING
+097_Early_Career_Fresher_Senior_ML_Brijesh_Sinha.txt,Brijesh Sinha,Senior Machine Learning Engineer,Early Career Fresher,0.5,brijesh-sinha,REJECT,EXPERIENCE_DEFICIT; REQUIRED_SKILLS_MISSING
+098_Early_Career_Fresher_Cloud_DevOps_Chirag_Varma.txt,Chirag Varma,Cloud DevOps & Site Reliability Lead,Early Career Fresher,0.5,chirag-varma,REJECT,EXPERIENCE_DEFICIT; REQUIRED_SKILLS_MISSING
+099_Early_Career_Fresher_FullStack_AI_Farhan_Ahmed.txt,Farhan Ahmed,Full-Stack AI Application Engineer,Early Career Fresher,0.5,farhan-ahmed,REJECT,EXPERIENCE_DEFICIT; REQUIRED_SKILLS_MISSING
+100_Early_Career_Fresher_Data_Platform_Hemant_Bose.txt,Hemant Bose,Data Platform & Distributed Systems Engineer,Early Career Fresher,0.5,hemant-bose,REJECT,EXPERIENCE_DEFICIT; REQUIRED_SKILLS_MISSING

@@ -1,0 +1,36 @@
+Abhishek Tiwari
+Email: abhishek.tiwari@mailbox.in | Phone: +91 98851 44192 | Location: Indore, India
+LinkedIn: https://linkedin.com/in/abhishek-tiwari | GitHub: https://github.com/tiwari-a
+
+PROFESSIONAL SUMMARY
+Senior Machine Learning Engineer with 4.5 years of production experience across SaaS and enterprise software. Deep hands-on expertise in PyTorch, TensorFlow, FastAPI, Docker. Known for measurable impact on latency, reliability and cost, and for mentoring engineers.
+
+TECHNICAL SKILLS
+PyTorch, TensorFlow, FastAPI, Docker, AWS, Hugging Face, MLOps, Scikit-Learn, Redis, MLflow, CI/CD, Kubernetes, Natural Language Processing, Pandas, Airflow
+
+EDUCATION
+M.Tech in Computer Science
+IIT Madras | CGPA: 8.5/10 | Graduated: 2021
+
+WORK EXPERIENCE
+Senior Machine Learning Engineer | Copperleaf Payments (Jul 2026 - Jan 2024)
+• Built an MLOps platform on MLflow, Airflow and Docker with automated retraining and canary rollout, cutting model release time from 12 days to 3 hours.
+• Deployed RoBERTa ONNX models with FastAPI and Triton serving 95k daily requests at 38 ms p95 latency on AWS ECS.
+• Reduced AWS GPU spend by 32% (about $14k per month) through INT8 quantization, dynamic batching and spot-instance training.
+• Led a squad of 6 engineers, introduced PyTest-based model contracts and lifted coverage of the training stack to 91%.
+
+Machine Learning Engineer | Basalt Mobility (Apr 2022 - May 2024)
+• Designed a feature store on PostgreSQL and Redis with point-in-time correctness; online feature reads at 4 ms p99.
+• Shipped a TensorFlow Serving to PyTorch migration for 14 legacy models with zero downtime and a 18% latency improvement.
+• Raised macro-F1 from 0.78 to 0.94 on a 24-class ticket classifier by fine-tuning Hugging Face transformers with focal loss and error-driven data curation.
+
+KEY PROJECTS
+Open-Source: onnx-batching-utils
+• Maintainer of a PyTorch-to-ONNX export and dynamic-batching helper (pytorch + FastAPI + Triton) with 1400 GitHub stars and 6 external contributors.
+
+Semantic Resume Search
+• RAG pipeline using sentence-transformers, FAISS and a FastAPI backend; returns results in under 62 ms across 120,000 documents.
+
+CERTIFICATIONS & AWARDS
+• TensorFlow Developer Certificate
+• Runner-up, Google Cloud Hackathon India 2022

@@ -1,0 +1,19 @@
+Swati Gupta
+Email: swati.gupta@domain.com | Phone: +91 93923 17592 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/swati-gupta | GitHub: https://github.com/swati-gupta
+
+PROFESSIONAL SUMMARY
+AI Safety, Governance & Alignment Auditor with 2.0 years of experience. Focus in AI Safety, Model Evaluation. Corrupt layout: overlapping timelines, unparseable tables and missing section headers.
+
+TECHNICAL SKILLS
+AI Safety, Model Evaluation
+
+WORK EXPERIENCE
+AI Safety, Governance & Alignment Auditor | TechCorp Enterprise Systems (2022 - Present)
+• Corrupt layout: overlapping timelines, unparseable tables and missing section headers.
+• Orchestrated continuous deployment and monitoring with CI/CD and Docker.
+• Mentored junior engineers and improved automated test coverage.
+
+EDUCATION
+B.Tech / B.E. in Computer Science & Engineering
+VTU University | Graduated 2021

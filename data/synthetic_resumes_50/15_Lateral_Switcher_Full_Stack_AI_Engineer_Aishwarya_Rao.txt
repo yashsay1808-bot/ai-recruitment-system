@@ -1,0 +1,32 @@
+Aishwarya Rao
+Email: aishwarya.rao@mailbox.in | Phone: +91 70343 15894 | Location: Mumbai, India
+LinkedIn: https://linkedin.com/in/aishwarya-rao | GitHub: https://github.com/aishwaryarao
+
+PROFESSIONAL SUMMARY
+Front-End Developer with 3.5 years of experience, recently transitioning into Full-Stack Engineer work. Completed hands-on projects and certifications in Next.js, REST API, OpenAI API and now seeking a role that applies this background to production systems.
+
+TECHNICAL SKILLS
+JavaScript, TypeScript, React, HTML, CSS, Tailwind CSS, Git, REST API, Next.js, OpenAI API, LangChain, AWS
+
+EDUCATION
+B.Tech in Computer Science (AI & ML)
+PES University, Bengaluru | CGPA: 9.3/10 | Graduated: 2022
+
+WORK EXPERIENCE
+Full-Stack Engineer (Transition Role) | Northwind Telecom (Nov 2025 - Present)
+• Containerised the stack with Docker and deployed on AWS with GitHub Actions, cutting release time to 12 minutes.
+• Designed PostgreSQL schemas and REST APIs handling 80,000 requests per day with 99.95% uptime.
+
+Front-End Developer | Quantiva Systems (Apr 2023 - Nov 2025)
+• Built 25 responsive React components used across 2,000 pages and improved Lighthouse performance score by 27%.
+• Integrated REST APIs and reduced bundle size by 27% with code splitting.
+
+KEY PROJECTS
+Document Q&A Platform
+• Built a Next.js and FastAPI application with chunked retrieval over 50,000 PDFs and sub-85 ms retrieval latency.
+AI Code Review Bot
+• Developed a GitHub App using the OpenAI API that commented on 20,000 pull requests with 88% acceptance.
+
+CERTIFICATIONS
+• DeepLearning.AI LangChain for LLM Application Development
+• Completed a career-transition bootcamp

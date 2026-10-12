@@ -1,0 +1,32 @@
+Sowmya Hebbar
+Email: sowmya.hebbar@mailbox.in | Location: Mangaluru, India
+GitHub: https://github.com/sowmyahebbar
+
+PROFESSIONAL SUMMARY
+Cloud DevOps & SRE Lead with 5.5 years of production experience across e-commerce and payments. Deep hands-on expertise in Kubernetes, Docker, Terraform, AWS. Known for measurable impact on latency, reliability and cost, and for mentoring engineers.
+
+TECHNICAL SKILLS
+Kubernetes, Docker, Terraform, AWS, CI/CD, Linux, Prometheus, Grafana, Vault, Helm, Istio, GitHub Actions, Datadog, Python, Ansible
+
+WORK EXPERIENCE
+Cloud DevOps & SRE Lead | Marlow Insurance Tech (Oct 2023 - Present)
+• Built Prometheus and Grafana observability with SLO burn-rate alerts; MTTR fell from 95 to 18 minutes and alert noise dropped 60%.
+• Reduced cloud spend by 27% ($48k per month) via right-sizing, Karpenter autoscaling and committed-use planning.
+• Operated 140 microservices on EKS with Terraform and ArgoCD, sustaining 99.995% SLA and p95 API latency below 42 ms.
+• Scaled ingress to 68,000 requests per second using Envoy and autoscaled HPA policies tuned with load tests.
+
+DevOps Engineer | Monsoon AI (Apr 2021 - Oct 2023)
+• Hardened Linux base images and Kubernetes policies (OPA, Falco), closing 160 CVEs and passing SOC 2 audits with zero findings.
+• Designed GitHub Actions and Jenkins CI/CD with canary and blue-green releases; deployment frequency rose from 6 per week to 55 per day.
+• Codified 12 environments as Terraform modules, cutting provisioning from 5 days to 25 minutes with policy-as-code guardrails.
+
+KEY PROJECTS
+Cost Optimiser
+• Python and AWS Cost Explorer tooling that recommends right-sizing and saved 95% of monthly spend.
+
+Chaos and DR Toolkit
+• Automated game-day scenarios with Litmus and Terraform; validated RTO of 12 minutes across 11 regions.
+
+CERTIFICATIONS & AWARDS
+• Certified Kubernetes Security Specialist (CKS)
+• Winner, Smart India Hackathon 2025

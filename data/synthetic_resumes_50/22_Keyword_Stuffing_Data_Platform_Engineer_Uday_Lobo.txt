@@ -1,0 +1,28 @@
+Uday Lobo
+Email: uday.lobo@mailbox.in | Phone: +91 97111 78084 | Location: Hyderabad, India
+LinkedIn: https://linkedin.com/in/uday-lobo | GitHub: https://github.com/uday-lobo
+
+PROFESSIONAL SUMMARY
+Dynamic AI guru and Data Platform Engineer leveraging synergy, paradigm shifts and best-in-class solutions. Proficient in everything. 0.6 years of experience building revolutionary platforms.
+
+TECHNICAL SKILLS
+PostgreSQL, Kafka, Angular, MLOps, Serverless, Kubernetes, Apache Spark, Data Modeling, Terraform, Kotlin, Apache Kafka, AGI, PyTorch, Swift, ETL, Flink, Delta Lake, DevOps, IoT, Spring Boot, Cybersecurity, Big Data, dbt, Redshift, Rust, Docker, Hadoop, Computer Vision, AWS Glue, Generative AI, Azure, Quantum Computing, Vue.js, BigQuery
+
+EDUCATION
+Bachelor of Engineering (Computer Science)
+SRM Institute of Science and Technology | Percentage: 64% | Passed: 2025
+
+WORK EXPERIENCE
+Data Platform Engineer (Self-Appointed) | DisruptAI (Mar 2026 - Present)
+• Learned about Kubernetes, blockchain and machine learning.
+• Worked on AI and cloud stuff.
+• Helped the team with various technologies.
+
+PROJECTS
+AI Metaverse Platform
+• Revolutionary platform using Rust, Delta Lake, Terraform, Azure, Angular.
+• Next-gen AI solution.
+
+CERTIFICATIONS
+• Online course certificate (Udemy)
+• Prompt Engineering Masterclass

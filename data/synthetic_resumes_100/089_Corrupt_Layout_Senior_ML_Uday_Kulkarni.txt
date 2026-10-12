@@ -1,0 +1,19 @@
+Uday Kulkarni
+Email: uday.kulkarni@domain.com | Phone: +91 97962 19071 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/uday-kulkarni | GitHub: https://github.com/uday-kulkarni
+
+PROFESSIONAL SUMMARY
+Senior Machine Learning Engineer with 2.0 years of experience. Focus in Python, PyTorch. Corrupt layout: overlapping timelines, unparseable tables and missing section headers.
+
+TECHNICAL SKILLS
+Python, PyTorch
+
+WORK EXPERIENCE
+Senior Machine Learning Engineer | TechCorp Enterprise Systems (2022 - Present)
+• Corrupt layout: overlapping timelines, unparseable tables and missing section headers.
+• Orchestrated continuous deployment and monitoring with CI/CD and Docker.
+• Mentored junior engineers and improved automated test coverage.
+
+EDUCATION
+B.Tech / B.E. in Computer Science & Engineering
+VTU University | Graduated 2021

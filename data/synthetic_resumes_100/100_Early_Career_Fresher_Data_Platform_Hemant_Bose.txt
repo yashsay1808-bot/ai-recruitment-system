@@ -1,0 +1,19 @@
+Hemant Bose
+Email: hemant.bose@domain.com | Phone: +91 91982 42493 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/hemant-bose | GitHub: https://github.com/hemant-bose
+
+PROFESSIONAL SUMMARY
+Data Platform & Distributed Systems Engineer with 0.5 years of experience. Focus in Python, Pandas. Academic capstone projects only; missing 2+ years required production tenure.
+
+TECHNICAL SKILLS
+Python, Pandas
+
+WORK EXPERIENCE
+Data Platform & Distributed Systems Engineer | TechCorp Enterprise Systems (2022 - Present)
+• Academic capstone projects only; missing 2+ years required production tenure.
+• Orchestrated continuous deployment and monitoring with CI/CD and Docker.
+• Mentored junior engineers and improved automated test coverage.
+
+EDUCATION
+B.Tech / B.E. in Computer Science & Engineering
+VTU University | Graduated 2021

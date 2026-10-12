@@ -1,0 +1,19 @@
+Rajat Sethi
+Email: rajat.sethi@domain.com | Phone: +91 90750 96673 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/rajat-sethi | GitHub: https://github.com/rajat-sethi
+
+PROFESSIONAL SUMMARY
+Backend Microservices Architect with 5.3 years of experience. Focus in Golang, Python, Microservices, gRPC, Git. Maintained production Golang and Python pipelines. Adjacent skills transitioning to Backend Microservices Architect.
+
+TECHNICAL SKILLS
+Golang, Python, Microservices, gRPC, Git, Linux
+
+WORK EXPERIENCE
+Backend Microservices Architect | TechCorp Enterprise Systems (2022 - Present)
+• Maintained production Golang and Python pipelines. Adjacent skills transitioning to Backend Microservices Architect.
+• Orchestrated continuous deployment and monitoring with CI/CD and Docker.
+• Mentored junior engineers and improved automated test coverage.
+
+EDUCATION
+B.Tech / B.E. in Computer Science & Engineering
+VTU University | Graduated 2021
