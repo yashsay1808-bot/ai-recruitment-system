@@ -1,0 +1,41 @@
+Karthik Menon
+Email: karthik.menon@mailbox.in | Phone: +91 98860 12345 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/karthik-menon-ml | GitHub: https://github.com/karthikmenon-ml
+
+PROFESSIONAL SUMMARY
+Machine Learning and Backend Engineer with 3 years of experience shipping production NLP and deep learning services. Designs, builds and deploys production machine learning pipelines and deep learning models, including transformer-based NLP architectures (BERT, LLMs) for document intelligence. Serves low-latency ML inference through FastAPI and Flask REST APIs, with Docker containerization, AWS cloud infrastructure and CI/CD pipelines, and a record of measurable gains in latency, accuracy and cost.
+
+TECHNICAL SKILLS
+Python, Machine Learning, Deep Learning, Natural Language Processing, PyTorch, TensorFlow, Hugging Face, Scikit-Learn, Pandas, NumPy, FastAPI, Flask, REST API, Docker, AWS, Git, CI/CD, PostgreSQL, Redis, Large Language Models, MLOps
+
+EDUCATION
+B.E. in Computer Science and Engineering (AI & ML)
+BMS College of Engineering, Bengaluru | CGPA: 9.1/10 | Graduated: 2023
+
+WORK EXPERIENCE
+Machine Learning Engineer | Nimbus Analytics Pvt Ltd (Jul 2023 - Present)
+• Built and deployed a transformer-based document classification service using PyTorch and FastAPI, serving 50,000 requests per day with p95 inference latency of 72 ms.
+• Reduced model inference cost by 38% by exporting models to ONNX, batching requests and caching embeddings in Redis.
+• Improved F1-score from 0.81 to 0.91 on a 12-class support-ticket classifier by fine-tuning BERT with Hugging Face Transformers and Scikit-Learn evaluation pipelines and Pandas-based error analysis.
+• Containerized every service with Docker and automated deployments to AWS ECS using GitHub Actions CI/CD, cutting release time from 2 hours to 12 minutes.
+• Mentored 2 junior engineers and introduced code reviews with unit tests in PyTest, raising coverage to 86%.
+
+Backend Engineering Intern | CloudNest Technologies (Jan 2023 - Jun 2023)
+• Developed REST API services in Flask and FastAPI with PostgreSQL that handled 20,000 queries daily with 99.9% uptime.
+• Optimized slow SQL queries and reduced average response time by 45%.
+
+KEY PROJECTS
+Semantic Resume Search Engine
+• Designed a RAG pipeline with sentence embeddings, NumPy vector search and a FastAPI backend that returns results in under 80 ms for 100,000 documents.
+• Deployed on AWS with Docker and monitored with CloudWatch dashboards.
+
+Real-Time Anomaly Detection for IoT Sensors
+• Implemented an LSTM autoencoder in PyTorch and benchmarked it against a TensorFlow baseline; it detected equipment faults with 94% precision and cut false alarms by 31%.
+
+Document Intelligence Pipeline
+• Built a production NLP pipeline with Hugging Face, PyTorch, Pandas and NumPy that extracts fields from 30,000 scanned documents per month, served through a Flask REST API in Docker with GitHub Actions CI/CD on AWS.
+
+CERTIFICATIONS & AWARDS
+• AWS Certified Machine Learning Specialty
+• Deep Learning Specialization (DeepLearning.AI)
+• Winner, Smart India Hackathon 2022

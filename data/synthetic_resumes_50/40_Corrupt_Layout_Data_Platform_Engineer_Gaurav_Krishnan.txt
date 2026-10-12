@@ -1,0 +1,8 @@
+Gaurav Krishnan
+WORK EXPERIENCE
+Data Engineer | Helix Bio Informatics (Dec 2023 - Mar 2020)
+• Migrated 18 legacy ETL jobs to Airflow and dbt, reducing nightly batch runtime from 3 hours to 1 hours.
+Data Engineer | Northwind Telecom (Nov 2019 - Jan 2017)
+• Migrated 4 legacy ETL jobs to Airflow and dbt, reducing nightly batch runtime from 8 hours to 1 hours.
+Principal | Helix Bio Informatics (Jul 2030 - Present)
+SKILLS ETL, Apache Spark, dbt, PostgreSQL, Apache Airflow, Python

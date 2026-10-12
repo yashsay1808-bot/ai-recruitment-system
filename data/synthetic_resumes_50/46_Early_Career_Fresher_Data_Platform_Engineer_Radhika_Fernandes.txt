@@ -1,0 +1,28 @@
+Radhika Fernandes
+Email: radhika.fernandes@mailbox.in | Phone: +91 96721 85215 | Location: Kochi, India
+LinkedIn: https://linkedin.com/in/radhika-fernandes | GitHub: https://github.com/radhika2001
+
+OBJECTIVE
+Recent graduate eager to start a career as a Data Engineer. Built academic and personal projects in Git, Terraform, PostgreSQL and keen to learn production engineering practices.
+
+TECHNICAL SKILLS
+Git, Terraform, PostgreSQL, Apache Airflow, SQL, AWS Glue, Python, Redshift, Apache Kafka, Apache Spark, Data Modeling
+
+EDUCATION
+B.Tech in Computer Science (AI & ML)
+NSUT Delhi | CGPA: 8.6/10 | Graduated: 2026
+
+INTERNSHIP EXPERIENCE
+Data Engineer Intern | Vertex Mobility (Jan 2026 - Aug 2026)
+• Contributed to a team service as a trainee, writing tests and documentation under a mentor.
+• Assisted senior engineers with debugging, code reviews and small feature tickets.
+
+ACADEMIC PROJECTS
+Self-Serve Metrics Layer
+• Built a dbt semantic layer used by 120 analysts, cutting duplicate metric definitions by 18%.
+Streaming Clickstream Pipeline
+• Processed 120,000 events per second with Kafka and Spark Structured Streaming into Delta Lake.
+
+CERTIFICATIONS
+• Databricks Lakehouse Fundamentals
+• Finalist, College Hackathon 2025

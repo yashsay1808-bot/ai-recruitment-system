@@ -1,0 +1,19 @@
+Meera Dsouza
+Email: meera.dsouza@domain.com | Phone: +91 93527 54118 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/meera-dsouza | GitHub: https://github.com/meera-dsouza
+
+PROFESSIONAL SUMMARY
+Cloud DevOps & Site Reliability Lead with 5.8 years of experience. Focus in Kubernetes, Docker, Terraform, AWS, CI/CD. Reduced mean-time-to-recovery (MTTR) from 45 minutes to 6 minutes using automated runbooks.
+
+TECHNICAL SKILLS
+Kubernetes, Docker, Terraform, AWS, CI/CD, Linux, Prometheus, Grafana
+
+WORK EXPERIENCE
+Cloud DevOps & Site Reliability Lead | TechCorp Enterprise Systems (2022 - Present)
+• Reduced mean-time-to-recovery (MTTR) from 45 minutes to 6 minutes using automated runbooks.
+• Orchestrated continuous deployment and monitoring with CI/CD and Docker.
+• Mentored junior engineers and improved automated test coverage.
+
+EDUCATION
+B.Tech / B.E. in Computer Science & Engineering
+VTU University | Graduated 2021

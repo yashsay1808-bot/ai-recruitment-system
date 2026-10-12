@@ -1,0 +1,32 @@
+Meera Pillai
+Email: meera.pillai@mailbox.in | Phone: +91 84104 59112 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/meera-pillai | GitHub: https://github.com/meera-pillai
+
+PROFESSIONAL SUMMARY
+BI Developer with 2.5 years of experience, recently transitioning into Data Engineer work. Completed hands-on projects and certifications in SQL, Redshift, Terraform and now seeking a role that applies this background to production systems.
+
+TECHNICAL SKILLS
+SQL, Power BI, SSIS, Excel, Python, Data Modeling, ETL, Git, Redshift, Terraform, Apache Kafka
+
+EDUCATION
+B.Tech in Computer Science (AI & ML)
+Delhi Technological University | CGPA: 9.2/10 | Graduated: 2023
+
+WORK EXPERIENCE
+Data Engineer (Transition Role) | Finovate Systems (Nov 2025 - Present)
+• Migrated 6 legacy ETL jobs to Airflow and dbt, reducing nightly batch runtime from 6 hours to 2 hours.
+• Cut warehouse cost by 22% (about $18k per month) through partition pruning, clustering and job scheduling.
+
+BI Developer | BlueHarbor Software (Apr 2024 - Nov 2025)
+• Built 9 SSIS ETL packages loading 40 TB monthly and cut report refresh time by 47%.
+• Modelled star schemas in SQL Server for 40 business users.
+
+KEY PROJECTS
+Streaming Clickstream Pipeline
+• Processed 20,000 events per second with Kafka and Spark Structured Streaming into Delta Lake.
+Data Lineage Tracker
+• Implemented column-level lineage for 100,000 tables using Airflow and OpenLineage.
+
+CERTIFICATIONS
+• Google Cloud Professional Data Engineer (in progress)
+• Completed a career-transition bootcamp

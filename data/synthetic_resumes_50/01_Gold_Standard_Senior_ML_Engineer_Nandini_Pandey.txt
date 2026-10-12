@@ -1,0 +1,36 @@
+Nandini Pandey
+Email: nandini.pandey@mailbox.in | Phone: +91 98417 25263 | Location: Gurugram, India
+LinkedIn: https://linkedin.com/in/nandini-pandey | GitHub: https://github.com/nandini-pandey
+
+PROFESSIONAL SUMMARY
+Senior Machine Learning Engineer with 6.5 years of experience delivering production systems. Skilled in Python, Machine Learning, Deep Learning, PyTorch, TensorFlow, Scikit-Learn. Consistent record of measurable gains in latency, throughput, reliability and cost.
+
+TECHNICAL SKILLS
+Python, Machine Learning, Deep Learning, PyTorch, TensorFlow, Scikit-Learn, Hugging Face, MLOps, MLflow, FastAPI, Docker, Kubernetes, AWS, SageMaker, SQL, Git, CI/CD, Pandas, NumPy, Airflow, Feature Store, Redis
+
+EDUCATION
+B.E. in Electronics and Communication
+NSUT Delhi | CGPA: 8.9/10 | Graduated: 2019
+
+WORK EXPERIENCE
+Senior Machine Learning Engineer | Cobalt Insurance Tech (Jun 2023 - Present)
+• Containerised services with Docker and shipped to Kubernetes on AWS through CI/CD, cutting release time from 12 hours to 15 minutes.
+• Raised F1-score from 0.76 to 0.89 on a 12-class classifier by fine-tuning transformers with Hugging Face and Scikit-Learn pipelines.
+• Productionised training pipelines in MLflow and Airflow, reducing retraining time from 8 hours to 2 hours.
+• Mentored 2 engineers and raised unit-test coverage to 90% with PyTest.
+• Introduced drift monitoring that caught 6 data-quality regressions before they reached 9,000 daily users.
+
+Machine Learning Engineer | Aurora Payments (Apr 2020 - Jun 2023)
+• Built and deployed a transformer-based model service with PyTorch and FastAPI serving 80,000 requests per day at p95 latency of 110 ms.
+• Mentored 2 engineers and raised unit-test coverage to 88% with PyTest.
+• Productionised training pipelines in MLflow and Airflow, reducing retraining time from 12 hours to 2 hours.
+
+KEY PROJECTS
+Real-Time Anomaly Detection
+• Implemented an LSTM autoencoder in PyTorch that detected equipment faults with 96% precision and cut false alarms by 38%.
+Semantic Search Engine
+• Designed a RAG pipeline with sentence embeddings and a FastAPI backend returning results in under 85 ms over 20,000 documents.
+
+CERTIFICATIONS & AWARDS
+• Deep Learning Specialization (DeepLearning.AI)
+• Internal Engineering Excellence Award, 2024

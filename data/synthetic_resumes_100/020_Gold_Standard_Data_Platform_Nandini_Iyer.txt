@@ -1,0 +1,19 @@
+Nandini Iyer
+Email: nandini.iyer@domain.com | Phone: +91 96224 22676 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/nandini-iyer | GitHub: https://github.com/nandini-iyer
+
+PROFESSIONAL SUMMARY
+Data Platform & Distributed Systems Engineer with 6.4 years of experience. Focus in Python, Apache Spark, Kafka, SQL, Snowflake. Constructed lakehouse pipelines on AWS S3 with parquet compression saving 40TB storage.
+
+TECHNICAL SKILLS
+Python, Apache Spark, Kafka, SQL, Snowflake, AWS S3, Airflow, PostgreSQL
+
+WORK EXPERIENCE
+Data Platform & Distributed Systems Engineer | TechCorp Enterprise Systems (2022 - Present)
+• Constructed lakehouse pipelines on AWS S3 with parquet compression saving 40TB storage.
+• Orchestrated continuous deployment and monitoring with CI/CD and Docker.
+• Mentored junior engineers and improved automated test coverage.
+
+EDUCATION
+B.Tech / B.E. in Computer Science & Engineering
+VTU University | Graduated 2021

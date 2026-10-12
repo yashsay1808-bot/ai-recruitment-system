@@ -1,0 +1,31 @@
+Ojaswini Patwardhan
+Email: ojaswini.patwardhan@mailbox.in | Phone: +91 93935 15751 | Location: Nashik, India
+LinkedIn: https://linkedin.com/in/ojaswini-patwardhan | GitHub: https://github.com/ojaswini-patwardhan
+
+PROFESSIONAL SUMMARY
+Dynamic AI guru, Principal Architect and Metaverse pioneer transforming enterprises through disruptive innovation. Hardworking, passionate fast learner with 8 months (internship only) of hands-on experience in all technologies.
+
+TECHNICAL SKILLS
+MLOps, Flutter, Apache Spark, Go, Terraform, Large Language Models, Unity, Kotlin, Prometheus, Big Data, Java, Generative AI, 5G, PyTorch, MongoDB, Git, TensorFlow, NumPy, FastAPI, Machine Learning, Hugging Face, DevOps, Kubernetes, Robotic Process Automation, Solidity, SQL, React, CUDA, SAP, Web3, Neo4j, Blockchain, Quantum Computing, Scala, Airflow, ONNX, Scikit-Learn, IoT, Salesforce, Metaverse, Rust, Edge AI, Docker, Computer Vision, DataOps, Redis, AGI, Serverless
+
+EDUCATION
+Bachelor of Engineering in Computer Science
+VIT Vellore | Percentage: 62% | Graduated: 2026
+
+WORK EXPERIENCE
+Global Principal AI & Quantum Architect (Intern) | DisruptAI Labs (Feb 2026 - Present)
+• Architected revolutionary quantum-ready blockchain intelligence paradigms at planetary scale.
+• Spearheaded world-changing next-gen AI disruptive solutions across the entire enterprise ecosystem.
+• Pioneered cutting-edge, best-in-class, paradigm-shifting platforms leveraging every emerging technology.
+
+KEY PROJECTS
+MNIST Digit Classifier (forked)
+• Forked a standard MNIST tutorial repository and added a README; no original commits.
+
+AI Quantum Blockchain Metaverse Platform
+• Revolutionary next-gen platform using Airflow, 5G, Redis, Salesforce, Metaverse, SAP. Next-gen AI solution.
+
+CERTIFICATIONS & AWARDS
+• Quantum Computing for Everyone (online course)
+• Blockchain Basics (Udemy)
+• Participation certificate, college tech fest

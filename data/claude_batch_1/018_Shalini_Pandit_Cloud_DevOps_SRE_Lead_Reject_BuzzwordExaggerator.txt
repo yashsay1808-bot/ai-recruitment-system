@@ -1,0 +1,31 @@
+Shalini Pandit
+Email: shalini.pandit@mailbox.in | Phone: +91 97384 46372 | Location: Bhopal, India
+LinkedIn: https://linkedin.com/in/shalini-pandit | GitHub: https://github.com/shalinipa19
+
+PROFESSIONAL SUMMARY
+Results-driven rockstar and Global AI & Quantum Evangelist leveraging synergy and paradigm shifts. Proficient in everything from Quantum Computing to Web3. 5 months of experience building revolutionary world-changing platforms.
+
+TECHNICAL SKILLS
+Cybersecurity, GraphQL, Go, Kotlin, Hugging Face, Neural Networks, Big Data, Jenkins, Snowflake, Neo4j, Istio, Grafana, Bash, Linux, MLOps, Python, TensorFlow, PyTorch, Quantum Computing, Elasticsearch, Rust, Blockchain, 5G, Terraform, Azure, Hadoop, Large Language Models, ArgoCD, Robotic Process Automation, AR/VR, Ansible, Generative AI, Computer Vision, LangChain, AWS, Kubernetes, Docker, Helm, Reinforcement Learning
+
+EDUCATION
+Bachelor of Engineering in Computer Science
+SJCE Mysuru | Percentage: 61% | Graduated: 2026
+
+WORK EXPERIENCE
+Global Principal AI & Quantum Architect | SynergyWorks Global (May 2026 - Present)
+• Pioneered cutting-edge, best-in-class, paradigm-shifting platforms leveraging every emerging technology.
+• Drove transformational disruption by orchestrating holistic next-generation digital ecosystems.
+• Spearheaded world-changing next-gen AI disruptive solutions across the entire enterprise ecosystem.
+
+KEY PROJECTS
+MNIST Digit Classifier (forked)
+• Forked a standard MNIST tutorial repository and added a README; no original commits.
+
+AI Quantum Blockchain Metaverse Platform
+• Revolutionary next-gen platform using Go, Jenkins, Ansible, Docker, Generative AI, Computer Vision. Next-gen AI solution.
+
+CERTIFICATIONS & AWARDS
+• Quantum Computing for Everyone (online course)
+• Blockchain Basics (Udemy)
+• Participation certificate, college tech fest

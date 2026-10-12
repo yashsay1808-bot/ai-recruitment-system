@@ -1,0 +1,28 @@
+Preethi Malhotra
+Email: preethi.malhotra@mailbox.in | Phone: +91 90005 30673 | Location: Mumbai, India
+LinkedIn: https://linkedin.com/in/preethi-malhotra | GitHub: https://github.com/preethimal18
+
+PROFESSIONAL SUMMARY
+Results-driven rockstar AI Safety Auditor and thought leader. Expert in every technology, 10x engineer, hardworking team player and fast learner with 0.8 years of experience.
+
+TECHNICAL SKILLS
+GCP, Serverless, SQL, Blockchain, Kubernetes, NIST AI RMF, Swift, DevOps, Differential Privacy, AGI, Model Evaluation, SHAP, Kafka, AIF360, Model Cards, Reinforcement Learning, Spring Boot, Hadoop, MongoDB, ISO 42001, Computer Vision, Terraform, Azure, Fairlearn, Neural Networks, Angular, Rust, TensorFlow, EU AI Act, Adversarial Robustness, Big Data, Metaverse, GraphQL, Vue.js, Docker, Java, Generative AI
+
+EDUCATION
+Bachelor of Engineering (Computer Science)
+Jadavpur University, Kolkata | Percentage: 65% | Passed: 2025
+
+WORK EXPERIENCE
+AI Safety Auditor (Self-Appointed) | StartupX (Jan 2026 - Present)
+• Involved in development and deployment activities.
+• Worked on AI and cloud stuff.
+• Learned about Kubernetes, blockchain and machine learning.
+
+PROJECTS
+AI Quantum Platform
+• Revolutionary platform using Neural Networks, SHAP, NIST AI RMF, GraphQL, Spring Boot.
+• Next-gen AI solution.
+
+CERTIFICATIONS
+• Online course certificate (Udemy)
+• Prompt Engineering Masterclass

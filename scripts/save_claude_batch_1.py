@@ -1,0 +1,772 @@
+import os
+import re
+import csv
+from pathlib import Path
+
+raw_input_text = """=== RESUME START: 001_Arvind_Subramanian_Cloud_DevOps_SRE_Lead_Lean_Hire ===
+Arvind Subramanian
+Email: arvind.subramanian@mailbox.in | Phone: +91 97685 35905 | Location: Chennai, India
+LinkedIn: https://linkedin.com/in/arvind-subramanian | GitHub: https://github.com/arvindsu19
+
+PROFESSIONAL SUMMARY
+DevOps Engineer with 3.5 years of experience building and operating production systems in Kubernetes, Docker, Terraform. Solid engineering fundamentals and a steady record of delivery; currently deepening skills in adjacent areas to move into a senior SRE role.
+
+TECHNICAL SKILLS
+Kubernetes, Docker, Terraform, AWS, CI/CD, Linux, GitHub Actions, Datadog, Bash, Python, Vault
+
+EDUCATION
+B.E. in Computer Science (AI & ML)
+Vellore Institute of Technology | CGPA: 7.8/10 | Graduated: 2023
+
+WORK EXPERIENCE
+Site Reliability Engineer | Pelican Health Data (Sep 2024 - Present)
+• Trimmed AWS spend by 17% by removing idle resources and introducing scheduled scaling.
+• Created Grafana dashboards and Prometheus alerts for 35 services, cutting mean time to detect by 38%.
+• Wrote Terraform for VPC, EKS and RDS stacks; reduced environment setup from 3 days to 3 hours.
+
+Associate DevOps Engineer | Redwater Energy Tech (Apr 2023 - Sep 2024)
+• Containerised 12 legacy applications with Docker and moved them to a CI/CD pipeline, shrinking release time from 4 hours to 35 minutes.
+• Maintained 60 services on Kubernetes with Helm charts and Jenkins pipelines, reaching 99.9% uptime.
+
+KEY PROJECTS
+Open-Source: tf-policy-pack
+• Maintainer of Terraform and OPA policy bundles for AWS guardrails adopted by 6 organisations; 1400 GitHub stars.
+
+Chaos and DR Toolkit
+• Automated game-day scenarios with Litmus and Terraform; validated RTO of 12 minutes across 19 regions.
+
+CERTIFICATIONS & AWARDS
+• Google Cloud Professional DevOps Engineer
+=== RESUME END ===
+
+=== RESUME START: 002_Meghna_Bhattacharya_Cloud_DevOps_SRE_Lead_Strong_Hire ===
+Meghna Bhattacharya
+Email: meghna.bhattacharya@mailbox.in | Phone: +91 92142 71401 | Location: Kolkata, India
+LinkedIn: https://linkedin.com/in/meghna-bhattacharya | GitHub: https://github.com/meghnabhattacharya
+
+PROFESSIONAL SUMMARY
+Cloud DevOps & SRE Lead with 7 years of production experience across SaaS and mobility. Deep hands-on expertise in Kubernetes, Docker, Terraform, AWS. Known for measurable impact on latency, reliability and cost, and for mentoring engineers.
+
+TECHNICAL SKILLS
+Kubernetes, Docker, Terraform, AWS, CI/CD, Linux, Prometheus, Grafana, Git, Bash, Vault, Jenkins, Istio, ArgoCD, Python
+
+EDUCATION
+B.E. in Computer Science (AI & ML)
+Jadavpur University | CGPA: 7.8/10 | Graduated: 2018
+
+WORK EXPERIENCE
+Cloud DevOps & SRE Lead | Orchid Logistics Tech (Dec 2022 - Present)
+• Scaled ingress to 110,000 requests per second using Envoy and autoscaled HPA policies tuned with load tests.
+• Mentored 6 engineers and ran incident reviews that cut Sev-1 incidents by 46% year over year.
+• Hardened Linux base images and Kubernetes policies (OPA, Falco), closing 210 CVEs and passing SOC 2 audits with zero findings.
+• Operated 180 microservices on EKS with Terraform and ArgoCD, sustaining 99.995% SLA and p95 API latency below 46 ms.
+
+DevOps Engineer | Fernhill Retail Cloud (Oct 2019 - Dec 2022)
+• Reduced cloud spend by 31% ($48k per month) via right-sizing, Karpenter autoscaling and committed-use planning.
+• Designed GitHub Actions and Jenkins CI/CD with canary and blue-green releases; deployment frequency rose from 8 per week to 40 per day.
+• Codified 12 environments as Terraform modules, cutting provisioning from 7 days to 18 minutes with policy-as-code guardrails.
+
+KEY PROJECTS
+Observability Stack
+• Prometheus, Thanos and Grafana stack ingesting 80,000 samples per second with SLO burn-rate alerting.
+
+Chaos and DR Toolkit
+• Automated game-day scenarios with Litmus and Terraform; validated RTO of 12 minutes across 19 regions.
+
+CERTIFICATIONS & AWARDS
+• Certified Kubernetes Administrator (CKA)
+• Employee of the Year, Engineering 2024
+=== RESUME END ===
+
+=== RESUME START: 003_Rohit_Deshpande_Senior_ML_Engineer_Lean_Hire ===
+Rohit Deshpande
+Email: rohit.deshpande@mailbox.in | Phone: +91 96600 48578 | Location: Pune, India
+LinkedIn: https://linkedin.com/in/rohit-deshpande | GitHub: https://github.com/rohitdev1
+
+PROFESSIONAL SUMMARY
+Machine Learning Engineer with 2.5 years of experience building and operating production systems in PyTorch, FastAPI, Docker. Solid engineering fundamentals and a steady record of delivery; currently deepening skills in adjacent areas to move into a senior Machine Learning Engineer role.
+
+TECHNICAL SKILLS
+PyTorch, FastAPI, Docker, AWS, Hugging Face, MLOps, Scikit-Learn, Kubernetes, NumPy, Redis, Pandas, Natural Language Processing
+
+EDUCATION
+B.E. in Computer Science (AI & ML)
+Manipal Institute of Technology | CGPA: 8.1/10 | Graduated: 2022
+
+WORK EXPERIENCE
+Machine Learning Engineer | Kinetica Labs (Apr 2025 - Present)
+• Collaborated with 4 backend engineers to expose model endpoints behind an API gateway with 99.9% availability.
+• Improved offline evaluation by adding 5 slice-level metrics, which exposed a 15% accuracy gap on a minority segment.
+• Wrote feature pipelines in Pandas and SQL processing 2M rows nightly with data-validation checks.
+
+Software Engineer | Pelican Health Data (Apr 2024 - Apr 2025)
+• Containerised training and inference with Docker and moved jobs to AWS Batch, reducing monthly compute cost by 22%.
+• Fine-tuned a BERT classifier with PyTorch, improving F1 from 0.75 to 0.84 on an internal support dataset.
+
+KEY PROJECTS
+Churn Prediction Platform
+• Scikit-Learn and LightGBM pipelines tracked with MLflow, orchestrated by Airflow and served with Docker on AWS.
+
+Realtime Fraud Scoring
+• XGBoost and PyTorch ensemble behind FastAPI on AWS ECS, Kafka ingestion, scoring 80,000 events per second with p99 of 85 ms.
+
+CERTIFICATIONS & AWARDS
+• TensorFlow Developer Certificate
+=== RESUME END ===
+
+=== RESUME START: 004_Fatima_Sheikh_Senior_ML_Engineer_Lean_Hire ===
+Fatima Sheikh
+Email: fatima.sheikh@mailbox.in | Phone: +91 95038 42410 | Location: Hyderabad, India
+LinkedIn: https://linkedin.com/in/fatima-sheikh | GitHub: https://github.com/fatima-sheikh
+
+PROFESSIONAL SUMMARY
+Machine Learning Engineer with 3 years of experience building and operating production systems in PyTorch, TensorFlow, FastAPI. Solid engineering fundamentals and a steady record of delivery; currently deepening skills in adjacent areas to move into a senior Machine Learning Engineer role.
+
+TECHNICAL SKILLS
+PyTorch, TensorFlow, FastAPI, Docker, AWS, Hugging Face, Scikit-Learn, Pandas, CI/CD, Airflow, NumPy, SQL
+
+EDUCATION
+B.Tech in Information Technology
+NIT Warangal | CGPA: 9.5/10 | Graduated: 2023
+
+WORK EXPERIENCE
+Machine Learning Engineer | Fernhill Retail Cloud (Jan 2025 - Present)
+• Wrote feature pipelines in Pandas and SQL processing 2M rows nightly with data-validation checks.
+• Containerised training and inference with Docker and moved jobs to AWS Batch, reducing monthly compute cost by 22%.
+• Improved offline evaluation by adding 5 slice-level metrics, which exposed a 12% accuracy gap on a minority segment.
+
+Junior Machine Learning Engineer | Ironbridge Fintech (Oct 2023 - Jan 2025)
+• Collaborated with 4 backend engineers to expose model endpoints behind an API gateway with 99.5% availability.
+• Automated experiment tracking with MLflow and a Jenkins pipeline, cutting manual retraining effort by 12 hours per week.
+
+KEY PROJECTS
+Edge Anomaly Detector
+• LSTM autoencoder in PyTorch quantised to INT8 and deployed to ARM devices; 91% precision on 400,000 sensor windows.
+
+Churn Prediction Platform
+• Scikit-Learn and LightGBM pipelines tracked with MLflow, orchestrated by Airflow and served with Docker on AWS.
+
+CERTIFICATIONS & AWARDS
+• AWS Certified Machine Learning - Specialty
+=== RESUME END ===
+
+=== RESUME START: 005_Kiran_Naidu_Senior_ML_Engineer_Reject_BuzzwordExaggerator ===
+Kiran Naidu
+Email: kiran.naidu@mailbox.in | Phone: +91 99735 74018 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/kiran-naidu | GitHub: https://github.com/kiran-naidu
+
+PROFESSIONAL SUMMARY
+Results-driven rockstar and Global AI & Quantum Evangelist leveraging synergy and paradigm shifts. Proficient in everything from Quantum Computing to Web3. 6 months of experience building revolutionary world-changing platforms.
+
+TECHNICAL SKILLS
+Neural Networks, Kubernetes, Angular, PyTorch, Docker, GraphQL, Cybersecurity, DevOps, Vue.js, TensorFlow, Redis, GCP, 5G, MLflow, Scala, Git, Airflow, Microservices, Blockchain, Salesforce, Web3, Unity, DataOps, Quantum Computing, Natural Language Processing, Machine Learning, Snowflake, Python, Java, ONNX, Hadoop, FastAPI, Edge AI, Metaverse, NumPy, Generative AI, Kafka, Computer Vision, CI/CD, Rust, Go
+
+EDUCATION
+Bachelor of Engineering in Computer Science
+Manipal Institute of Technology | Percentage: 66% | Graduated: 2026
+
+WORK EXPERIENCE
+Global Principal AI & Quantum Architect | QuantumLeap Technologies (Apr 2026 - Present)
+• Championed thought leadership in AGI, Web3 and quantum innovation initiatives worldwide.
+• Drove transformational disruption by orchestrating holistic next-generation digital ecosystems.
+• Spearheaded world-changing next-gen AI disruptive solutions across the entire enterprise ecosystem.
+
+KEY PROJECTS
+MNIST Digit Classifier (forked)
+• Forked a standard MNIST tutorial repository and added a README; no original commits.
+
+AI Quantum Blockchain Metaverse Platform
+• Revolutionary next-gen platform using FastAPI, Edge AI, DevOps, Snowflake, Angular, NumPy. Next-gen AI solution.
+
+CERTIFICATIONS & AWARDS
+• Quantum Computing for Everyone (online course)
+• Blockchain Basics (Udemy)
+• Participation certificate, college tech fest
+=== RESUME END ===
+
+=== RESUME START: 006_Tanvi_Kulshreshtha_Cloud_DevOps_SRE_Lead_Reject_BuzzwordExaggerator ===
+Tanvi Kulshreshtha
+Email: tanvi.kulshreshtha@mailbox.in | Phone: +91 99485 65141 | Location: Jaipur, India
+LinkedIn: https://linkedin.com/in/tanvi-kulshreshtha | GitHub: https://github.com/tkulshreshtha
+
+PROFESSIONAL SUMMARY
+Visionary Global Principal AI & Quantum Architect and Full Stack Blockchain Ninja with 9 months of experience. Passionate about disrupting the world with cutting-edge, next-gen, synergistic technologies; expert in every framework and a 10x thought leader.
+
+TECHNICAL SKILLS
+Big Data, Azure, ArgoCD, Kafka, AGI, Hadoop, Hugging Face, Snowflake, 5G, Flutter, Kotlin, Jenkins, Blockchain, Elasticsearch, Angular, Swift, GitHub Actions, AWS, C++, Docker, Metaverse, Quantum Computing, Vault, Neo4j, Rust, Generative AI, Digital Twins, Unity, Solidity, SAP, Prometheus, AR/VR, Terraform, Go, Linux, CI/CD, Istio, Microservices, Bash, Serverless, Datadog, Kubernetes, Java, Large Language Models, Python, TensorFlow
+
+EDUCATION
+Bachelor of Engineering in Computer Science
+Thapar Institute of Engineering and Technology | Percentage: 58% | Graduated: 2026
+
+WORK EXPERIENCE
+Global Principal AI & Quantum Architect | NextGen Ventures (Jan 2026 - Present)
+• Championed thought leadership in AGI, Web3 and quantum innovation initiatives worldwide.
+• Spearheaded world-changing next-gen AI disruptive solutions across the entire enterprise ecosystem.
+• Drove transformational disruption by orchestrating holistic next-generation digital ecosystems.
+
+KEY PROJECTS
+MNIST Digit Classifier (forked)
+• Forked a standard MNIST tutorial repository and added a README; no original commits.
+
+AI Quantum Blockchain Metaverse Platform
+• Revolutionary next-gen platform using Kafka, Generative AI, Kotlin, Solidity, Rust, Flutter. Next-gen AI solution.
+
+CERTIFICATIONS & AWARDS
+• Quantum Computing for Everyone (online course)
+• Blockchain Basics (Udemy)
+• Participation certificate, college tech fest
+=== RESUME END ===
+
+=== RESUME START: 007_Sandeep_Rajagopal_Cloud_DevOps_SRE_Lead_Strong_Hire ===
+Sandeep Rajagopal
+Email: sandeep.rajagopal@mailbox.in | Phone: +91 99677 70793 | Location: Coimbatore, India
+LinkedIn: https://linkedin.com/in/sandeep-rajagopal | GitHub: https://github.com/srajagopal
+
+PROFESSIONAL SUMMARY
+Cloud DevOps & SRE Lead with 5.5 years of production experience across healthcare and enterprise software. Deep hands-on expertise in Kubernetes, Docker, Terraform, AWS. Known for measurable impact on latency, reliability and cost, and for mentoring engineers.
+
+TECHNICAL SKILLS
+Kubernetes, Docker, Terraform, AWS, CI/CD, Linux, Prometheus, Grafana, Git, Istio, GitHub Actions, Vault, ArgoCD, Helm, Ansible
+
+EDUCATION
+M.Tech in Computer Science
+RV College of Engineering, Bengaluru | CGPA: 9.3/10 | Graduated: 2021
+
+WORK EXPERIENCE
+Cloud DevOps & SRE Lead | Saffron Commerce (Oct 2023 - Present)
+• Designed GitHub Actions and Jenkins CI/CD with canary and blue-green releases; deployment frequency rose from 8 per week to 70 per day.
+• Operated 180 microservices on EKS with Terraform and ArgoCD, sustaining 99.99% SLA and p95 API latency below 46 ms.
+• Reduced cloud spend by 27% ($72k per month) via right-sizing, Karpenter autoscaling and committed-use planning.
+• Codified 9 environments as Terraform modules, cutting provisioning from 5 days to 12 minutes with policy-as-code guardrails.
+
+DevOps Engineer | Orchid Logistics Tech (Apr 2021 - Oct 2023)
+• Built Prometheus and Grafana observability with SLO burn-rate alerts; MTTR fell from 150 to 11 minutes and alert noise dropped 68%.
+• Scaled ingress to 68,000 requests per second using Envoy and autoscaled HPA policies tuned with load tests.
+• Led multi-region failover on AWS achieving RTO of 8 minutes and RPO under 45 seconds, validated by quarterly game days.
+
+KEY PROJECTS
+Chaos and DR Toolkit
+• Automated game-day scenarios with Litmus and Terraform; validated RTO of 12 minutes across 11 regions.
+
+Internal Developer Platform
+• Self-service Terraform, Helm and ArgoCD platform used by 120 engineers; new service bootstrap from 6 days to 18 minutes.
+
+CERTIFICATIONS & AWARDS
+• AWS Certified Solutions Architect - Professional
+• Open Source Contributor Award 2023
+=== RESUME END ===
+
+=== RESUME START: 008_Ishita_Banerjee_Cloud_DevOps_SRE_Lead_Lean_Hire ===
+Ishita Banerjee
+Email: ishita.banerjee@mailbox.in | Phone: +91 91496 80241 | Location: Kolkata, India
+LinkedIn: https://linkedin.com/in/ishita-banerjee | GitHub: https://github.com/banerjee-i
+
+PROFESSIONAL SUMMARY
+DevOps Engineer with 3.5 years of experience building and operating production systems in Docker, Terraform, AWS. Solid engineering fundamentals and a steady record of delivery; currently deepening skills in adjacent areas to move into a senior SRE role.
+
+TECHNICAL SKILLS
+Docker, Terraform, AWS, CI/CD, Linux, Prometheus, Grafana, Bash, ArgoCD, Ansible, Azure, Git
+
+EDUCATION
+B.Tech in Information Technology
+BITS Pilani | CGPA: 8.6/10 | Graduated: 2023
+
+WORK EXPERIENCE
+Site Reliability Engineer | Marlow Insurance Tech (Sep 2024 - Present)
+• Participated in on-call rotation and authored 14 runbooks that reduced escalations by 25%.
+• Trimmed AWS spend by 17% by removing idle resources and introducing scheduled scaling.
+• Automated server patching and log rotation with Bash and Ansible across 160 Linux hosts.
+
+Software Engineer | Banyan Data Works (Apr 2023 - Sep 2024)
+• Wrote Terraform for VPC, EKS and RDS stacks; reduced environment setup from 3 days to 3 hours.
+• Containerised 12 legacy applications with Docker and moved them to a CI/CD pipeline, shrinking release time from 4 hours to 45 minutes.
+
+KEY PROJECTS
+Observability Stack
+• Prometheus, Thanos and Grafana stack ingesting 80,000 samples per second with SLO burn-rate alerting.
+
+GitOps Migration
+• Migrated 45 services from Jenkins to ArgoCD and GitHub Actions with progressive delivery on Kubernetes.
+
+CERTIFICATIONS & AWARDS
+• Certified Kubernetes Security Specialist (CKS)
+• Finalist, Kaggle Days India 2025
+=== RESUME END ===
+
+=== RESUME START: 009_Vikrant_Choudhary_Senior_ML_Engineer_Strong_Hire ===
+Vikrant Choudhary
+Email: vikrant.choudhary@mailbox.in | Phone: +91 95075 93022 | Location: Gurugram, India
+LinkedIn: https://linkedin.com/in/vikrant-choudhary | GitHub: https://github.com/vchoudhary
+
+PROFESSIONAL SUMMARY
+Senior Machine Learning Engineer with 5.5 years of production experience across e-commerce and mobility. Deep hands-on expertise in PyTorch, TensorFlow, FastAPI, Docker. Known for measurable impact on latency, reliability and cost, and for mentoring engineers.
+
+TECHNICAL SKILLS
+PyTorch, TensorFlow, FastAPI, Docker, AWS, Hugging Face, MLOps, Scikit-Learn, SQL, Python, Pandas, NumPy, Airflow, CI/CD, Machine Learning
+
+EDUCATION
+B.Tech in Computer Science and Engineering
+Vellore Institute of Technology | CGPA: 8.4/10 | Graduated: 2021
+
+WORK EXPERIENCE
+Senior Machine Learning Engineer | Basalt Mobility (Oct 2023 - Present)
+• Designed a feature store on PostgreSQL and Redis with point-in-time correctness; online feature reads at 3 ms p99.
+• Reduced AWS GPU spend by 36% (about $31k per month) through INT8 quantization, dynamic batching and spot-instance training.
+• Implemented drift and data-quality monitoring with Prometheus and Evidently that caught 11 silent regressions before reaching 40,000 daily users.
+• Deployed RoBERTa ONNX models with FastAPI and Triton serving 80k daily requests at 45 ms p95 latency on AWS ECS.
+
+Machine Learning Engineer | Pelican Health Data (Apr 2021 - Oct 2023)
+• Cut training time for a 340M-parameter PyTorch model by 52% using mixed precision, gradient checkpointing and DDP on 16 GPUs.
+• Shipped a TensorFlow Serving to PyTorch migration for 14 legacy models with zero downtime and a 33% latency improvement.
+• Led a squad of 5 engineers, introduced PyTest-based model contracts and lifted coverage of the training stack to 84%.
+
+KEY PROJECTS
+Edge Anomaly Detector
+• LSTM autoencoder in PyTorch quantised to INT8 and deployed to ARM devices; 95% precision on 400,000 sensor windows.
+
+Semantic Resume Search
+• RAG pipeline using sentence-transformers, FAISS and a FastAPI backend; returns results in under 62 ms across 40,000 documents.
+
+CERTIFICATIONS & AWARDS
+• NVIDIA DLI: Fundamentals of Deep Learning
+• Runner-up, Google Cloud Hackathon India 2024
+=== RESUME END ===
+
+=== RESUME START: 010_Lavanya_Murthy_Senior_ML_Engineer_Strong_Hire ===
+Lavanya Murthy
+Email: lavanya.murthy@mailbox.in | Phone: +91 91929 41479 | Location: Mysuru, India
+LinkedIn: https://linkedin.com/in/lavanya-murthy | GitHub: https://github.com/lavanyamu51
+
+PROFESSIONAL SUMMARY
+Senior Machine Learning Engineer with 6.5 years of production experience across e-commerce and enterprise software. Deep hands-on expertise in PyTorch, TensorFlow, FastAPI, Docker. Known for measurable impact on latency, reliability and cost, and for mentoring engineers.
+
+TECHNICAL SKILLS
+PyTorch, TensorFlow, FastAPI, Docker, AWS, Hugging Face, MLOps, Scikit-Learn, Pandas, Airflow, SQL, Natural Language Processing, CI/CD, Redis, Python
+
+EDUCATION
+M.Tech in Computer Science
+NIT Warangal | CGPA: 9.1/10 | Graduated: 2020
+
+WORK EXPERIENCE
+Senior Machine Learning Engineer | Copperleaf Payments (Apr 2023 - Present)
+• Cut training time for a 1.2B-parameter PyTorch model by 44% using mixed precision, gradient checkpointing and DDP on 8 GPUs.
+• Raised macro-F1 from 0.83 to 0.94 on a 12-class ticket classifier by fine-tuning Hugging Face transformers with focal loss and error-driven data curation.
+• Reduced AWS GPU spend by 32% (about $22k per month) through INT8 quantization, dynamic batching and spot-instance training.
+• Led a squad of 4 engineers, introduced PyTest-based model contracts and lifted coverage of the training stack to 91%.
+
+Machine Learning Engineer | Quillpoint Software (Apr 2020 - Apr 2023)
+• Shipped a TensorFlow Serving to PyTorch migration for 6 legacy models with zero downtime and a 24% latency improvement.
+• Designed a feature store on PostgreSQL and Redis with point-in-time correctness; online feature reads at 4 ms p99.
+• Deployed RoBERTa ONNX models with FastAPI and Triton serving 120k daily requests at 48 ms p95 latency on AWS ECS.
+
+KEY PROJECTS
+LLM Eval Harness
+• Evaluation framework for Hugging Face models with 120,000 test prompts, CI regression gates and Grafana dashboards.
+
+Open-Source: onnx-batching-utils
+• Maintainer of a PyTorch-to-ONNX export and dynamic-batching helper (pytorch + FastAPI + Triton) with 180 GitHub stars and 19 external contributors.
+
+CERTIFICATIONS & AWARDS
+• NVIDIA DLI: Fundamentals of Deep Learning
+• Open Source Contributor Award 2022
+=== RESUME END ===
+
+=== RESUME START: 011_Harpreet_Gill_Senior_ML_Engineer_Reject_BuzzwordExaggerator ===
+Harpreet Gill
+Email: harpreet.gill@mailbox.in | Phone: +91 92157 22109 | Location: Chandigarh, India
+LinkedIn: https://linkedin.com/in/harpreet-gill | GitHub: https://github.com/harpreet-gill
+
+PROFESSIONAL SUMMARY
+Visionary Global Principal AI & Quantum Architect and Full Stack Blockchain Ninja with 7 months of experience. Passionate about disrupting the world with cutting-edge, next-gen, synergistic technologies; expert in every framework and a 10x thought leader.
+
+TECHNICAL SKILLS
+Scikit-Learn, Edge AI, Rust, Swift, Docker, Kotlin, Snowflake, Scala, Large Language Models, React, Flutter, Salesforce, Blockchain, Airflow, SAP, Azure, Unity, Microservices, AR/VR, GCP, Prometheus, DataOps, FastAPI, Metaverse, Deep Learning, MLflow, Cybersecurity, AGI, Hugging Face, Serverless, C++, Generative AI, MongoDB, Web3, Vue.js, MLOps, Terraform, Robotic Process Automation, Neural Networks, Redis, TensorFlow, Solidity, PyTorch, Machine Learning, AWS, 5G
+
+EDUCATION
+Bachelor of Engineering in Computer Science
+Amrita School of Engineering, Coimbatore | Percentage: 66% | Graduated: 2026
+
+WORK EXPERIENCE
+Global Principal AI & Quantum Architect | SynergyWorks Global (Mar 2026 - Present)
+• Drove transformational disruption by orchestrating holistic next-generation digital ecosystems.
+• Architected revolutionary quantum-ready blockchain intelligence paradigms at planetary scale.
+• Spearheaded world-changing next-gen AI disruptive solutions across the entire enterprise ecosystem.
+
+KEY PROJECTS
+MNIST Digit Classifier (forked)
+• Forked a standard MNIST tutorial repository and added a README; no original commits.
+
+AI Quantum Blockchain Metaverse Platform
+• Revolutionary next-gen platform using Kotlin, Unity, AWS, TensorFlow, Prometheus, Salesforce. Next-gen AI solution.
+
+CERTIFICATIONS & AWARDS
+• Quantum Computing for Everyone (online course)
+• Blockchain Basics (Udemy)
+• Participation certificate, college tech fest
+=== RESUME END ===
+
+=== RESUME START: 012_Anushka_Varghese_Cloud_DevOps_SRE_Lead_Lean_Hire ===
+Anushka Varghese
+Email: anushka.varghese@mailbox.in | Phone: +91 95624 43768 | Location: Kochi, India
+LinkedIn: https://linkedin.com/in/anushka-varghese | GitHub: https://github.com/anushkavarghese
+
+PROFESSIONAL SUMMARY
+DevOps Engineer with 4 years of experience building and operating production systems in Kubernetes, Docker, Terraform. Solid engineering fundamentals and a steady record of delivery; currently deepening skills in adjacent areas to move into a senior SRE role.
+
+TECHNICAL SKILLS
+Kubernetes, Docker, Terraform, AWS, CI/CD, Linux, Grafana, Bash, GitHub Actions, Ansible, Git, Helm
+
+EDUCATION
+B.Tech in Information Technology
+College of Engineering Pune | CGPA: 9.5/10 | Graduated: 2020
+
+WORK EXPERIENCE
+Site Reliability Engineer | Basalt Mobility (Jun 2024 - Present)
+• Created Grafana dashboards and Prometheus alerts for 35 services, cutting mean time to detect by 30%.
+• Wrote Terraform for VPC, EKS and RDS stacks; reduced environment setup from 4 days to 3 hours.
+• Maintained 30 services on Kubernetes with Helm charts and Jenkins pipelines, reaching 99.95% uptime.
+
+Software Engineer | Nautilus Networks (Oct 2022 - Jun 2024)
+• Trimmed AWS spend by 17% by removing idle resources and introducing scheduled scaling.
+• Containerised 18 legacy applications with Docker and moved them to a CI/CD pipeline, shrinking release time from 6 hours to 35 minutes.
+
+KEY PROJECTS
+Observability Stack
+• Prometheus, Thanos and Grafana stack ingesting 80,000 samples per second with SLO burn-rate alerting.
+
+GitOps Migration
+• Migrated 260 services from Jenkins to ArgoCD and GitHub Actions with progressive delivery on Kubernetes.
+
+CERTIFICATIONS & AWARDS
+• Google Cloud Professional DevOps Engineer
+• Speaker, PyCon India 2023
+=== RESUME END ===
+
+=== RESUME START: 013_Pranav_Joshi_Cloud_DevOps_SRE_Lead_ATS_Parse_Warning ===
+Pranav Joshi
+Email: pranav.joshi@mailbox.in | Phone: +91 93707 69596 | Location: Nagpur, India
+LinkedIn: https://linkedin.com/in/pranav-joshi | GitHub: https://github.com/pranavdev8
+
+PROFESSIONAL SUMMARY
+Cloud DevOps & SRE Lead with 5 years of production experience across logistics and mobility. Deep hands-on expertise in Kubernetes, Docker, Terraform, AWS. Known for measurable impact on latency, reliability and cost, and for mentoring engineers.
+
+TECHNICAL SKILLS
+Kubernetes, Docker, Terraform, AWS, CI/CD, Linux, Prometheus, Grafana, Jenkins, Datadog, Ansible, ArgoCD, GitHub Actions, Python, Bash
+
+EDUCATION
+B.E. in Information Science and Engineering
+IIT Madras | CGPA: 8.1/10 | Graduated: 2021
+
+WORK EXPERIENCE
+Cloud DevOps & SRE Lead | Lattice Edge Systems (Mar 2023 - Present)
+• Full-time on-site role at the San Jose, USA office, concurrent with the full-time role below in Bengaluru, India.
+• Scaled ingress to 110,000 requests per second using Envoy and autoscaled HPA policies tuned with load tests.
+• Hardened Linux base images and Kubernetes policies (OPA, Falco), closing 120 CVEs and passing SOC 2 audits with zero findings.
+• Built Prometheus and Grafana observability with SLO burn-rate alerts; MTTR fell from 95 to 14 minutes and alert noise dropped 68%.
+• Led multi-region failover on AWS achieving RTO of 8 minutes and RPO under 45 seconds, validated by quarterly game days.
+
+DevOps Engineer | Kinetica Labs (Jan 2022 - Aug 2025)
+• Designed GitHub Actions and Jenkins CI/CD with canary and blue-green releases; deployment frequency rose from 6 per week to 70 per day.
+• Operated 140 microservices on EKS with Terraform and ArgoCD, sustaining 99.99% SLA and p95 API latency below 49 ms.
+• Reduced cloud spend by 36% ($95k per month) via right-sizing, Karpenter autoscaling and committed-use planning.
+
+KEY PROJECTS
+Chaos and DR Toolkit
+• Automated game-day scenarios with Litmus and Terraform; validated RTO of 18 minutes across 6 regions.
+
+GitOps Migration
+• Migrated 260 services from Jenkins to ArgoCD and GitHub Actions with progressive delivery on Kubernetes.
+
+CERTIFICATIONS & AWARDS
+• Certified Kubernetes Administrator (CKA)
+• Winner, Smart India Hackathon 2025
+=== RESUME END ===
+
+=== RESUME START: 014_Zainab_Qureshi_Cloud_DevOps_SRE_Lead_Lean_Hire ===
+Zainab Qureshi
+Email: zainab.qureshi@mailbox.in | Phone: +91 98866 36090 | Location: Lucknow, India
+LinkedIn: https://linkedin.com/in/zainab-qureshi | GitHub: https://github.com/zainabqu79
+
+PROFESSIONAL SUMMARY
+DevOps Engineer with 3 years of experience building and operating production systems in Kubernetes, Docker, AWS. Solid engineering fundamentals and a steady record of delivery; currently deepening skills in adjacent areas to move into a senior SRE role.
+
+TECHNICAL SKILLS
+Kubernetes, Docker, AWS, CI/CD, Linux, Prometheus, Grafana, Istio, Jenkins, Azure, Datadog, ArgoCD
+
+EDUCATION
+B.E. in Information Science and Engineering
+PES University, Bengaluru | CGPA: 8.2/10 | Graduated: 2022
+
+WORK EXPERIENCE
+DevOps Engineer | Marlow Insurance Tech (Jan 2025 - Present)
+• Created Grafana dashboards and Prometheus alerts for 20 services, cutting mean time to detect by 45%.
+• Maintained 45 services on Kubernetes with Helm charts and Jenkins pipelines, reaching 99.95% uptime.
+• Trimmed AWS spend by 14% by removing idle resources and introducing scheduled scaling.
+
+Junior DevOps Engineer | Alderwood Systems (Oct 2023 - Jan 2025)
+• Participated in on-call rotation and authored 10 runbooks that reduced escalations by 25%.
+• Automated server patching and log rotation with Bash and Ansible across 80 Linux hosts.
+
+KEY PROJECTS
+Cost Optimiser
+• Python and AWS Cost Explorer tooling that recommends right-sizing and saved 91% of monthly spend.
+
+Open-Source: tf-policy-pack
+• Maintainer of Terraform and OPA policy bundles for AWS guardrails adopted by 11 organisations; 180 GitHub stars.
+
+CERTIFICATIONS & AWARDS
+• AWS Certified Solutions Architect - Professional
+=== RESUME END ===
+
+=== RESUME START: 015_Devendra_Rawat_Senior_ML_Engineer_Reject_BuzzwordExaggerator ===
+Devendra Rawat
+Email: devendra.rawat@mailbox.in | Phone: +91 96933 14081 | Location: Dehradun, India
+LinkedIn: https://linkedin.com/in/devendra-rawat | GitHub: https://github.com/devendra-rawat
+
+PROFESSIONAL SUMMARY
+Dynamic AI guru, Principal Architect and Metaverse pioneer transforming enterprises through disruptive innovation. Hardworking, passionate fast learner with 10 months of hands-on experience in all technologies.
+
+TECHNICAL SKILLS
+Swift, Git, Neo4j, Deep Learning, NumPy, Scala, Reinforcement Learning, Salesforce, MLflow, MongoDB, 5G, Kotlin, Solidity, Computer Vision, Edge AI, Web3, Metaverse, Python, Microservices, SQL, SAP, DevOps, Quantum Computing, Redis, Blockchain, Docker, Kubernetes, FastAPI, Digital Twins, Angular, ONNX, LangChain, Vue.js, Robotic Process Automation, Go, Cybersecurity, PyTorch, Elasticsearch, Unity, AGI, GCP, DataOps, TensorFlow, AR/VR, CI/CD, Hugging Face, Snowflake, React
+
+EDUCATION
+Bachelor of Engineering in Computer Science
+RV College of Engineering, Bengaluru | Percentage: 60% | Graduated: 2026
+
+WORK EXPERIENCE
+Global Principal AI & Quantum Architect | QuantumLeap Technologies (Dec 2025 - Present)
+• Pioneered cutting-edge, best-in-class, paradigm-shifting platforms leveraging every emerging technology.
+• Championed thought leadership in AGI, Web3 and quantum innovation initiatives worldwide.
+• Drove transformational disruption by orchestrating holistic next-generation digital ecosystems.
+
+KEY PROJECTS
+MNIST Digit Classifier (forked)
+• Forked a standard MNIST tutorial repository and added a README; no original commits.
+
+AI Quantum Blockchain Metaverse Platform
+• Revolutionary next-gen platform using Go, PyTorch, Vue.js, Python, Web3, Scala. Next-gen AI solution.
+
+CERTIFICATIONS & AWARDS
+• Quantum Computing for Everyone (online course)
+• Blockchain Basics (Udemy)
+• Participation certificate, college tech fest
+=== RESUME END ===
+
+=== RESUME START: 016_Nithya_Ramesh_Cloud_DevOps_SRE_Lead_Lean_Hire ===
+Nithya Ramesh
+Email: nithya.ramesh@mailbox.in | Phone: +91 91462 84764 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/nithya-ramesh | GitHub: https://github.com/nithya-ramesh
+
+PROFESSIONAL SUMMARY
+DevOps Engineer with 2.5 years of experience building and operating production systems in Kubernetes, Docker, AWS. Solid engineering fundamentals and a steady record of delivery; currently deepening skills in adjacent areas to move into a senior SRE role.
+
+TECHNICAL SKILLS
+Kubernetes, Docker, AWS, CI/CD, Linux, Prometheus, Datadog, ArgoCD, Istio, GitHub Actions, Git
+
+EDUCATION
+B.E. in Computer Science (AI & ML)
+IIT Bombay | CGPA: 8.2/10 | Graduated: 2022
+
+WORK EXPERIENCE
+DevOps Engineer | Driftwood Robotics (Apr 2025 - Present)
+• Automated server patching and log rotation with Bash and Ansible across 80 Linux hosts.
+• Participated in on-call rotation and authored 10 runbooks that reduced escalations by 20%.
+• Containerised 24 legacy applications with Docker and moved them to a CI/CD pipeline, shrinking release time from 6 hours to 45 minutes.
+
+Software Engineer | Nautilus Networks (Apr 2024 - Apr 2025)
+• Trimmed AWS spend by 11% by removing idle resources and introducing scheduled scaling.
+• Wrote Terraform for VPC, EKS and RDS stacks; reduced environment setup from 4 days to 3 hours.
+
+KEY PROJECTS
+Chaos and DR Toolkit
+• Automated game-day scenarios with Litmus and Terraform; validated RTO of 8 minutes across 6 regions.
+
+GitOps Migration
+• Migrated 120 services from Jenkins to ArgoCD and GitHub Actions with progressive delivery on Kubernetes.
+
+CERTIFICATIONS & AWARDS
+• AWS Certified Solutions Architect - Professional
+=== RESUME END ===
+
+=== RESUME START: 017_Kabir_Malhotra_Senior_ML_Engineer_Lean_Hire ===
+Kabir Malhotra
+Email: kabir.malhotra@mailbox.in | Phone: +91 96069 40960 | Location: New Delhi, India
+LinkedIn: https://linkedin.com/in/kabir-malhotra | GitHub: https://github.com/kabirma43
+
+PROFESSIONAL SUMMARY
+Machine Learning Engineer with 3.5 years of experience building and operating production systems in PyTorch, FastAPI, Docker. Solid engineering fundamentals and a steady record of delivery; currently deepening skills in adjacent areas to move into a senior Machine Learning Engineer role.
+
+TECHNICAL SKILLS
+PyTorch, FastAPI, Docker, AWS, MLOps, Scikit-Learn, Pandas, Machine Learning, Git, ONNX, SQL
+
+EDUCATION
+B.E. in Information Science and Engineering
+SJCE Mysuru | CGPA: 7.6/10 | Graduated: 2022
+
+WORK EXPERIENCE
+Senior Machine Learning Engineer | Veridian Analytics (Sep 2024 - Present)
+• Containerised training and inference with Docker and moved jobs to AWS Batch, reducing monthly compute cost by 22%.
+• Collaborated with 4 backend engineers to expose model endpoints behind an API gateway with 99.9% availability.
+• Automated experiment tracking with MLflow and a Jenkins pipeline, cutting manual retraining effort by 8 hours per week.
+
+Junior Machine Learning Engineer | Nautilus Networks (Apr 2023 - Sep 2024)
+• Built and deployed a gradient-boosted scoring service with Scikit-Learn and FastAPI handling 25,000 requests per day at 140 ms p95.
+• Fine-tuned a BERT classifier with PyTorch, improving F1 from 0.72 to 0.87 on an internal support dataset.
+
+KEY PROJECTS
+Edge Anomaly Detector
+• LSTM autoencoder in PyTorch quantised to INT8 and deployed to ARM devices; 93% precision on 120,000 sensor windows.
+
+Semantic Resume Search
+• RAG pipeline using sentence-transformers, FAISS and a FastAPI backend; returns results in under 85 ms across 400,000 documents.
+
+CERTIFICATIONS & AWARDS
+• AWS Certified Machine Learning - Specialty
+• Runner-up, Google Cloud Hackathon India 2025
+=== RESUME END ===
+
+=== RESUME START: 018_Shalini_Pandit_Cloud_DevOps_SRE_Lead_Reject_BuzzwordExaggerator ===
+Shalini Pandit
+Email: shalini.pandit@mailbox.in | Phone: +91 97384 46372 | Location: Bhopal, India
+LinkedIn: https://linkedin.com/in/shalini-pandit | GitHub: https://github.com/shalinipa19
+
+PROFESSIONAL SUMMARY
+Results-driven rockstar and Global AI & Quantum Evangelist leveraging synergy and paradigm shifts. Proficient in everything from Quantum Computing to Web3. 5 months of experience building revolutionary world-changing platforms.
+
+TECHNICAL SKILLS
+Cybersecurity, GraphQL, Go, Kotlin, Hugging Face, Neural Networks, Big Data, Jenkins, Snowflake, Neo4j, Istio, Grafana, Bash, Linux, MLOps, Python, TensorFlow, PyTorch, Quantum Computing, Elasticsearch, Rust, Blockchain, 5G, Terraform, Azure, Hadoop, Large Language Models, ArgoCD, Robotic Process Automation, AR/VR, Ansible, Generative AI, Computer Vision, LangChain, AWS, Kubernetes, Docker, Helm, Reinforcement Learning
+
+EDUCATION
+Bachelor of Engineering in Computer Science
+SJCE Mysuru | Percentage: 61% | Graduated: 2026
+
+WORK EXPERIENCE
+Global Principal AI & Quantum Architect | SynergyWorks Global (May 2026 - Present)
+• Pioneered cutting-edge, best-in-class, paradigm-shifting platforms leveraging every emerging technology.
+• Drove transformational disruption by orchestrating holistic next-generation digital ecosystems.
+• Spearheaded world-changing next-gen AI disruptive solutions across the entire enterprise ecosystem.
+
+KEY PROJECTS
+MNIST Digit Classifier (forked)
+• Forked a standard MNIST tutorial repository and added a README; no original commits.
+
+AI Quantum Blockchain Metaverse Platform
+• Revolutionary next-gen platform using Go, Jenkins, Ansible, Docker, Generative AI, Computer Vision. Next-gen AI solution.
+
+CERTIFICATIONS & AWARDS
+• Quantum Computing for Everyone (online course)
+• Blockchain Basics (Udemy)
+• Participation certificate, college tech fest
+=== RESUME END ===
+
+=== RESUME START: 019_Abhishek_Tiwari_Senior_ML_Engineer_ATS_Parse_Warning ===
+Abhishek Tiwari
+Email: abhishek.tiwari@mailbox.in | Phone: +91 98851 44192 | Location: Indore, India
+LinkedIn: https://linkedin.com/in/abhishek-tiwari | GitHub: https://github.com/tiwari-a
+
+PROFESSIONAL SUMMARY
+Senior Machine Learning Engineer with 4.5 years of production experience across SaaS and enterprise software. Deep hands-on expertise in PyTorch, TensorFlow, FastAPI, Docker. Known for measurable impact on latency, reliability and cost, and for mentoring engineers.
+
+TECHNICAL SKILLS
+PyTorch, TensorFlow, FastAPI, Docker, AWS, Hugging Face, MLOps, Scikit-Learn, Redis, MLflow, CI/CD, Kubernetes, Natural Language Processing, Pandas, Airflow
+
+EDUCATION
+M.Tech in Computer Science
+IIT Madras | CGPA: 8.5/10 | Graduated: 2021
+
+WORK EXPERIENCE
+Senior Machine Learning Engineer | Copperleaf Payments (Jul 2026 - Jan 2024)
+• Built an MLOps platform on MLflow, Airflow and Docker with automated retraining and canary rollout, cutting model release time from 12 days to 3 hours.
+• Deployed RoBERTa ONNX models with FastAPI and Triton serving 95k daily requests at 38 ms p95 latency on AWS ECS.
+• Reduced AWS GPU spend by 32% (about $14k per month) through INT8 quantization, dynamic batching and spot-instance training.
+• Led a squad of 6 engineers, introduced PyTest-based model contracts and lifted coverage of the training stack to 91%.
+
+Machine Learning Engineer | Basalt Mobility (Apr 2022 - May 2024)
+• Designed a feature store on PostgreSQL and Redis with point-in-time correctness; online feature reads at 4 ms p99.
+• Shipped a TensorFlow Serving to PyTorch migration for 14 legacy models with zero downtime and a 18% latency improvement.
+• Raised macro-F1 from 0.78 to 0.94 on a 24-class ticket classifier by fine-tuning Hugging Face transformers with focal loss and error-driven data curation.
+
+KEY PROJECTS
+Open-Source: onnx-batching-utils
+• Maintainer of a PyTorch-to-ONNX export and dynamic-batching helper (pytorch + FastAPI + Triton) with 1400 GitHub stars and 6 external contributors.
+
+Semantic Resume Search
+• RAG pipeline using sentence-transformers, FAISS and a FastAPI backend; returns results in under 62 ms across 120,000 documents.
+
+CERTIFICATIONS & AWARDS
+• TensorFlow Developer Certificate
+• Runner-up, Google Cloud Hackathon India 2022
+=== RESUME END ===
+
+=== RESUME START: 020_Gayathri_Venkatesh_Senior_ML_Engineer_Lean_Hire ===
+Gayathri Venkatesh
+Email: gayathri.venkatesh@mailbox.in | Phone: +91 99400 22329 | Location: Chennai, India
+LinkedIn: https://linkedin.com/in/gayathri-venkatesh | GitHub: https://github.com/gayathri-venkatesh
+
+PROFESSIONAL SUMMARY
+Machine Learning Engineer with 4 years of experience building and operating production systems in PyTorch, TensorFlow, FastAPI. Solid engineering fundamentals and a steady record of delivery; currently deepening skills in adjacent areas to move into a senior Machine Learning Engineer role.
+
+TECHNICAL SKILLS
+PyTorch, TensorFlow, FastAPI, Docker, AWS, Scikit-Learn, ONNX, Redis, Airflow, Git, Machine Learning
+
+EDUCATION
+B.Tech in Information Technology
+NIT Trichy | CGPA: 9.1/10 | Graduated: 2020
+
+WORK EXPERIENCE
+Senior Machine Learning Engineer | Kinetica Labs (Jun 2024 - Present)
+• Wrote feature pipelines in Pandas and SQL processing 5M rows nightly with data-validation checks.
+• Containerised training and inference with Docker and moved jobs to AWS Batch, reducing monthly compute cost by 14%.
+• Improved offline evaluation by adding 6 slice-level metrics, which exposed a 15% accuracy gap on a minority segment.
+
+Junior Machine Learning Engineer | Prismatic Media (Oct 2022 - Jun 2024)
+• Automated experiment tracking with MLflow and a Jenkins pipeline, cutting manual retraining effort by 12 hours per week.
+• Fine-tuned a BERT classifier with PyTorch, improving F1 from 0.75 to 0.87 on an internal support dataset.
+
+KEY PROJECTS
+Churn Prediction Platform
+• Scikit-Learn and LightGBM pipelines tracked with MLflow, orchestrated by Airflow and served with Docker on AWS.
+
+Edge Anomaly Detector
+• LSTM autoencoder in PyTorch quantised to INT8 and deployed to ARM devices; 93% precision on 120,000 sensor windows.
+
+CERTIFICATIONS & AWARDS
+• Deep Learning Specialization (DeepLearning.AI)
+• Runner-up, Google Cloud Hackathon India 2022
+=== RESUME END ===
+"""
+
+out_dir = Path("data/claude_batch_1")
+out_dir.mkdir(parents=True, exist_ok=True)
+
+blocks = re.findall(r"=== RESUME START: (.*?) ===\n(.*?)\n=== RESUME END ===", raw_input_text, re.DOTALL)
+print(f"Extracted {len(blocks)} resumes from input.")
+
+manifest_rows = []
+for tag, text in blocks:
+    tag = tag.strip()
+    txt_filename = f"{tag}.txt"
+    txt_path = out_dir / txt_filename
+    with open(txt_path, "w", encoding="utf-8") as f:
+        f.write(text.strip() + "\n")
+    
+    parts = tag.split("_")
+    idx = parts[0]
+    verdict = parts[-1]
+    name_and_role = "_".join(parts[1:-1])
+    manifest_rows.append({
+        "id": idx,
+        "tag": tag,
+        "filename": txt_filename,
+        "expected_verdict": verdict
+    })
+
+manifest_path = out_dir / "manifest.csv"
+with open(manifest_path, "w", newline="", encoding="utf-8") as f:
+    writer = csv.DictWriter(f, fieldnames=["id", "tag", "filename", "expected_verdict"])
+    writer.writeheader()
+    writer.writerows(manifest_rows)
+
+print(f"Saved {len(blocks)} files into {out_dir}")
+print(f"Saved manifest to {manifest_path}")

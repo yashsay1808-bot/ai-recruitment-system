@@ -1,0 +1,19 @@
+Rohan Trivedi
+Email: rohan.trivedi@domain.com | Phone: +91 98837 79514 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/rohan-trivedi | GitHub: https://github.com/rohan-trivedi
+
+PROFESSIONAL SUMMARY
+Senior Machine Learning Engineer with 0.4 years of experience. Focus in Python, PyTorch, TensorFlow, FastAPI, Docker. Claimed mastery across 17 enterprise technologies in 4 months total tenure; untouched forks.
+
+TECHNICAL SKILLS
+Python, PyTorch, TensorFlow, FastAPI, Docker, AWS, Hugging Face, MLOps, Scikit-Learn, Pandas, Quantum Computing, Blockchain, CUDA, Kubernetes Master, Solidity, Rust, Hadoop
+
+WORK EXPERIENCE
+Senior Machine Learning Engineer | TechCorp Enterprise Systems (2022 - Present)
+• Claimed mastery across 17 enterprise technologies in 4 months total tenure; untouched forks.
+• Orchestrated continuous deployment and monitoring with CI/CD and Docker.
+• Mentored junior engineers and improved automated test coverage.
+
+EDUCATION
+B.Tech / B.E. in Computer Science & Engineering
+VTU University | Graduated 2021

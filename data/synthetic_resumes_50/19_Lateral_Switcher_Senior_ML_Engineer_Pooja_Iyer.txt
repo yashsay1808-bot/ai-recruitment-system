@@ -1,0 +1,32 @@
+Pooja Iyer
+Email: pooja.iyer@mailbox.in | Phone: +91 81021 57566 | Location: Chennai, India
+LinkedIn: https://linkedin.com/in/pooja-iyer | GitHub: https://github.com/iyerp
+
+PROFESSIONAL SUMMARY
+Data Analyst with 3.5 years of experience, recently transitioning into Machine Learning Engineer work. Completed hands-on projects and certifications in Pandas, Hugging Face, FastAPI and now seeking a role that applies this background to production systems.
+
+TECHNICAL SKILLS
+Python, SQL, Pandas, NumPy, Scikit-Learn, Tableau, Excel, Statistics, Git, Hugging Face, FastAPI, TensorFlow, SageMaker, MLOps
+
+EDUCATION
+B.E. in Computer Science and Engineering
+NSUT Delhi | CGPA: 8.7/10 | Graduated: 2022
+
+WORK EXPERIENCE
+Machine Learning Engineer (Transition Role) | Meridian Health Tech (Aug 2025 - Present)
+• Mentored 4 engineers and raised unit-test coverage to 88% with PyTest.
+• Containerised services with Docker and shipped to Kubernetes on AWS through CI/CD, cutting release time from 12 hours to 10 minutes.
+
+Data Analyst | Helix Bio Informatics (Apr 2023 - Aug 2025)
+• Built 9 Tableau dashboards used by 120 stakeholders and automated weekly reporting in Python and SQL, saving 4 hours per week.
+• Developed a churn-propensity model in Scikit-Learn with 92% precision on 100,000 customer records.
+
+KEY PROJECTS
+Churn Prediction Platform
+• Trained gradient-boosted models on 100,000 customer records, deployed with MLflow and monitored with Prometheus.
+Real-Time Anomaly Detection
+• Implemented an LSTM autoencoder in PyTorch that detected equipment faults with 92% precision and cut false alarms by 31%.
+
+CERTIFICATIONS
+• Machine Learning Specialization (Coursera)
+• Completed a career-transition bootcamp

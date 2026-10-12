@@ -1,0 +1,19 @@
+Varun Mathur
+Email: varun.mathur@domain.com | Phone: +91 98727 26483 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/varun-mathur | GitHub: https://github.com/varun-mathur
+
+PROFESSIONAL SUMMARY
+Cloud DevOps & Site Reliability Lead with 2.0 years of experience. Focus in Kubernetes, Docker. Corrupt layout: overlapping timelines, unparseable tables and missing section headers.
+
+TECHNICAL SKILLS
+Kubernetes, Docker
+
+WORK EXPERIENCE
+Cloud DevOps & Site Reliability Lead | TechCorp Enterprise Systems (2022 - Present)
+• Corrupt layout: overlapping timelines, unparseable tables and missing section headers.
+• Orchestrated continuous deployment and monitoring with CI/CD and Docker.
+• Mentored junior engineers and improved automated test coverage.
+
+EDUCATION
+B.Tech / B.E. in Computer Science & Engineering
+VTU University | Graduated 2021

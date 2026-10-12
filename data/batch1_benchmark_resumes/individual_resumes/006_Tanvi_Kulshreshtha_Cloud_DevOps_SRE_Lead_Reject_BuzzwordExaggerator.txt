@@ -1,0 +1,31 @@
+Tanvi Kulshreshtha
+Email: tanvi.kulshreshtha@mailbox.in | Phone: +91 99485 65141 | Location: Jaipur, India
+LinkedIn: https://linkedin.com/in/tanvi-kulshreshtha | GitHub: https://github.com/tkulshreshtha
+
+PROFESSIONAL SUMMARY
+Visionary Global Principal AI & Quantum Architect and Full Stack Blockchain Ninja with 9 months of experience. Passionate about disrupting the world with cutting-edge, next-gen, synergistic technologies; expert in every framework and a 10x thought leader.
+
+TECHNICAL SKILLS
+Big Data, Azure, ArgoCD, Kafka, AGI, Hadoop, Hugging Face, Snowflake, 5G, Flutter, Kotlin, Jenkins, Blockchain, Elasticsearch, Angular, Swift, GitHub Actions, AWS, C++, Docker, Metaverse, Quantum Computing, Vault, Neo4j, Rust, Generative AI, Digital Twins, Unity, Solidity, SAP, Prometheus, AR/VR, Terraform, Go, Linux, CI/CD, Istio, Microservices, Bash, Serverless, Datadog, Kubernetes, Java, Large Language Models, Python, TensorFlow
+
+EDUCATION
+Bachelor of Engineering in Computer Science
+Thapar Institute of Engineering and Technology | Percentage: 58% | Graduated: 2026
+
+WORK EXPERIENCE
+Global Principal AI & Quantum Architect | NextGen Ventures (Jan 2026 - Present)
+• Championed thought leadership in AGI, Web3 and quantum innovation initiatives worldwide.
+• Spearheaded world-changing next-gen AI disruptive solutions across the entire enterprise ecosystem.
+• Drove transformational disruption by orchestrating holistic next-generation digital ecosystems.
+
+KEY PROJECTS
+MNIST Digit Classifier (forked)
+• Forked a standard MNIST tutorial repository and added a README; no original commits.
+
+AI Quantum Blockchain Metaverse Platform
+• Revolutionary next-gen platform using Kafka, Generative AI, Kotlin, Solidity, Rust, Flutter. Next-gen AI solution.
+
+CERTIFICATIONS & AWARDS
+• Quantum Computing for Everyone (online course)
+• Blockchain Basics (Udemy)
+• Participation certificate, college tech fest

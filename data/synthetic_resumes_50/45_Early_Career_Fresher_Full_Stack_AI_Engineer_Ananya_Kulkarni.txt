@@ -1,0 +1,28 @@
+Ananya Kulkarni
+Email: ananya.kulkarni@mailbox.in | Phone: +91 71493 35153 | Location: Noida, India
+LinkedIn: https://linkedin.com/in/ananya-kulkarni | GitHub: https://github.com/ananya-kulkarni-dev
+
+OBJECTIVE
+Recent graduate eager to start a career as a Full-Stack Engineer. Built academic and personal projects in PostgreSQL, REST API, LangChain and keen to learn production engineering practices.
+
+TECHNICAL SKILLS
+PostgreSQL, REST API, LangChain, Node.js, TypeScript, JavaScript, Git, Tailwind CSS, RAG
+
+EDUCATION
+B.Tech in Information Technology
+VIT Vellore | CGPA: 7.6/10 | Graduated: 2026
+
+INTERNSHIP EXPERIENCE
+Full-Stack Engineer Intern | Cobalt Insurance Tech (Feb 2026 - Aug 2026)
+• Contributed to a team service as a trainee, writing tests and documentation under a mentor.
+• Assisted senior engineers with debugging, code reviews and small feature tickets.
+
+ACADEMIC PROJECTS
+Document Q&A Platform
+• Built a Next.js and FastAPI application with chunked retrieval over 50,000 PDFs and sub-60 ms retrieval latency.
+AI Code Review Bot
+• Developed a GitHub App using the OpenAI API that commented on 20,000 pull requests with 94% acceptance.
+
+CERTIFICATIONS
+• Meta Front-End Developer Certificate
+• Finalist, College Hackathon 2025

@@ -1,0 +1,36 @@
+Chirag Prabhu
+Email: chirag.prabhu@mailbox.in | Phone: +91 71369 35486 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/chirag-prabhu | GitHub: https://github.com/chiragpra23
+
+PROFESSIONAL SUMMARY
+Full-Stack AI Engineer with 6 years of experience delivering production systems. Skilled in Python, TypeScript, JavaScript, React, Next.js, Node.js. Consistent record of measurable gains in latency, throughput, reliability and cost.
+
+TECHNICAL SKILLS
+Python, TypeScript, JavaScript, React, Next.js, Node.js, FastAPI, PostgreSQL, Docker, REST API, LangChain, OpenAI API, RAG, Vector Database, Redis, Git, AWS, Tailwind CSS, GraphQL, Prompt Engineering, Pinecone
+
+EDUCATION
+B.Tech in Information Technology
+NIT Karnataka, Surathkal | CGPA: 8.0/10 | Graduated: 2020
+
+WORK EXPERIENCE
+Full-Stack AI Engineer | Kestrel Data (Aug 2023 - Present)
+• Reduced LLM spend by 27% through prompt caching in Redis and response truncation, saving about $18k per month.
+• Built a React and Next.js front end with streaming responses that raised task completion by 27% for 9,000 monthly active users.
+• Shipped a RAG-powered assistant with LangChain, FastAPI and a vector database answering 120,000 queries per day at p95 latency of 85 ms.
+• Collaborated with 6 designers and data scientists to ship 4 AI features in two quarters.
+• Designed PostgreSQL schemas and REST APIs handling 50,000 requests per day with 99.99% uptime.
+
+Full-Stack Engineer | Orbitron Labs (Oct 2020 - Aug 2023)
+• Reduced LLM spend by 27% through prompt caching in Redis and response truncation, saving about $40k per month.
+• Designed PostgreSQL schemas and REST APIs handling 50,000 requests per day with 99.99% uptime.
+• Implemented evaluation harnesses that tracked answer accuracy from 70% to 86% across 20 regression suites.
+
+KEY PROJECTS
+Realtime Collaboration Tool
+• Implemented WebSocket collaboration in Node.js supporting 120 concurrent editors.
+AI Code Review Bot
+• Developed a GitHub App using the OpenAI API that commented on 400,000 pull requests with 95% acceptance.
+
+CERTIFICATIONS & AWARDS
+• DeepLearning.AI LangChain for LLM Application Development
+• Internal Engineering Excellence Award, 2023

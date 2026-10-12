@@ -1,0 +1,578 @@
+import claudeSynthetic50 from "./claude_synthetic_50.json";
+
+// ============================================================================
+// VERIFIED DATASETS: 12 CORE PAPER BENCHMARKS + 50 EXPANDED DIVERSE POOL
+// ============================================================================
+
+export const CANDIDATES_12 = [
+
+  {
+    rank: 1,
+    id: "CAN-001",
+    name: "Karthik Menon",
+    anonymizedId: "Candidate #001",
+    fileName: "Test_Case_1_Gold_Standard_Pass.txt",
+    title: "Senior Machine Learning Engineer",
+    experienceYears: 4.5,
+    matchScore: 88.1,
+    atsScore: 100,
+    councilScore: 91.4,
+    verdict: "STRONG_HIRE",
+    verdictType: "positive",
+    redFlags: [],
+    matchedSkills: ["Python", "PyTorch", "FastAPI", "Docker", "AWS", "NLP", "Scikit-Learn"],
+    partiallyMatchedSkills: [],
+    missingSkills: [],
+    salaryRange: "$165k - $190k",
+    salaryInr: "35 - 42 LPA",
+    level: "L5 - Senior Staff ML Engineer",
+    bandPosPct: 75,
+    evidenceSnippet: "Engineered production PyTorch inference service handling 50,000 req/day with p95 latency under 72ms on AWS ECS.",
+    github: {
+      username: "karthik-m-ml",
+      score: 94,
+      risk: "LOW",
+      reposAnalyzed: 14,
+      authenticRepos: 13,
+      forksCount: 1,
+      archSignals: 8,
+      quantifiedMetrics: 6,
+      languages: ["Python (78%)", "C++ (14%)", "CUDA (8%)"]
+    },
+    council: {
+      techLead: { score: 89, feedback: "Production latency <75ms verified. PyTorch inference pipelines clean and production-ready." },
+      culture: { score: 78, feedback: "Proven cross-functional delivery with backend and data platform teams." },
+      fairAuditor: { score: 99, feedback: "Zero demographic bias detected; evaluation strictly evidence-based." },
+      seniorityComp: { score: 100, feedback: "Solid L5 Senior candidate. Recommended compensation: $165k-$190k." }
+    },
+    debateSnippet: [
+      { agent: "Tech Lead", text: "Production latency <75ms verified on PyTorch inference pipelines." },
+      { agent: "Seniority & Comp", text: "Meets all senior engineering competencies; compensation aligns with L5 band." },
+      { agent: "Fair Auditor", text: "Confirmed: assessment based entirely on evidenced system architecture." }
+    ],
+    interviewQuestions: [
+      { q: "How did you achieve <72ms p95 latency on PyTorch inference under 50k requests/day?", type: "Architecture Deep-Dive", lookFor: "Batching strategies, TorchScript/ONNX conversion, async worker thread pools." },
+      { q: "Explain your experience managing zero-downtime rolling model updates on AWS ECS.", type: "Production DevOps", lookFor: "Blue/green deployments, health check routing, canary traffic splitting." }
+    ]
+  },
+  {
+    rank: 2,
+    id: "CAN-002",
+    name: "Rahul Nair",
+    anonymizedId: "Candidate #002",
+    fileName: "Rahul_Nair_ML_Engineer.pdf",
+    title: "ML Systems Engineer",
+    experienceYears: 3.8,
+    matchScore: 82.3,
+    atsScore: 92,
+    councilScore: 83.2,
+    verdict: "STRONG_HIRE",
+    verdictType: "positive",
+    redFlags: [],
+    matchedSkills: ["Python", "TensorFlow", "FastAPI", "CI/CD", "Docker", "Pandas", "Git"],
+    partiallyMatchedSkills: [],
+    missingSkills: ["PyTorch"],
+    salaryRange: "$150k - $175k",
+    salaryInr: "30 - 36 LPA",
+    level: "L4/L5 - Machine Learning Engineer II",
+    bandPosPct: 60,
+    evidenceSnippet: "Orchestrated distributed TensorFlow training pipeline in Kubernetes with automated Docker CI/CD.",
+    github: {
+      username: "rnair-sys",
+      score: 88,
+      risk: "LOW",
+      reposAnalyzed: 9,
+      authenticRepos: 8,
+      forksCount: 1,
+      archSignals: 6,
+      quantifiedMetrics: 5,
+      languages: ["Python (82%)", "Shell (11%)", "Go (7%)"]
+    },
+    council: {
+      techLead: { score: 84, feedback: "Solid system engineering; heavy TensorFlow usage, rapid PyTorch ramp-up expected." },
+      culture: { score: 81, feedback: "Active open-source contributor with high code review cadence." },
+      fairAuditor: { score: 98, feedback: "Objective grading verified." },
+      seniorityComp: { score: 86, feedback: "L4/L5 border. Mid-to-senior transition package appropriate." }
+    },
+    debateSnippet: [
+      { agent: "Tech Lead", text: "Has strong ML infrastructure background, though primary modeling tool is TF rather than PyTorch." },
+      { agent: "Culture", text: "Demonstrated clear pull-request collaboration in public repositories." }
+    ],
+    interviewQuestions: [
+      { q: "You used TensorFlow extensively. How would you translate your distributed training knowledge to PyTorch DDP?", type: "Gap Probing", lookFor: "Understanding distributed data parallel, torch.distributed, NCCL backend." },
+      { q: "Describe your CI/CD test automation for ML model artifact validation.", type: "MLOps", lookFor: "Data drift assertions, model accuracy regression gates." }
+    ]
+  },
+  {
+    rank: 3,
+    id: "CAN-003",
+    name: "Siddharth Rao",
+    anonymizedId: "Candidate #003 (Lateral Match)",
+    fileName: "Test_Case_3_Lateral_Partial_Match.txt",
+    title: "Backend / Microservices Engineer",
+    experienceYears: 4.0,
+    matchScore: 61.3,
+    atsScore: 92,
+    councilScore: 76.0,
+    verdict: "LEAN_HIRE",
+    verdictType: "neutral",
+    redFlags: ["REQUIRED_SKILLS_MISSING"],
+    matchedSkills: ["Python", "REST API", "Docker", "AWS", "Git"],
+    partiallyMatchedSkills: ["FastAPI (via Flask: 0.5 credit)"],
+    missingSkills: ["PyTorch", "NLP"],
+    salaryRange: "$140k - $160k",
+    salaryInr: "28 - 34 LPA",
+    level: "L4 - Senior Backend Engineer (Lateral Transition)",
+    bandPosPct: 50,
+    evidenceSnippet: "High-throughput asynchronous Flask microservices on AWS ECS. FastAPI requirement granted partial credit.",
+    github: {
+      username: "sid-backend",
+      score: 79,
+      risk: "LOW",
+      reposAnalyzed: 11,
+      authenticRepos: 10,
+      forksCount: 1,
+      archSignals: 5,
+      quantifiedMetrics: 4,
+      languages: ["Python (65%)", "TypeScript (25%)", "SQL (10%)"]
+    },
+    council: {
+      techLead: { score: 68, feedback: "FastAPI credited via Flask. Missing core ML modeling libraries." },
+      culture: { score: 82, feedback: "Excellent API engineering background and documentation." },
+      fairAuditor: { score: 96, feedback: "Neutral screening, no bias found." },
+      seniorityComp: { score: 75, feedback: "Lateral hire: strong backend candidate requiring ML onboarding." }
+    },
+    debateSnippet: [
+      { agent: "Tech Lead", text: "Strong Python and Flask backend background, but PyTorch and NLP require onboarding." },
+      { agent: "Seniority & Comp", text: "Compensation should reflect lateral backend hire transitioning into ML." }
+    ],
+    interviewQuestions: [
+      { q: "You have strong Flask experience. What differences exist between Flask WSGI and FastAPI ASGI event loops?", type: "Technical Transition", lookFor: "async/await coroutines, uvloop, Pydantic type validation." },
+      { q: "How would you design a microservice to wrap a machine learning model that takes 200ms per inference?", type: "System Design", lookFor: "Queueing with Celery/Redis, worker scaling, non-blocking response." }
+    ]
+  },
+  {
+    rank: 4,
+    id: "CAN-004",
+    name: "Sneha Kulkarni",
+    anonymizedId: "Candidate #004",
+    fileName: "Sneha_Kulkarni_Fullstack_Dev.txt",
+    title: "Fullstack Platform Engineer",
+    experienceYears: 3.2,
+    matchScore: 56.0,
+    atsScore: 75,
+    councilScore: 66.2,
+    verdict: "LEAN_HIRE",
+    verdictType: "neutral",
+    redFlags: ["REQUIRED_SKILLS_MISSING"],
+    matchedSkills: ["Python", "FastAPI", "Docker", "Git"],
+    partiallyMatchedSkills: [],
+    missingSkills: ["Deep Learning", "PyTorch"],
+    salaryRange: "$130k - $150k",
+    salaryInr: "24 - 30 LPA",
+    level: "L3/L4 - Platform Software Engineer",
+    bandPosPct: 45,
+    evidenceSnippet: "Engineered web dashboards and FastAPI endpoints; lacking statistical modeling depth.",
+    github: {
+      username: "sneha-dev",
+      score: 74,
+      risk: "LOW",
+      reposAnalyzed: 8,
+      authenticRepos: 7,
+      forksCount: 1,
+      archSignals: 4,
+      quantifiedMetrics: 3,
+      languages: ["TypeScript (52%)", "Python (38%)", "CSS (10%)"]
+    },
+    council: {
+      techLead: { score: 62, feedback: "Fullstack competence confirmed; minimal ML depth." },
+      culture: { score: 84, feedback: "High velocity and strong cross-stack communication." },
+      fairAuditor: { score: 97, feedback: "Objective evaluation." },
+      seniorityComp: { score: 70, feedback: "Standard mid-level offer." }
+    },
+    debateSnippet: [
+      { agent: "Tech Lead", text: "Clean FastAPI integration, but candidate is primarily fullstack." }
+    ],
+    interviewQuestions: [
+      { q: "How do you coordinate backend FastAPI schema changes with frontend web clients?", type: "Fullstack Sync", lookFor: "OpenAPI auto-generated TypeScript clients, versioned routes." }
+    ]
+  },
+  {
+    rank: 5,
+    id: "CAN-005",
+    name: "Vikram Singh",
+    anonymizedId: "Candidate #005",
+    fileName: "Vikram_Singh_Cloud_DevOps.docx",
+    title: "Cloud DevOps Specialist",
+    experienceYears: 5.0,
+    matchScore: 50.1,
+    atsScore: 75,
+    councilScore: 61.5,
+    verdict: "REJECT",
+    verdictType: "negative",
+    redFlags: ["REQUIRED_SKILLS_MISSING"],
+    matchedSkills: ["AWS", "Docker", "CI/CD", "Git"],
+    partiallyMatchedSkills: [],
+    missingSkills: ["PyTorch", "Machine Learning", "NLP", "Pandas"],
+    salaryRange: "$145k - $165k",
+    salaryInr: "28 - 35 LPA",
+    level: "L4 - Cloud Infrastructure Engineer",
+    bandPosPct: 55,
+    evidenceSnippet: "5 years managing Kubernetes clusters and CI/CD pipelines; zero ML algorithms found.",
+    github: {
+      username: "vikram-ops",
+      score: 72,
+      risk: "LOW",
+      reposAnalyzed: 6,
+      authenticRepos: 6,
+      forksCount: 0,
+      archSignals: 5,
+      quantifiedMetrics: 4,
+      languages: ["HCL (50%)", "Shell (30%)", "Python (20%)"]
+    },
+    council: {
+      techLead: { score: 48, feedback: "DevOps infra expert, but lacks mandatory ML modeling skillset." },
+      culture: { score: 75, feedback: "Solid SRE reliability mindset." },
+      fairAuditor: { score: 95, feedback: "Disqualification justified on technical prerequisites." },
+      seniorityComp: { score: 65, feedback: "Not aligned with ML Engineer core band." }
+    },
+    debateSnippet: [
+      { agent: "Tech Lead", text: "Zero evidence of statistical ML or deep learning models." }
+    ],
+    interviewQuestions: [
+      { q: "How would you optimize AWS GPU node provisioning costs for intermittent batch ML jobs?", type: "Cloud Infra", lookFor: "Spot instances with graceful checkpoint saving." }
+    ]
+  },
+  {
+    rank: 6,
+    id: "CAN-006",
+    name: "Kavita Mehta",
+    anonymizedId: "Candidate #006",
+    fileName: "Kavita_Mehta_Buzzword_Flawed.txt",
+    title: "Junior Data Enthusiast",
+    experienceYears: 1.0,
+    matchScore: 47.4,
+    atsScore: 54,
+    councilScore: 48.1,
+    verdict: "REJECT",
+    verdictType: "negative",
+    redFlags: ["EXPERIENCE_DEFICIT", "REQUIRED_SKILLS_MISSING"],
+    matchedSkills: ["Python", "Pandas", "NumPy", "Scikit-Learn"],
+    partiallyMatchedSkills: [],
+    missingSkills: ["Docker", "AWS", "CI/CD", "PyTorch", "FastAPI"],
+    salaryRange: "$80k - $95k",
+    salaryInr: "12 - 16 LPA",
+    level: "L2 - Junior Data Analyst",
+    bandPosPct: 20,
+    evidenceSnippet: "Academic coursework only; lacks production deployment experience.",
+    github: {
+      username: "kavita-data",
+      score: 51,
+      risk: "MEDIUM",
+      reposAnalyzed: 4,
+      authenticRepos: 3,
+      forksCount: 1,
+      archSignals: 2,
+      quantifiedMetrics: 1,
+      languages: ["Jupyter (70%)", "Python (30%)"]
+    },
+    council: {
+      techLead: { score: 45, feedback: "Academic coursework only; lacks production deployment experience." },
+      culture: { score: 70, feedback: "Eager learner." },
+      fairAuditor: { score: 94, feedback: "Evaluated fairly against job prerequisites." },
+      seniorityComp: { score: 40, feedback: "Underqualified for senior level role." }
+    },
+    debateSnippet: [
+      { agent: "Tech Lead", text: "12 months total experience fails minimum senior engineering requirements." }
+    ],
+    interviewQuestions: [
+      { q: "What projects have you deployed to production outside of Jupyter notebooks?", type: "Tenure Check", lookFor: "Dockerization, deployment scripts." }
+    ]
+  },
+  {
+    rank: 7,
+    id: "CAN-007",
+    name: "Aarav Sharma",
+    anonymizedId: "Candidate #007",
+    fileName: "Aarav_Sharma_Backend_Dev.docx",
+    title: "Backend Engineer",
+    experienceYears: 2.8,
+    matchScore: 46.1,
+    atsScore: 75,
+    councilScore: 66.2,
+    verdict: "LEAN_HIRE",
+    verdictType: "neutral",
+    redFlags: ["REQUIRED_SKILLS_MISSING"],
+    matchedSkills: ["Python", "FastAPI", "Docker", "Git", "REST API"],
+    partiallyMatchedSkills: [],
+    missingSkills: ["PyTorch", "Deep Learning", "TensorFlow"],
+    salaryRange: "$120k - $140k",
+    salaryInr: "22 - 28 LPA",
+    level: "L3 - Backend Engineer",
+    bandPosPct: 40,
+    evidenceSnippet: "Clean REST architecture but misses candidate job requirement on NLP/DL.",
+    github: {
+      username: "aarav-codes",
+      score: 68,
+      risk: "LOW",
+      reposAnalyzed: 7,
+      authenticRepos: 6,
+      forksCount: 1,
+      archSignals: 3,
+      quantifiedMetrics: 3,
+      languages: ["Python (80%)", "Docker (20%)"]
+    },
+    council: {
+      techLead: { score: 55, feedback: "Backend fundamentals intact, ML depth missing." },
+      culture: { score: 80, feedback: "Collaborative and structured code style." },
+      fairAuditor: { score: 96, feedback: "No bias observed." },
+      seniorityComp: { score: 65, feedback: "Mid-level backend compensation." }
+    },
+    debateSnippet: [
+      { agent: "Tech Lead", text: "Clean REST architecture but misses candidate job requirement on NLP/DL." }
+    ],
+    interviewQuestions: [
+      { q: "How do you handle database connection pooling in high-concurrency FastAPI services?", type: "Backend", lookFor: "asyncpg, SQLAlchemy async sessions." }
+    ]
+  },
+  {
+    rank: 8,
+    id: "CAN-008",
+    name: "Ananya Roy",
+    anonymizedId: "Candidate #008",
+    fileName: "Ananya_Roy_Fresher_Engineer.pdf",
+    title: "Fresher Engineer",
+    experienceYears: 0.4,
+    matchScore: 46.1,
+    atsScore: 67,
+    councilScore: 44.1,
+    verdict: "REJECT",
+    verdictType: "negative",
+    redFlags: ["EXPERIENCE_DEFICIT", "REQUIRED_SKILLS_MISSING"],
+    matchedSkills: ["Python", "Pandas", "Scikit-Learn"],
+    partiallyMatchedSkills: [],
+    missingSkills: ["Docker", "AWS", "FastAPI", "PyTorch", "CI/CD"],
+    salaryRange: "$70k - $85k",
+    salaryInr: "8 - 12 LPA",
+    level: "L1/L2 - Graduate Trainee",
+    bandPosPct: 15,
+    evidenceSnippet: "College capstone project using standard classification algorithms.",
+    github: {
+      username: "ananya-fresh",
+      score: 42,
+      risk: "LOW",
+      reposAnalyzed: 3,
+      authenticRepos: 3,
+      forksCount: 0,
+      archSignals: 1,
+      quantifiedMetrics: 1,
+      languages: ["Python (90%)", "HTML (10%)"]
+    },
+    council: {
+      techLead: { score: 40, feedback: "Fresher resume, misses core infrastructure requirements." },
+      culture: { score: 72, feedback: "Good academic standing." },
+      fairAuditor: { score: 95, feedback: "Neutral screening." },
+      seniorityComp: { score: 35, feedback: "Candidate does not meet job leveling minimums." }
+    },
+    debateSnippet: [
+      { agent: "Fair Auditor", text: "Candidate lacks required 2+ years of professional engineering tenure." }
+    ],
+    interviewQuestions: [
+      { q: "Walk me through your college machine learning capstone project.", type: "Academic", lookFor: "Dataset preprocessing, evaluation metrics." }
+    ]
+  },
+  {
+    rank: 9,
+    id: "CAN-009",
+    name: "Priya Patel",
+    anonymizedId: "Candidate #009",
+    fileName: "Priya_Patel_Data_Analyst.pdf",
+    title: "Data Analyst",
+    experienceYears: 2.0,
+    matchScore: 45.3,
+    atsScore: 67,
+    councilScore: 57.4,
+    verdict: "REJECT",
+    verdictType: "negative",
+    redFlags: ["REQUIRED_SKILLS_MISSING"],
+    matchedSkills: ["Python", "Pandas", "NumPy"],
+    partiallyMatchedSkills: [],
+    missingSkills: ["PyTorch", "Docker", "FastAPI", "CI/CD"],
+    salaryRange: "$95k - $115k",
+    salaryInr: "15 - 20 LPA",
+    level: "L3 - BI & Data Analyst",
+    bandPosPct: 35,
+    evidenceSnippet: "SQL queries, Tableau dashboarding, exploratory statistics with Pandas.",
+    github: {
+      username: "priya-analytics",
+      score: 60,
+      risk: "LOW",
+      reposAnalyzed: 5,
+      authenticRepos: 5,
+      forksCount: 0,
+      archSignals: 2,
+      quantifiedMetrics: 2,
+      languages: ["SQL (60%)", "Python (40%)"]
+    },
+    council: {
+      techLead: { score: 48, feedback: "Heavy SQL/BI reporting background; software engineering depth lacking." },
+      culture: { score: 76, feedback: "Effective analytical communicator." },
+      fairAuditor: { score: 96, feedback: "Fair." },
+      seniorityComp: { score: 55, feedback: "Data analyst profile." }
+    },
+    debateSnippet: [
+      { agent: "Tech Lead", text: "Role mandates building production inference APIs, not tabular reports." }
+    ],
+    interviewQuestions: [
+      { q: "What experience do you have with API development vs reporting queries?", type: "Role Alignment", lookFor: "Transition motivation." }
+    ]
+  },
+  {
+    rank: 10,
+    id: "CAN-010",
+    name: "Rohit Verma",
+    anonymizedId: "Candidate #010 (Buzzword Fail)",
+    fileName: "Test_Case_2_Buzzword_Exaggeration_Fail.txt",
+    title: "AI Specialist & Blockchain Guru",
+    experienceYears: 0.3,
+    matchScore: 41.6,
+    atsScore: 56,
+    councilScore: 50.3,
+    verdict: "REJECT",
+    verdictType: "negative",
+    redFlags: ["EXPERIENCE_DEFICIT", "UNVERIFIED_SKILL_CLAIMS", "SKILL_STUFFING", "REQUIRED_SKILLS_MISSING"],
+    matchedSkills: [],
+    partiallyMatchedSkills: [],
+    missingSkills: ["Verifiable Tenure", "Production Proof", "PyTorch"],
+    salaryRange: "$85k - $100k",
+    salaryInr: "12 - 15 LPA",
+    level: "L1 - Unverified Junior Profile",
+    bandPosPct: 10,
+    evidenceSnippet: "Claims 35 enterprise technologies across 4 months total tenure; 10 out of 12 GitHub repos are untouched forks.",
+    github: {
+      username: "rohit-guru",
+      score: 28,
+      risk: "HIGH",
+      reposAnalyzed: 12,
+      authenticRepos: 2,
+      forksCount: 10,
+      archSignals: 0,
+      quantifiedMetrics: 0,
+      languages: ["HTML (60%)", "Jupyter (40%)"]
+    },
+    council: {
+      techLead: { score: 34, feedback: "Extreme keyword stuffing. 35 technologies listed with under 4 months tenure." },
+      culture: { score: 45, feedback: "Misleading claims on GitHub; 10 out of 12 repositories are unaltered forks." },
+      fairAuditor: { score: 98, feedback: "Objective audit: flags verified against commit logs." },
+      seniorityComp: { score: 25, feedback: "Automatic rejection due to fabrication indicators." }
+    },
+    debateSnippet: [
+      { agent: "Tech Lead", text: "Red flag: Candidate claims Kubernetes and CUDA expertise, but commits are untouched tutorial forks." },
+      { agent: "Fair Auditor", text: "Evidence-backed disqualification confirmed. Zero verifiable impact." }
+    ],
+    interviewQuestions: [
+      { q: "You listed Kubernetes, CUDA, and PyTorch across 4 months. Can you live-code a basic CUDA kernel or custom PyTorch backward pass?", type: "Authenticity Verification", lookFor: "Immediate clarity vs buzzword bluffing." }
+    ]
+  },
+  {
+    rank: 11,
+    id: "CAN-011",
+    name: "Devendra Rao",
+    anonymizedId: "Candidate #011 (Corrupt ATS Format)",
+    fileName: "Test_Case_4_Corrupt_ATS_Format_Error.txt",
+    title: "Lead Software Architect",
+    experienceYears: 6.0,
+    matchScore: 34.0,
+    atsScore: 23,
+    councilScore: 38.5,
+    verdict: "REJECT",
+    verdictType: "negative",
+    redFlags: ["NO_QUANTIFIED_IMPACT", "DATE_INCONSISTENCY", "REQUIRED_SKILLS_MISSING"],
+    matchedSkills: [],
+    partiallyMatchedSkills: [],
+    missingSkills: ["Docker", "PyTorch", "FastAPI"],
+    salaryRange: "$160k - $185k",
+    salaryInr: "32 - 40 LPA",
+    level: "Format Readability Invalidation",
+    bandPosPct: 30,
+    evidenceSnippet: "Corrupted PDF layout; overlapping concurrent dates; parser failed to extract standard timeline.",
+    github: {
+      username: "dev-rao",
+      score: 45,
+      risk: "MEDIUM",
+      reposAnalyzed: 4,
+      authenticRepos: 3,
+      forksCount: 1,
+      archSignals: 2,
+      quantifiedMetrics: 0,
+      languages: ["C++ (70%)", "Java (30%)"]
+    },
+    council: {
+      techLead: { score: 35, feedback: "Corrupt ATS formatting. Date timeline overlaps contradict employment claims." },
+      culture: { score: 50, feedback: "Lack of quantified achievement metrics." },
+      fairAuditor: { score: 92, feedback: "Chronology validation flagged overlapping tenure periods." },
+      seniorityComp: { score: 30, feedback: "ATS readability failure." }
+    },
+    debateSnippet: [
+      { agent: "Fair Auditor", text: "Chronology check failed: 2 overlapping full-time positions during the same calendar year." },
+      { agent: "Tech Lead", text: "Formatting destroyed resume structure; ATS parser score 23/100." }
+    ],
+    interviewQuestions: [
+      { q: "Please clarify the timeline overlap between your concurrent positions in 2024.", type: "Integrity Audit", lookFor: "Clear explanation of overlapping dates." }
+    ]
+  },
+  {
+    rank: 12,
+    id: "CAN-012",
+    name: "Edge Case Parser",
+    anonymizedId: "Candidate #012 (Malformed)",
+    fileName: "Edge_Case_Missing_Sections.txt",
+    title: "Programmer",
+    experienceYears: 0.0,
+    matchScore: 28.3,
+    atsScore: 40,
+    councilScore: 27.4,
+    verdict: "REJECT",
+    verdictType: "negative",
+    redFlags: ["EXPERIENCE_DEFICIT", "REQUIRED_SKILLS_MISSING"],
+    matchedSkills: ["Python"],
+    partiallyMatchedSkills: [],
+    missingSkills: ["All Core Job Requirements"],
+    salaryRange: "N/A",
+    salaryInr: "N/A",
+    level: "Structural Incomplete Application",
+    bandPosPct: 5,
+    evidenceSnippet: "Missing required sections: Education, Work Experience, and Projects.",
+    github: {
+      username: "edge-null",
+      score: 10,
+      risk: "HIGH",
+      reposAnalyzed: 0,
+      authenticRepos: 0,
+      forksCount: 0,
+      archSignals: 0,
+      quantifiedMetrics: 0,
+      languages: []
+    },
+    council: {
+      techLead: { score: 20, feedback: "Missing required sections: Education, Work Experience, Projects." },
+      culture: { score: 30, feedback: "Incomplete application file." },
+      fairAuditor: { score: 90, feedback: "Structural deficiency rejection." },
+      seniorityComp: { score: 15, feedback: "Ineligible." }
+    },
+    debateSnippet: [
+      { agent: "Tech Lead", text: "No work history or demonstrable project section in resume payload." }
+    ],
+    interviewQuestions: [
+      { q: "Please provide a standard complete resume with Education, Projects, and Work History.", type: "Prerequisite", lookFor: "Submission of complete documents." }
+    ]
+  }
+
+];
+
+// 50 Benchmark Candidates from manifest.csv (Nandini Pandey, Deepa Gowda, Bhavna Ahmed, etc.)
+export const CANDIDATES_50 = claudeSynthetic50;
+
+// 100 Enterprise Benchmark Candidates across all 8 disciplines
+import synthetic100 from "./synthetic_100.json";
+export const CANDIDATES_100 = synthetic100;

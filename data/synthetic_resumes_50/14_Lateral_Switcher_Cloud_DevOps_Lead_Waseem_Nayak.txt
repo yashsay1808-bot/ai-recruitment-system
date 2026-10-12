@@ -1,0 +1,32 @@
+Waseem Nayak
+Email: waseem.nayak@mailbox.in | Phone: +91 89485 69384 | Location: Hyderabad, India
+LinkedIn: https://linkedin.com/in/waseem-nayak | GitHub: https://github.com/waseem-codes
+
+PROFESSIONAL SUMMARY
+Systems Administrator with 4 years of experience, recently transitioning into DevOps Engineer work. Completed hands-on projects and certifications in Python, Ansible, CI/CD and now seeking a role that applies this background to production systems.
+
+TECHNICAL SKILLS
+Linux, Bash, Networking, VMware, Nagios, Python, Git, Docker, Ansible, CI/CD, Jenkins
+
+EDUCATION
+B.Tech in Information Technology
+RV College of Engineering, Bengaluru | CGPA: 8.1/10 | Graduated: 2020
+
+WORK EXPERIENCE
+DevOps Engineer (Transition Role) | Orbitron Labs (Jul 2025 - Present)
+• Sustained 99.95% uptime across 8,000 requests per second at peak with multi-AZ failover.
+• Led migration of 25 services to Kubernetes on AWS EKS, improving deployment frequency from 6 per month to 10 per day.
+
+Systems Administrator | Stratus Networks (Oct 2022 - Jul 2025)
+• Administered 4 Linux servers with 99.99% uptime and automated patching with Bash and Ansible.
+• Managed on-premise virtualisation for 40 users and cut ticket backlog by 31%.
+
+KEY PROJECTS
+Disaster Recovery Automation
+• Automated cross-region failover with Terraform and Ansible, achieving RTO of 10 minutes.
+Internal Developer Platform
+• Built a self-service Terraform and Helm platform used by 40 engineers, reducing environment requests by 55%.
+
+CERTIFICATIONS
+• HashiCorp Terraform Associate
+• Completed a career-transition bootcamp

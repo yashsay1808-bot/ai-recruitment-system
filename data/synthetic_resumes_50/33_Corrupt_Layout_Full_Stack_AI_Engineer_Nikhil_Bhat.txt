@@ -1,0 +1,10 @@
+Nikhil Bhat
+Location: Kochi
+
+WORK EXPERIENCE
+Full-Stack Engineer | Nimbus Analytics (Jan 2024 - Present)
+• Collaborated with 3 designers and data scientists to ship 9 AI features in two quarters.
+• Reduced LLM spend by 22% through prompt caching in Redis and response truncation, saving about $40k per month.
+
+(education section missing)
+(skills section missing)

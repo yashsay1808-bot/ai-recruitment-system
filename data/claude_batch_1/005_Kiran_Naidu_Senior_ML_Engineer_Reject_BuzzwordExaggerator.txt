@@ -1,0 +1,31 @@
+Kiran Naidu
+Email: kiran.naidu@mailbox.in | Phone: +91 99735 74018 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/kiran-naidu | GitHub: https://github.com/kiran-naidu
+
+PROFESSIONAL SUMMARY
+Results-driven rockstar and Global AI & Quantum Evangelist leveraging synergy and paradigm shifts. Proficient in everything from Quantum Computing to Web3. 6 months of experience building revolutionary world-changing platforms.
+
+TECHNICAL SKILLS
+Neural Networks, Kubernetes, Angular, PyTorch, Docker, GraphQL, Cybersecurity, DevOps, Vue.js, TensorFlow, Redis, GCP, 5G, MLflow, Scala, Git, Airflow, Microservices, Blockchain, Salesforce, Web3, Unity, DataOps, Quantum Computing, Natural Language Processing, Machine Learning, Snowflake, Python, Java, ONNX, Hadoop, FastAPI, Edge AI, Metaverse, NumPy, Generative AI, Kafka, Computer Vision, CI/CD, Rust, Go
+
+EDUCATION
+Bachelor of Engineering in Computer Science
+Manipal Institute of Technology | Percentage: 66% | Graduated: 2026
+
+WORK EXPERIENCE
+Global Principal AI & Quantum Architect | QuantumLeap Technologies (Apr 2026 - Present)
+• Championed thought leadership in AGI, Web3 and quantum innovation initiatives worldwide.
+• Drove transformational disruption by orchestrating holistic next-generation digital ecosystems.
+• Spearheaded world-changing next-gen AI disruptive solutions across the entire enterprise ecosystem.
+
+KEY PROJECTS
+MNIST Digit Classifier (forked)
+• Forked a standard MNIST tutorial repository and added a README; no original commits.
+
+AI Quantum Blockchain Metaverse Platform
+• Revolutionary next-gen platform using FastAPI, Edge AI, DevOps, Snowflake, Angular, NumPy. Next-gen AI solution.
+
+CERTIFICATIONS & AWARDS
+• Quantum Computing for Everyone (online course)
+• Blockchain Basics (Udemy)
+• Participation certificate, college tech fest

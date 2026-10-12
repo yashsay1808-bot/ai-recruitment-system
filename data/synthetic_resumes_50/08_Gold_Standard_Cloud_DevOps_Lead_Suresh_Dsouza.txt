@@ -1,0 +1,36 @@
+Suresh D'Souza
+Email: suresh.dsouza@mailbox.in | Phone: +91 93285 62402 | Location: Mumbai, India
+LinkedIn: https://linkedin.com/in/suresh-dsouza | GitHub: https://github.com/sdsouza-dev
+
+PROFESSIONAL SUMMARY
+Cloud DevOps Lead with 7 years of experience delivering production systems. Skilled in AWS, Azure, Terraform, Kubernetes, Docker, Helm. Consistent record of measurable gains in latency, throughput, reliability and cost.
+
+TECHNICAL SKILLS
+AWS, Azure, Terraform, Kubernetes, Docker, Helm, ArgoCD, Jenkins, GitHub Actions, CI/CD, Prometheus, Grafana, Ansible, Linux, Bash, Python, Git, Istio, Packer, GCP, Vault
+
+EDUCATION
+B.E. in Computer Science and Engineering
+College of Engineering Pune | CGPA: 8.1/10 | Graduated: 2019
+
+WORK EXPERIENCE
+Cloud DevOps Lead | Vertex Mobility (Nov 2022 - Present)
+• Led migration of 12 services to Kubernetes on AWS EKS, improving deployment frequency from 3 per month to 15 per day.
+• Led a team of 2 engineers and ran on-call rotations that cut paging incidents by 47%.
+• Codified 9 environments in Terraform modules, cutting provisioning time from 12 days to 8 minutes.
+• Sustained 99.99% uptime across 50,000 requests per second at peak with multi-AZ failover.
+• Reduced cloud spend by 55% (about $65k per month) through right-sizing, spot instances and autoscaling policies.
+
+DevOps Engineer | Finovate Systems (Oct 2019 - Nov 2022)
+• Designed Prometheus and Grafana observability covering 25 services; improved MTTR from 12 hours to 15 minutes.
+• Sustained 99.99% uptime across 50,000 requests per second at peak with multi-AZ failover.
+• Codified 6 environments in Terraform modules, cutting provisioning time from 3 days to 8 minutes.
+
+KEY PROJECTS
+Internal Developer Platform
+• Built a self-service Terraform and Helm platform used by 350 engineers, reducing environment requests by 42%.
+Policy-as-Code Pipeline
+• Added OPA checks to CI/CD that blocked 6 misconfigurations per quarter.
+
+CERTIFICATIONS & AWARDS
+• HashiCorp Terraform Associate
+• Internal Engineering Excellence Award, 2023

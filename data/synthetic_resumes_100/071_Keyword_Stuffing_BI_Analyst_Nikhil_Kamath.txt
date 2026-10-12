@@ -1,0 +1,19 @@
+Nikhil Kamath
+Email: nikhil.kamath@domain.com | Phone: +91 95573 24621 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/nikhil-kamath | GitHub: https://github.com/nikhil-kamath
+
+PROFESSIONAL SUMMARY
+Senior Business Intelligence & Data Analyst with 0.4 years of experience. Focus in SQL, Python, Tableau, Power BI, Pandas. Claimed mastery across 17 enterprise technologies in 4 months total tenure; untouched forks.
+
+TECHNICAL SKILLS
+SQL, Python, Tableau, Power BI, Pandas, NumPy, Business Intelligence, Data Warehousing, Statistical Analysis, A/B Testing, Quantum Computing, Blockchain, CUDA, Kubernetes Master, Solidity, Rust, Hadoop
+
+WORK EXPERIENCE
+Senior Business Intelligence & Data Analyst | TechCorp Enterprise Systems (2022 - Present)
+• Claimed mastery across 17 enterprise technologies in 4 months total tenure; untouched forks.
+• Orchestrated continuous deployment and monitoring with CI/CD and Docker.
+• Mentored junior engineers and improved automated test coverage.
+
+EDUCATION
+B.Tech / B.E. in Computer Science & Engineering
+VTU University | Graduated 2021
