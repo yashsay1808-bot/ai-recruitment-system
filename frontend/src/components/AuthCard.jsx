@@ -202,11 +202,7 @@ export default function AuthCard() {
             {isSignIn ? "Sign in" : "Create your account"}
           </h1>
           <p className="mt-1 text-sm text-slate-500">
-            {isGoogleAuthEnabled
-              ? "Continue with your Google account to open your workspace."
-              : isSignIn
-                ? "Welcome back. Sign in to continue to your workspace."
-                : "It only takes a minute."}
+            {isSignIn ? "Welcome back. Sign in to continue to your workspace." : "It only takes a minute."}
           </p>
 
           {notice && (
@@ -219,16 +215,7 @@ export default function AuthCard() {
             </div>
           )}
 
-          {isGoogleAuthEnabled ? (
-            <div className="mt-6 space-y-4">
-              <GoogleSignIn onCredential={handleGoogle} onError={setError} />
-              {error && (
-                <p role="alert" className="text-center text-sm text-rose-600">
-                  {error}
-                </p>
-              )}
-            </div>
-          ) : isSignIn ? (
+          {isSignIn ? (
             <form key="signin" onSubmit={handleSignIn} className="mt-5 space-y-4">
               <Field label="Corporate email">
                 {(id) => (
@@ -287,7 +274,7 @@ export default function AuthCard() {
                   <input id={id} value={form.name} onChange={setField("name")} autoComplete="name" required className={inputClass} />
                 )}
               </Field>
-              <Field label="Work email">
+              <Field label="Gmail address">
                 {(id) => (
                   <input
                     id={id}
@@ -295,7 +282,7 @@ export default function AuthCard() {
                     value={form.email}
                     onChange={setField("email")}
                     autoComplete="email"
-                    placeholder="you@company.com"
+                    placeholder="you@gmail.com"
                     required
                     className={inputClass}
                   />
@@ -343,20 +330,32 @@ export default function AuthCard() {
               </button>
             </form>
           )}
+
+          {isGoogleAuthEnabled && (
+            <div className="mt-6">
+              <div className="flex items-center gap-3 text-xs uppercase tracking-wide text-slate-400">
+                <span className="h-px flex-1 bg-slate-200" />
+                or
+                <span className="h-px flex-1 bg-slate-200" />
+              </div>
+              <div className="mt-4">
+                <GoogleSignIn onCredential={handleGoogle} onError={setError} />
+              </div>
+              <p className="mt-2 text-center text-xs text-slate-500">Only @gmail.com accounts are accepted.</p>
+            </div>
+          )}
         </div>
 
-        {!isGoogleAuthEnabled && (
-          <p className="mt-5 text-center text-sm text-slate-500">
-            {isSignIn ? "Don't have an account?" : "Already have an account?"}{" "}
-            <button
-              type="button"
-              onClick={() => switchMode(isSignIn ? "signup" : "signin")}
-              className="font-medium text-indigo-600 hover:text-indigo-700 hover:underline"
-            >
-              {isSignIn ? "Sign up" : "Sign in"}
-            </button>
-          </p>
-        )}
+        <p className="mt-5 text-center text-sm text-slate-500">
+          {isSignIn ? "Don't have an account?" : "Already have an account?"}{" "}
+          <button
+            type="button"
+            onClick={() => switchMode(isSignIn ? "signup" : "signin")}
+            className="font-medium text-indigo-600 hover:text-indigo-700 hover:underline"
+          >
+            {isSignIn ? "Sign up" : "Sign in"}
+          </button>
+        </p>
       </div>
     </main>
   );
