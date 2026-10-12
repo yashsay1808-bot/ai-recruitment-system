@@ -14,6 +14,9 @@ export const config = {
   // "local" -> bundled sample candidates. "api" -> GET /candidates on apiBaseUrl (MongoDB Atlas).
   candidatesProvider: env.VITE_CANDIDATES_PROVIDER || "local",
 
+  // Google Sign-In (Google Identity Services). When set, Google is the ONLY way to sign in.
+  googleClientId: env.VITE_GOOGLE_CLIENT_ID || "",
+
   // GitHub OAuth: the client id is public; the secret and token exchange stay on the backend.
   githubClientId: env.VITE_GITHUB_CLIENT_ID || "",
 

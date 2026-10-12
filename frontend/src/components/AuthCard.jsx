@@ -1,7 +1,62 @@
-import { useId, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { Eye, EyeOff, CheckCircle2, Wand2 } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
-import { ROLES, MIN_PASSWORD_LENGTH, DEMO_ACCOUNT, isDemoAccountEnabled } from "../utils/authService";
+import { config } from "../config/env";
+import {
+  ROLES,
+  MIN_PASSWORD_LENGTH,
+  DEMO_ACCOUNT,
+  isDemoAccountEnabled,
+  isGoogleAuthEnabled,
+} from "../utils/authService";
+
+const GSI_SRC = "https://accounts.google.com/gsi/client";
+
+// Renders Google's official "Sign in with Google" button and hands the returned ID token to onCredential.
+function GoogleSignIn({ onCredential, onError }) {
+  const holder = useRef(null);
+  const handler = useRef(onCredential);
+
+  useEffect(() => {
+    handler.current = onCredential;
+  }, [onCredential]);
+
+  useEffect(() => {
+    let cancelled = false;
+    const init = () => {
+      if (cancelled || !window.google?.accounts?.id || !holder.current) return;
+      window.google.accounts.id.initialize({
+        client_id: config.googleClientId,
+        callback: (res) => handler.current(res.credential),
+      });
+      window.google.accounts.id.renderButton(holder.current, {
+        theme: "outline",
+        size: "large",
+        text: "signin_with",
+        shape: "rectangular",
+        width: 320,
+      });
+    };
+    if (window.google?.accounts?.id) {
+      init();
+    } else {
+      let script = document.querySelector(`script[src="${GSI_SRC}"]`);
+      if (!script) {
+        script = document.createElement("script");
+        script.src = GSI_SRC;
+        script.async = true;
+        document.head.appendChild(script);
+      }
+      script.addEventListener("load", init);
+      script.addEventListener("error", () => onError("Could not load Google sign-in. Check your connection."));
+    }
+    return () => {
+      cancelled = true;
+    };
+  }, [onError]);
+
+  return <div ref={holder} className="flex min-h-[44px] justify-center" />;
+}
 
 const SUCCESS_NOTICE = "Account created successfully. Please sign in with your credentials.";
 
@@ -65,7 +120,7 @@ function PasswordInput({ id, value, onChange, autoComplete, placeholder }) {
 const EMPTY_SIGN_UP = { name: "", email: "", company: "", role: ROLES[0], password: "" };
 
 export default function AuthCard() {
-  const { signIn, signUp } = useAuth();
+  const { signIn, signUp, signInWithGoogle } = useAuth();
   const [mode, setMode] = useState("signin"); // "signin" | "signup"
   const [notice, setNotice] = useState("");
   const [error, setError] = useState("");
@@ -91,6 +146,15 @@ export default function AuthCard() {
       setBusy(false);
     }
     // On success the gate swaps this card out, so there is nothing more to update here.
+  };
+
+  const handleGoogle = async (credential) => {
+    setError("");
+    try {
+      await signInWithGoogle(credential);
+    } catch (err) {
+      setError(err.message || "Could not sign in with Google. Please try again.");
+    }
   };
 
   const handleSignUp = async (e) => {
@@ -138,7 +202,11 @@ export default function AuthCard() {
             {isSignIn ? "Sign in" : "Create your account"}
           </h1>
           <p className="mt-1 text-sm text-slate-500">
-            {isSignIn ? "Welcome back. Sign in to continue to your workspace." : "It only takes a minute."}
+            {isGoogleAuthEnabled
+              ? "Continue with your Google account to open your workspace."
+              : isSignIn
+                ? "Welcome back. Sign in to continue to your workspace."
+                : "It only takes a minute."}
           </p>
 
           {notice && (
@@ -151,7 +219,16 @@ export default function AuthCard() {
             </div>
           )}
 
-          {isSignIn ? (
+          {isGoogleAuthEnabled ? (
+            <div className="mt-6 space-y-4">
+              <GoogleSignIn onCredential={handleGoogle} onError={setError} />
+              {error && (
+                <p role="alert" className="text-center text-sm text-rose-600">
+                  {error}
+                </p>
+              )}
+            </div>
+          ) : isSignIn ? (
             <form key="signin" onSubmit={handleSignIn} className="mt-5 space-y-4">
               <Field label="Corporate email">
                 {(id) => (
@@ -268,16 +345,18 @@ export default function AuthCard() {
           )}
         </div>
 
-        <p className="mt-5 text-center text-sm text-slate-500">
-          {isSignIn ? "Don't have an account?" : "Already have an account?"}{" "}
-          <button
-            type="button"
-            onClick={() => switchMode(isSignIn ? "signup" : "signin")}
-            className="font-medium text-indigo-600 hover:text-indigo-700 hover:underline"
-          >
-            {isSignIn ? "Sign up" : "Sign in"}
-          </button>
-        </p>
+        {!isGoogleAuthEnabled && (
+          <p className="mt-5 text-center text-sm text-slate-500">
+            {isSignIn ? "Don't have an account?" : "Already have an account?"}{" "}
+            <button
+              type="button"
+              onClick={() => switchMode(isSignIn ? "signup" : "signin")}
+              className="font-medium text-indigo-600 hover:text-indigo-700 hover:underline"
+            >
+              {isSignIn ? "Sign up" : "Sign in"}
+            </button>
+          </p>
+        )}
       </div>
     </main>
   );
