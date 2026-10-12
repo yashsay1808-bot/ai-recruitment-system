@@ -26,6 +26,7 @@ export const ROLES = [
 
 export const MIN_PASSWORD_LENGTH = 8;
 const EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+const isGmail = (email) => /@gmail\.com$/i.test((email || "").trim());
 
 export class AuthError extends Error {}
 
@@ -42,7 +43,8 @@ export const isDemoAccountEnabled = config.seedDemoAccount && !isApiMode(config.
 
 export function validateSignUp({ name, email, company, role, password }) {
   if (!name?.trim()) return "Enter your full name.";
-  if (!EMAIL_RE.test(email?.trim() || "")) return "Enter a valid work email.";
+  if (!EMAIL_RE.test(email?.trim() || "")) return "Enter a valid email address.";
+  if (!isGmail(email)) return "Only Gmail addresses (name@gmail.com) can sign up.";
   if (!company?.trim()) return "Enter your company.";
   if (!ROLES.includes(role)) return "Choose your role.";
   if ((password || "").length < MIN_PASSWORD_LENGTH) {
@@ -242,6 +244,7 @@ async function signInWithGoogle(credential) {
   if (!claims.email || claims.email_verified === false) {
     throw new AuthError("Your Google account email is not verified.");
   }
+  if (!isGmail(claims.email)) throw new AuthError("Only @gmail.com Google accounts are accepted.");
   const user = {
     id: claims.sub,
     name: claims.name || claims.email,
