@@ -215,4 +215,44 @@ const apiProvider = {
   },
 };
 
-export const authService = isApiMode(config.authProvider) ? apiProvider : localProvider;
+/* -------------------------------------------------------------------------------------------- */
+/* Google Sign-In (Google Identity Services)                                                     */
+/* -------------------------------------------------------------------------------------------- */
+// With VITE_GOOGLE_CLIENT_ID set, Google is the only sign-in method. The ID token is checked in the
+// browser (audience, issuer, expiry); there is no server in this deployment, so treat it as an
+// access gate for the UI rather than server-side authorization.
+export const isGoogleAuthEnabled = Boolean(config.googleClientId);
+
+function decodeJwtPayload(token) {
+  try {
+    const b64 = token.split(".")[1].replace(/-/g, "+").replace(/_/g, "/");
+    const bytes = Uint8Array.from(atob(b64), (c) => c.charCodeAt(0));
+    return JSON.parse(new TextDecoder().decode(bytes));
+  } catch {
+    return null;
+  }
+}
+
+async function signInWithGoogle(credential) {
+  const claims = decodeJwtPayload(credential || "");
+  const issuerOk = claims && ["accounts.google.com", "https://accounts.google.com"].includes(claims.iss);
+  if (!claims || !issuerOk || claims.aud !== config.googleClientId || claims.exp * 1000 < Date.now()) {
+    throw new AuthError("Google sign-in could not be verified. Please try again.");
+  }
+  if (!claims.email || claims.email_verified === false) {
+    throw new AuthError("Your Google account email is not verified.");
+  }
+  const user = {
+    id: claims.sub,
+    name: claims.name || claims.email,
+    email: claims.email.toLowerCase(),
+    company: claims.hd || "Google account",
+    role: ROLES[0],
+    picture: claims.picture,
+  };
+  writeJson(sessionStorage, SESSION_KEY, { token: credential, user });
+  return user;
+}
+
+const baseProvider = isApiMode(config.authProvider) ? apiProvider : localProvider;
+export const authService = { ...baseProvider, signInWithGoogle };

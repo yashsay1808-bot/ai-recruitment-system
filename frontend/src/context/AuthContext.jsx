@@ -30,6 +30,12 @@ export function AuthProvider({ children }) {
     return u;
   }, []);
 
+  const signInWithGoogle = useCallback(async (credential) => {
+    const u = await authService.signInWithGoogle(credential);
+    setUser(u);
+    return u;
+  }, []);
+
   // Creating an account deliberately does NOT sign the user in.
   const signUp = useCallback((form) => authService.signUp(form), []);
 
@@ -39,8 +45,8 @@ export function AuthProvider({ children }) {
   }, []);
 
   const value = useMemo(
-    () => ({ user, isAuthenticated: Boolean(user), status, signIn, signUp, signOut }),
-    [user, status, signIn, signUp, signOut],
+    () => ({ user, isAuthenticated: Boolean(user), status, signIn, signInWithGoogle, signUp, signOut }),
+    [user, status, signIn, signInWithGoogle, signUp, signOut],
   );
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
