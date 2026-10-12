@@ -1,0 +1,28 @@
+Siddharth Patil
+Email: siddharth.patil@mailbox.in | Phone: +91 92360 19960 | Location: Pune, India
+LinkedIn: https://linkedin.com/in/siddharth-patil | GitHub: https://github.com/siddharth-patil-dev
+
+OBJECTIVE
+Recent graduate eager to start a career as a Machine Learning Engineer. Built academic and personal projects in Machine Learning, Docker, MLOps and keen to learn production engineering practices.
+
+TECHNICAL SKILLS
+Machine Learning, Docker, MLOps, MLflow, Scikit-Learn, SageMaker, TensorFlow, CI/CD, NumPy
+
+EDUCATION
+B.E. in Computer Science and Engineering
+NIT Karnataka, Surathkal | CGPA: 8.0/10 | Graduated: 2026
+
+INTERNSHIP EXPERIENCE
+Machine Learning Engineer Intern | Stratus Networks (Nov 2025 - Aug 2026)
+• Contributed to a team service as a trainee, writing tests and documentation under a mentor.
+• Assisted senior engineers with debugging, code reviews and small feature tickets.
+
+ACADEMIC PROJECTS
+Semantic Search Engine
+• Designed a RAG pipeline with sentence embeddings and a FastAPI backend returning results in under 140 ms over 20,000 documents.
+Real-Time Anomaly Detection
+• Implemented an LSTM autoencoder in PyTorch that detected equipment faults with 88% precision and cut false alarms by 38%.
+
+CERTIFICATIONS
+• Deep Learning Specialization (DeepLearning.AI)
+• Finalist, College Hackathon 2025

@@ -1,0 +1,19 @@
+Vikram Nayak
+Email: vikram.nayak@domain.com | Phone: +91 94422 93886 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/vikram-nayak | GitHub: https://github.com/vikram-nayak
+
+PROFESSIONAL SUMMARY
+Cloud DevOps & Site Reliability Lead with 4.8 years of experience. Focus in Kubernetes, Docker, Terraform, AWS, Git. Maintained production Kubernetes and Docker pipelines. Adjacent skills transitioning to Cloud DevOps & Site Reliability Lead.
+
+TECHNICAL SKILLS
+Kubernetes, Docker, Terraform, AWS, Git, Linux
+
+WORK EXPERIENCE
+Cloud DevOps & Site Reliability Lead | TechCorp Enterprise Systems (2022 - Present)
+• Maintained production Kubernetes and Docker pipelines. Adjacent skills transitioning to Cloud DevOps & Site Reliability Lead.
+• Orchestrated continuous deployment and monitoring with CI/CD and Docker.
+• Mentored junior engineers and improved automated test coverage.
+
+EDUCATION
+B.Tech / B.E. in Computer Science & Engineering
+VTU University | Graduated 2021

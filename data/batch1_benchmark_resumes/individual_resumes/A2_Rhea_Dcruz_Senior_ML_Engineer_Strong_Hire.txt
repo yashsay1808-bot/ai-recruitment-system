@@ -1,0 +1,36 @@
+Rhea D'Cruz
+Email: rhea.dcruz@mailbox.in | Phone: +91 95171 63616 | Location: Goa, India
+LinkedIn: https://linkedin.com/in/rhea-dcruz | GitHub: https://github.com/dcruz-r
+
+PROFESSIONAL SUMMARY
+Senior Machine Learning Engineer with 6 years of production experience across e-commerce and mobility. Deep hands-on expertise in PyTorch, TensorFlow, FastAPI, Docker. Known for measurable impact on latency, reliability and cost, and for mentoring engineers.
+
+TECHNICAL SKILLS
+PyTorch, TensorFlow, FastAPI, Docker, AWS, Hugging Face, MLOps, Scikit-Learn, Python, Git, Deep Learning, Machine Learning, Natural Language Processing, Airflow, SQL
+
+EDUCATION
+B.Tech in Computer Science and Engineering
+Thapar Institute of Engineering and Technology | CGPA: 8.0/10 | Graduated: 2020
+
+WORK EXPERIENCE
+Senior Machine Learning Engineer | Basalt Mobility (Jul 2023 - Present)
+• Cut training time for a 1.2B-parameter PyTorch model by 52% using mixed precision, gradient checkpointing and DDP on 8 GPUs.
+• Led a squad of 6 engineers, introduced PyTest-based model contracts and lifted coverage of the training stack to 88%.
+• Built an MLOps platform on MLflow, Airflow and Docker with automated retraining and canary rollout, cutting model release time from 12 days to 2 hours.
+• Deployed RoBERTa ONNX models with FastAPI and Triton serving 120k daily requests at 41 ms p95 latency on AWS ECS.
+
+Machine Learning Engineer | Driftwood Robotics (Oct 2020 - Jul 2023)
+• Shipped a TensorFlow Serving to PyTorch migration for 9 legacy models with zero downtime and a 18% latency improvement.
+• Reduced AWS GPU spend by 32% (about $31k per month) through INT8 quantization, dynamic batching and spot-instance training.
+• Implemented drift and data-quality monitoring with Prometheus and Evidently that caught 7 silent regressions before reaching 120,000 daily users.
+
+KEY PROJECTS
+Open-Source: onnx-batching-utils
+• Maintainer of a PyTorch-to-ONNX export and dynamic-batching helper (pytorch + FastAPI + Triton) with 720 GitHub stars and 19 external contributors.
+
+Churn Prediction Platform
+• Scikit-Learn and LightGBM pipelines tracked with MLflow, orchestrated by Airflow and served with Docker on AWS.
+
+CERTIFICATIONS & AWARDS
+• TensorFlow Developer Certificate
+• Speaker, PyCon India 2024

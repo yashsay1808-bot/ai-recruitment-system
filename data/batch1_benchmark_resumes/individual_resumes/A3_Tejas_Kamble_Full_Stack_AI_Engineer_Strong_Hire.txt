@@ -1,0 +1,36 @@
+Tejas Kamble
+Email: tejas.kamble@mailbox.in | Phone: +91 96803 82148 | Location: Pune, India
+LinkedIn: https://linkedin.com/in/tejas-kamble | GitHub: https://github.com/tejas-kamble
+
+PROFESSIONAL SUMMARY
+Full-Stack AI Engineer with 4.5 years of production experience across fintech and payments. Deep hands-on expertise in React, TypeScript, Python, FastAPI. Known for measurable impact on latency, reliability and cost, and for mentoring engineers.
+
+TECHNICAL SKILLS
+React, TypeScript, Python, FastAPI, Next.js, LangChain, PostgreSQL, Docker, GraphQL, Node.js, RAG, OpenAI API, Vector Database, Tailwind CSS, REST API
+
+EDUCATION
+B.Tech in Computer Science and Engineering
+IIT Madras | CGPA: 8.3/10 | Graduated: 2021
+
+WORK EXPERIENCE
+Software Engineer | Pelican Health Data (May 2024 - Present)
+• Designed PostgreSQL schemas and REST/GraphQL APIs sustaining 2,400 requests per second with 99.99% uptime.
+• Containerised the stack with Docker and shipped through GitHub Actions to AWS, cutting release time from 4 hours to 12 minutes.
+• Shipped a RAG assistant with LangChain, FastAPI and pgvector answering 140k queries per day at 260 ms p95 including retrieval.
+• Cut LLM spend by 41% ($9k per month) via prompt caching in Redis, response truncation and a routing layer for smaller models.
+
+Full-Stack Engineer | Quillpoint Software (Apr 2022 - May 2024)
+• Led 4 engineers and 1 designers delivering 8 AI features in two quarters.
+• Built a Next.js and React front end with streaming responses that lifted task completion by 31% for 45,000 monthly users.
+• Implemented an evaluation harness tracking answer accuracy from 74% to 92% across 5 regression suites in CI.
+
+KEY PROJECTS
+Document Q&A Platform
+• Next.js and FastAPI app with chunked retrieval over 400,000 PDFs, pgvector search and sub-85 ms retrieval.
+
+AI Code Review Bot
+• GitHub App using LLM APIs that reviewed 120,000 pull requests with 95% accepted suggestions.
+
+CERTIFICATIONS & AWARDS
+• Meta Front-End Developer Certificate
+• Winner, Inter-College Hackathon 2022

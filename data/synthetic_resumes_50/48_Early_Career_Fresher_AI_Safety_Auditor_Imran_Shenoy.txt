@@ -1,0 +1,28 @@
+Imran Shenoy
+Email: imran.shenoy@mailbox.in | Phone: +91 71208 62068 | Location: Pune, India
+LinkedIn: https://linkedin.com/in/imran-shenoy | GitHub: https://github.com/imran2001
+
+OBJECTIVE
+Recent graduate eager to start a career as a Responsible AI Analyst. Built academic and personal projects in Bias Auditing, Adversarial Robustness, Python and keen to learn production engineering practices.
+
+TECHNICAL SKILLS
+Bias Auditing, Adversarial Robustness, Python, Red Teaming, Fairlearn, Model Evaluation, AIF360, Machine Learning
+
+EDUCATION
+B.Tech in Computer Science (AI & ML)
+Anna University, Chennai | CGPA: 8.2/10 | Graduated: 2026
+
+INTERNSHIP EXPERIENCE
+Responsible AI Analyst Intern | Vertex Mobility (Aug 2025 - Aug 2026)
+• Contributed to a team service as a trainee, writing tests and documentation under a mentor.
+• Assisted senior engineers with debugging, code reviews and small feature tickets.
+
+ACADEMIC PROJECTS
+Bias Audit Toolkit
+• Open-sourced a Fairlearn-based audit pipeline evaluated on 50,000 loan records, flagging 12 protected-group gaps.
+LLM Red-Team Benchmark
+• Compiled 50,000 adversarial prompts with automated scoring and a public leaderboard.
+
+CERTIFICATIONS
+• Responsible AI (Google Cloud Skills Boost)
+• Finalist, College Hackathon 2025

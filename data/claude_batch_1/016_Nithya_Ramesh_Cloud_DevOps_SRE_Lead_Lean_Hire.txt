@@ -1,0 +1,33 @@
+Nithya Ramesh
+Email: nithya.ramesh@mailbox.in | Phone: +91 91462 84764 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/nithya-ramesh | GitHub: https://github.com/nithya-ramesh
+
+PROFESSIONAL SUMMARY
+DevOps Engineer with 2.5 years of experience building and operating production systems in Kubernetes, Docker, AWS. Solid engineering fundamentals and a steady record of delivery; currently deepening skills in adjacent areas to move into a senior SRE role.
+
+TECHNICAL SKILLS
+Kubernetes, Docker, AWS, CI/CD, Linux, Prometheus, Datadog, ArgoCD, Istio, GitHub Actions, Git
+
+EDUCATION
+B.E. in Computer Science (AI & ML)
+IIT Bombay | CGPA: 8.2/10 | Graduated: 2022
+
+WORK EXPERIENCE
+DevOps Engineer | Driftwood Robotics (Apr 2025 - Present)
+• Automated server patching and log rotation with Bash and Ansible across 80 Linux hosts.
+• Participated in on-call rotation and authored 10 runbooks that reduced escalations by 20%.
+• Containerised 24 legacy applications with Docker and moved them to a CI/CD pipeline, shrinking release time from 6 hours to 45 minutes.
+
+Software Engineer | Nautilus Networks (Apr 2024 - Apr 2025)
+• Trimmed AWS spend by 11% by removing idle resources and introducing scheduled scaling.
+• Wrote Terraform for VPC, EKS and RDS stacks; reduced environment setup from 4 days to 3 hours.
+
+KEY PROJECTS
+Chaos and DR Toolkit
+• Automated game-day scenarios with Litmus and Terraform; validated RTO of 8 minutes across 6 regions.
+
+GitOps Migration
+• Migrated 120 services from Jenkins to ArgoCD and GitHub Actions with progressive delivery on Kubernetes.
+
+CERTIFICATIONS & AWARDS
+• AWS Certified Solutions Architect - Professional

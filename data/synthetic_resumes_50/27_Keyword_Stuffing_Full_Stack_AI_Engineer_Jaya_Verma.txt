@@ -1,0 +1,28 @@
+Jaya Verma
+Email: jaya.verma@mailbox.in | Phone: +91 95995 44833 | Location: Gurugram, India
+LinkedIn: https://linkedin.com/in/jaya-verma | GitHub: https://github.com/jayaverma
+
+PROFESSIONAL SUMMARY
+Visionary Full-Stack AI Engineer and Full Stack Quantum Blockchain Ninja with 0.4 years of experience. Passionate about disrupting the world with cutting-edge, next-gen, synergistic technologies and always learning new things.
+
+TECHNICAL SKILLS
+Kotlin, Terraform, Git, MongoDB, Vue.js, Big Data, TypeScript, Rust, Prompt Engineering, FastAPI, AGI, IoT, DevOps, Next.js, Vector Database, OpenAI API, Python, Computer Vision, MLOps, Blockchain, C++, Web3, AWS, Metaverse, React, GraphQL, Generative AI, Node.js, Java, Cybersecurity, Tailwind CSS, Docker, Edge AI
+
+EDUCATION
+Bachelor of Engineering (Computer Science)
+SRM Institute of Science and Technology | Percentage: 62% | Passed: 2025
+
+WORK EXPERIENCE
+Full-Stack AI Engineer (Self-Appointed) | DisruptAI (Jun 2026 - Present)
+• Worked on AI and cloud stuff.
+• Learned about Kubernetes, blockchain and machine learning.
+• Responsible for many important tasks.
+
+PROJECTS
+AI Blockchain Platform
+• Revolutionary platform using Prompt Engineering, Generative AI, Edge AI, Big Data, Docker.
+• Next-gen AI solution.
+
+CERTIFICATIONS
+• Online course certificate (Udemy)
+• Prompt Engineering Masterclass

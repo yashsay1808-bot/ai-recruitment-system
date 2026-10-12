@@ -1,0 +1,28 @@
+Kunal Agarwal
+Email: kunal.agarwal@mailbox.in | Phone: +91 73748 49517 | Location: Hyderabad, India
+LinkedIn: https://linkedin.com/in/kunal-agarwal | GitHub: https://github.com/agarwalk
+
+PROFESSIONAL SUMMARY
+Dynamic AI guru and Senior Machine Learning Engineer leveraging synergy, paradigm shifts and best-in-class solutions. Proficient in everything. 0.5 years of experience building revolutionary platforms.
+
+TECHNICAL SKILLS
+Reinforcement Learning, Azure, GCP, Web3, Machine Learning, Microservices, Hadoop, Kafka, MongoDB, GraphQL, FastAPI, Serverless, Kubernetes, Big Data, Docker, AWS, IoT, Pandas, Large Language Models, Blockchain, Vue.js, Python, Swift, CI/CD, SQL, Rust, Natural Language Processing, DevOps, Go, MLOps, PyTorch, Feature Store, Scikit-Learn, Kotlin
+
+EDUCATION
+Bachelor of Engineering (Computer Science)
+PES University, Bengaluru | Percentage: 60% | Passed: 2025
+
+WORK EXPERIENCE
+Senior Machine Learning Engineer (Self-Appointed) | SynergyWorks (Apr 2026 - Present)
+• Helped the team with various technologies.
+• Handled several projects using latest technologies.
+• Worked on AI and cloud stuff.
+
+PROJECTS
+AI Blockchain Platform
+• Revolutionary platform using Pandas, Vue.js, Rust, Python, Kubernetes.
+• Next-gen AI solution.
+
+CERTIFICATIONS
+• Online course certificate (Udemy)
+• Prompt Engineering Masterclass

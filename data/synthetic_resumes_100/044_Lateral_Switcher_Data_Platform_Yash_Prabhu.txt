@@ -1,0 +1,19 @@
+Yash Prabhu
+Email: yash.prabhu@domain.com | Phone: +91 95313 17331 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/yash-prabhu | GitHub: https://github.com/yash-prabhu
+
+PROFESSIONAL SUMMARY
+Data Platform & Distributed Systems Engineer with 3.3 years of experience. Focus in Python, Apache Spark, Kafka, SQL, Git. Maintained production Python and Apache Spark pipelines. Adjacent skills transitioning to Data Platform & Distributed Systems Engineer.
+
+TECHNICAL SKILLS
+Python, Apache Spark, Kafka, SQL, Git, Linux
+
+WORK EXPERIENCE
+Data Platform & Distributed Systems Engineer | TechCorp Enterprise Systems (2022 - Present)
+• Maintained production Python and Apache Spark pipelines. Adjacent skills transitioning to Data Platform & Distributed Systems Engineer.
+• Orchestrated continuous deployment and monitoring with CI/CD and Docker.
+• Mentored junior engineers and improved automated test coverage.
+
+EDUCATION
+B.Tech / B.E. in Computer Science & Engineering
+VTU University | Graduated 2021

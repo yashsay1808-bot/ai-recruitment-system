@@ -1,0 +1,6 @@
+Abhinav Thakur
+
+SKILLS
+Python, PyTorch, Machine Learning, Fairlearn, AIF360, SHAP, LIME, Red Teaming, Adversarial Robustness, Model Cards, NIST AI RMF, ISO 42001, Bias Auditing, Model Evaluation, SQL, Hugging Face, Git, EU AI Act, Differential Privacy, Interpretability, Prompt Injection Testing
+Python, PyTorch, Machine Learning, Fairlearn, AIF360, SHAP, LIME, Red Teaming, Adversarial Robustness, Model Cards, NIST AI RMF, ISO 42001, Bias Auditing, Model Evaluation, SQL, Hugging Face, Git
+EU AI Act, Differential Privacy, Interpretability, Prompt Injection Testing, Quantum Computing, Blockchain, Web3, Metaverse, Generative AI, AGI, Computer Vision, Reinforcement Learning

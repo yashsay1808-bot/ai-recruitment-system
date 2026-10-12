@@ -1,0 +1,31 @@
+Meera Iyer
+Email: meera.iyer@mailbox.in | Phone: +91 98450 67890 | Location: Chennai, India
+LinkedIn: https://linkedin.com/in/meera-iyer-backend | GitHub: https://github.com/meeraiyer-dev
+
+PROFESSIONAL SUMMARY
+Backend Developer with 4 years of experience building high-throughput REST services in Python. Strong in API design, relational data modelling and caching; looking to move closer to machine learning platform engineering.
+
+TECHNICAL SKILLS
+Python, Flask, REST API, PostgreSQL, Redis, Docker, AWS, Git, Linux, CI/CD, PyTest, SQL
+
+EDUCATION
+B.Tech in Information Technology
+Anna University, Chennai | CGPA: 8.4/10 | Graduated: 2022
+
+WORK EXPERIENCE
+Backend Developer | RetailEdge Software (Aug 2022 - Present)
+• Designed and maintained 14 Flask microservices handling 120,000 requests per day with 99.95% uptime.
+• Reduced average API response time by 41% by introducing Redis caching and optimizing PostgreSQL indexes.
+• Containerized services with Docker and deployed to AWS EC2 through a Jenkins CI/CD pipeline, cutting rollbacks by 60%.
+• Wrote 400+ unit and integration tests in PyTest and enforced code review standards across a team of 6.
+• Built a scheduled SQL reporting job that replaced a manual process and saved 15 hours of effort weekly.
+
+KEY PROJECTS
+Inventory Forecast Dashboard
+• Developed a Flask and PostgreSQL service that exposes daily sales aggregates to a reporting dashboard for 300 store managers.
+
+Rate-Limited Public API Gateway
+• Implemented token-bucket rate limiting in Redis and Flask, protecting services from 5x traffic spikes.
+
+CERTIFICATIONS & AWARDS
+• AWS Certified Developer Associate

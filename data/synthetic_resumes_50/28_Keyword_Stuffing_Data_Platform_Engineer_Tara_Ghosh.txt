@@ -1,0 +1,28 @@
+Tara Ghosh
+Email: tara.ghosh@mailbox.in | Phone: +91 89681 98388 | Location: Chennai, India
+LinkedIn: https://linkedin.com/in/tara-ghosh | GitHub: https://github.com/tara-ghosh
+
+PROFESSIONAL SUMMARY
+Results-driven rockstar Data Platform Engineer and thought leader. Expert in every technology, 10x engineer, hardworking team player and fast learner with 0.4 years of experience.
+
+TECHNICAL SKILLS
+IoT, Metaverse, Cybersecurity, Snowflake, C++, Reinforcement Learning, Databricks, GraphQL, Delta Lake, Redis, Quantum Computing, Apache Kafka, GCP, Computer Vision, SQL, Docker, dbt, ETL, Data Modeling, Java, Apache Airflow, Kubernetes, Scala, Blockchain, Vue.js, BigQuery, Go, DevOps, Web3, Great Expectations, Rust
+
+EDUCATION
+Bachelor of Engineering (Computer Science)
+PES University, Bengaluru | Percentage: 66% | Passed: 2025
+
+WORK EXPERIENCE
+Data Platform Engineer (Self-Appointed) | StartupX (Jun 2026 - Present)
+• Learned about Kubernetes, blockchain and machine learning.
+• Responsible for many important tasks.
+• Handled several projects using latest technologies.
+
+PROJECTS
+AI Quantum Platform
+• Revolutionary platform using GraphQL, IoT, BigQuery, ETL, GCP.
+• Next-gen AI solution.
+
+CERTIFICATIONS
+• Online course certificate (Udemy)
+• Prompt Engineering Masterclass

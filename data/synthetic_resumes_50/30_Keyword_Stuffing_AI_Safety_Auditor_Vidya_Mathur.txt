@@ -1,0 +1,28 @@
+Vidya Mathur
+Email: vidya.mathur@mailbox.in | Phone: +91 95821 38843 | Location: Noida, India
+LinkedIn: https://linkedin.com/in/vidya-mathur | GitHub: https://github.com/vidyamat19
+
+PROFESSIONAL SUMMARY
+Results-driven rockstar AI Safety Auditor and thought leader. Expert in every technology, 10x engineer, hardworking team player and fast learner with 0.4 years of experience.
+
+TECHNICAL SKILLS
+NIST AI RMF, PyTorch, Rust, Kafka, Reinforcement Learning, Azure, Edge AI, Vue.js, Git, Red Teaming, Java, Metaverse, Blockchain, Prompt Injection Testing, C++, Adversarial Robustness, Scala, MLOps, EU AI Act, Hadoop, Generative AI, Computer Vision, Serverless, Redis, Neural Networks, SQL, TensorFlow, Docker, Cybersecurity, Python, SHAP, Web3, LIME, Differential Privacy
+
+EDUCATION
+Bachelor of Engineering (Computer Science)
+NSUT Delhi | Percentage: 68% | Passed: 2025
+
+WORK EXPERIENCE
+AI Safety Auditor (Self-Appointed) | StartupX (Jun 2026 - Present)
+• Part of a team building a next-generation platform.
+• Involved in development and deployment activities.
+• Learned about Kubernetes, blockchain and machine learning.
+
+PROJECTS
+AI Quantum Platform
+• Revolutionary platform using Redis, Hadoop, EU AI Act, Docker, Scala.
+• Next-gen AI solution.
+
+CERTIFICATIONS
+• Online course certificate (Udemy)
+• Prompt Engineering Masterclass

@@ -1,0 +1,34 @@
+Anushka Varghese
+Email: anushka.varghese@mailbox.in | Phone: +91 95624 43768 | Location: Kochi, India
+LinkedIn: https://linkedin.com/in/anushka-varghese | GitHub: https://github.com/anushkavarghese
+
+PROFESSIONAL SUMMARY
+DevOps Engineer with 4 years of experience building and operating production systems in Kubernetes, Docker, Terraform. Solid engineering fundamentals and a steady record of delivery; currently deepening skills in adjacent areas to move into a senior SRE role.
+
+TECHNICAL SKILLS
+Kubernetes, Docker, Terraform, AWS, CI/CD, Linux, Grafana, Bash, GitHub Actions, Ansible, Git, Helm
+
+EDUCATION
+B.Tech in Information Technology
+College of Engineering Pune | CGPA: 9.5/10 | Graduated: 2020
+
+WORK EXPERIENCE
+Site Reliability Engineer | Basalt Mobility (Jun 2024 - Present)
+• Created Grafana dashboards and Prometheus alerts for 35 services, cutting mean time to detect by 30%.
+• Wrote Terraform for VPC, EKS and RDS stacks; reduced environment setup from 4 days to 3 hours.
+• Maintained 30 services on Kubernetes with Helm charts and Jenkins pipelines, reaching 99.95% uptime.
+
+Software Engineer | Nautilus Networks (Oct 2022 - Jun 2024)
+• Trimmed AWS spend by 17% by removing idle resources and introducing scheduled scaling.
+• Containerised 18 legacy applications with Docker and moved them to a CI/CD pipeline, shrinking release time from 6 hours to 35 minutes.
+
+KEY PROJECTS
+Observability Stack
+• Prometheus, Thanos and Grafana stack ingesting 80,000 samples per second with SLO burn-rate alerting.
+
+GitOps Migration
+• Migrated 260 services from Jenkins to ArgoCD and GitHub Actions with progressive delivery on Kubernetes.
+
+CERTIFICATIONS & AWARDS
+• Google Cloud Professional DevOps Engineer
+• Speaker, PyCon India 2023

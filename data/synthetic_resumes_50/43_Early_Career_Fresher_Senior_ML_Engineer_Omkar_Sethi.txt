@@ -1,0 +1,28 @@
+Omkar Sethi
+Email: omkar.sethi@mailbox.in | Phone: +91 85461 70385 | Location: Pune, India
+LinkedIn: https://linkedin.com/in/omkar-sethi | GitHub: https://github.com/omkar-sethi-dev
+
+OBJECTIVE
+Recent graduate eager to start a career as a Machine Learning Engineer. Built academic and personal projects in Kubernetes, PyTorch, NumPy and keen to learn production engineering practices.
+
+TECHNICAL SKILLS
+Kubernetes, PyTorch, NumPy, Deep Learning, FastAPI, Docker, SageMaker, MLOps, TensorFlow, CI/CD, Git
+
+EDUCATION
+B.Tech in Information Technology
+NIT Karnataka, Surathkal | CGPA: 7.7/10 | Graduated: 2026
+
+INTERNSHIP EXPERIENCE
+Machine Learning Engineer Intern | Helix Bio Informatics (Nov 2025 - Aug 2026)
+• Contributed to a team service as a trainee, writing tests and documentation under a mentor.
+• Assisted senior engineers with debugging, code reviews and small feature tickets.
+
+ACADEMIC PROJECTS
+Churn Prediction Platform
+• Trained gradient-boosted models on 50,000 customer records, deployed with MLflow and monitored with Prometheus.
+Real-Time Anomaly Detection
+• Implemented an LSTM autoencoder in PyTorch that detected equipment faults with 92% precision and cut false alarms by 18%.
+
+CERTIFICATIONS
+• Deep Learning Specialization (DeepLearning.AI)
+• Finalist, College Hackathon 2025

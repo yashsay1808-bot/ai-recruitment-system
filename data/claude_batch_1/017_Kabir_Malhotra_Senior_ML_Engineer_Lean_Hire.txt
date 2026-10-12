@@ -1,0 +1,34 @@
+Kabir Malhotra
+Email: kabir.malhotra@mailbox.in | Phone: +91 96069 40960 | Location: New Delhi, India
+LinkedIn: https://linkedin.com/in/kabir-malhotra | GitHub: https://github.com/kabirma43
+
+PROFESSIONAL SUMMARY
+Machine Learning Engineer with 3.5 years of experience building and operating production systems in PyTorch, FastAPI, Docker. Solid engineering fundamentals and a steady record of delivery; currently deepening skills in adjacent areas to move into a senior Machine Learning Engineer role.
+
+TECHNICAL SKILLS
+PyTorch, FastAPI, Docker, AWS, MLOps, Scikit-Learn, Pandas, Machine Learning, Git, ONNX, SQL
+
+EDUCATION
+B.E. in Information Science and Engineering
+SJCE Mysuru | CGPA: 7.6/10 | Graduated: 2022
+
+WORK EXPERIENCE
+Senior Machine Learning Engineer | Veridian Analytics (Sep 2024 - Present)
+• Containerised training and inference with Docker and moved jobs to AWS Batch, reducing monthly compute cost by 22%.
+• Collaborated with 4 backend engineers to expose model endpoints behind an API gateway with 99.9% availability.
+• Automated experiment tracking with MLflow and a Jenkins pipeline, cutting manual retraining effort by 8 hours per week.
+
+Junior Machine Learning Engineer | Nautilus Networks (Apr 2023 - Sep 2024)
+• Built and deployed a gradient-boosted scoring service with Scikit-Learn and FastAPI handling 25,000 requests per day at 140 ms p95.
+• Fine-tuned a BERT classifier with PyTorch, improving F1 from 0.72 to 0.87 on an internal support dataset.
+
+KEY PROJECTS
+Edge Anomaly Detector
+• LSTM autoencoder in PyTorch quantised to INT8 and deployed to ARM devices; 93% precision on 120,000 sensor windows.
+
+Semantic Resume Search
+• RAG pipeline using sentence-transformers, FAISS and a FastAPI backend; returns results in under 85 ms across 400,000 documents.
+
+CERTIFICATIONS & AWARDS
+• AWS Certified Machine Learning - Specialty
+• Runner-up, Google Cloud Hackathon India 2025

@@ -1,0 +1,19 @@
+Radhika Pillai
+Email: radhika.pillai@domain.com | Phone: +91 95925 85674 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/radhika-pillai | GitHub: https://github.com/radhika-pillai
+
+PROFESSIONAL SUMMARY
+Full-Stack AI Application Engineer with 3.3 years of experience. Focus in React, TypeScript, Python, FastAPI, Git. Maintained production React and TypeScript pipelines. Adjacent skills transitioning to Full-Stack AI Application Engineer.
+
+TECHNICAL SKILLS
+React, TypeScript, Python, FastAPI, Git, Linux
+
+WORK EXPERIENCE
+Full-Stack AI Application Engineer | TechCorp Enterprise Systems (2022 - Present)
+• Maintained production React and TypeScript pipelines. Adjacent skills transitioning to Full-Stack AI Application Engineer.
+• Orchestrated continuous deployment and monitoring with CI/CD and Docker.
+• Mentored junior engineers and improved automated test coverage.
+
+EDUCATION
+B.Tech / B.E. in Computer Science & Engineering
+VTU University | Graduated 2021

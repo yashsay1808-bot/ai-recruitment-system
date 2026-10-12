@@ -1,0 +1,28 @@
+Leela Mukherjee
+Email: leela.mukherjee@mailbox.in | Phone: +91 94864 45439 | Location: Kochi, India
+LinkedIn: https://linkedin.com/in/leela-mukherjee | GitHub: https://github.com/leela-mukherjee-dev
+
+OBJECTIVE
+Recent graduate eager to start a career as a Backend Engineer. Built academic and personal projects in Java, gRPC, Redis and keen to learn production engineering practices.
+
+TECHNICAL SKILLS
+Java, gRPC, Redis, REST API, Kubernetes, Event-Driven Architecture, Go, CI/CD, Spring Boot, Microservices, Git
+
+EDUCATION
+B.E. in Information Science and Engineering
+BMS College of Engineering, Bengaluru | CGPA: 8.5/10 | Graduated: 2026
+
+INTERNSHIP EXPERIENCE
+Backend Engineer Intern | Tessera Media (Aug 2025 - Aug 2026)
+• Contributed to a team service as a trainee, writing tests and documentation under a mentor.
+• Assisted senior engineers with debugging, code reviews and small feature tickets.
+
+ACADEMIC PROJECTS
+Payments Orchestrator
+• Implemented a saga-based payment flow in Spring Boot and Kafka processing 12,000 transactions per second.
+API Gateway and Rate Limiter
+• Built a Go gateway with token-bucket limits protecting services from 4x traffic spikes.
+
+CERTIFICATIONS
+• Oracle Certified Java Associate
+• Finalist, College Hackathon 2025

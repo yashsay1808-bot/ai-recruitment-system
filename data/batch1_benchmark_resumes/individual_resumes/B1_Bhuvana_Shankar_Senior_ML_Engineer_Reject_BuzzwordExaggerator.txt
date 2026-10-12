@@ -1,0 +1,31 @@
+Bhuvana Shankar
+Email: bhuvana.shankar@mailbox.in | Phone: +91 92145 55081 | Location: Hyderabad, India
+LinkedIn: https://linkedin.com/in/bhuvana-shankar | GitHub: https://github.com/bhuvanadev3
+
+PROFESSIONAL SUMMARY
+Results-driven rockstar and Global AI & Quantum Evangelist leveraging synergy and paradigm shifts. Proficient in everything from Quantum Computing to Web3. 8 months (internship only) of experience building revolutionary world-changing platforms.
+
+TECHNICAL SKILLS
+SAP, DataOps, Prometheus, Blockchain, MLOps, Swift, Edge AI, Natural Language Processing, Solidity, Serverless, Apache Spark, React, GraphQL, Neural Networks, Machine Learning, Pandas, FastAPI, Git, Reinforcement Learning, Java, C++, Generative AI, IoT, Snowflake, Rust, TensorFlow, Azure, Metaverse, Elasticsearch, Scikit-Learn, Web3, SQL, LangChain, Big Data, Docker, CI/CD, Airflow, Terraform, Angular, Large Language Models, PyTorch, Hadoop, AR/VR, Kafka, Vue.js, Unity, Robotic Process Automation, DevOps, Scala
+
+EDUCATION
+Bachelor of Engineering in Computer Science
+Anna University, Chennai | Percentage: 66% | Graduated: 2026
+
+WORK EXPERIENCE
+Global Principal AI & Quantum Architect (Intern) | DisruptAI Labs (Feb 2026 - Present)
+• Spearheaded world-changing next-gen AI disruptive solutions across the entire enterprise ecosystem.
+• Pioneered cutting-edge, best-in-class, paradigm-shifting platforms leveraging every emerging technology.
+• Architected revolutionary quantum-ready blockchain intelligence paradigms at planetary scale.
+
+KEY PROJECTS
+MNIST Digit Classifier (forked)
+• Forked a standard MNIST tutorial repository and added a README; no original commits.
+
+AI Quantum Blockchain Metaverse Platform
+• Revolutionary next-gen platform using Airflow, Snowflake, Solidity, IoT, DataOps, MLOps. Next-gen AI solution.
+
+CERTIFICATIONS & AWARDS
+• Quantum Computing for Everyone (online course)
+• Blockchain Basics (Udemy)
+• Participation certificate, college tech fest

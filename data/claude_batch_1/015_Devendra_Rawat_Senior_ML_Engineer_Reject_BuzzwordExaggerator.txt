@@ -1,0 +1,31 @@
+Devendra Rawat
+Email: devendra.rawat@mailbox.in | Phone: +91 96933 14081 | Location: Dehradun, India
+LinkedIn: https://linkedin.com/in/devendra-rawat | GitHub: https://github.com/devendra-rawat
+
+PROFESSIONAL SUMMARY
+Dynamic AI guru, Principal Architect and Metaverse pioneer transforming enterprises through disruptive innovation. Hardworking, passionate fast learner with 10 months of hands-on experience in all technologies.
+
+TECHNICAL SKILLS
+Swift, Git, Neo4j, Deep Learning, NumPy, Scala, Reinforcement Learning, Salesforce, MLflow, MongoDB, 5G, Kotlin, Solidity, Computer Vision, Edge AI, Web3, Metaverse, Python, Microservices, SQL, SAP, DevOps, Quantum Computing, Redis, Blockchain, Docker, Kubernetes, FastAPI, Digital Twins, Angular, ONNX, LangChain, Vue.js, Robotic Process Automation, Go, Cybersecurity, PyTorch, Elasticsearch, Unity, AGI, GCP, DataOps, TensorFlow, AR/VR, CI/CD, Hugging Face, Snowflake, React
+
+EDUCATION
+Bachelor of Engineering in Computer Science
+RV College of Engineering, Bengaluru | Percentage: 60% | Graduated: 2026
+
+WORK EXPERIENCE
+Global Principal AI & Quantum Architect | QuantumLeap Technologies (Dec 2025 - Present)
+• Pioneered cutting-edge, best-in-class, paradigm-shifting platforms leveraging every emerging technology.
+• Championed thought leadership in AGI, Web3 and quantum innovation initiatives worldwide.
+• Drove transformational disruption by orchestrating holistic next-generation digital ecosystems.
+
+KEY PROJECTS
+MNIST Digit Classifier (forked)
+• Forked a standard MNIST tutorial repository and added a README; no original commits.
+
+AI Quantum Blockchain Metaverse Platform
+• Revolutionary next-gen platform using Go, PyTorch, Vue.js, Python, Web3, Scala. Next-gen AI solution.
+
+CERTIFICATIONS & AWARDS
+• Quantum Computing for Everyone (online course)
+• Blockchain Basics (Udemy)
+• Participation certificate, college tech fest

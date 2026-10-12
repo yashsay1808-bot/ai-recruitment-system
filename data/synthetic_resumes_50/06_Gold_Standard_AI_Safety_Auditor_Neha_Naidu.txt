@@ -1,0 +1,36 @@
+Neha Naidu
+Email: neha.naidu@mailbox.in | Phone: +91 94693 27162 | Location: Gurugram, India
+LinkedIn: https://linkedin.com/in/neha-naidu | GitHub: https://github.com/nehanaidu
+
+PROFESSIONAL SUMMARY
+AI Safety Auditor with 4.5 years of experience delivering production systems. Skilled in Python, PyTorch, Machine Learning, Fairlearn, AIF360, SHAP. Consistent record of measurable gains in latency, throughput, reliability and cost.
+
+TECHNICAL SKILLS
+Python, PyTorch, Machine Learning, Fairlearn, AIF360, SHAP, LIME, Red Teaming, Adversarial Robustness, Model Cards, NIST AI RMF, ISO 42001, Bias Auditing, Model Evaluation, SQL, Hugging Face, Git, EU AI Act, Interpretability, Differential Privacy
+
+EDUCATION
+B.E. in Computer Science and Engineering
+Vivekananda Institute of Technology, Bengaluru | CGPA: 8.2/10 | Graduated: 2022
+
+WORK EXPERIENCE
+AI Safety Auditor | Finovate Systems (Apr 2024 - Present)
+• Authored model cards and ISO 42001 control mappings for 4 high-risk systems across NIST AI RMF functions.
+• Audited 12 production models for demographic bias with Fairlearn and AIF360, reducing disparate-impact gaps from 76% to 87%.
+• Briefed 4 governance committees and trained 9,000 engineers on responsible-AI practice.
+• Designed evaluation harnesses covering 20 safety benchmarks, running 12,000 automated test prompts per release.
+• Led red-team exercises on LLM applications and documented 4 jailbreak and prompt-injection classes with reproducible test suites.
+
+Responsible AI Analyst | Stratus Networks (Apr 2022 - Apr 2024)
+• Built SHAP and LIME explanation reports adopted by 9,000 reviewers, cutting model-review time by 22%.
+• Reduced adversarial attack success rate from 92% to 79% through robustness testing and input filtering.
+• Briefed 5 governance committees and trained 2,000 engineers on responsible-AI practice.
+
+KEY PROJECTS
+Bias Audit Toolkit
+• Open-sourced a Fairlearn-based audit pipeline evaluated on 20,000 loan records, flagging 12 protected-group gaps.
+LLM Red-Team Benchmark
+• Compiled 100,000 adversarial prompts with automated scoring and a public leaderboard.
+
+CERTIFICATIONS & AWARDS
+• Responsible AI (Google Cloud Skills Boost)
+• Internal Engineering Excellence Award, 2024

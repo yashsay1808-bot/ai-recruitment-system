@@ -1,0 +1,19 @@
+Brijesh Sinha
+Email: brijesh.sinha@domain.com | Phone: +91 95107 62296 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/brijesh-sinha | GitHub: https://github.com/brijesh-sinha
+
+PROFESSIONAL SUMMARY
+Senior Machine Learning Engineer with 0.5 years of experience. Focus in Python, Pandas. Academic capstone projects only; missing 2+ years required production tenure.
+
+TECHNICAL SKILLS
+Python, Pandas
+
+WORK EXPERIENCE
+Senior Machine Learning Engineer | TechCorp Enterprise Systems (2022 - Present)
+• Academic capstone projects only; missing 2+ years required production tenure.
+• Orchestrated continuous deployment and monitoring with CI/CD and Docker.
+• Mentored junior engineers and improved automated test coverage.
+
+EDUCATION
+B.Tech / B.E. in Computer Science & Engineering
+VTU University | Graduated 2021

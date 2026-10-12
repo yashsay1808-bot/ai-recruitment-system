@@ -1,0 +1,33 @@
+Fatima Sheikh
+Email: fatima.sheikh@mailbox.in | Phone: +91 95038 42410 | Location: Hyderabad, India
+LinkedIn: https://linkedin.com/in/fatima-sheikh | GitHub: https://github.com/fatima-sheikh
+
+PROFESSIONAL SUMMARY
+Machine Learning Engineer with 3 years of experience building and operating production systems in PyTorch, TensorFlow, FastAPI. Solid engineering fundamentals and a steady record of delivery; currently deepening skills in adjacent areas to move into a senior Machine Learning Engineer role.
+
+TECHNICAL SKILLS
+PyTorch, TensorFlow, FastAPI, Docker, AWS, Hugging Face, Scikit-Learn, Pandas, CI/CD, Airflow, NumPy, SQL
+
+EDUCATION
+B.Tech in Information Technology
+NIT Warangal | CGPA: 9.5/10 | Graduated: 2023
+
+WORK EXPERIENCE
+Machine Learning Engineer | Fernhill Retail Cloud (Jan 2025 - Present)
+• Wrote feature pipelines in Pandas and SQL processing 2M rows nightly with data-validation checks.
+• Containerised training and inference with Docker and moved jobs to AWS Batch, reducing monthly compute cost by 22%.
+• Improved offline evaluation by adding 5 slice-level metrics, which exposed a 12% accuracy gap on a minority segment.
+
+Junior Machine Learning Engineer | Ironbridge Fintech (Oct 2023 - Jan 2025)
+• Collaborated with 4 backend engineers to expose model endpoints behind an API gateway with 99.5% availability.
+• Automated experiment tracking with MLflow and a Jenkins pipeline, cutting manual retraining effort by 12 hours per week.
+
+KEY PROJECTS
+Edge Anomaly Detector
+• LSTM autoencoder in PyTorch quantised to INT8 and deployed to ARM devices; 91% precision on 400,000 sensor windows.
+
+Churn Prediction Platform
+• Scikit-Learn and LightGBM pipelines tracked with MLflow, orchestrated by Airflow and served with Docker on AWS.
+
+CERTIFICATIONS & AWARDS
+• AWS Certified Machine Learning - Specialty

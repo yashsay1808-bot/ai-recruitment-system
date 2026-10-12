@@ -1,0 +1,292 @@
+=== RESUME START: A1_Mustafa_Ansari_Senior_ML_Engineer_Strong_Hire ===
+Mustafa Ansari
+Email: mustafa.ansari@mailbox.in | Phone: +91 93527 19641 | Location: Mumbai, India
+LinkedIn: https://linkedin.com/in/mustafa-ansari | GitHub: https://github.com/ansari-m
+
+PROFESSIONAL SUMMARY
+Senior Machine Learning Engineer with 5 years of production experience across SaaS and streaming. Deep hands-on expertise in PyTorch, TensorFlow, FastAPI, Docker. Known for measurable impact on latency, reliability and cost, and for mentoring engineers.
+
+TECHNICAL SKILLS
+PyTorch, TensorFlow, FastAPI, Docker, AWS, Hugging Face, MLOps, Scikit-Learn, Pandas, Natural Language Processing, CI/CD, SQL, Deep Learning, ONNX, MLflow
+
+EDUCATION
+B.Tech in Information Technology
+NIT Warangal | CGPA: 8.5/10 | Graduated: 2020
+
+WORK EXPERIENCE
+Senior Machine Learning Engineer | Basalt Mobility (Jan 2024 - Present)
+• Cut training time for a 1.2B-parameter PyTorch model by 61% using mixed precision, gradient checkpointing and DDP on 8 GPUs.
+• Implemented drift and data-quality monitoring with Prometheus and Evidently that caught 7 silent regressions before reaching 40,000 daily users.
+• Led a squad of 4 engineers, introduced PyTest-based model contracts and lifted coverage of the training stack to 91%.
+• Designed a feature store on PostgreSQL and Redis with point-in-time correctness; online feature reads at 4 ms p99.
+
+Machine Learning Engineer | Skyloom Technologies (Oct 2021 - Jan 2024)
+• Deployed RoBERTa ONNX models with FastAPI and Triton serving 210k daily requests at 45 ms p95 latency on AWS ECS.
+• Raised macro-F1 from 0.83 to 0.94 on a 12-class ticket classifier by fine-tuning Hugging Face transformers with focal loss and error-driven data curation.
+• Reduced AWS GPU spend by 36% (about $22k per month) through INT8 quantization, dynamic batching and spot-instance training.
+
+KEY PROJECTS
+Edge Anomaly Detector
+• LSTM autoencoder in PyTorch quantised to INT8 and deployed to ARM devices; 95% precision on 400,000 sensor windows.
+
+Churn Prediction Platform
+• Scikit-Learn and LightGBM pipelines tracked with MLflow, orchestrated by Airflow and served with Docker on AWS.
+
+CERTIFICATIONS & AWARDS
+• Databricks Machine Learning Associate
+• Winner, Inter-College Hackathon 2023
+=== RESUME END ===
+
+=== RESUME START: A2_Rhea_Dcruz_Senior_ML_Engineer_Strong_Hire ===
+Rhea D'Cruz
+Email: rhea.dcruz@mailbox.in | Phone: +91 95171 63616 | Location: Goa, India
+LinkedIn: https://linkedin.com/in/rhea-dcruz | GitHub: https://github.com/dcruz-r
+
+PROFESSIONAL SUMMARY
+Senior Machine Learning Engineer with 6 years of production experience across e-commerce and mobility. Deep hands-on expertise in PyTorch, TensorFlow, FastAPI, Docker. Known for measurable impact on latency, reliability and cost, and for mentoring engineers.
+
+TECHNICAL SKILLS
+PyTorch, TensorFlow, FastAPI, Docker, AWS, Hugging Face, MLOps, Scikit-Learn, Python, Git, Deep Learning, Machine Learning, Natural Language Processing, Airflow, SQL
+
+EDUCATION
+B.Tech in Computer Science and Engineering
+Thapar Institute of Engineering and Technology | CGPA: 8.0/10 | Graduated: 2020
+
+WORK EXPERIENCE
+Senior Machine Learning Engineer | Basalt Mobility (Jul 2023 - Present)
+• Cut training time for a 1.2B-parameter PyTorch model by 52% using mixed precision, gradient checkpointing and DDP on 8 GPUs.
+• Led a squad of 6 engineers, introduced PyTest-based model contracts and lifted coverage of the training stack to 88%.
+• Built an MLOps platform on MLflow, Airflow and Docker with automated retraining and canary rollout, cutting model release time from 12 days to 2 hours.
+• Deployed RoBERTa ONNX models with FastAPI and Triton serving 120k daily requests at 41 ms p95 latency on AWS ECS.
+
+Machine Learning Engineer | Driftwood Robotics (Oct 2020 - Jul 2023)
+• Shipped a TensorFlow Serving to PyTorch migration for 9 legacy models with zero downtime and a 18% latency improvement.
+• Reduced AWS GPU spend by 32% (about $31k per month) through INT8 quantization, dynamic batching and spot-instance training.
+• Implemented drift and data-quality monitoring with Prometheus and Evidently that caught 7 silent regressions before reaching 120,000 daily users.
+
+KEY PROJECTS
+Open-Source: onnx-batching-utils
+• Maintainer of a PyTorch-to-ONNX export and dynamic-batching helper (pytorch + FastAPI + Triton) with 720 GitHub stars and 19 external contributors.
+
+Churn Prediction Platform
+• Scikit-Learn and LightGBM pipelines tracked with MLflow, orchestrated by Airflow and served with Docker on AWS.
+
+CERTIFICATIONS & AWARDS
+• TensorFlow Developer Certificate
+• Speaker, PyCon India 2024
+=== RESUME END ===
+
+=== RESUME START: A3_Tejas_Kamble_Full_Stack_AI_Engineer_Strong_Hire ===
+Tejas Kamble
+Email: tejas.kamble@mailbox.in | Phone: +91 96803 82148 | Location: Pune, India
+LinkedIn: https://linkedin.com/in/tejas-kamble | GitHub: https://github.com/tejas-kamble
+
+PROFESSIONAL SUMMARY
+Full-Stack AI Engineer with 4.5 years of production experience across fintech and payments. Deep hands-on expertise in React, TypeScript, Python, FastAPI. Known for measurable impact on latency, reliability and cost, and for mentoring engineers.
+
+TECHNICAL SKILLS
+React, TypeScript, Python, FastAPI, Next.js, LangChain, PostgreSQL, Docker, GraphQL, Node.js, RAG, OpenAI API, Vector Database, Tailwind CSS, REST API
+
+EDUCATION
+B.Tech in Computer Science and Engineering
+IIT Madras | CGPA: 8.3/10 | Graduated: 2021
+
+WORK EXPERIENCE
+Software Engineer | Pelican Health Data (May 2024 - Present)
+• Designed PostgreSQL schemas and REST/GraphQL APIs sustaining 2,400 requests per second with 99.99% uptime.
+• Containerised the stack with Docker and shipped through GitHub Actions to AWS, cutting release time from 4 hours to 12 minutes.
+• Shipped a RAG assistant with LangChain, FastAPI and pgvector answering 140k queries per day at 260 ms p95 including retrieval.
+• Cut LLM spend by 41% ($9k per month) via prompt caching in Redis, response truncation and a routing layer for smaller models.
+
+Full-Stack Engineer | Quillpoint Software (Apr 2022 - May 2024)
+• Led 4 engineers and 1 designers delivering 8 AI features in two quarters.
+• Built a Next.js and React front end with streaming responses that lifted task completion by 31% for 45,000 monthly users.
+• Implemented an evaluation harness tracking answer accuracy from 74% to 92% across 5 regression suites in CI.
+
+KEY PROJECTS
+Document Q&A Platform
+• Next.js and FastAPI app with chunked retrieval over 400,000 PDFs, pgvector search and sub-85 ms retrieval.
+
+AI Code Review Bot
+• GitHub App using LLM APIs that reviewed 120,000 pull requests with 95% accepted suggestions.
+
+CERTIFICATIONS & AWARDS
+• Meta Front-End Developer Certificate
+• Winner, Inter-College Hackathon 2022
+=== RESUME END ===
+
+=== RESUME START: B1_Bhuvana_Shankar_Senior_ML_Engineer_Reject_BuzzwordExaggerator ===
+Bhuvana Shankar
+Email: bhuvana.shankar@mailbox.in | Phone: +91 92145 55081 | Location: Hyderabad, India
+LinkedIn: https://linkedin.com/in/bhuvana-shankar | GitHub: https://github.com/bhuvanadev3
+
+PROFESSIONAL SUMMARY
+Results-driven rockstar and Global AI & Quantum Evangelist leveraging synergy and paradigm shifts. Proficient in everything from Quantum Computing to Web3. 8 months (internship only) of experience building revolutionary world-changing platforms.
+
+TECHNICAL SKILLS
+SAP, DataOps, Prometheus, Blockchain, MLOps, Swift, Edge AI, Natural Language Processing, Solidity, Serverless, Apache Spark, React, GraphQL, Neural Networks, Machine Learning, Pandas, FastAPI, Git, Reinforcement Learning, Java, C++, Generative AI, IoT, Snowflake, Rust, TensorFlow, Azure, Metaverse, Elasticsearch, Scikit-Learn, Web3, SQL, LangChain, Big Data, Docker, CI/CD, Airflow, Terraform, Angular, Large Language Models, PyTorch, Hadoop, AR/VR, Kafka, Vue.js, Unity, Robotic Process Automation, DevOps, Scala
+
+EDUCATION
+Bachelor of Engineering in Computer Science
+Anna University, Chennai | Percentage: 66% | Graduated: 2026
+
+WORK EXPERIENCE
+Global Principal AI & Quantum Architect (Intern) | DisruptAI Labs (Feb 2026 - Present)
+• Spearheaded world-changing next-gen AI disruptive solutions across the entire enterprise ecosystem.
+• Pioneered cutting-edge, best-in-class, paradigm-shifting platforms leveraging every emerging technology.
+• Architected revolutionary quantum-ready blockchain intelligence paradigms at planetary scale.
+
+KEY PROJECTS
+MNIST Digit Classifier (forked)
+• Forked a standard MNIST tutorial repository and added a README; no original commits.
+
+AI Quantum Blockchain Metaverse Platform
+• Revolutionary next-gen platform using Airflow, Snowflake, Solidity, IoT, DataOps, MLOps. Next-gen AI solution.
+
+CERTIFICATIONS & AWARDS
+• Quantum Computing for Everyone (online course)
+• Blockchain Basics (Udemy)
+• Participation certificate, college tech fest
+=== RESUME END ===
+
+=== RESUME START: B2_Dhruv_Saxena_Full_Stack_AI_Engineer_Reject_BuzzwordExaggerator ===
+Dhruv Saxena
+Email: dhruv.saxena@mailbox.in | Phone: +91 95765 23765 | Location: Noida, India
+LinkedIn: https://linkedin.com/in/dhruv-saxena | GitHub: https://github.com/dhruvsa49
+
+PROFESSIONAL SUMMARY
+Results-driven rockstar and Global AI & Quantum Evangelist leveraging synergy and paradigm shifts. Proficient in everything from Quantum Computing to Web3. 8 months (internship only) of experience building revolutionary world-changing platforms.
+
+TECHNICAL SKILLS
+Cybersecurity, PostgreSQL, Generative AI, LangChain, Neural Networks, Computer Vision, DataOps, 5G, TypeScript, Neo4j, Tailwind CSS, IoT, Go, Kotlin, Rust, Angular, PyTorch, TensorFlow, Docker, FastAPI, Kubernetes, Metaverse, Blockchain, Redis, MLOps, Scala, Edge AI, SAP, Robotic Process Automation, Python, RAG, Solidity, Unity, Snowflake, AGI, Kafka, MongoDB, OpenAI API, React, GraphQL, Azure, AWS, Reinforcement Learning, Prometheus, Node.js, Flutter, Hadoop, DevOps, Microservices
+
+EDUCATION
+Bachelor of Engineering in Computer Science
+College of Engineering Pune | Percentage: 62% | Graduated: 2026
+
+WORK EXPERIENCE
+Global Principal AI & Quantum Architect (Intern) | SynergyWorks Global (Feb 2026 - Present)
+• Spearheaded world-changing next-gen AI disruptive solutions across the entire enterprise ecosystem.
+• Led visionary cross-functional synergies to unlock exponential AI-driven value for global stakeholders.
+• Drove transformational disruption by orchestrating holistic next-generation digital ecosystems.
+
+KEY PROJECTS
+MNIST Digit Classifier (forked)
+• Forked a standard MNIST tutorial repository and added a README; no original commits.
+
+AI Quantum Blockchain Metaverse Platform
+• Revolutionary next-gen platform using Kotlin, MongoDB, Snowflake, RAG, Generative AI, Redis. Next-gen AI solution.
+
+CERTIFICATIONS & AWARDS
+• Quantum Computing for Everyone (online course)
+• Blockchain Basics (Udemy)
+• Participation certificate, college tech fest
+=== RESUME END ===
+
+=== RESUME START: B3_Ojaswini_Patwardhan_Senior_ML_Engineer_Reject_BuzzwordExaggerator ===
+Ojaswini Patwardhan
+Email: ojaswini.patwardhan@mailbox.in | Phone: +91 93935 15751 | Location: Nashik, India
+LinkedIn: https://linkedin.com/in/ojaswini-patwardhan | GitHub: https://github.com/ojaswini-patwardhan
+
+PROFESSIONAL SUMMARY
+Dynamic AI guru, Principal Architect and Metaverse pioneer transforming enterprises through disruptive innovation. Hardworking, passionate fast learner with 8 months (internship only) of hands-on experience in all technologies.
+
+TECHNICAL SKILLS
+MLOps, Flutter, Apache Spark, Go, Terraform, Large Language Models, Unity, Kotlin, Prometheus, Big Data, Java, Generative AI, 5G, PyTorch, MongoDB, Git, TensorFlow, NumPy, FastAPI, Machine Learning, Hugging Face, DevOps, Kubernetes, Robotic Process Automation, Solidity, SQL, React, CUDA, SAP, Web3, Neo4j, Blockchain, Quantum Computing, Scala, Airflow, ONNX, Scikit-Learn, IoT, Salesforce, Metaverse, Rust, Edge AI, Docker, Computer Vision, DataOps, Redis, AGI, Serverless
+
+EDUCATION
+Bachelor of Engineering in Computer Science
+VIT Vellore | Percentage: 62% | Graduated: 2026
+
+WORK EXPERIENCE
+Global Principal AI & Quantum Architect (Intern) | DisruptAI Labs (Feb 2026 - Present)
+• Architected revolutionary quantum-ready blockchain intelligence paradigms at planetary scale.
+• Spearheaded world-changing next-gen AI disruptive solutions across the entire enterprise ecosystem.
+• Pioneered cutting-edge, best-in-class, paradigm-shifting platforms leveraging every emerging technology.
+
+KEY PROJECTS
+MNIST Digit Classifier (forked)
+• Forked a standard MNIST tutorial repository and added a README; no original commits.
+
+AI Quantum Blockchain Metaverse Platform
+• Revolutionary next-gen platform using Airflow, 5G, Redis, Salesforce, Metaverse, SAP. Next-gen AI solution.
+
+CERTIFICATIONS & AWARDS
+• Quantum Computing for Everyone (online course)
+• Blockchain Basics (Udemy)
+• Participation certificate, college tech fest
+=== RESUME END ===
+
+=== RESUME START: C1_Yuvraj_Bedi_Senior_ML_Engineer_ATS_Parse_Warning ===
+Yuvraj Bedi
+Email: yuvraj.bedi@mailbox.in | Phone: +91 92950 79720 | Location: Amritsar, India
+LinkedIn: https://linkedin.com/in/yuvraj-bedi | GitHub: https://github.com/yuvrajbedi
+
+PROFESSIONAL SUMMARY
+Senior Machine Learning Engineer with 5 years of production experience across e-commerce and streaming. Deep hands-on expertise in PyTorch, TensorFlow, FastAPI, Docker. Known for measurable impact on latency, reliability and cost, and for mentoring engineers.
+
+TECHNICAL SKILLS
+PyTorch, TensorFlow, FastAPI, Docker, AWS, Hugging Face, MLOps, Scikit-Learn, ONNX, Pandas, Git, Deep Learning, CI/CD, NumPy, Kubernetes
+
+EDUCATION
+B.Tech in Computer Science and Engineering
+Anna University, Chennai | CGPA: 9.1/10 | Graduated: 2020
+
+WORK EXPERIENCE
+Senior Machine Learning Engineer | Prismatic Media (Jul 2026 - Jan 2024)
+• Shipped a TensorFlow Serving to PyTorch migration for 14 legacy models with zero downtime and a 24% latency improvement.
+• Designed a feature store on PostgreSQL and Redis with point-in-time correctness; online feature reads at 4 ms p99.
+• Raised macro-F1 from 0.78 to 0.90 on a 18-class ticket classifier by fine-tuning Hugging Face transformers with focal loss and error-driven data curation.
+• Built an MLOps platform on MLflow, Airflow and Docker with automated retraining and canary rollout, cutting model release time from 14 days to 3 hours.
+
+Machine Learning Engineer | Basalt Mobility (Oct 2021 - Jan 2024)
+• Cut training time for a 560M-parameter PyTorch model by 44% using mixed precision, gradient checkpointing and DDP on 16 GPUs.
+• Implemented drift and data-quality monitoring with Prometheus and Evidently that caught 7 silent regressions before reaching 65,000 daily users.
+• Deployed RoBERTa ONNX models with FastAPI and Triton serving 210k daily requests at 41 ms p95 latency on AWS ECS.
+
+KEY PROJECTS
+Churn Prediction Platform
+• Scikit-Learn and LightGBM pipelines tracked with MLflow, orchestrated by Airflow and served with Docker on AWS.
+
+Realtime Fraud Scoring
+• XGBoost and PyTorch ensemble behind FastAPI on AWS ECS, Kafka ingestion, scoring 35,000 events per second with p99 of 48 ms.
+
+CERTIFICATIONS & AWARDS
+• TensorFlow Developer Certificate
+• Winner, Smart India Hackathon 2024
+=== RESUME END ===
+
+=== RESUME START: C2_Sowmya_Hebbar_Cloud_DevOps_SRE_Lead_ATS_Parse_Warning ===
+Sowmya Hebbar
+Email: sowmya.hebbar@mailbox.in | Location: Mangaluru, India
+GitHub: https://github.com/sowmyahebbar
+
+PROFESSIONAL SUMMARY
+Cloud DevOps & SRE Lead with 5.5 years of production experience across e-commerce and payments. Deep hands-on expertise in Kubernetes, Docker, Terraform, AWS. Known for measurable impact on latency, reliability and cost, and for mentoring engineers.
+
+TECHNICAL SKILLS
+Kubernetes, Docker, Terraform, AWS, CI/CD, Linux, Prometheus, Grafana, Vault, Helm, Istio, GitHub Actions, Datadog, Python, Ansible
+
+WORK EXPERIENCE
+Cloud DevOps & SRE Lead | Marlow Insurance Tech (Oct 2023 - Present)
+• Built Prometheus and Grafana observability with SLO burn-rate alerts; MTTR fell from 95 to 18 minutes and alert noise dropped 60%.
+• Reduced cloud spend by 27% ($48k per month) via right-sizing, Karpenter autoscaling and committed-use planning.
+• Operated 140 microservices on EKS with Terraform and ArgoCD, sustaining 99.995% SLA and p95 API latency below 42 ms.
+• Scaled ingress to 68,000 requests per second using Envoy and autoscaled HPA policies tuned with load tests.
+
+DevOps Engineer | Monsoon AI (Apr 2021 - Oct 2023)
+• Hardened Linux base images and Kubernetes policies (OPA, Falco), closing 160 CVEs and passing SOC 2 audits with zero findings.
+• Designed GitHub Actions and Jenkins CI/CD with canary and blue-green releases; deployment frequency rose from 6 per week to 55 per day.
+• Codified 12 environments as Terraform modules, cutting provisioning from 5 days to 25 minutes with policy-as-code guardrails.
+
+KEY PROJECTS
+Cost Optimiser
+• Python and AWS Cost Explorer tooling that recommends right-sizing and saved 95% of monthly spend.
+
+Chaos and DR Toolkit
+• Automated game-day scenarios with Litmus and Terraform; validated RTO of 12 minutes across 11 regions.
+
+CERTIFICATIONS & AWARDS
+• Certified Kubernetes Security Specialist (CKS)
+• Winner, Smart India Hackathon 2025
+=== RESUME END ===

@@ -1,0 +1,28 @@
+Harsh Banerjee
+Email: harsh.banerjee@mailbox.in | Phone: +91 90396 80476 | Location: Bengaluru, India
+LinkedIn: https://linkedin.com/in/harsh-banerjee | GitHub: https://github.com/harshbanerjee
+
+PROFESSIONAL SUMMARY
+Results-driven rockstar Full-Stack AI Engineer and thought leader. Expert in every technology, 10x engineer, hardworking team player and fast learner with 0.5 years of experience.
+
+TECHNICAL SKILLS
+WebSockets, MongoDB, C++, Swift, Cybersecurity, Metaverse, Pinecone, Kotlin, Prompt Engineering, Azure, GCP, IoT, Node.js, Angular, Quantum Computing, Hadoop, RAG, AWS, Scala, FastAPI, PyTorch, REST API, Reinforcement Learning, Terraform, Spring Boot, Go, PostgreSQL, LangChain, Big Data, Java, Computer Vision, Rust, Docker, Redis, Microservices, Kafka
+
+EDUCATION
+Bachelor of Engineering (Computer Science)
+BMS College of Engineering, Bengaluru | Percentage: 62% | Passed: 2025
+
+WORK EXPERIENCE
+Full-Stack AI Engineer (Self-Appointed) | StartupX (Apr 2026 - Present)
+• Part of a team building a next-generation platform.
+• Handled several projects using latest technologies.
+• Worked on AI and cloud stuff.
+
+PROJECTS
+AI Blockchain Platform
+• Revolutionary platform using Docker, PostgreSQL, Metaverse, IoT, AWS.
+• Next-gen AI solution.
+
+CERTIFICATIONS
+• Online course certificate (Udemy)
+• Prompt Engineering Masterclass
