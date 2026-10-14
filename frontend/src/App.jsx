@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useRef, useEffect } from "react";
 import {
   Search,
   X,
@@ -21,7 +21,7 @@ import {
   RefreshCw
 } from "lucide-react";
 import { DEFAULT_JOB_ROLES } from "./data/jobRoles";
-import { generateChatbotResponse } from "./utils/chatbotEngine";
+import { generateChatbotReply } from "./utils/chatbotEngine";
 import { buildInterviewKit, BADGE_CLASSES } from "./utils/interviewQuestions";
 import { useAuth } from "./context/AuthContext";
 import JobHome from "./components/JobHome";
@@ -452,18 +452,47 @@ export default function App() {
     if (!q.trim()) return;
 
     const userMsg = { sender: "user", text: q };
-    const reply = generateChatbotResponse({
+    // The engine reads the earlier messages (and the context stored on each answer) to resolve follow-ups.
+    const reply = generateChatbotReply({
       query: q,
       candidatesPool,
       activeRole,
       recruiterName: recruiterName,
       recruiterRole: user.role,
-      company: user.company
+      company: user.company,
+      history: copilotMessages
     });
 
-    setCopilotMessages((prev) => [...prev, userMsg, { sender: "assistant", text: reply }]);
+    setCopilotMessages((prev) => [
+      ...prev,
+      userMsg,
+      { sender: "assistant", text: reply.text, meta: reply.meta, suggestions: reply.suggestions }
+    ]);
     setCopilotInput("");
   };
+
+  // Keep the newest message in view.
+  const chatScrollRef = useRef(null);
+  useEffect(() => {
+    const el = chatScrollRef.current;
+    if (el) el.scrollTop = el.scrollHeight;
+  }, [copilotMessages]);
+
+  // Starter questions built from the loaded pool (names and ranks always exist, even for uploaded resumes).
+  const copilotPills = useMemo(() => {
+    const a = candidatesPool[0];
+    const b = candidatesPool[1];
+    const tag = (c) => `${c.name} #${c.rank}`;
+    return [
+      "Give me a pool overview",
+      "Show the strong hires",
+      "Who has red flags and why?",
+      "Who is the most experienced candidate?",
+      a && b ? `Compare ${tag(a)} and ${tag(b)}` : null,
+      a ? `Draft outreach email for ${tag(a)}` : null,
+      "What is the compensation band?"
+    ].filter(Boolean);
+  }, [candidatesPool]);
 
 
   // ==========================================================================
@@ -1471,14 +1500,7 @@ export default function App() {
 
               {/* Dynamic Suggested Question Pills */}
               <div className="flex flex-wrap gap-2 text-xs font-mono">
-                {[
-                  "How many members are there in total?",
-                  "Which candidate has the required skills?",
-                  "Who has red flags and why?",
-                  "Compare Karthik Menon and Rahul Nair",
-                  "Draft outreach email for Karthik",
-                  "What is the compensation band?"
-                ].map((pill, pIdx) => (
+                {copilotPills.map((pill, pIdx) => (
                   <button
                     key={pIdx}
                     onClick={() => handleSendCopilot(pill)}
@@ -1491,7 +1513,7 @@ export default function App() {
 
               {/* Chat Container */}
               <div className="rounded-lg border border-slate-200 bg-white flex flex-col h-[520px] overflow-hidden">
-                <div className="flex-1 p-6 overflow-y-auto space-y-4">
+                <div ref={chatScrollRef} className="flex-1 p-6 overflow-y-auto space-y-4">
                   {copilotMessages.map((msg, idx) => (
                     <div
                       key={idx}
@@ -1502,14 +1524,30 @@ export default function App() {
                           AI
                         </div>
                       )}
-                      <div
-                        className={`p-4 rounded-lg text-xs leading-relaxed ${
-                          msg.sender === "user"
-                            ? "bg-indigo-600 text-white font-bold"
-                            : "bg-white border border-slate-200 text-slate-800"
-                        }`}
-                      >
-                        <div className="whitespace-pre-wrap font-sans">{renderInline(msg.text)}</div>
+                      <div className="min-w-0">
+                        <div
+                          className={`p-4 rounded-lg text-xs leading-relaxed ${
+                            msg.sender === "user"
+                              ? "bg-indigo-600 text-white font-bold"
+                              : "bg-white border border-slate-200 text-slate-800"
+                          }`}
+                        >
+                          <div className="whitespace-pre-wrap font-sans">{renderInline(msg.text)}</div>
+                        </div>
+                        {msg.sender === "assistant" && idx === copilotMessages.length - 1 && msg.suggestions?.length > 0 && (
+                          <div className="mt-2 flex flex-wrap gap-1.5">
+                            {msg.suggestions.map((s) => (
+                              <button
+                                key={s}
+                                type="button"
+                                onClick={() => handleSendCopilot(s)}
+                                className="px-2.5 py-1 rounded-full border border-indigo-200 bg-indigo-50 text-[11px] font-mono text-indigo-700 hover:bg-indigo-100 transition-colors"
+                              >
+                                {s}
+                              </button>
+                            ))}
+                          </div>
+                        )}
                       </div>
                     </div>
                   ))}
