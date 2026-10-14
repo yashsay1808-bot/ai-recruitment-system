@@ -31,6 +31,10 @@ class Settings(BaseSettings):
     MONGODB_URI: Optional[str] = Field(default=None, description="mongodb+srv://... connection string")
     MONGODB_DB: str = "recruitment"
 
+    # Google OAuth Web client id (public). Required for POST /auth/google; same value as the
+    # frontend's VITE_GOOGLE_CLIENT_ID.
+    GOOGLE_CLIENT_ID: Optional[str] = None
+
     # LLM & Embedding Provider configuration (Configurable via env, never hardcoded)
     LLM_PROVIDER: str = Field(
         default="mock",

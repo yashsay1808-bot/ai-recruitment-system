@@ -220,9 +220,10 @@ const apiProvider = {
 /* -------------------------------------------------------------------------------------------- */
 /* Google Sign-In (Google Identity Services)                                                     */
 /* -------------------------------------------------------------------------------------------- */
-// With VITE_GOOGLE_CLIENT_ID set, Google is the only sign-in method. The ID token is checked in the
-// browser (audience, issuer, expiry); there is no server in this deployment, so treat it as an
-// access gate for the UI rather than server-side authorization.
+// With VITE_GOOGLE_CLIENT_ID set, the Google button is shown. In "api" auth mode the ID token is sent to
+// POST /auth/google, which verifies it with Google, stores the user in MongoDB and returns a session
+// token. In "local" mode there is no server, so the token is only checked in the browser (audience,
+// issuer, expiry): treat that as a UI gate, not server-side authorization.
 export const isGoogleAuthEnabled = Boolean(config.googleClientId);
 
 function decodeJwtPayload(token) {
@@ -236,6 +237,16 @@ function decodeJwtPayload(token) {
 }
 
 async function signInWithGoogle(credential) {
+  if (isApiMode(config.authProvider)) {
+    try {
+      const res = await api.post("/auth/google", { credential });
+      tokenStore.set(res.token);
+      return res.user;
+    } catch (err) {
+      throw asAuthError(err);
+    }
+  }
+
   const claims = decodeJwtPayload(credential || "");
   const issuerOk = claims && ["accounts.google.com", "https://accounts.google.com"].includes(claims.iss);
   if (!claims || !issuerOk || claims.aud !== config.googleClientId || claims.exp * 1000 < Date.now()) {
