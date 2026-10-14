@@ -26,6 +26,11 @@ class Settings(BaseSettings):
     )
     SQLITE_FALLBACK_URL: str = "sqlite:///./recruitment_system_v4.db"
 
+    # MongoDB Atlas (accounts, sessions, candidate pools). Optional: the Mongo-backed routes answer
+    # 503 until MONGODB_URI is set.
+    MONGODB_URI: Optional[str] = Field(default=None, description="mongodb+srv://... connection string")
+    MONGODB_DB: str = "recruitment"
+
     # LLM & Embedding Provider configuration (Configurable via env, never hardcoded)
     LLM_PROVIDER: str = Field(
         default="mock",

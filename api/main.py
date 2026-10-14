@@ -16,7 +16,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
 from src.config import get_settings
-from api.routers import jobs_router, resumes_router, screenings_router, audits_router
+from api.routers import (
+    jobs_router, resumes_router, screenings_router, audits_router, auth_router, candidates_router,
+)
+from api.mongo import get_mongo_db, init_mongo
 from db.session import engine
 from db.base import Base
 
@@ -31,6 +34,12 @@ async def lifespan(app: FastAPI):
         Base.metadata.create_all(bind=engine)
     except Exception as e:
         print(f"[Startup Warning] Could not initialize database tables: {e}")
+    # MongoDB Atlas: indexes + candidate seed. Skipped when MONGODB_URI is unset or unreachable.
+    if settings.MONGODB_URI:
+        try:
+            init_mongo(get_mongo_db())
+        except Exception as e:
+            print(f"[Startup Warning] Could not initialize MongoDB: {e}")
     yield
 
 
@@ -69,6 +78,10 @@ app.include_router(jobs_router, prefix=settings.API_V1_STR)
 app.include_router(resumes_router, prefix=settings.API_V1_STR)
 app.include_router(screenings_router, prefix=settings.API_V1_STR)
 app.include_router(audits_router, prefix=settings.API_V1_STR)
+
+# Frontend-facing routes (unprefixed, as frontend/src/utils/*Service.js calls them)
+app.include_router(auth_router)
+app.include_router(candidates_router)
 
 
 @app.get("/", tags=["System"])
