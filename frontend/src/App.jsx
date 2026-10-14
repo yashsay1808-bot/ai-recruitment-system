@@ -471,6 +471,28 @@ export default function App() {
     setCopilotInput("");
   };
 
+  // Download the whole conversation as a Markdown file.
+  const exportCopilotMarkdown = () => {
+    const stamp = new Date().toISOString().slice(0, 16).replace("T", " ");
+    const body = copilotMessages
+      .map((m) => `${m.sender === "user" ? "**Recruiter:**" : "**Copilot:**"}\n\n${m.text}`)
+      .join("\n\n---\n\n");
+    const md =
+      `# Talent Copilot session\n\n` +
+      `- **Role:** ${activeRole.title}\n` +
+      `- **Pool:** ${poolSource} (${candidatesPool.length} candidates)\n` +
+      `- **Exported:** ${stamp}\n\n---\n\n${body}\n`;
+    const url = URL.createObjectURL(new Blob([md], { type: "text/markdown;charset=utf-8" }));
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `copilot-session-${stamp.slice(0, 10)}.md`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+    showToast("✓ Session exported as a Markdown file.");
+  };
+
   // Keep the newest message in view.
   const chatScrollRef = useRef(null);
   useEffect(() => {
@@ -1490,7 +1512,7 @@ export default function App() {
                     <RefreshCw className="w-3.5 h-3.5" /> Clear History
                   </button>
                   <button
-                    onClick={() => showToast("✓ Session exported to markdown dossier.")}
+                    onClick={exportCopilotMarkdown}
                     className="px-3.5 py-1.5 rounded-lg border border-slate-200 bg-slate-100 hover:bg-slate-200 text-slate-900 font-mono text-xs flex items-center gap-1.5"
                   >
                     <Download className="w-4 h-4" /> Export Report (.md)

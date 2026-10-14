@@ -31,7 +31,7 @@ This project delivers a **production-ready Phase 2 Intelligent Recruitment Syste
           └───────────────┼───────────────┘
                           ↓
                SKILL SYNONYM ONTOLOGY
-            (1,500+ Skills, Aliases, Fuzzy)
+         (79 canonical skills, 353 aliases, Fuzzy)
                           ↓
                HYBRID MULTI-SCORE RANKING
        (Skills + Semantic BERT + Exp + Edu + Proj + Certs)
@@ -59,16 +59,16 @@ This project delivers a **production-ready Phase 2 Intelligent Recruitment Syste
 | # | Feature | Capability Description |
 |---|---|---|
 | **1** | **Advanced Multi-Format Resume Parser & OCR** | Extracts candidate Name, Email, Phone, Location, Skills, Education (Degree, Branch, CGPA, Year), Experience (Years, Titles, History), Projects (Stack & Impact), and Certifications across **PDF**, **Scanned PDF (OCR)**, **DOCX**, and **TXT**. |
-| **2** | **Skill Synonym & Ontology Knowledge Base** | Maps 1,500+ canonical technical skills with aliases (e.g. `ML` ↔ `Machine Learning`, `JS` ↔ `JavaScript`, `sklearn` ↔ `Scikit-Learn`, `k8s` ↔ `Kubernetes`, `FastAPI` ↔ `Flask`). |
+| **2** | **Skill Synonym & Ontology Knowledge Base** | Maps 79 canonical technical skills (353 lookup entries in 8 categories) with aliases (e.g. `ML` ↔ `Machine Learning`, `JS` ↔ `JavaScript`, `sklearn` ↔ `Scikit-Learn`, `k8s` ↔ `Kubernetes`, `FastAPI` ↔ `Flask`). |
 | **3** | **Hybrid AI Multi-Score Ranking Engine** | Combines 7 weighted dimensions: 35% Skills Match, 20% Semantic JD Fit (BERT / SentenceTransformer), 15% Experience Alignment, 10% Education Credentials, 10% Project Depth, 5% Certifications, 5% ATS Resume Quality. |
 | **4** | **Skill Gap Analysis** | Displays granular skill breakdown: **Matched Skills** (Green), **Partially Matched Skills** (Yellow with relationship rationale), and **Missing Skills** (Red). |
 | **5** | **Explainable AI (XAI) & Rationale** | Transparent explanations: reasons why a candidate ranked high/low, key strengths, warning flags, and categorized recommendations (`Strongly Recommended`, `Recommended`, `HR Review`, `Not Recommended`). |
 | **6** | **Candidate Comparison Matrix** | Side-by-side comparison of 2–4 candidates with **Plotly Radar charts**, dimensional metric comparisons, and skill overlap matrices. |
-| **7** | **AI-Powered Interview Question Generator** | Automatically crafts customized Technical, Project-Specific, Gap-Probing, and Behavioral interview questionnaires with expected answers and difficulty levels. |
+| **7** | **AI-Powered Interview Question Generator** | Automatically crafts customized Technical, Project-Specific, Gap-Probing, and Behavioral interview questionnaires with expected answers and difficulty levels. The web dashboard builds a kit of **19–24 questions per candidate** (role-family system design, skill deep-dives, red-flag and GitHub-risk probes, behavioural and logistics questions) with category filters and a copy-all button. |
 | **8** | **Resume ATS Quality Analyzer** | Generates a 0-100 ATS quality score, checks contact hygiene, section formatting, action verbs, quantified business impact, and gives actionable candidate resume tips. |
 | **9** | **Fair & Bias-Aware Blind Screening Mode** | One-click toggle redacting names, photos, gender markers, contact details, and demographic clues for unbiased merit evaluation. |
 | **10** | **Recruiter Search & Multi-Filters** | Recruiter filters by minimum score, experience range, must-have skills, education, and shortlist status. |
-| **11** | **SQLite Screening History & Job Store** | Persistent SQLite database for saving multiple Job Descriptions, screening batches, past scores, and audit trails. |
+| **11** | **SQLite Screening History & Job Store** | Persistent SQLite database for saving multiple Job Descriptions, screening batches, past scores, and audit trails. In the deployed web system, **MongoDB Atlas** stores user accounts, sessions and the 12 / 50 / 100 candidate pools. |
 | **12** | **Recruiter Analytics & Shortlist Email Gen** | Score distributions, talent pool skill frequency, gap bottlenecks, decision funnel donuts, and ready-to-send email invitation generator. |
 
 ---
@@ -150,9 +150,41 @@ The app will open in your browser at `http://localhost:8501`.
 
 ### 3. Run Automated Tests
 ```bash
-pytest tests/ -v
+pytest -v                    # 49 Python tests (core, API, accounts, Google sign-in)
+cd frontend && npm test      # 29 JavaScript tests (interview kit and chatbot, all 162 candidates)
 ```
-*All 6 test suites pass with 100% success.*
+*All 78 tests pass.* The account and Google tests use an in-memory MongoDB (`mongomock`), so no database or secret is needed.
+
+---
+
+## 🌐 Live Deployment (React Dashboard + FastAPI + MongoDB Atlas)
+
+| Piece | Where | Notes |
+|---|---|---|
+| Web dashboard (Nexus ATS) | https://ai-recruitment-system-lemon.vercel.app | React 19 + Vite, root directory `frontend` |
+| REST API | https://ai-recruitment-api-7blc.onrender.com | FastAPI, `/docs` and `/health`; the free tier sleeps when idle (first request up to ~50 s) |
+| Database | MongoDB Atlas (free M0) | collections `users`, `sessions`, `candidates` |
+
+**Accounts and security.** Sign-up is Gmail-only. Passwords are hashed with PBKDF2-HMAC-SHA256 (210,000 iterations, per-user salt); sessions are random tokens of which only the SHA-256 is stored, expiring after 7 days; five wrong passwords lock an account for 15 minutes; an unknown address and a wrong password give the same error. Google sign-in is verified on the server (audience, issuer, expiry, verified e-mail, Gmail only). The credential fields block copy, cut and paste but still allow a password manager's autofill and strong-password suggestion.
+
+**Configuration** (never commit real values; see `.env.example`, `frontend/.env.example` and `DEPLOY.md`):
+
+| Where | Variables |
+|---|---|
+| Vercel (frontend) | `VITE_API_BASE_URL`, `VITE_AUTH_PROVIDER=api`, `VITE_CANDIDATES_PROVIDER=api`, `VITE_GOOGLE_CLIENT_ID` |
+| Render (API) | `MONGODB_URI`, `MONGODB_DB`, `GOOGLE_CLIENT_ID`, `CORS_ORIGINS` (JSON list of allowed web origins) |
+
+**Run it locally**
+```bash
+# API (needs a MongoDB connection string in MONGODB_URI)
+pip install -r requirements-api.txt
+uvicorn api.main:app --reload
+
+# Web dashboard (stand-alone mode with a seeded demo account if no .env is present)
+cd frontend && npm install && npm run dev
+```
+
+The project report, the presentation and their sources are in [`docs/`](docs/); start with `docs/CHANGES_FOR_REPORT_AND_PPT.md`.
 
 ---
 
@@ -177,9 +209,9 @@ Where:
 |---|---|---|
 | **Input Format** | Plain text / Simple PDF only | Multi-format PDF, Scanned PDF via OCR, DOCX, TXT |
 | **Parsing** | Raw word tokenization | Structured entity extraction (Skills, Education, CGPA, Exp, Projects, Certs) |
-| **Skill Understanding** | Exact string match only | 1,500+ Skill Ontology + Alias Expansion + Partial Relatedness |
+| **Skill Understanding** | Exact string match only | 79-skill Ontology + Alias Expansion + Partial Relatedness |
 | **Scoring** | Single Cosine / TF-IDF score | 7-Pillar Hybrid AI Multi-Score Ranking |
 | **Transparency** | Black-box number (e.g. 78%) | Explainable AI (XAI) rationale, strengths, warnings, and recommendations |
 | **Post-Screening** | None | Skill gap analysis, Side-by-side radar comparison, and AI Interview Question Generation |
 | **Fairness** | Uncontrolled demographic bias | Bias-Aware Blind Screening Mode with PII redaction |
-| **Persistence** | In-memory only | SQLite Database with historical audit sessions and email generator |
+| **Persistence** | In-memory only | SQLite database with historical audit sessions and email generator; MongoDB Atlas for accounts, sessions and candidate pools in the deployed system |

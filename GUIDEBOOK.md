@@ -98,8 +98,9 @@ experience and no metrics, so the evidence ratio is low and the council raises U
 adds an external check: claimed languages vs. actual repository language percentages.
 
 **Q7. How was the system validated, and what are its limits?**
-26 automated tests (`pytest`) cover parser, ontology, ranker, council, GitHub inspector, RAG, database, the four demo resumes with
-asserted outcomes, and a headless boot of the UI. `scripts/verify_test_suite.py` prints the full table. Limits to state proactively: rules and
+78 automated tests (49 with `pytest`, 29 with `npm test` in `frontend/`) cover parser, ontology, ranker, council, GitHub inspector, RAG, database,
+accounts, sessions and Google sign-in (MongoDB, tested in memory), the four demo resumes with asserted outcomes, a headless boot of the UI, and the
+interview kit and chatbot of the web dashboard on all 162 candidates. `scripts/verify_test_suite.py` prints the full table. Limits to state proactively: rules and
 weights were chosen by us, not learned from labelled hiring outcomes; compensation bands are *indicative* planning ranges; GitHub
 checks need network (offline demo is simulated and labelled); the sample set is small (12 resumes). Future work: learn weights from
 recruiter feedback, calibrate on a labelled dataset, add fairness metrics (e.g. adverse-impact ratio).
@@ -113,8 +114,11 @@ pip install -r requirements.txt
 python run_app.py            # Streamlit UI  -> http://localhost:8501
 python run_api.py            # FastAPI       -> http://localhost:8000   (Swagger: /docs)
 python scripts/verify_test_suite.py   # prints the 12-resume results table
-python -m pytest -q          # 26 tests
+python -m pytest -q          # 49 tests
+cd frontend && npm test      # 29 tests (interview kit and chatbot logic)
 ```
+
+**Deployed system:** web dashboard on Vercel, FastAPI on Render, MongoDB Atlas for accounts, sessions and candidate pools (see `README.md` and `DEPLOY.md`). The report, the deck and their sources are in `docs/`.
 
 | Symptom | Fix |
 |---|---|
