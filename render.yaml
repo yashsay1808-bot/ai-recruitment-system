@@ -26,6 +26,9 @@ services:
         sync: false
       - key: MONGODB_DB
         value: recruitment
+      # Public Google OAuth Web client id (same as the frontend's VITE_GOOGLE_CLIENT_ID)
+      - key: GOOGLE_CLIENT_ID
+        value: 300352964711-tnrl165g4r9g0ifegdi4dlknal0o01b7.apps.googleusercontent.com
       # JSON list of allowed frontend origins, e.g. ["https://your-app.vercel.app"]
       - key: CORS_ORIGINS
         sync: false

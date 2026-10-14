@@ -3,6 +3,7 @@ Account routes backed by MongoDB. Contract (matches frontend/src/utils/authServi
 
     POST /auth/signup  {name,email,company,role,password} -> 201 {user}
     POST /auth/signin  {email,password}                   -> {token,user}
+    POST /auth/google  {credential}  (Google ID token)    -> {token,user}
     GET  /auth/me      (Bearer token)                     -> {user}
     POST /auth/signout (Bearer token)                     -> 204
 
@@ -12,8 +13,12 @@ is stored, and they expire after SESSION_DAYS. Five wrong passwords lock the acc
 
 import hashlib
 import hmac
+import json
 import re
 import secrets
+import urllib.error
+import urllib.parse
+import urllib.request
 from datetime import datetime, timedelta, timezone
 from typing import Optional
 
@@ -23,6 +28,7 @@ from pymongo.database import Database
 from pymongo.errors import DuplicateKeyError
 
 from api.mongo import get_mongo_db
+from src.config import get_settings
 
 router = APIRouter(prefix="/auth", tags=["Auth"])
 
@@ -39,6 +45,9 @@ SESSION_DAYS = 7
 MAX_FAILED_LOGINS = 5
 LOCK_MINUTES = 15
 
+GOOGLE_TOKENINFO_URL = "https://oauth2.googleapis.com/tokeninfo"
+GOOGLE_ISSUERS = ("accounts.google.com", "https://accounts.google.com")
+
 EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
 BAD_CREDENTIALS = "Incorrect email or password."
 
@@ -54,6 +63,10 @@ class SignUpBody(BaseModel):
 class SignInBody(BaseModel):
     email: str = Field(max_length=254)
     password: str = Field(max_length=256)
+
+
+class GoogleBody(BaseModel):
+    credential: str = Field(max_length=4096)
 
 
 def _now() -> datetime:
@@ -73,13 +86,63 @@ def _token_hash(token: str) -> str:
 
 
 def _public_user(doc: dict) -> dict:
-    return {
+    user = {
         "id": str(doc["_id"]),
         "name": doc["name"],
         "email": doc["email"],
         "company": doc["company"],
         "role": doc["role"],
     }
+    if doc.get("picture"):
+        user["picture"] = doc["picture"]
+    return user
+
+
+def _issue_session(db: Database, user: dict) -> dict:
+    token = secrets.token_urlsafe(32)
+    db.sessions.insert_one(
+        {
+            "tokenHash": _token_hash(token),
+            "userId": user["_id"],
+            "createdAt": _now(),
+            "expiresAt": _now() + timedelta(days=SESSION_DAYS),
+        }
+    )
+    return {"token": token, "user": _public_user(user)}
+
+
+def verify_google_credential(credential: str) -> dict:
+    """Validate a Google ID token with Google and return its claims.
+
+    Raises HTTPException when the token is invalid, for another client, expired, or the email is
+    unverified or not a Gmail address. Tests replace this function with a stub.
+    """
+    client_id = get_settings().GOOGLE_CLIENT_ID
+    if not client_id:
+        raise HTTPException(status.HTTP_503_SERVICE_UNAVAILABLE, "Google sign-in is not configured.")
+
+    bad = HTTPException(status.HTTP_401_UNAUTHORIZED, "Google sign-in could not be verified.")
+    url = f"{GOOGLE_TOKENINFO_URL}?{urllib.parse.urlencode({'id_token': credential})}"
+    try:
+        with urllib.request.urlopen(url, timeout=10) as res:
+            claims = json.loads(res.read().decode("utf-8"))
+    except urllib.error.HTTPError:
+        raise bad  # Google rejects malformed, expired or tampered tokens with a 400
+    except (urllib.error.URLError, TimeoutError, ValueError):
+        raise HTTPException(status.HTTP_502_BAD_GATEWAY, "Could not reach Google to verify sign-in.")
+
+    if claims.get("aud") != client_id or claims.get("iss") not in GOOGLE_ISSUERS:
+        raise bad
+    try:
+        if int(claims.get("exp", 0)) <= _now().timestamp():
+            raise bad
+    except (TypeError, ValueError):
+        raise bad
+    if str(claims.get("email_verified")).lower() != "true" or not claims.get("email"):
+        raise HTTPException(status.HTTP_401_UNAUTHORIZED, "Your Google account email is not verified.")
+    if not _norm_email(claims["email"]).endswith("@gmail.com"):
+        raise HTTPException(status.HTTP_403_FORBIDDEN, "Only @gmail.com Google accounts are accepted.")
+    return claims
 
 
 def _aware(dt: Optional[datetime]) -> Optional[datetime]:
@@ -148,8 +211,8 @@ def signin(body: SignInBody, db: Database = Depends(get_mongo_db)) -> dict:
     email = _norm_email(body.email)
     user = db.users.find_one({"email": email})
 
-    if user is None:
-        # Spend the same time as a real check so unknown emails can't be told apart by latency.
+    if user is None or not user.get("hash"):
+        # Unknown email, or a Google-only account with no password. Spend the same time as a real check so unknown emails can't be told apart by latency.
         _hash_password(body.password, b"\x00" * 16)
         raise HTTPException(status.HTTP_401_UNAUTHORIZED, BAD_CREDENTIALS)
 
@@ -170,16 +233,43 @@ def signin(body: SignInBody, db: Database = Depends(get_mongo_db)) -> dict:
         raise HTTPException(status.HTTP_401_UNAUTHORIZED, BAD_CREDENTIALS)
 
     db.users.update_one({"_id": user["_id"]}, {"$set": {"failedLogins": 0, "lockedUntil": None}})
-    token = secrets.token_urlsafe(32)
-    db.sessions.insert_one(
-        {
-            "tokenHash": _token_hash(token),
-            "userId": user["_id"],
+    return _issue_session(db, user)
+
+
+@router.post("/google")
+def google_signin(body: GoogleBody, db: Database = Depends(get_mongo_db)) -> dict:
+    claims = verify_google_credential(body.credential)
+    email = _norm_email(claims["email"])
+    picture = claims.get("picture")
+
+    user = db.users.find_one({"email": email})
+    if user is None:
+        user = {
+            "name": claims.get("name") or email,
+            "email": email,
+            "company": claims.get("hd") or "Google account",
+            "role": ROLES[0],
+            "hash": None,  # Google-only account: no password to sign in with
+            "salt": None,
+            "iterations": 0,
+            "failedLogins": 0,
+            "lockedUntil": None,
+            "googleId": claims.get("sub"),
+            "picture": picture,
             "createdAt": _now(),
-            "expiresAt": _now() + timedelta(days=SESSION_DAYS),
         }
-    )
-    return {"token": token, "user": _public_user(user)}
+        try:
+            user["_id"] = db.users.insert_one(user).inserted_id
+        except DuplicateKeyError:  # two first sign-ins racing: use the winner's record
+            user = db.users.find_one({"email": email})
+    else:
+        # Same Gmail already registered (email + password): link Google to that account.
+        update = {"googleId": claims.get("sub")}
+        if picture:
+            update["picture"] = picture
+        db.users.update_one({"_id": user["_id"]}, {"$set": update})
+        user = {**user, **update}
+    return _issue_session(db, user)
 
 
 @router.get("/me")
