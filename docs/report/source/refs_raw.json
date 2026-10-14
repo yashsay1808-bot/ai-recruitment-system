@@ -1,0 +1,2496 @@
+{
+ "arxiv": {
+  "1908.10084": {
+   "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+   "authors": [
+    [
+     "Nils",
+     "Reimers"
+    ],
+    [
+     "Iryna",
+     "Gurevych"
+    ]
+   ],
+   "published": "2019",
+   "journal_ref": null,
+   "doi": null
+  },
+  "1810.04805": {
+   "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+   "authors": [
+    [
+     "Jacob",
+     "Devlin"
+    ],
+    [
+     "Ming-Wei",
+     "Chang"
+    ],
+    [
+     "Kenton",
+     "Lee"
+    ],
+    [
+     "Kristina",
+     "Toutanova"
+    ]
+   ],
+   "published": "2018",
+   "journal_ref": null,
+   "doi": null
+  },
+  "1706.03762": {
+   "title": "Attention Is All You Need",
+   "authors": [
+    [
+     "Ashish",
+     "Vaswani"
+    ],
+    [
+     "Noam",
+     "Shazeer"
+    ],
+    [
+     "Niki",
+     "Parmar"
+    ],
+    [
+     "Jakob",
+     "Uszkoreit"
+    ],
+    [
+     "Llion",
+     "Jones"
+    ],
+    [
+     "Aidan N.",
+     "Gomez"
+    ],
+    [
+     "Lukasz",
+     "Kaiser"
+    ],
+    [
+     "Illia",
+     "Polosukhin"
+    ]
+   ],
+   "published": "2017",
+   "journal_ref": null,
+   "doi": null
+  },
+  "2004.04906": {
+   "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+   "authors": [
+    [
+     "Vladimir",
+     "Karpukhin"
+    ],
+    [
+     "Barlas",
+     "Oğuz"
+    ],
+    [
+     "Sewon",
+     "Min"
+    ],
+    [
+     "Patrick",
+     "Lewis"
+    ],
+    [
+     "Ledell",
+     "Wu"
+    ],
+    [
+     "Sergey",
+     "Edunov"
+    ],
+    [
+     "Danqi",
+     "Chen"
+    ],
+    [
+     "Wen-tau",
+     "Yih"
+    ]
+   ],
+   "published": "2020",
+   "journal_ref": null,
+   "doi": null
+  },
+  "2005.11401": {
+   "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+   "authors": [
+    [
+     "Patrick",
+     "Lewis"
+    ],
+    [
+     "Ethan",
+     "Perez"
+    ],
+    [
+     "Aleksandra",
+     "Piktus"
+    ],
+    [
+     "Fabio",
+     "Petroni"
+    ],
+    [
+     "Vladimir",
+     "Karpukhin"
+    ],
+    [
+     "Naman",
+     "Goyal"
+    ],
+    [
+     "Heinrich",
+     "Küttler"
+    ],
+    [
+     "Mike",
+     "Lewis"
+    ],
+    [
+     "Wen-tau",
+     "Yih"
+    ],
+    [
+     "Tim",
+     "Rocktäschel"
+    ],
+    [
+     "Sebastian",
+     "Riedel"
+    ],
+    [
+     "Douwe",
+     "Kiela"
+    ]
+   ],
+   "published": "2020",
+   "journal_ref": null,
+   "doi": null
+  },
+  "2305.14325": {
+   "title": "Improving Factuality and Reasoning in Language Models through Multiagent Debate",
+   "authors": [
+    [
+     "Yilun",
+     "Du"
+    ],
+    [
+     "Shuang",
+     "Li"
+    ],
+    [
+     "Antonio",
+     "Torralba"
+    ],
+    [
+     "Joshua B.",
+     "Tenenbaum"
+    ],
+    [
+     "Igor",
+     "Mordatch"
+    ]
+   ],
+   "published": "2023",
+   "journal_ref": null,
+   "doi": null
+  },
+  "2308.07201": {
+   "title": "ChatEval: Towards Better LLM-based Evaluators through Multi-Agent Debate",
+   "authors": [
+    [
+     "Chi-Min",
+     "Chan"
+    ],
+    [
+     "Weize",
+     "Chen"
+    ],
+    [
+     "Yusheng",
+     "Su"
+    ],
+    [
+     "Jianxuan",
+     "Yu"
+    ],
+    [
+     "Wei",
+     "Xue"
+    ],
+    [
+     "Shanghang",
+     "Zhang"
+    ],
+    [
+     "Jie",
+     "Fu"
+    ],
+    [
+     "Zhiyuan",
+     "Liu"
+    ]
+   ],
+   "published": "2023",
+   "journal_ref": null,
+   "doi": null
+  },
+  "2306.05685": {
+   "title": "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena",
+   "authors": [
+    [
+     "Lianmin",
+     "Zheng"
+    ],
+    [
+     "Wei-Lin",
+     "Chiang"
+    ],
+    [
+     "Ying",
+     "Sheng"
+    ],
+    [
+     "Siyuan",
+     "Zhuang"
+    ],
+    [
+     "Zhanghao",
+     "Wu"
+    ],
+    [
+     "Yonghao",
+     "Zhuang"
+    ],
+    [
+     "Zi",
+     "Lin"
+    ],
+    [
+     "Zhuohan",
+     "Li"
+    ],
+    [
+     "Dacheng",
+     "Li"
+    ],
+    [
+     "Eric P.",
+     "Xing"
+    ],
+    [
+     "Hao",
+     "Zhang"
+    ],
+    [
+     "Joseph E.",
+     "Gonzalez"
+    ],
+    [
+     "Ion",
+     "Stoica"
+    ]
+   ],
+   "published": "2023",
+   "journal_ref": null,
+   "doi": null
+  },
+  "1910.03089": {
+   "title": "End-to-End Resume Parsing and Finding Candidates for a Job Description using BERT",
+   "authors": [
+    [
+     "Vedant",
+     "Bhatia"
+    ],
+    [
+     "Prateek",
+     "Rawat"
+    ],
+    [
+     "Ajit",
+     "Kumar"
+    ],
+    [
+     "Rajiv Ratn",
+     "Shah"
+    ]
+   ],
+   "published": "2019",
+   "journal_ref": null,
+   "doi": null
+  },
+  "2307.03195": {
+   "title": "A Comprehensive Survey of Artificial Intelligence Techniques for Talent Analytics",
+   "authors": [
+    [
+     "Chuan",
+     "Qin"
+    ],
+    [
+     "Le",
+     "Zhang"
+    ],
+    [
+     "Yihang",
+     "Cheng"
+    ],
+    [
+     "Rui",
+     "Zha"
+    ],
+    [
+     "Dazhong",
+     "Shen"
+    ],
+    [
+     "Qi",
+     "Zhang"
+    ],
+    [
+     "Xi",
+     "Chen"
+    ],
+    [
+     "Ying",
+     "Sun"
+    ],
+    [
+     "Chen",
+     "Zhu"
+    ],
+    [
+     "Hengshu",
+     "Zhu"
+    ],
+    [
+     "Hui",
+     "Xiong"
+    ]
+   ],
+   "published": "2023",
+   "journal_ref": null,
+   "doi": null
+  },
+  "2111.13576": {
+   "title": "Job Recommender Systems: A Review",
+   "authors": [
+    [
+     "Corné",
+     "de Ruijt"
+    ],
+    [
+     "Sandjai",
+     "Bhulai"
+    ]
+   ],
+   "published": "2021",
+   "journal_ref": null,
+   "doi": null
+  },
+  "2307.03539": {
+   "title": "Large Language Models as Batteries-Included Zero-Shot ESCO Skills Matchers",
+   "authors": [
+    [
+     "Benjamin",
+     "Clavié"
+    ],
+    [
+     "Guillaume",
+     "Soulié"
+    ]
+   ],
+   "published": "2023",
+   "journal_ref": null,
+   "doi": null
+  },
+  "2405.04412": {
+   "title": "The Silicon Ceiling: Auditing GPT's Race and Gender Biases in Hiring",
+   "authors": [
+    [
+     "Lena",
+     "Armstrong"
+    ],
+    [
+     "Abbey",
+     "Liu"
+    ],
+    [
+     "Stephen",
+     "MacNeil"
+    ],
+    [
+     "Danaë",
+     "Metaxa"
+    ]
+   ],
+   "published": "2024",
+   "journal_ref": null,
+   "doi": null
+  },
+  "1906.09208": {
+   "title": "Mitigating Bias in Algorithmic Hiring: Evaluating Claims and Practices",
+   "authors": [
+    [
+     "Manish",
+     "Raghavan"
+    ],
+    [
+     "Solon",
+     "Barocas"
+    ],
+    [
+     "Jon",
+     "Kleinberg"
+    ],
+    [
+     "Karen",
+     "Levy"
+    ]
+   ],
+   "published": "2019",
+   "journal_ref": null,
+   "doi": null
+  },
+  "1706.06368": {
+   "title": "FA*IR: A Fair Top-k Ranking Algorithm",
+   "authors": [
+    [
+     "Meike",
+     "Zehlike"
+    ],
+    [
+     "Francesco",
+     "Bonchi"
+    ],
+    [
+     "Carlos",
+     "Castillo"
+    ],
+    [
+     "Sara",
+     "Hajian"
+    ],
+    [
+     "Mohamed",
+     "Megahed"
+    ],
+    [
+     "Ricardo",
+     "Baeza-Yates"
+    ]
+   ],
+   "published": "2017",
+   "journal_ref": null,
+   "doi": null
+  },
+  "1602.04938": {
+   "title": "\"Why Should I Trust You?\": Explaining the Predictions of Any Classifier",
+   "authors": [
+    [
+     "Marco Tulio",
+     "Ribeiro"
+    ],
+    [
+     "Sameer",
+     "Singh"
+    ],
+    [
+     "Carlos",
+     "Guestrin"
+    ]
+   ],
+   "published": "2016",
+   "journal_ref": null,
+   "doi": null
+  },
+  "1705.07874": {
+   "title": "A Unified Approach to Interpreting Model Predictions",
+   "authors": [
+    [
+     "Scott",
+     "Lundberg"
+    ],
+    [
+     "Su-In",
+     "Lee"
+    ]
+   ],
+   "published": "2017",
+   "journal_ref": null,
+   "doi": null
+  },
+  "1702.08608": {
+   "title": "Towards A Rigorous Science of Interpretable Machine Learning",
+   "authors": [
+    [
+     "Finale",
+     "Doshi-Velez"
+    ],
+    [
+     "Been",
+     "Kim"
+    ]
+   ],
+   "published": "2017",
+   "journal_ref": null,
+   "doi": null
+  },
+  "1811.10154": {
+   "title": "Stop Explaining Black Box Machine Learning Models for High Stakes Decisions and Use Interpretable Models Instead",
+   "authors": [
+    [
+     "Cynthia",
+     "Rudin"
+    ]
+   ],
+   "published": "2018",
+   "journal_ref": null,
+   "doi": null
+  },
+  "1908.09635": {
+   "title": "A Survey on Bias and Fairness in Machine Learning",
+   "authors": [
+    [
+     "Ninareh",
+     "Mehrabi"
+    ],
+    [
+     "Fred",
+     "Morstatter"
+    ],
+    [
+     "Nripsuta",
+     "Saxena"
+    ],
+    [
+     "Kristina",
+     "Lerman"
+    ],
+    [
+     "Aram",
+     "Galstyan"
+    ]
+   ],
+   "published": "2019",
+   "journal_ref": null,
+   "doi": null
+  },
+  "1610.02413": {
+   "title": "Equality of Opportunity in Supervised Learning",
+   "authors": [
+    [
+     "Moritz",
+     "Hardt"
+    ],
+    [
+     "Eric",
+     "Price"
+    ],
+    [
+     "Nathan",
+     "Srebro"
+    ]
+   ],
+   "published": "2016",
+   "journal_ref": null,
+   "doi": null
+  },
+  "1104.3913": {
+   "title": "Fairness Through Awareness",
+   "authors": [
+    [
+     "Cynthia",
+     "Dwork"
+    ],
+    [
+     "Moritz",
+     "Hardt"
+    ],
+    [
+     "Toniann",
+     "Pitassi"
+    ],
+    [
+     "Omer",
+     "Reingold"
+    ],
+    [
+     "Rich",
+     "Zemel"
+    ]
+   ],
+   "published": "2011",
+   "journal_ref": null,
+   "doi": null
+  },
+  "1810.03993": {
+   "title": "Model Cards for Model Reporting",
+   "authors": [
+    [
+     "Margaret",
+     "Mitchell"
+    ],
+    [
+     "Simone",
+     "Wu"
+    ],
+    [
+     "Andrew",
+     "Zaldivar"
+    ],
+    [
+     "Parker",
+     "Barnes"
+    ],
+    [
+     "Lucy",
+     "Vasserman"
+    ],
+    [
+     "Ben",
+     "Hutchinson"
+    ],
+    [
+     "Elena",
+     "Spitzer"
+    ],
+    [
+     "Inioluwa Deborah",
+     "Raji"
+    ],
+    [
+     "Timnit",
+     "Gebru"
+    ]
+   ],
+   "published": "2018",
+   "journal_ref": null,
+   "doi": null
+  },
+  "1609.05807": {
+   "title": "Inherent Trade-Offs in the Fair Determination of Risk Scores",
+   "authors": [
+    [
+     "Jon",
+     "Kleinberg"
+    ],
+    [
+     "Sendhil",
+     "Mullainathan"
+    ],
+    [
+     "Manish",
+     "Raghavan"
+    ]
+   ],
+   "published": "2016",
+   "journal_ref": null,
+   "doi": null
+  },
+  "1607.06520": {
+   "title": "Man is to Computer Programmer as Woman is to Homemaker? Debiasing Word Embeddings",
+   "authors": [
+    [
+     "Tolga",
+     "Bolukbasi"
+    ],
+    [
+     "Kai-Wei",
+     "Chang"
+    ],
+    [
+     "James",
+     "Zou"
+    ],
+    [
+     "Venkatesh",
+     "Saligrama"
+    ],
+    [
+     "Adam",
+     "Kalai"
+    ]
+   ],
+   "published": "2016",
+   "journal_ref": null,
+   "doi": null
+  },
+  "1608.07187": {
+   "title": "Semantics derived automatically from language corpora contain human-like biases",
+   "authors": [
+    [
+     "Aylin",
+     "Caliskan"
+    ],
+    [
+     "Joanna J.",
+     "Bryson"
+    ],
+    [
+     "Arvind",
+     "Narayanan"
+    ]
+   ],
+   "published": "2016",
+   "journal_ref": null,
+   "doi": null
+  },
+  "1803.09010": {
+   "title": "Datasheets for Datasets",
+   "authors": [
+    [
+     "Timnit",
+     "Gebru"
+    ],
+    [
+     "Jamie",
+     "Morgenstern"
+    ],
+    [
+     "Briana",
+     "Vecchione"
+    ],
+    [
+     "Jennifer Wortman",
+     "Vaughan"
+    ],
+    [
+     "Hanna",
+     "Wallach"
+    ],
+    [
+     "Hal",
+     "Daumé"
+    ],
+    [
+     "Kate",
+     "Crawford"
+    ]
+   ],
+   "published": "2018",
+   "journal_ref": null,
+   "doi": null
+  },
+  "2001.00973": {
+   "title": "Closing the AI Accountability Gap: Defining an End-to-End Framework for Internal Algorithmic Auditing",
+   "authors": [
+    [
+     "Inioluwa Deborah",
+     "Raji"
+    ],
+    [
+     "Andrew",
+     "Smart"
+    ],
+    [
+     "Rebecca N.",
+     "White"
+    ],
+    [
+     "Margaret",
+     "Mitchell"
+    ],
+    [
+     "Timnit",
+     "Gebru"
+    ],
+    [
+     "Ben",
+     "Hutchinson"
+    ],
+    [
+     "Jamila",
+     "Smith-Loud"
+    ],
+    [
+     "Daniel",
+     "Theron"
+    ],
+    [
+     "Parker",
+     "Barnes"
+    ]
+   ],
+   "published": "2020",
+   "journal_ref": null,
+   "doi": null
+  },
+  "1301.3781": {
+   "title": "Efficient Estimation of Word Representations in Vector Space",
+   "authors": [
+    [
+     "Tomas",
+     "Mikolov"
+    ],
+    [
+     "Kai",
+     "Chen"
+    ],
+    [
+     "Greg",
+     "Corrado"
+    ],
+    [
+     "Jeffrey",
+     "Dean"
+    ]
+   ],
+   "published": "2013",
+   "journal_ref": null,
+   "doi": null
+  },
+  "1907.11692": {
+   "title": "RoBERTa: A Robustly Optimized BERT Pretraining Approach",
+   "authors": [
+    [
+     "Yinhan",
+     "Liu"
+    ],
+    [
+     "Myle",
+     "Ott"
+    ],
+    [
+     "Naman",
+     "Goyal"
+    ],
+    [
+     "Jingfei",
+     "Du"
+    ],
+    [
+     "Mandar",
+     "Joshi"
+    ],
+    [
+     "Danqi",
+     "Chen"
+    ],
+    [
+     "Omer",
+     "Levy"
+    ],
+    [
+     "Mike",
+     "Lewis"
+    ],
+    [
+     "Luke",
+     "Zettlemoyer"
+    ],
+    [
+     "Veselin",
+     "Stoyanov"
+    ]
+   ],
+   "published": "2019",
+   "journal_ref": null,
+   "doi": null
+  },
+  "2002.10957": {
+   "title": "MiniLM: Deep Self-Attention Distillation for Task-Agnostic Compression of Pre-Trained Transformers",
+   "authors": [
+    [
+     "Wenhui",
+     "Wang"
+    ],
+    [
+     "Furu",
+     "Wei"
+    ],
+    [
+     "Li",
+     "Dong"
+    ],
+    [
+     "Hangbo",
+     "Bao"
+    ],
+    [
+     "Nan",
+     "Yang"
+    ],
+    [
+     "Ming",
+     "Zhou"
+    ]
+   ],
+   "published": "2020",
+   "journal_ref": null,
+   "doi": null
+  },
+  "1910.03771": {
+   "title": "HuggingFace's Transformers: State-of-the-art Natural Language Processing",
+   "authors": [
+    [
+     "Thomas",
+     "Wolf"
+    ],
+    [
+     "Lysandre",
+     "Debut"
+    ],
+    [
+     "Victor",
+     "Sanh"
+    ],
+    [
+     "Julien",
+     "Chaumond"
+    ],
+    [
+     "Clement",
+     "Delangue"
+    ],
+    [
+     "Anthony",
+     "Moi"
+    ],
+    [
+     "Pierric",
+     "Cistac"
+    ],
+    [
+     "Tim",
+     "Rault"
+    ],
+    [
+     "Rémi",
+     "Louf"
+    ],
+    [
+     "Morgan",
+     "Funtowicz"
+    ],
+    [
+     "Joe",
+     "Davison"
+    ],
+    [
+     "Sam",
+     "Shleifer"
+    ],
+    [
+     "Patrick",
+     "von Platen"
+    ],
+    [
+     "Clara",
+     "Ma"
+    ],
+    [
+     "Yacine",
+     "Jernite"
+    ],
+    [
+     "Julien",
+     "Plu"
+    ],
+    [
+     "Canwen",
+     "Xu"
+    ],
+    [
+     "Teven Le",
+     "Scao"
+    ],
+    [
+     "Sylvain",
+     "Gugger"
+    ],
+    [
+     "Mariama",
+     "Drame"
+    ],
+    [
+     "Quentin",
+     "Lhoest"
+    ],
+    [
+     "Alexander M.",
+     "Rush"
+    ]
+   ],
+   "published": "2019",
+   "journal_ref": null,
+   "doi": null
+  },
+  "2308.08155": {
+   "title": "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation",
+   "authors": [
+    [
+     "Qingyun",
+     "Wu"
+    ],
+    [
+     "Gagan",
+     "Bansal"
+    ],
+    [
+     "Jieyu",
+     "Zhang"
+    ],
+    [
+     "Yiran",
+     "Wu"
+    ],
+    [
+     "Beibin",
+     "Li"
+    ],
+    [
+     "Erkang",
+     "Zhu"
+    ],
+    [
+     "Li",
+     "Jiang"
+    ],
+    [
+     "Xiaoyun",
+     "Zhang"
+    ],
+    [
+     "Shaokun",
+     "Zhang"
+    ],
+    [
+     "Jiale",
+     "Liu"
+    ],
+    [
+     "Ahmed Hassan",
+     "Awadallah"
+    ],
+    [
+     "Ryen W",
+     "White"
+    ],
+    [
+     "Doug",
+     "Burger"
+    ],
+    [
+     "Chi",
+     "Wang"
+    ]
+   ],
+   "published": "2023",
+   "journal_ref": null,
+   "doi": null
+  },
+  "2308.00352": {
+   "title": "MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework",
+   "authors": [
+    [
+     "Sirui",
+     "Hong"
+    ],
+    [
+     "Mingchen",
+     "Zhuge"
+    ],
+    [
+     "Jiaqi",
+     "Chen"
+    ],
+    [
+     "Xiawu",
+     "Zheng"
+    ],
+    [
+     "Yuheng",
+     "Cheng"
+    ],
+    [
+     "Ceyao",
+     "Zhang"
+    ],
+    [
+     "Jinlin",
+     "Wang"
+    ],
+    [
+     "Zili",
+     "Wang"
+    ],
+    [
+     "Steven Ka Shing",
+     "Yau"
+    ],
+    [
+     "Zijuan",
+     "Lin"
+    ],
+    [
+     "Liyang",
+     "Zhou"
+    ],
+    [
+     "Chenyu",
+     "Ran"
+    ],
+    [
+     "Lingfeng",
+     "Xiao"
+    ],
+    [
+     "Chenglin",
+     "Wu"
+    ],
+    [
+     "Jürgen",
+     "Schmidhuber"
+    ]
+   ],
+   "published": "2023",
+   "journal_ref": null,
+   "doi": null
+  },
+  "2203.11171": {
+   "title": "Self-Consistency Improves Chain of Thought Reasoning in Language Models",
+   "authors": [
+    [
+     "Xuezhi",
+     "Wang"
+    ],
+    [
+     "Jason",
+     "Wei"
+    ],
+    [
+     "Dale",
+     "Schuurmans"
+    ],
+    [
+     "Quoc",
+     "Le"
+    ],
+    [
+     "Ed",
+     "Chi"
+    ],
+    [
+     "Sharan",
+     "Narang"
+    ],
+    [
+     "Aakanksha",
+     "Chowdhery"
+    ],
+    [
+     "Denny",
+     "Zhou"
+    ]
+   ],
+   "published": "2022",
+   "journal_ref": null,
+   "doi": null
+  },
+  "2210.03629": {
+   "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+   "authors": [
+    [
+     "Shunyu",
+     "Yao"
+    ],
+    [
+     "Jeffrey",
+     "Zhao"
+    ],
+    [
+     "Dian",
+     "Yu"
+    ],
+    [
+     "Nan",
+     "Du"
+    ],
+    [
+     "Izhak",
+     "Shafran"
+    ],
+    [
+     "Karthik",
+     "Narasimhan"
+    ],
+    [
+     "Yuan",
+     "Cao"
+    ]
+   ],
+   "published": "2022",
+   "journal_ref": null,
+   "doi": null
+  },
+  "1901.04085": {
+   "title": "Passage Re-ranking with BERT",
+   "authors": [
+    [
+     "Rodrigo",
+     "Nogueira"
+    ],
+    [
+     "Kyunghyun",
+     "Cho"
+    ]
+   ],
+   "published": "2019",
+   "journal_ref": null,
+   "doi": null
+  },
+  "2010.06467": {
+   "title": "Pretrained Transformers for Text Ranking: BERT and Beyond",
+   "authors": [
+    [
+     "Jimmy",
+     "Lin"
+    ],
+    [
+     "Rodrigo",
+     "Nogueira"
+    ],
+    [
+     "Andrew",
+     "Yates"
+    ]
+   ],
+   "published": "2020",
+   "journal_ref": null,
+   "doi": null
+  },
+  "1810.04040": {
+   "title": "Person-Job Fit: Adapting the Right Talent for the Right Job with Joint Representation Learning",
+   "authors": [
+    [
+     "Chen",
+     "Zhu"
+    ],
+    [
+     "Hengshu",
+     "Zhu"
+    ],
+    [
+     "Hui",
+     "Xiong"
+    ],
+    [
+     "Chao",
+     "Ma"
+    ],
+    [
+     "Fang",
+     "Xie"
+    ],
+    [
+     "Pengliang",
+     "Ding"
+    ],
+    [
+     "Pan",
+     "Li"
+    ]
+   ],
+   "published": "2018",
+   "journal_ref": null,
+   "doi": null
+  },
+  "1201.0490": {
+   "title": "Scikit-learn: Machine Learning in Python",
+   "authors": [
+    [
+     "Fabian",
+     "Pedregosa"
+    ],
+    [
+     "Gaël",
+     "Varoquaux"
+    ],
+    [
+     "Alexandre",
+     "Gramfort"
+    ],
+    [
+     "Vincent",
+     "Michel"
+    ],
+    [
+     "Bertrand",
+     "Thirion"
+    ],
+    [
+     "Olivier",
+     "Grisel"
+    ],
+    [
+     "Mathieu",
+     "Blondel"
+    ],
+    [
+     "Andreas",
+     "Müller"
+    ],
+    [
+     "Joel",
+     "Nothman"
+    ],
+    [
+     "Gilles",
+     "Louppe"
+    ],
+    [
+     "Peter",
+     "Prettenhofer"
+    ],
+    [
+     "Ron",
+     "Weiss"
+    ],
+    [
+     "Vincent",
+     "Dubourg"
+    ],
+    [
+     "Jake",
+     "Vanderplas"
+    ],
+    [
+     "Alexandre",
+     "Passos"
+    ],
+    [
+     "David",
+     "Cournapeau"
+    ],
+    [
+     "Matthieu",
+     "Brucher"
+    ],
+    [
+     "Matthieu",
+     "Perrot"
+    ],
+    [
+     "Édouard",
+     "Duchesnay"
+    ]
+   ],
+   "published": "2012",
+   "journal_ref": null,
+   "doi": null
+  },
+  "2305.19118": {
+   "title": "Encouraging Divergent Thinking in Large Language Models through Multi-Agent Debate",
+   "authors": [
+    [
+     "Tian",
+     "Liang"
+    ],
+    [
+     "Zhiwei",
+     "He"
+    ],
+    [
+     "Wenxiang",
+     "Jiao"
+    ],
+    [
+     "Xing",
+     "Wang"
+    ],
+    [
+     "Yan",
+     "Wang"
+    ],
+    [
+     "Rui",
+     "Wang"
+    ],
+    [
+     "Yujiu",
+     "Yang"
+    ],
+    [
+     "Shuming",
+     "Shi"
+    ],
+    [
+     "Zhaopeng",
+     "Tu"
+    ]
+   ],
+   "published": "2023",
+   "journal_ref": null,
+   "doi": null
+  },
+  "2109.09605": {
+   "title": "JobBERT: Understanding Job Titles through Skills",
+   "authors": [
+    [
+     "Jens-Joris",
+     "Decorte"
+    ],
+    [
+     "Jeroen",
+     "Van Hautte"
+    ],
+    [
+     "Thomas",
+     "Demeester"
+    ],
+    [
+     "Chris",
+     "Develder"
+    ]
+   ],
+   "published": "2021",
+   "journal_ref": null,
+   "doi": null
+  },
+  "2204.12811": {
+   "title": "SkillSpan: Hard and Soft Skill Extraction from English Job Postings",
+   "authors": [
+    [
+     "Mike",
+     "Zhang"
+    ],
+    [
+     "Kristian Nørgaard",
+     "Jensen"
+    ],
+    [
+     "Sif Dam",
+     "Sonniks"
+    ],
+    [
+     "Barbara",
+     "Plank"
+    ]
+   ],
+   "published": "2022",
+   "journal_ref": null,
+   "doi": null
+  },
+  "2407.20371": {
+   "title": "Gender, Race, and Intersectional Bias in Resume Screening via Language Model Retrieval",
+   "authors": [
+    [
+     "Kyra",
+     "Wilson"
+    ],
+    [
+     "Aylin",
+     "Caliskan"
+    ]
+   ],
+   "published": "2024",
+   "journal_ref": null,
+   "doi": null
+  }
+ },
+ "crossref": {
+  "10.1145/3209978.3210025": {
+   "title": "Enhancing Person-Job Fit for Talent Recruitment",
+   "authors": [
+    [
+     "Chuan",
+     "Qin"
+    ],
+    [
+     "Hengshu",
+     "Zhu"
+    ],
+    [
+     "Tong",
+     "Xu"
+    ],
+    [
+     "Chen",
+     "Zhu"
+    ],
+    [
+     "Liang",
+     "Jiang"
+    ],
+    [
+     "Enhong",
+     "Chen"
+    ],
+    [
+     "Hui",
+     "Xiong"
+    ]
+   ],
+   "container": "The 41st International ACM SIGIR Conference on Research &amp; Development in Information Retrieval",
+   "volume": null,
+   "issue": null,
+   "page": "25-34",
+   "year": 2018,
+   "type": "proceedings-article",
+   "publisher": "ACM",
+   "article_number": null
+  },
+  "10.1257/0002828042002561": {
+   "title": "Are Emily and Greg More Employable Than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination",
+   "authors": [
+    [
+     "Marianne",
+     "Bertrand"
+    ],
+    [
+     "Sendhil",
+     "Mullainathan"
+    ]
+   ],
+   "container": "American Economic Review",
+   "volume": "94",
+   "issue": "4",
+   "page": "991-1013",
+   "year": 2004,
+   "type": "journal-article",
+   "publisher": "American Economic Association",
+   "article_number": null
+  },
+  "10.1109/MSR.2015.41": {
+   "title": "Matching GitHub Developer Profiles to Job Advertisements",
+   "authors": [
+    [
+     "Claudia",
+     "Hauff"
+    ],
+    [
+     "Georgios",
+     "Gousios"
+    ]
+   ],
+   "container": "2015 IEEE/ACM 12th Working Conference on Mining Software Repositories",
+   "volume": null,
+   "issue": null,
+   "page": "362-366",
+   "year": 2015,
+   "type": "proceedings-article",
+   "publisher": "IEEE",
+   "article_number": null
+  },
+  "10.1561/1500000019": {
+   "title": "The Probabilistic Relevance Framework: BM25 and Beyond",
+   "authors": [
+    [
+     "Stephen",
+     "Robertson"
+    ],
+    [
+     "Hugo",
+     "Zaragoza"
+    ]
+   ],
+   "container": "Foundations and Trends® in Information Retrieval",
+   "volume": "4",
+   "issue": "1-2",
+   "page": "1-174",
+   "year": 2009,
+   "type": "journal-article",
+   "publisher": "Emerald",
+   "article_number": null
+  },
+  "10.1016/0306-4573(88)90021-0": {
+   "title": "Term-weighting approaches in automatic text retrieval",
+   "authors": [
+    [
+     "Gerard",
+     "Salton"
+    ],
+    [
+     "Christopher",
+     "Buckley"
+    ]
+   ],
+   "container": "Information Processing &amp; Management",
+   "volume": "24",
+   "issue": "5",
+   "page": "513-523",
+   "year": 1988,
+   "type": "journal-article",
+   "publisher": "Elsevier BV",
+   "article_number": null
+  },
+  "10.2307/2332226": {
+   "title": "A New Measure of Rank Correlation",
+   "authors": [
+    [
+     "M. G.",
+     "Kendall"
+    ]
+   ],
+   "container": "Biometrika",
+   "volume": "30",
+   "issue": "1/2",
+   "page": "81",
+   "year": 1938,
+   "type": "journal-article",
+   "publisher": "JSTOR",
+   "article_number": null
+  },
+  "10.1108/eb026526": {
+   "title": "A STATISTICAL INTERPRETATION OF TERM SPECIFICITY AND ITS APPLICATION IN RETRIEVAL",
+   "authors": [
+    [
+     "KAREN",
+     "SPARCK JONES"
+    ]
+   ],
+   "container": "Journal of Documentation",
+   "volume": "28",
+   "issue": "1",
+   "page": "11-21",
+   "year": 1972,
+   "type": "journal-article",
+   "publisher": "Emerald",
+   "article_number": null
+  },
+  "10.1145/1571941.1572114": {
+   "title": "Reciprocal rank fusion outperforms condorcet and individual rank learning methods",
+   "authors": [
+    [
+     "Gordon V.",
+     "Cormack"
+    ],
+    [
+     "Charles L A",
+     "Clarke"
+    ],
+    [
+     "Stefan",
+     "Buettcher"
+    ]
+   ],
+   "container": "Proceedings of the 32nd international ACM SIGIR conference on Research and development in information retrieval",
+   "volume": null,
+   "issue": null,
+   "page": "758-759",
+   "year": 2009,
+   "type": "proceedings-article",
+   "publisher": "ACM",
+   "article_number": null
+  },
+  "10.1145/582415.582418": {
+   "title": "Cumulated gain-based evaluation of IR techniques",
+   "authors": [
+    [
+     "Kalervo",
+     "Järvelin"
+    ],
+    [
+     "Jaana",
+     "Kekäläinen"
+    ]
+   ],
+   "container": "ACM Transactions on Information Systems",
+   "volume": "20",
+   "issue": "4",
+   "page": "422-446",
+   "year": 2002,
+   "type": "journal-article",
+   "publisher": "Association for Computing Machinery (ACM)",
+   "article_number": null
+  },
+  "10.3115/v1/D14-1162": {
+   "title": "Glove: Global Vectors for Word Representation",
+   "authors": [
+    [
+     "Jeffrey",
+     "Pennington"
+    ],
+    [
+     "Richard",
+     "Socher"
+    ],
+    [
+     "Christopher",
+     "Manning"
+    ]
+   ],
+   "container": "Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+   "volume": null,
+   "issue": null,
+   "page": "1532-1543",
+   "year": 2014,
+   "type": "proceedings-article",
+   "publisher": "Association for Computational Linguistics",
+   "article_number": null
+  },
+  "10.1007/s40685-020-00134-w": {
+   "title": "Discriminated by an algorithm: a systematic review of discrimination and fairness by algorithmic decision-making in the context of HR recruitment and HR development",
+   "authors": [
+    [
+     "Alina",
+     "Köchling"
+    ],
+    [
+     "Marius Claus",
+     "Wehner"
+    ]
+   ],
+   "container": "Business Research",
+   "volume": "13",
+   "issue": "3",
+   "page": "795-848",
+   "year": 2020,
+   "type": "journal-article",
+   "publisher": "Springer Science and Business Media LLC",
+   "article_number": null
+  },
+  "10.1016/j.bushor.2019.12.001": {
+   "title": "AI-enabled recruiting: What is it and how should a manager use it?",
+   "authors": [
+    [
+     "J. Stewart",
+     "Black"
+    ],
+    [
+     "Patrick",
+     "van Esch"
+    ]
+   ],
+   "container": "Business Horizons",
+   "volume": "63",
+   "issue": "2",
+   "page": "215-226",
+   "year": 2020,
+   "type": "journal-article",
+   "publisher": "Elsevier BV",
+   "article_number": null
+  },
+  "10.3390/ai5010019": {
+   "title": "A Comprehensive Review of AI Techniques for Addressing Algorithmic Bias in Job Hiring",
+   "authors": [
+    [
+     "Elham",
+     "Albaroudi"
+    ],
+    [
+     "Taha",
+     "Mansouri"
+    ],
+    [
+     "Ali",
+     "Alameer"
+    ]
+   ],
+   "container": "AI",
+   "volume": "5",
+   "issue": "1",
+   "page": "383-404",
+   "year": 2024,
+   "type": "journal-article",
+   "publisher": "MDPI AG",
+   "article_number": null
+  },
+  "10.1057/s41599-023-02079-x": {
+   "title": "Ethics and discrimination in artificial intelligence-enabled recruitment practices",
+   "authors": [
+    [
+     "Zhisheng",
+     "Chen"
+    ]
+   ],
+   "container": "Humanities and Social Sciences Communications",
+   "volume": "10",
+   "issue": "1",
+   "page": null,
+   "year": 2023,
+   "type": "journal-article",
+   "publisher": "Springer Science and Business Media LLC",
+   "article_number": "567"
+  },
+  "10.1016/j.inffus.2019.12.012": {
+   "title": "Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI",
+   "authors": [
+    [
+     "Alejandro",
+     "Barredo Arrieta"
+    ],
+    [
+     "Natalia",
+     "Díaz-Rodríguez"
+    ],
+    [
+     "Javier",
+     "Del Ser"
+    ],
+    [
+     "Adrien",
+     "Bennetot"
+    ],
+    [
+     "Siham",
+     "Tabik"
+    ],
+    [
+     "Alberto",
+     "Barbado"
+    ],
+    [
+     "Salvador",
+     "Garcia"
+    ],
+    [
+     "Sergio",
+     "Gil-Lopez"
+    ],
+    [
+     "Daniel",
+     "Molina"
+    ],
+    [
+     "Richard",
+     "Benjamins"
+    ],
+    [
+     "Raja",
+     "Chatila"
+    ],
+    [
+     "Francisco",
+     "Herrera"
+    ]
+   ],
+   "container": "Information Fusion",
+   "volume": "58",
+   "issue": null,
+   "page": "82-115",
+   "year": 2020,
+   "type": "journal-article",
+   "publisher": "Elsevier BV",
+   "article_number": null
+  },
+  "10.1016/j.artint.2018.07.007": {
+   "title": "Explanation in artificial intelligence: Insights from the social sciences",
+   "authors": [
+    [
+     "Tim",
+     "Miller"
+    ]
+   ],
+   "container": "Artificial Intelligence",
+   "volume": "267",
+   "issue": null,
+   "page": "1-38",
+   "year": 2019,
+   "type": "journal-article",
+   "publisher": "Elsevier BV",
+   "article_number": null
+  },
+  "10.1145/3236009": {
+   "title": "A Survey of Methods for Explaining Black Box Models",
+   "authors": [
+    [
+     "Riccardo",
+     "Guidotti"
+    ],
+    [
+     "Anna",
+     "Monreale"
+    ],
+    [
+     "Salvatore",
+     "Ruggieri"
+    ],
+    [
+     "Franco",
+     "Turini"
+    ],
+    [
+     "Fosca",
+     "Giannotti"
+    ],
+    [
+     "Dino",
+     "Pedreschi"
+    ]
+   ],
+   "container": "ACM Computing Surveys",
+   "volume": "51",
+   "issue": "5",
+   "page": "1-42",
+   "year": 2018,
+   "type": "journal-article",
+   "publisher": "Association for Computing Machinery (ACM)",
+   "article_number": null
+  },
+  "10.1109/ICDAR.2007.4376991": {
+   "title": "An Overview of the Tesseract OCR Engine",
+   "authors": [
+    [
+     "R.",
+     "Smith"
+    ]
+   ],
+   "container": "Ninth International Conference on Document Analysis and Recognition (ICDAR 2007) Vol 2",
+   "volume": null,
+   "issue": null,
+   "page": "629-633",
+   "year": 2007,
+   "type": "proceedings-article",
+   "publisher": "IEEE",
+   "article_number": null
+  },
+  "10.1145/3351095.3372849": {
+   "title": "What does it mean to 'solve' the problem of discrimination in hiring?",
+   "authors": [
+    [
+     "Javier",
+     "Sánchez-Monedero"
+    ],
+    [
+     "Lina",
+     "Dencik"
+    ],
+    [
+     "Lilian",
+     "Edwards"
+    ]
+   ],
+   "container": "Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency",
+   "volume": null,
+   "issue": null,
+   "page": "458-468",
+   "year": 2020,
+   "type": "proceedings-article",
+   "publisher": "ACM",
+   "article_number": null
+  },
+  "10.1126/science.aal4230": {
+   "title": "Semantics derived automatically from language corpora contain human-like biases",
+   "authors": [
+    [
+     "Aylin",
+     "Caliskan"
+    ],
+    [
+     "Joanna J.",
+     "Bryson"
+    ],
+    [
+     "Arvind",
+     "Narayanan"
+    ]
+   ],
+   "container": "Science",
+   "volume": "356",
+   "issue": "6334",
+   "page": "183-186",
+   "year": 2017,
+   "type": "journal-article",
+   "publisher": "American Association for the Advancement of Science (AAAS)",
+   "article_number": null
+  },
+  "10.1109/MCSE.2007.55": {
+   "title": "Matplotlib: A 2D Graphics Environment",
+   "authors": [
+    [
+     "John D.",
+     "Hunter"
+    ]
+   ],
+   "container": "Computing in Science &amp; Engineering",
+   "volume": "9",
+   "issue": "3",
+   "page": "90-95",
+   "year": 2007,
+   "type": "journal-article",
+   "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+   "article_number": null
+  },
+  "10.25080/Majora-92bf1922-00a": {
+   "title": "Data Structures for Statistical Computing in Python",
+   "authors": [
+    [
+     "Wes",
+     "McKinney"
+    ]
+   ],
+   "container": "Proceedings of the Python in Science Conference",
+   "volume": null,
+   "issue": null,
+   "page": "56-61",
+   "year": 2010,
+   "type": "proceedings-article",
+   "publisher": "SciPy",
+   "article_number": null
+  },
+  "10.1007/s00521-020-05302-x": {
+   "title": "Skills prediction based on multi-label resume classification using CNN with model predictions explanation",
+   "authors": [
+    [
+     "Kameni Florentin Flambeau",
+     "Jiechieu"
+    ],
+    [
+     "Norbert",
+     "Tsopze"
+    ]
+   ],
+   "container": "Neural Computing and Applications",
+   "volume": "33",
+   "issue": "10",
+   "page": "5069-5087",
+   "year": 2020,
+   "type": "journal-article",
+   "publisher": "Springer Science and Business Media LLC",
+   "article_number": null
+  },
+  "10.1145/3357384.3357949": {
+   "title": "Towards Effective and Interpretable Person-Job Fitting",
+   "authors": [
+    [
+     "Ran",
+     "Le"
+    ],
+    [
+     "Wenpeng",
+     "Hu"
+    ],
+    [
+     "Yang",
+     "Song"
+    ],
+    [
+     "Tao",
+     "Zhang"
+    ],
+    [
+     "Dongyan",
+     "Zhao"
+    ],
+    [
+     "Rui",
+     "Yan"
+    ]
+   ],
+   "container": "Proceedings of the 28th ACM International Conference on Information and Knowledge Management",
+   "volume": null,
+   "issue": null,
+   "page": "1883-1892",
+   "year": 2019,
+   "type": "proceedings-article",
+   "publisher": "ACM",
+   "article_number": null
+  },
+  "10.1145/3173574.3174225": {
+   "title": "Investigating the Impact of Gender on Rank in Resume Search Engines",
+   "authors": [
+    [
+     "Le",
+     "Chen"
+    ],
+    [
+     "Ruijun",
+     "Ma"
+    ],
+    [
+     "Anikó",
+     "Hannák"
+    ],
+    [
+     "Christo",
+     "Wilson"
+    ]
+   ],
+   "container": "Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems",
+   "volume": null,
+   "issue": null,
+   "page": "1-14",
+   "year": 2018,
+   "type": "proceedings-article",
+   "publisher": "ACM",
+   "article_number": null
+  },
+  "10.1016/j.chb.2018.09.009": {
+   "title": "Marketing AI recruitment: The next phase in job application and selection",
+   "authors": [
+    [
+     "Patrick",
+     "van Esch"
+    ],
+    [
+     "J. Stewart",
+     "Black"
+    ],
+    [
+     "Joseph",
+     "Ferolie"
+    ]
+   ],
+   "container": "Computers in Human Behavior",
+   "volume": "90",
+   "issue": null,
+   "page": "215-222",
+   "year": 2019,
+   "type": "journal-article",
+   "publisher": "Elsevier BV",
+   "article_number": null
+  },
+  "10.1108/SHR-07-2018-0051": {
+   "title": "Applying artificial intelligence: implications for recruitment",
+   "authors": [
+    [
+     "Ashwani Kumar",
+     "Upadhyay"
+    ],
+    [
+     "Komal",
+     "Khandelwal"
+    ]
+   ],
+   "container": "Strategic HR Review",
+   "volume": "17",
+   "issue": "5",
+   "page": "255-258",
+   "year": 2018,
+   "type": "journal-article",
+   "publisher": "Emerald",
+   "article_number": null
+  },
+  "10.1111/ijsa.12246": {
+   "title": "Highly automated job interviews: Acceptance under the influence of stakes",
+   "authors": [
+    [
+     "Markus",
+     "Langer"
+    ],
+    [
+     "Cornelius J.",
+     "König"
+    ],
+    [
+     "Maria",
+     "Papathanasiou"
+    ]
+   ],
+   "container": "International Journal of Selection and Assessment",
+   "volume": "27",
+   "issue": "3",
+   "page": "217-234",
+   "year": 2019,
+   "type": "journal-article",
+   "publisher": "Wiley",
+   "article_number": null
+  },
+  "10.1177/0008125619867910": {
+   "title": "Artificial Intelligence in Human Resources Management: Challenges and a Path Forward",
+   "authors": [
+    [
+     "Prasanna",
+     "Tambe"
+    ],
+    [
+     "Peter",
+     "Cappelli"
+    ],
+    [
+     "Valery",
+     "Yakubovich"
+    ]
+   ],
+   "container": "California Management Review",
+   "volume": "61",
+   "issue": "4",
+   "page": "15-42",
+   "year": 2019,
+   "type": "journal-article",
+   "publisher": "SAGE Publications",
+   "article_number": null
+  },
+  "10.1609/aaai.v34i08.7021": {
+   "title": "FedVision: An Online Visual Object Detection Platform Powered by Federated Learning",
+   "authors": [
+    [
+     "Yang",
+     "Liu"
+    ],
+    [
+     "Anbu",
+     "Huang"
+    ],
+    [
+     "Yun",
+     "Luo"
+    ],
+    [
+     "He",
+     "Huang"
+    ],
+    [
+     "Youzhi",
+     "Liu"
+    ],
+    [
+     "Yuanyuan",
+     "Chen"
+    ],
+    [
+     "Lican",
+     "Feng"
+    ],
+    [
+     "Tianjian",
+     "Chen"
+    ],
+    [
+     "Han",
+     "Yu"
+    ],
+    [
+     "Qiang",
+     "Yang"
+    ]
+   ],
+   "container": "Proceedings of the AAAI Conference on Artificial Intelligence",
+   "volume": "34",
+   "issue": "08",
+   "page": "13172-13179",
+   "year": 2020,
+   "type": "journal-article",
+   "publisher": "Association for the Advancement of Artificial Intelligence (AAAI)",
+   "article_number": null
+  },
+  "10.1017/CBO9780511809071": {
+   "title": "Introduction to Information Retrieval",
+   "authors": [
+    [
+     "Christopher D.",
+     "Manning"
+    ],
+    [
+     "Prabhakar",
+     "Raghavan"
+    ],
+    [
+     "Hinrich",
+     "Schütze"
+    ]
+   ],
+   "container": "",
+   "volume": null,
+   "issue": null,
+   "page": null,
+   "year": 2008,
+   "type": "monograph",
+   "publisher": "Cambridge University Press",
+   "article_number": null
+  },
+  "10.1145/514183.514185": {
+   "title": "Principled design of the modern Web architecture",
+   "authors": [
+    [
+     "Roy T.",
+     "Fielding"
+    ],
+    [
+     "Richard N.",
+     "Taylor"
+    ]
+   ],
+   "container": "ACM Transactions on Internet Technology",
+   "volume": "2",
+   "issue": "2",
+   "page": "115-150",
+   "year": 2002,
+   "type": "journal-article",
+   "publisher": "Association for Computing Machinery (ACM)",
+   "article_number": null
+  },
+  "10.1145/3351095.3372828": {
+   "title": "Mitigating bias in algorithmic hiring",
+   "authors": [
+    [
+     "Manish",
+     "Raghavan"
+    ],
+    [
+     "Solon",
+     "Barocas"
+    ],
+    [
+     "Jon",
+     "Kleinberg"
+    ],
+    [
+     "Karen",
+     "Levy"
+    ]
+   ],
+   "container": "Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency",
+   "volume": null,
+   "issue": null,
+   "page": "469-481",
+   "year": 2020,
+   "type": "proceedings-article",
+   "publisher": "ACM",
+   "article_number": null
+  },
+  "10.1145/3132847.3132938": {
+   "title": "FA*IR",
+   "authors": [
+    [
+     "Meike",
+     "Zehlike"
+    ],
+    [
+     "Francesco",
+     "Bonchi"
+    ],
+    [
+     "Carlos",
+     "Castillo"
+    ],
+    [
+     "Sara",
+     "Hajian"
+    ],
+    [
+     "Mohamed",
+     "Megahed"
+    ],
+    [
+     "Ricardo",
+     "Baeza-Yates"
+    ]
+   ],
+   "container": "Proceedings of the 2017 ACM on Conference on Information and Knowledge Management",
+   "volume": null,
+   "issue": null,
+   "page": "1569-1578",
+   "year": 2017,
+   "type": "proceedings-article",
+   "publisher": "ACM",
+   "article_number": null
+  },
+  "10.1145/2939672.2939778": {
+   "title": "\"Why Should I Trust You?\"",
+   "authors": [
+    [
+     "Marco Tulio",
+     "Ribeiro"
+    ],
+    [
+     "Sameer",
+     "Singh"
+    ],
+    [
+     "Carlos",
+     "Guestrin"
+    ]
+   ],
+   "container": "Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+   "volume": null,
+   "issue": null,
+   "page": "1135-1144",
+   "year": 2016,
+   "type": "proceedings-article",
+   "publisher": "ACM",
+   "article_number": null
+  },
+  "10.18653/v1/2020.coling-main.513": {
+   "title": "Retrieving Skills from Job Descriptions: A Language Model Based Extreme Multi-label Classification Framework",
+   "authors": [
+    [
+     "Akshay",
+     "Bhola"
+    ],
+    [
+     "Kishaloy",
+     "Halder"
+    ],
+    [
+     "Animesh",
+     "Prasad"
+    ],
+    [
+     "Min-Yen",
+     "Kan"
+    ]
+   ],
+   "container": "Proceedings of the 28th International Conference on Computational Linguistics",
+   "volume": null,
+   "issue": null,
+   "page": "5832-5842",
+   "year": 2020,
+   "type": "proceedings-article",
+   "publisher": "International Committee on Computational Linguistics",
+   "article_number": null
+  },
+  "10.1145/3457607": {
+   "title": "A Survey on Bias and Fairness in Machine Learning",
+   "authors": [
+    [
+     "Ninareh",
+     "Mehrabi"
+    ],
+    [
+     "Fred",
+     "Morstatter"
+    ],
+    [
+     "Nripsuta",
+     "Saxena"
+    ],
+    [
+     "Kristina",
+     "Lerman"
+    ],
+    [
+     "Aram",
+     "Galstyan"
+    ]
+   ],
+   "container": "ACM Computing Surveys",
+   "volume": "54",
+   "issue": "6",
+   "page": "1-35",
+   "year": 2021,
+   "type": "journal-article",
+   "publisher": "Association for Computing Machinery (ACM)",
+   "article_number": null
+  },
+  "10.1145/3292500.3330699": {
+   "title": "Pythia: AI-assisted Code Completion System",
+   "authors": [
+    [
+     "Alexey",
+     "Svyatkovskiy"
+    ],
+    [
+     "Ying",
+     "Zhao"
+    ],
+    [
+     "Shengyu",
+     "Fu"
+    ],
+    [
+     "Neel",
+     "Sundaresan"
+    ]
+   ],
+   "container": "Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining",
+   "volume": null,
+   "issue": null,
+   "page": "2727-2735",
+   "year": 2019,
+   "type": "proceedings-article",
+   "publisher": "ACM",
+   "article_number": null
+  }
+ }
+}
