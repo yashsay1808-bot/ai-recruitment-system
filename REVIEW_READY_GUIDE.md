@@ -29,7 +29,7 @@ Follow this exact sequence to wow your review panel:
 ### 📍 Minute 1: The Problem & System Architecture
 * **What to say:**  
   > *"Good morning professors and reviewers. Traditional ATS platforms rely on rudimentary keyword matching or black-box cosine similarity, causing false rejections, resume stuffing loopholes, and demographic bias.  
-  > Our project introduces an **Explainable Multi-Agent AI Recruitment System (Phase 2 ATS)** featuring a 7-factor hybrid ranking engine, a 1,500+ skill synonym ontology, a 4-agent consensus council, and fair blind screening."*
+  > Our project introduces an **Explainable Multi-Agent AI Recruitment System (Phase 2 ATS)** featuring a 7-factor hybrid ranking engine, a 79-skill synonym ontology (353 aliases), a 4-agent consensus council, and fair blind screening."*
 * **What to show on screen:**  
   - You are on **🎯 Job Management** (Tab 1).
   - Point out the active job role (**Senior Machine Learning Engineer**).
@@ -99,7 +99,7 @@ Follow this exact sequence to wow your review panel:
 
 ### Q1: "How is your system different from standard ATS keyword matching?"
 **Answer:**  
-*"Standard ATS only matches exact literal keywords. If a resume says 'ML' or 'PyTorch' and the job requires 'Machine Learning' or 'Deep Learning', basic ATS fails. Our system uses a **Skill Synonym Ontology of over 1,500 canonical concepts** that understands relationships (e.g., K8s ↔ Kubernetes, FastAPI ↔ Flask). Furthermore, keyword match is only 35% of our score; we evaluate semantic relevance, quantified achievements (e.g., latency under 72ms), and demonstrable repository artifacts."*
+*"Standard ATS only matches exact literal keywords. If a resume says 'ML' or 'PyTorch' and the job requires 'Machine Learning' or 'Deep Learning', basic ATS fails. Our system uses a **Skill Synonym Ontology of 79 canonical skills with 353 aliases and an explicit table of 15 related-skill pairs** that understands relationships (e.g., K8s ↔ Kubernetes, FastAPI ↔ Flask). Furthermore, keyword match is only 35% of our score; we evaluate semantic relevance, quantified achievements (e.g., latency under 72ms), and demonstrable repository artifacts."*
 
 ### Q2: "How does the system prevent algorithmic bias?"
 **Answer:**  
@@ -148,5 +148,23 @@ Follow this exact sequence to wow your review panel:
 - [x] Instant Login active as **Yashashwini** (Lead Recruiter L2)
 - [x] All 7 tabs verified with zero console errors
 - [x] In-app export toasts working smoothly
-- [x] Python test suite verified (26/26 tests passing)
+- [x] Test suites verified (78/78 passing: 49 `pytest` + 29 `npm test`)
 - [x] Review Guide & Demo script handy!
+
+---
+
+## 🌐 Live deployment: what to say and what to check
+
+**What exists:** the web dashboard on Vercel (`https://ai-recruitment-system-lemon.vercel.app`), the FastAPI service on Render (`https://ai-recruitment-api-7blc.onrender.com`) and MongoDB Atlas for accounts, sessions and the 12 / 50 / 100 candidate pools.
+
+**Say it in one breath:** *"The system is deployed as a multi-user web service: the browser talks to a FastAPI backend, accounts are stored server-side with salted PBKDF2 hashes and expiring sessions, Google sign-in is verified on the server, and the candidate pools come from a managed MongoDB database."*
+
+**Before the review**
+- [ ] Open `https://ai-recruitment-api-7blc.onrender.com/health` a minute earlier. The free tier sleeps after about 15 minutes idle, and the first request can take about 50 seconds.
+- [ ] Sign in once with a Gmail address that is listed under *Audience → Test users* in the Google Cloud project (the app is in testing mode), or with an e-mail and password account you created.
+- [ ] Do not demonstrate pasting into the password field: copy, cut and paste are blocked on purpose; autofill and the browser's strong-password suggestion still work.
+
+**Questions you may get**
+- *Where is the data stored?* MongoDB Atlas (`users`, `sessions`, `candidates`); screening scores for the benchmark pools are pre-computed by the Python pipeline, and only uploaded resumes are scored in the browser.
+- *How are passwords protected?* PBKDF2-HMAC-SHA256, 210,000 iterations, per-user salt; sessions are random tokens of which only the SHA-256 is stored; five wrong passwords lock an account for 15 minutes.
+- *Is it production-ready?* No. It runs on free tiers, has not been load-tested and has had no usability study; it is decision support, not an autonomous decision maker.
