@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import { DEFAULT_JOB_ROLES } from "./data/jobRoles";
 import { generateChatbotResponse } from "./utils/chatbotEngine";
+import { buildInterviewKit, BADGE_CLASSES } from "./utils/interviewQuestions";
 import { useAuth } from "./context/AuthContext";
 import JobHome from "./components/JobHome";
 import { isApiMode } from "./config/env";
@@ -163,6 +164,8 @@ export default function App() {
 
   // Interview Assistant State
   const [interviewCandId, setInterviewCandId] = useState("CAN-001");
+  const [interviewType, setInterviewType] = useState("All");
+  const [interviewCopied, setInterviewCopied] = useState(false);
 
   // Copilot Chat
   const [copilotMessages, setCopilotMessages] = useState([
@@ -378,6 +381,34 @@ export default function App() {
   const interviewCandidate = useMemo(() => {
     return candidatesPool.find((c) => c.id === interviewCandId) || candidatesPool[0];
   }, [candidatesPool, interviewCandId]);
+
+  // Full tailored kit (stored questions + generated ones), grouped by category for the filter chips.
+  const interviewKit = useMemo(
+    () => buildInterviewKit(interviewCandidate, activeRole),
+    [interviewCandidate, activeRole],
+  );
+  const interviewTypes = useMemo(() => {
+    const counts = new Map();
+    interviewKit.forEach((q) => counts.set(q.type, (counts.get(q.type) || 0) + 1));
+    return [...counts.entries()];
+  }, [interviewKit]);
+  const activeInterviewType = interviewTypes.some(([t]) => t === interviewType) ? interviewType : "All";
+  const visibleInterviewKit =
+    activeInterviewType === "All" ? interviewKit : interviewKit.filter((q) => q.type === activeInterviewType);
+
+  const copyInterviewKit = async () => {
+    const text = [
+      `Interview kit: ${interviewCandidate.name} (${interviewCandidate.title}) for ${activeRole?.title || "the open role"}`,
+      ...interviewKit.map((q, i) => `${i + 1}. [${q.type}] ${q.q}\n   Look for: ${q.lookFor}`),
+    ].join("\n\n");
+    try {
+      await navigator.clipboard.writeText(text);
+      setInterviewCopied(true);
+      setTimeout(() => setInterviewCopied(false), 1800);
+    } catch {
+      /* clipboard unavailable (insecure context or denied): nothing to do */
+    }
+  };
 
   // Candidates filtering
   const filteredCandidates = useMemo(() => {
@@ -1257,24 +1288,60 @@ export default function App() {
 
               {/* Questions List */}
               <div className="space-y-4">
-                <div className="p-5 rounded-lg border border-slate-200 bg-white">
-                  <h3 className="text-sm font-bold text-slate-900">
-                    Tailored Interview Questionnaire for {interviewCandidate.name} ({interviewCandidate.title})
-                  </h3>
-                  <p className="text-xs text-slate-600 mt-0.5 font-mono">
-                    Generated based on identified resume skills, detected gaps, and verified project snippets.
-                  </p>
+                <div className="p-5 rounded-lg border border-slate-200 bg-white space-y-3">
+                  <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
+                    <div>
+                      <h3 className="text-sm font-bold text-slate-900">
+                        Tailored Interview Questionnaire for {interviewCandidate.name} ({interviewCandidate.title})
+                      </h3>
+                      <p className="text-xs text-slate-600 mt-0.5 font-mono">
+                        {interviewKit.length} questions generated from resume skills, detected gaps, red flags, GitHub risk and the{" "}
+                        {activeRole?.title || "open"} role.
+                      </p>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={copyInterviewKit}
+                      className="shrink-0 px-3 py-1.5 rounded-lg border border-slate-200 bg-white text-xs font-mono text-slate-700 hover:bg-slate-50"
+                    >
+                      {interviewCopied ? "Copied" : "Copy all"}
+                    </button>
+                  </div>
+                  <div className="flex flex-wrap gap-1.5" role="tablist" aria-label="Question categories">
+                    {[["All", interviewKit.length], ...interviewTypes].map(([type, count]) => (
+                      <button
+                        key={type}
+                        type="button"
+                        onClick={() => setInterviewType(type)}
+                        className={`px-2.5 py-1 rounded-full border text-[11px] font-mono transition ${
+                          activeInterviewType === type
+                            ? "bg-slate-900 text-white border-slate-900"
+                            : "bg-white text-slate-600 border-slate-200 hover:bg-slate-50"
+                        }`}
+                      >
+                        {type} ({count})
+                      </button>
+                    ))}
+                  </div>
                 </div>
 
-                {interviewCandidate.interviewQuestions && interviewCandidate.interviewQuestions.length > 0 ? (
-                  interviewCandidate.interviewQuestions.map((q, idx) => (
+                {visibleInterviewKit.length > 0 ? (
+                  visibleInterviewKit.map((q) => (
                     <div
-                      key={idx}
+                      key={q.id}
                       className="p-5 rounded-lg border border-slate-200 bg-white space-y-2.5 relative overflow-hidden"
                     >
-                      <div className="flex justify-between items-center text-xs font-mono">
-                        <span className="font-bold text-indigo-600">QUESTION #{idx + 1} • {q.type}</span>
-                        <span className="text-slate-500">Recruiter Evaluation Rubric</span>
+                      <div className="flex justify-between items-center gap-2 text-xs font-mono">
+                        <span className="font-bold text-slate-900">
+                          QUESTION #{interviewKit.findIndex((k) => k.id === q.id) + 1}
+                        </span>
+                        <span
+                          className={`px-2 py-0.5 rounded-full border text-[11px] ${
+                            BADGE_CLASSES[q.badgeColor] || BADGE_CLASSES.slate
+                          }`}
+                        >
+                          {q.type}
+                        </span>
                       </div>
                       <p className="text-sm font-bold text-slate-900 font-sans">"{q.q}"</p>
                       <div className="p-3 rounded-lg bg-white border border-slate-200 text-xs font-mono text-slate-700">
