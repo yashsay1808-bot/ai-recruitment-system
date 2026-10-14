@@ -64,6 +64,33 @@ const inputClass =
   "w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 " +
   "shadow-sm outline-none transition duration-150 hover:border-slate-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100";
 
+// Blocks copy, cut, paste and drag-and-drop on a field. Password managers and the browser's strong-password
+// suggestion fill fields programmatically (no paste event), so those keep working.
+const clipboardGuards = {
+  onPaste: (e) => e.preventDefault(),
+  onCopy: (e) => e.preventDefault(),
+  onCut: (e) => e.preventDefault(),
+  onDrop: (e) => e.preventDefault(),
+};
+
+// With `noAutofill` the field starts read-only and unlocks on focus. The browser then does not pre-fill saved
+// credentials into a fresh sign-in form (for example right after logging out), but its saved-login dropdown
+// still appears when the user clicks into the field.
+function GuardedInput({ noAutofill = false, onFocus, ...props }) {
+  const [locked, setLocked] = useState(noAutofill);
+  return (
+    <input
+      {...props}
+      {...clipboardGuards}
+      readOnly={locked}
+      onFocus={(e) => {
+        setLocked(false);
+        onFocus?.(e);
+      }}
+    />
+  );
+}
+
 // Soft indigo glow top-centre, faint slate glow bottom-right, and a dotted grid that fades out from the middle.
 const BACKDROP = {
   backgroundImage:
@@ -91,11 +118,12 @@ function Field({ label, children, hint }) {
   );
 }
 
-function PasswordInput({ id, value, onChange, autoComplete, placeholder }) {
+function PasswordInput({ id, value, onChange, autoComplete, placeholder, noAutofill }) {
   const [visible, setVisible] = useState(false);
   return (
     <div className="relative">
-      <input
+      <GuardedInput
+        noAutofill={noAutofill}
         id={id}
         type={visible ? "text" : "password"}
         value={value}
@@ -219,12 +247,15 @@ export default function AuthCard() {
             <form key="signin" onSubmit={handleSignIn} className="mt-5 space-y-4">
               <Field label="Corporate email">
                 {(id) => (
-                  <input
+                  <GuardedInput
+                    noAutofill
                     id={id}
                     type="email"
                     value={credentials.email}
                     onChange={(e) => setCredentials((c) => ({ ...c, email: e.target.value }))}
                     autoComplete="username"
+                    spellCheck={false}
+                    autoCapitalize="none"
                     placeholder="you@company.com"
                     required
                     className={inputClass}
@@ -238,6 +269,7 @@ export default function AuthCard() {
                     value={credentials.password}
                     onChange={(e) => setCredentials((c) => ({ ...c, password: e.target.value }))}
                     autoComplete="current-password"
+                    noAutofill
                   />
                 )}
               </Field>
@@ -276,12 +308,14 @@ export default function AuthCard() {
               </Field>
               <Field label="Gmail address">
                 {(id) => (
-                  <input
+                  <GuardedInput
                     id={id}
                     type="email"
                     value={form.email}
                     onChange={setField("email")}
                     autoComplete="email"
+                    spellCheck={false}
+                    autoCapitalize="none"
                     placeholder="you@gmail.com"
                     required
                     className={inputClass}

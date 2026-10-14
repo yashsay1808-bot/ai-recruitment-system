@@ -41,6 +41,12 @@ export function AuthProvider({ children }) {
 
   const signOut = useCallback(async () => {
     await authService.signOut();
+    // Stop Google from auto-selecting the previous account on the next visit.
+    try {
+      window.google?.accounts?.id?.disableAutoSelect?.();
+    } catch {
+      /* Google script not loaded: nothing to reset */
+    }
     setUser(null);
   }, []);
 
