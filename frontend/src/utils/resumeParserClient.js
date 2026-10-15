@@ -344,7 +344,7 @@ export async function parseUploadedFiles(files, activeRole = { title: "Senior Ma
       matchedSkills: matchedSkills,
       partiallyMatchedSkills: [],
       missingSkills: missingSkills.slice(0, 4),
-      salaryRange: activeRole.salaryRange,
+      salaryRange: activeRole.salaryInr ? `INR ${activeRole.salaryInr}` : "",
       salaryInr: activeRole.salaryInr,
       level: activeRole.level,
       bandPosPct: Math.floor(matchScore * 0.85),
@@ -377,7 +377,7 @@ export async function parseUploadedFiles(files, activeRole = { title: "Senior Ma
         },
         seniorityComp: {
           score: Math.floor(matchScore * 0.9),
-          feedback: `Target compensation aligned with ${activeRole.salaryRange}.`
+          feedback: `Target compensation aligned with INR ${activeRole.salaryInr}.`
         }
       },
       debateSnippet: [

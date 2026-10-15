@@ -164,7 +164,6 @@ export default function JobHome({
 
           <dl className="mt-4 grid grid-cols-1 gap-4 border-t border-slate-200 pt-4 sm:grid-cols-3">
             <Fact label="Minimum tenure" value={activeRole.minExperience} />
-            <Fact label="Compensation (USD)" value={activeRole.salaryRange} />
             <Fact label="Compensation (INR)" value={activeRole.salaryInr} />
           </dl>
 
@@ -278,27 +277,15 @@ export default function JobHome({
               </div>
             </div>
 
-            <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
-              <div>
-                <label className="mb-1 block text-xs text-slate-600">Salary range (USD)</label>
-                <input
-                  type="text"
-                  value={newRoleForm.salaryRange}
-                  onChange={setForm("salaryRange")}
-                  placeholder="$160k - $190k"
-                  className={inputClass}
-                />
-              </div>
-              <div>
-                <label className="mb-1 block text-xs text-slate-600">Salary range (INR, annual)</label>
-                <input
-                  type="text"
-                  value={newRoleForm.salaryInr}
-                  onChange={setForm("salaryInr")}
-                  placeholder="35 - 42 LPA"
-                  className={inputClass}
-                />
-              </div>
+            <div>
+              <label className="mb-1 block text-xs text-slate-600">Salary range (INR, annual)</label>
+              <input
+                type="text"
+                value={newRoleForm.salaryInr}
+                onChange={setForm("salaryInr")}
+                placeholder="35 - 42 LPA"
+                className={inputClass}
+              />
             </div>
 
             <div>

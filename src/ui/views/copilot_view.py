@@ -59,16 +59,14 @@ def _salary_estimator(ranked, jd) -> None:
     choice = st.selectbox("Candidate", labels, key="copilot_salary_pick", label_visibility="collapsed")
     cand = ranked[labels.index(choice)]
     comp = get_council_report(cand, jd)["executive_consensus"].get("compensation") or {}
-    usd, inr = comp.get("usd", {}), comp.get("inr", {})
-    if not usd:
+    inr = comp.get("inr", {})
+    if not inr:
         st.caption("No compensation estimate available.")
         return
     T.md(T.card(
         f'<div class="ob-between"><b>{T.esc(comp.get("level_title", comp.get("level", "")))}</b>'
         f'<span class="ob-chip solid" style="--c:{T.CYAN}">target {T.esc(comp.get("jd_target_level", ""))}</span></div>'
-        f'<div class="ob-num" style="font-size:1.25rem;margin-top:8px;color:{T.EMERALD}">${usd["min"]:,.0f} - ${usd["max"]:,.0f}</div>'
-        f'<div class="ob-sub">suggested ${usd["suggested_target"]:,.0f}</div>'
-        f'<div class="ob-num" style="font-size:1.05rem;margin-top:8px;color:{T.AMBER}">INR {inr["min_lpa"]:g} - {inr["max_lpa"]:g} LPA</div>'
+        f'<div class="ob-num" style="font-size:1.25rem;margin-top:8px;color:{T.AMBER}">INR {inr["min_lpa"]:g} - {inr["max_lpa"]:g} LPA</div>'
         f'<div class="ob-sub">suggested {inr["suggested_target_lpa"]:g} LPA · band position {comp.get("band_position_pct", 0)}%</div>'
         f'<div class="ob-sub" style="margin-top:8px;font-size:.68rem">{T.esc(comp.get("disclaimer", ""))}</div>', T.EMERALD))
 

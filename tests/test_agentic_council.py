@@ -47,7 +47,7 @@ def test_leveling_and_comp_bands():
     sen = RecruitmentCouncil(use_llm=False).evaluate_candidate_council(STRONG, JD)["agent_scorecards"]["seniority_comp"]
     comp = sen["metrics"]["compensation"]
     assert comp["level"] in {"L3", "L4", "L5", "L6"}
-    assert comp["usd"]["min"] < comp["usd"]["max"] and comp["inr"]["min_lpa"] < comp["inr"]["max_lpa"]
+    assert "usd" not in comp and comp["inr"]["min_lpa"] < comp["inr"]["max_lpa"]
 
 
 def test_llm_bias_text_is_audited_and_score_nudge_is_bounded():

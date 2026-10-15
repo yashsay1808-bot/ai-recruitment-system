@@ -1,6 +1,6 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
-import { loadPool, chatbot, conversation, role, first, uniqueNames } from "./helpers.mjs";
+import { loadPool, chatbot, conversation, role, first, uniqueNames, interview } from "./helpers.mjs";
 
 const pool50 = loadPool("benchmark50"); // 50 distinct names
 const pool100 = loadPool("benchmark100"); // 50 names, each used by two different people
@@ -209,5 +209,38 @@ describe("chatbot: interview questions only for candidates who move forward", ()
     const reply = ask(conversation(pool12), `interview questions for ${strong.name}`);
     assert.match(reply.text, /interview questions for/i);
     assert.match(reply.text, /Look for:/);
+  });
+});
+
+describe("money is shown in INR only", () => {
+  it("replaces the stored USD band of every candidate with the INR band, in all three pools", async () => {
+    const { inrOnlyPool } = await import("../src/utils/money.js");
+    for (const name of ["core12", "benchmark50", "benchmark100"]) {
+      for (const c of inrOnlyPool(loadPool(name))) {
+        assert.match(c.salaryRange, /^(INR \d|n\/a$)/, `${c.id} ${c.salaryRange}`);
+        assert.doesNotMatch(c.council?.seniorityComp?.feedback || "", /\$\s?\d|USD/, `${c.id} feedback`);
+      }
+    }
+  });
+
+  it("never mentions dollars in compensation answers, outreach drafts or interview questions", async () => {
+    const { inrOnlyPool } = await import("../src/utils/money.js");
+    const pool = inrOnlyPool(pool12);
+    const strong = pool.find((c) => c.verdict === "STRONG_HIRE");
+    const chat = conversation(pool);
+    const asked = [
+      `what is the compensation for ${strong.name}?`,
+      "what is the compensation band?",
+      "give me a shortlist of 3",
+      `draft outreach email for ${strong.name}`,
+      `interview questions for ${strong.name}`,
+    ];
+    for (const q of asked) {
+      const reply = ask(chat, q);
+      assert.doesNotMatch(reply.text, /\$\s?\d|\bUSD\b/, `dollars in answer to "${q}"`);
+    }
+    assert.match(ask(conversation(pool), `what is the compensation for ${strong.name}?`).text, /INR \d/);
+    const questions = interview.buildInterviewKit(strong, role).map((k) => k.q).join(" ");
+    assert.doesNotMatch(questions, /\$\s?\d|\bUSD\b/);
   });
 });
