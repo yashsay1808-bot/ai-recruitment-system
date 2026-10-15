@@ -153,6 +153,7 @@ export default function AuthCard() {
   const [notice, setNotice] = useState("");
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
+  const [googleBusy, setGoogleBusy] = useState(false);
   const [credentials, setCredentials] = useState({ email: "", password: "" });
   const [form, setForm] = useState(EMPTY_SIGN_UP);
 
@@ -178,11 +179,15 @@ export default function AuthCard() {
 
   const handleGoogle = async (credential) => {
     setError("");
+    setNotice("");
+    setGoogleBusy(true);
     try {
       await signInWithGoogle(credential);
     } catch (err) {
       setError(err.message || "Could not sign in with Google. Please try again.");
+      setGoogleBusy(false);
     }
+    // On success the gate swaps this card out.
   };
 
   const handleSignUp = async (e) => {
@@ -375,6 +380,11 @@ export default function AuthCard() {
               <div className="mt-4">
                 <GoogleSignIn onCredential={handleGoogle} onError={setError} />
               </div>
+              {googleBusy && (
+                <p role="status" className="mt-3 rounded-lg bg-indigo-50 px-3 py-2 text-center text-xs text-indigo-800">
+                  Signing you in with Google… The server may need up to a minute to wake up. Please wait.
+                </p>
+              )}
               <p className="mt-2 text-center text-xs text-slate-500">Only @gmail.com accounts are accepted.</p>
             </div>
           )}

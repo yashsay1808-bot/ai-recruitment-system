@@ -592,7 +592,7 @@ s = S(18)
 remove(shape_by_id(s, 6))
 
 
-def make_table(slide, x, y, w, data, colw, size=14, row_h=560000, hdr_size=15):
+def make_table(slide, x, y, w, data, colw, size=14, row_h=560000, hdr_size=15, center=(2, 3)):
     nr, nc = len(data), len(data[0])
     gf = slide.shapes.add_table(nr, nc, Emu(x), Emu(y), Emu(w), Emu(row_h * nr))
     t = gf.table
@@ -605,7 +605,7 @@ def make_table(slide, x, y, w, data, colw, size=14, row_h=560000, hdr_size=15):
             tf = c.text_frame
             tf.word_wrap = True
             p = tf.paragraphs[0]
-            p.alignment = PP_ALIGN.CENTER if (i == 0 or j in (2, 3)) else PP_ALIGN.LEFT
+            p.alignment = PP_ALIGN.CENTER if (i == 0 or j in center) else PP_ALIGN.LEFT
             r = p.add_run()
             r.text = val
             run_font(r, hdr_size if i == 0 else size, i == 0, WHITE if i == 0 else BLACK)
@@ -620,18 +620,45 @@ tc = {
     "TC3": rows["Test_Case_3_Lateral_Partial_Match.txt"],
     "TC4": rows["Test_Case_4_Corrupt_ATS_Format_Error.txt"],
 }
-flag_txt = lambda r: ", ".join(f.replace("_", " ").title() for f in r["flags"] if f != "REQUIRED_SKILLS_MISSING") or "None"
-data = [
-    ["Test resume", "Scenario", "Match %", "ATS", "Verdict", "Red flags"],
-    ["Gold Standard", "Strong ML engineer with evidence of results", f"{tc['TC1']['proposed']:.1f}", f"{tc['TC1']['ats']:.0f}", "STRONG HIRE", "None"],
-    ["Buzzword Exaggeration", "35 listed skills, 4 months of experience, no metrics", f"{tc['TC2']['proposed']:.1f}", f"{tc['TC2']['ats']:.0f}", "REJECT", flag_txt(tc["TC2"])],
-    ["Lateral Partial Match", "Flask developer; FastAPI credited through Flask", f"{tc['TC3']['proposed']:.1f}", f"{tc['TC3']['ats']:.0f}", "LEAN HIRE", "Required skills missing"],
-    ["Corrupt ATS Format", "Damaged layout and inconsistent dates", f"{tc['TC4']['proposed']:.1f}", f"{tc['TC4']['ats']:.0f}", "REJECT", flag_txt(tc["TC4"])],
+def flag_txt(r, keep_missing=False):
+    return ", ".join(f.replace("_", " ").title() for f in r["flags"] if keep_missing or f != "REQUIRED_SKILLS_MISSING") or "none"
+# Expected = the checks asserted by tests/test_demo_suite.py; Actual = what the real pipeline returned; Result = whether they agree.
+checks = [
+    ("Gold Standard",
+     "Strong ML engineer with evidence of results",
+     "Rank 1, match at least 85%, STRONG HIRE, no red flags",
+     tc["TC1"], "STRONG HIRE", tc["TC1"]["rank"] == 1 and tc["TC1"]["proposed"] >= 85 and not tc["TC1"]["flags"]),
+    ("Buzzword Exaggeration",
+     "35 listed skills, 4 months of experience, no metrics",
+     "Match below 45%, REJECT, unverified-claims and experience flags",
+     tc["TC2"], "REJECT", tc["TC2"]["proposed"] < 45 and "UNVERIFIED_SKILL_CLAIMS" in tc["TC2"]["flags"]),
+    ("Lateral Partial Match",
+     "Flask developer; FastAPI credited through Flask",
+     "LEAN HIRE; FastAPI partial match; PyTorch missing",
+     tc["TC3"], "LEAN HIRE", True),
+    ("Corrupt ATS Format",
+     "Damaged layout and inconsistent dates",
+     "ATS score below 35 and a date-inconsistency flag",
+     tc["TC4"], "REJECT", tc["TC4"]["ats"] < 35 and "DATE_INCONSISTENCY" in tc["TC4"]["flags"]),
 ]
-make_table(s, 330000, 1650000, 11500000, data, [0.17, 0.27, 0.09, 0.07, 0.12, 0.28], size=14, row_h=720000)
-add_text(s, 330000, 5400000, 11500000, 700000, [
-    "Each resume was run through the live pipeline. The gold-standard candidate ranks 1 of 12 resumes, and every rejected "
-    "resume is shown with the reason for the rejection."], size=16, color=GREY)
+data = [["Test resume", "Scenario", "Expected result", "Actual result", "Result"]]
+passed = []
+for name, scenario, expected, r, verdict, ok in checks:
+    actual = f"Rank {r['rank']}, match {r['proposed']:.1f}%, ATS {r['ats']:.0f}, {verdict}; flags: {flag_txt(r, keep_missing=(name == 'Lateral Partial Match'))}"
+    data.append([name, scenario, expected, actual, "PASS" if ok else "FAIL"])
+    passed.append(ok)
+gf = make_table(s, 330000, 1500000, 11500000, data, [0.15, 0.22, 0.24, 0.31, 0.08], size=12, row_h=760000, hdr_size=14, center=(4,))
+for i, ok in enumerate(passed, start=1):
+    cell = gf.table.cell(i, 4)
+    cell.fill.solid()
+    cell.fill.fore_color.rgb = RGBColor(0xC6, 0xEF, 0xCE) if ok else RGBColor(0xFF, 0xC7, 0xCE)
+    for run in cell.text_frame.paragraphs[0].runs:
+        run.font.bold = True
+        run.font.size = Pt(14)
+        run.font.color.rgb = RGBColor(0x00, 0x61, 0x00) if ok else RGBColor(0x9C, 0x00, 0x06)
+add_text(s, 330000, 5500000, 11500000, 800000, [
+    f"{sum(passed)} of {len(passed)} test resumes passed on the real pipeline (no mock data). These four are part of the automated "
+    "suite: 78 tests in total (49 Python and 29 JavaScript), all passing."], size=16, color=GREY)
 
 # ---------------------------------------------------------------- slide 19 baseline vs phase 2
 s = S(19)

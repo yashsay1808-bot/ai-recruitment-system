@@ -1,5 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import { authService } from "../utils/authService";
+import { warmUpApi } from "../utils/apiClient";
 
 const AuthContext = createContext(null);
 
@@ -7,9 +8,11 @@ export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [status, setStatus] = useState("loading"); // "loading" | "ready"
 
-  // Restore an existing session (if any) once on load.
+  // Restore an existing session (if any) once on load. The warm-up ping wakes the API while the user is
+  // still typing or verifying with Google, so that signing in does not wait for a cold start.
   useEffect(() => {
     let cancelled = false;
+    warmUpApi();
     authService
       .getSession()
       .then((u) => {
