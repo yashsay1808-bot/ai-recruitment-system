@@ -193,3 +193,21 @@ describe("chatbot: fallback and robustness", () => {
     assert.match(ask(chat, `compare ${pool12[0].name} and ${pool12[1].name}`).text, /leads on|evenly/);
   });
 });
+
+describe("chatbot: interview questions only for candidates who move forward", () => {
+  it("declines to prepare a kit for a rejected candidate and offers the shortlist instead", () => {
+    const rejected = pool12.find((c) => c.verdict === "REJECT");
+    const chat = conversation(pool12);
+    const reply = ask(chat, `interview questions for ${rejected.name}`);
+    assert.match(reply.text, /was rejected/i);
+    assert.doesNotMatch(reply.text, /\[Technical Verification\]|Look for:/);
+    assert.ok(reply.suggestions.some((s) => /shortlist/i.test(s)));
+  });
+
+  it("still prepares the kit for a shortlisted candidate", () => {
+    const strong = pool12.find((c) => c.verdict === "STRONG_HIRE");
+    const reply = ask(conversation(pool12), `interview questions for ${strong.name}`);
+    assert.match(reply.text, /interview questions for/i);
+    assert.match(reply.text, /Look for:/);
+  });
+});

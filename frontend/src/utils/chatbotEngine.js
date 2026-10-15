@@ -479,6 +479,16 @@ function salaryReply(c, role) {
 }
 
 function interviewReply(c, role) {
+  if (c.verdict === "REJECT") {
+    const f = first(c.name);
+    return makeReply(
+      `**${c.name} was rejected, so I have not prepared interview questions.** Interview kits are only for candidates who move forward (Strong Hire or Lean Hire).
+
+Why: ${c.councilScore != null ? `the council scored ${f} ${fix1(c.councilScore)} and ` : ""}the verdict is Reject.`,
+      { intent: "interview", candidateIds: [c.id] },
+      [`Why was ${f} rejected?`, "Give me a shortlist of 3", `What are ${f}'s skill gaps?`],
+    );
+  }
   const kit = buildInterviewKit(c, role);
   const wanted = ["Technical Verification", "Skill Deep-Dive", "System Design", "Red-Flag Verification", "Behavioral & Collaboration"];
   const chosen = [];

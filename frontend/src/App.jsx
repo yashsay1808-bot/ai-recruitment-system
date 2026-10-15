@@ -378,13 +378,16 @@ export default function App() {
     return candidatesPool.find((c) => c.id === compareCandBId) || candidatesPool[1] || candidatesPool[0];
   }, [candidatesPool, compareCandBId]);
 
+  // Interview kits are only for candidates who move forward, so rejected candidates are not listed.
+  const interviewPool = useMemo(() => candidatesPool.filter((c) => c.verdict !== "REJECT"), [candidatesPool]);
+  const interviewExcluded = candidatesPool.length - interviewPool.length;
   const interviewCandidate = useMemo(() => {
-    return candidatesPool.find((c) => c.id === interviewCandId) || candidatesPool[0];
-  }, [candidatesPool, interviewCandId]);
+    return interviewPool.find((c) => c.id === interviewCandId) || interviewPool[0] || null;
+  }, [interviewPool, interviewCandId]);
 
   // Full tailored kit (stored questions + generated ones), grouped by category for the filter chips.
   const interviewKit = useMemo(
-    () => buildInterviewKit(interviewCandidate, activeRole),
+    () => (interviewCandidate ? buildInterviewKit(interviewCandidate, activeRole) : []),
     [interviewCandidate, activeRole],
   );
   const interviewTypes = useMemo(() => {
@@ -397,6 +400,7 @@ export default function App() {
     activeInterviewType === "All" ? interviewKit : interviewKit.filter((q) => q.type === activeInterviewType);
 
   const copyInterviewKit = async () => {
+    if (!interviewCandidate) return;
     const text = [
       `Interview kit: ${interviewCandidate.name} (${interviewCandidate.title}) for ${activeRole?.title || "the open role"}`,
       ...interviewKit.map((q, i) => `${i + 1}. [${q.type}] ${q.q}\n   Look for: ${q.lookFor}`),
@@ -1324,11 +1328,11 @@ export default function App() {
                 <div className="flex items-center gap-2">
                   <span className="text-xs font-mono text-slate-600">Candidate:</span>
                   <select
-                    value={interviewCandId}
+                    value={interviewCandidate?.id || ""}
                     onChange={(e) => setInterviewCandId(e.target.value)}
                     className="px-3 py-1.5 rounded-lg border text-xs font-mono bg-white border-slate-200 text-slate-900 outline-none"
                   >
-                    {candidatesPool.map((c) => (
+                    {interviewPool.map((c) => (
                       <option key={c.id} value={c.id}>
                         #{c.rank} {c.name} ({c.matchScore}%)
                       </option>
@@ -1337,13 +1341,25 @@ export default function App() {
                 </div>
               </div>
 
+              {interviewExcluded > 0 && (
+                <div className="px-4 py-2.5 rounded-lg border border-amber-200 bg-amber-50 text-xs text-amber-900">
+                  {interviewExcluded} rejected {interviewExcluded === 1 ? "candidate is" : "candidates are"} not listed here. Interview
+                  questions are prepared only for candidates who move forward (Strong Hire or Lean Hire).
+                </div>
+              )}
+              {!interviewCandidate && (
+                <div className="p-5 rounded-lg border border-slate-200 bg-white text-sm text-slate-600">
+                  No candidate has moved forward yet, so there are no interview questions to show.
+                </div>
+              )}
+
               {/* Questions List */}
               <div className="space-y-4">
                 <div className="p-5 rounded-lg border border-slate-200 bg-white space-y-3">
                   <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
                     <div>
                       <h3 className="text-sm font-bold text-slate-900">
-                        Tailored Interview Questionnaire for {interviewCandidate.name} ({interviewCandidate.title})
+                        Tailored Interview Questionnaire for {interviewCandidate?.name || "—"} ({interviewCandidate?.title || "no shortlisted candidate"})
                       </h3>
                       <p className="text-xs text-slate-600 mt-0.5 font-mono">
                         {interviewKit.length} questions generated from resume skills, detected gaps, red flags, GitHub risk and the{" "}

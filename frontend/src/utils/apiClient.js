@@ -21,6 +21,18 @@ export const tokenStore = {
   clear: () => safeStorage.remove(TOKEN_KEY),
 };
 
+const REQUEST_TIMEOUT_MS = 120000;
+
+/** Fire-and-forget request that wakes a sleeping API so that the first real call is not slow. */
+export function warmUpApi(baseUrl = config.apiBaseUrl) {
+  if (!baseUrl) return;
+  try {
+    fetch(`${baseUrl}/health`, { mode: "no-cors", cache: "no-store" }).catch(() => {});
+  } catch {
+    /* nothing to do */
+  }
+}
+
 export class ApiError extends Error {
   constructor(message, status, details) {
     super(message);
@@ -43,15 +55,24 @@ export function createApiClient({ baseUrl = config.apiBaseUrl, getToken = tokenS
     if (token) headers.Authorization = `Bearer ${token}`;
     if (body !== undefined) headers["Content-Type"] = "application/json";
 
+    // The free hosting tier sleeps when idle and can need about a minute to wake up, so allow for that.
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
     let res;
     try {
       res = await fetch(`${baseUrl}${path}`, {
         method,
         headers,
         body: body === undefined ? undefined : JSON.stringify(body),
+        signal: controller.signal,
       });
-    } catch {
+    } catch (err) {
+      if (err?.name === "AbortError") {
+        throw new ApiError("The server is taking too long to respond. It may be waking up; please try again in a minute.", 0);
+      }
       throw new ApiError("Cannot reach the server. Check your connection and try again.", 0);
+    } finally {
+      clearTimeout(timer);
     }
 
     const payload = res.status === 204 ? null : await res.json().catch(() => null);
