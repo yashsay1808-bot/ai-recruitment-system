@@ -33,7 +33,7 @@ AGENT_META = {
     "tech_lead": ("TECH LEAD", "Architecture · craftsmanship · repo maturity", T.ACCENT, "TL"),
     "culture_retention": ("CULTURE & RETENTION", "Tenure · progression · stability", T.ACCENT, "CR"),
     "fair_auditor": ("FAIR HIRING AUDITOR", "Bias audit · merit-only score", T.ACCENT, "FA"),
-    "seniority_comp": ("SENIORITY & COMP", "Level L3-L6 · USD / INR bands", "#4f46e5", "SC"),
+    "seniority_comp": ("SENIORITY & COMP", "Level L3-L6 · INR bands", "#4f46e5", "SC"),
 }
 AGENT_BY_NAME = {
     "TechLeadAgent": "tech_lead", "CultureRetentionAgent": "culture_retention", "FairHiringAuditor": "fair_auditor",
@@ -76,14 +76,13 @@ def _agent_card(key: str, card: Dict[str, Any]) -> str:
     extra = ""
     if key == "seniority_comp":
         comp = metrics.get("compensation", {})
-        usd, inr = comp.get("usd", {}), comp.get("inr", {})
+        inr = comp.get("inr", {})
         pos = comp.get("band_position_pct", 50)
         extra = (
             f'<div style="margin-top:10px"><div class="ob-eyebrow">Predicted level</div>'
             f'<div class="ob-num" style="font-size:1.35rem;color:{color}">{T.esc(comp.get("level", "?"))}'
             f'<span class="ob-sub" style="font-size:.74rem"> {T.esc(comp.get("level_title", "").split(" - ")[-1])}</span></div>'
             f'<div class="ob-band"><div class="fill"></div><div class="mk" style="left:{pos}%"></div></div>'
-            f'{T.chip("$%sk-$%sk" % (int(usd.get("min", 0) / 1000), int(usd.get("max", 0) / 1000)), T.AMBER)}'
             f'{T.chip("INR %g-%g LPA" % (inr.get("min_lpa", 0), inr.get("max_lpa", 0)), T.AMBER)}</div>'
         )
     elif key == "fair_auditor":

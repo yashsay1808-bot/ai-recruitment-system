@@ -11,7 +11,7 @@ Agents
 1. ``TechLeadAgent``                     - architecture depth, craftsmanship, tooling, repo maturity.
 2. ``CultureRetentionAgent``             - tenure consistency, progression, promotion velocity.
 3. ``FairHiringAuditor``                 - audits the *other* agents for bias, produces a merit-only score.
-4. ``SeniorityCompensationEstimator``    - L3-L6 leveling plus US (USD) and India (INR) comp bands.
+4. ``SeniorityCompensationEstimator``    - L3-L6 leveling plus India (INR) comp bands.
 
 Orchestration (``RecruitmentCouncil.evaluate_candidate_council``)
 -----------------------------------------------------------------
@@ -946,10 +946,10 @@ class FairHiringAuditor(_BaseAgent):
 
 # Indicative total-compensation planning bands. Override via RecruitmentCouncil(comp_bands=...).
 DEFAULT_COMP_BANDS: Dict[int, Dict[str, Any]] = {
-    3: {"title": "L3 - Associate Engineer", "usd": (85_000, 125_000), "inr_lpa": (6.0, 14.0)},
-    4: {"title": "L4 - Software Engineer", "usd": (120_000, 175_000), "inr_lpa": (14.0, 28.0)},
-    5: {"title": "L5 - Senior Engineer", "usd": (170_000, 250_000), "inr_lpa": (28.0, 50.0)},
-    6: {"title": "L6 - Principal Engineer", "usd": (240_000, 380_000), "inr_lpa": (50.0, 90.0)},
+    3: {"title": "L3 - Associate Engineer", "inr_lpa": (6.0, 14.0)},
+    4: {"title": "L4 - Software Engineer", "inr_lpa": (14.0, 28.0)},
+    5: {"title": "L5 - Senior Engineer", "inr_lpa": (28.0, 50.0)},
+    6: {"title": "L6 - Principal Engineer", "inr_lpa": (50.0, 90.0)},
 }
 
 
@@ -958,7 +958,7 @@ class SeniorityCompensationEstimator(_BaseAgent):
 
     key = "seniority_comp"
     name = "SeniorityCompensationEstimator"
-    role = "Seniority leveling (L3-L6) and compensation band estimation (USD and INR)"
+    role = "Seniority leveling (L3-L6) and compensation band estimation (INR)"
     llm_score_adjust_limit = 0
     persona_prompt = (
         "You are a compensation and leveling analyst. Estimate engineering level L3 (Associate) to L6 (Principal) "
@@ -1019,17 +1019,12 @@ class SeniorityCompensationEstimator(_BaseAgent):
         score = float(fit_table.get(max(-3, min(3, diff)), 20))
 
         band = self.bands[level]
-        usd_lo, usd_hi = band["usd"]
         lpa_lo, lpa_hi = band["inr_lpa"]
         position = _clamp(0.25 + 0.45 * (f.coverage if f.required else 0.5) + 0.30 * min(1.0, len(f.scope_terms) / 6.0), 0.0, 1.0)
         comp = {
             "level": f"L{level}",
             "level_title": band["title"],
             "jd_target_level": f"L{target}",
-            "usd": {
-                "currency": "USD", "min": usd_lo, "max": usd_hi,
-                "suggested_target": int(round((usd_lo + position * (usd_hi - usd_lo)) / 1000.0) * 1000),
-            },
             "inr": {
                 "currency": "INR", "unit": "LPA (lakhs per annum)", "min_lpa": lpa_lo, "max_lpa": lpa_hi,
                 "suggested_target_lpa": round(lpa_lo + position * (lpa_hi - lpa_lo), 1),
@@ -1042,7 +1037,7 @@ class SeniorityCompensationEstimator(_BaseAgent):
         obs = list(notes)
         obs.append(f"Target level for {f.jd_title} is L{target}; estimated candidate level is L{level}.")
         obs.append(
-            f"Indicative band: ${usd_lo:,.0f}-${usd_hi:,.0f} (US) and INR {lpa_lo:g}-{lpa_hi:g} LPA (India); "
+            f"Indicative band: INR {lpa_lo:g}-{lpa_hi:g} LPA; "
             f"suggested placement at {comp['band_position_pct']}% of the band."
         )
         strengths: List[str] = []
@@ -1452,7 +1447,7 @@ class RecruitmentCouncil:
             reasoning.append(f"Main risk: {top_concern}")
         reasoning.append(
             f"Leveling: {comp['level_title']} (role target {comp['jd_target_level']}); indicative band "
-            f"${comp['usd']['min']:,.0f}-${comp['usd']['max']:,.0f} US, INR {comp['inr']['min_lpa']:g}-{comp['inr']['max_lpa']:g} LPA India."
+            f"INR {comp['inr']['min_lpa']:g}-{comp['inr']['max_lpa']:g} LPA."
         )
         reasoning.append(
             f"Fairness: integrity {audit.metrics['fairness_integrity_score']:.0f}/100 with {len(audit.metrics['bias_flags'])} flag(s); "

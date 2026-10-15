@@ -10,6 +10,7 @@
  */
 import { config, isApiMode } from "../config/env";
 import { api } from "./apiClient";
+import { inrOnlyPool } from "./money";
 import { CANDIDATES_12, CANDIDATES_50, CANDIDATES_100 } from "../data/candidatesData";
 
 export const POOLS = {
@@ -18,15 +19,19 @@ export const POOLS = {
   benchmark100: { id: "benchmark100", label: "100 Enterprise Benchmark Suite", count: 100 },
 };
 
-const LOCAL = { core12: CANDIDATES_12, benchmark50: CANDIDATES_50, benchmark100: CANDIDATES_100 };
+const LOCAL = {
+  core12: inrOnlyPool(CANDIDATES_12),
+  benchmark50: inrOnlyPool(CANDIDATES_50),
+  benchmark100: inrOnlyPool(CANDIDATES_100),
+};
 
-export const INITIAL_POOL = CANDIDATES_12;
+export const INITIAL_POOL = LOCAL.core12;
 
 export const candidatesService = {
   async loadPool(poolId) {
     if (!POOLS[poolId]) throw new Error(`Unknown candidate pool: ${poolId}`);
     if (isApiMode(config.candidatesProvider)) {
-      return api.get(`/candidates?pool=${encodeURIComponent(poolId)}`);
+      return inrOnlyPool(await api.get(`/candidates?pool=${encodeURIComponent(poolId)}`));
     }
     return LOCAL[poolId];
   },

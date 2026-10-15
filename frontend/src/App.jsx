@@ -23,6 +23,8 @@ import {
 import { DEFAULT_JOB_ROLES } from "./data/jobRoles";
 import { generateChatbotReply } from "./utils/chatbotEngine";
 import { buildInterviewKit, BADGE_CLASSES } from "./utils/interviewQuestions";
+import { inr } from "./utils/money";
+import Analytics from "./components/Analytics";
 import { useAuth } from "./context/AuthContext";
 import JobHome from "./components/JobHome";
 import { isApiMode } from "./config/env";
@@ -121,7 +123,6 @@ export default function App() {
     department: "Engineering Org",
     level: "L4/L5 Senior",
     minExperience: "3+ Years Production",
-    salaryRange: "$150k - $180k",
     salaryInr: "30 - 38 LPA",
     description: "",
     skills: "Python, Docker, AWS, CI/CD, REST API"
@@ -219,7 +220,6 @@ export default function App() {
       department: newRoleForm.department.trim() || "Engineering Org",
       level: newRoleForm.level.trim() || "L4/L5 Senior",
       minExperience: newRoleForm.minExperience.trim() || "2+ Years Production",
-      salaryRange: newRoleForm.salaryRange.trim() || "$140k - $170k",
       salaryInr: newRoleForm.salaryInr.trim() || "28 - 36 LPA",
       status: "ACCEPTING CANDIDATES",
       description: newRoleForm.description.trim() || `Enterprise hiring for ${newRoleForm.title}.`,
@@ -233,7 +233,6 @@ export default function App() {
       department: "Engineering Org",
       level: "L4/L5 Senior",
       minExperience: "3+ Years Production",
-      salaryRange: "$150k - $180k",
       salaryInr: "30 - 38 LPA",
       description: "",
       skills: "Python, Docker, AWS, CI/CD, REST API"
@@ -1159,7 +1158,7 @@ export default function App() {
                     <div className="my-2.5 h-2 rounded-full bg-slate-100 relative">
                       <div className="absolute top-0 bottom-0 left-0 rounded-full bg-indigo-600" style={{ width: `${councilCandidate.bandPosPct}%` }} />
                     </div>
-                    <div className="text-xs font-mono text-amber-700 font-bold">{councilCandidate.salaryRange}</div>
+                    <div className="text-xs font-mono text-amber-700 font-bold">{inr(councilCandidate)}</div>
                   </div>
                 </div>
               </div>
@@ -1297,8 +1296,8 @@ export default function App() {
                     </tr>
                     <tr>
                       <td className="py-3.5 px-5 font-bold text-slate-900">Salary Range Target</td>
-                      <td className="py-3.5 px-5 text-amber-700">{candA.salaryRange}</td>
-                      <td className="py-3.5 px-5 text-amber-700">{candB.salaryRange}</td>
+                      <td className="py-3.5 px-5 text-amber-700">{inr(candA)}</td>
+                      <td className="py-3.5 px-5 text-amber-700">{inr(candB)}</td>
                       <td className="py-3.5 px-5 text-right text-slate-600">Level Aligned</td>
                     </tr>
                   </tbody>
@@ -1429,72 +1428,7 @@ export default function App() {
           {/* ================================================================ */}
           {/* PAGE 6: RECRUITER ANALYTICS (Recruiter Analytics)              */}
           {/* ================================================================ */}
-          {activeNav === "analytics" && (
-            <div className="space-y-6">
-              <div className="p-5 rounded-lg border border-slate-200 bg-white">
-                <div className="text-[11px] font-mono tracking-widest uppercase text-indigo-600 font-bold">
-                  Talent Acquisition Intelligence
-                </div>
-                <h1 className="text-2xl font-extrabold tracking-tight mt-0.5">
-                  Recruiter Analytics & Cohort Metrics
-                </h1>
-                <p className="text-xs text-slate-600 font-mono mt-1">
-                  Candidate pool funnel, score density distribution, and red-flag frequency metrics.
-                </p>
-              </div>
-
-              {/* 4 Metrics */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div className="p-5 rounded-lg border border-slate-200 bg-white">
-                  <div className="text-xs font-mono text-slate-600">POOL CONVERSION RATE</div>
-                  <div className="text-3xl font-mono font-bold text-emerald-700 mt-2">16.7%</div>
-                  <div className="text-xs text-slate-500 font-mono mt-1">2 of 12 Strong Hires</div>
-                </div>
-
-                <div className="p-5 rounded-lg border border-slate-200 bg-white">
-                  <div className="text-xs font-mono text-slate-600">MEDIAN SCORE</div>
-                  <div className="text-3xl font-mono font-bold text-indigo-600 mt-2">48.8%</div>
-                  <div className="text-xs text-slate-500 font-mono mt-1">Cohort benchmark</div>
-                </div>
-
-                <div className="p-5 rounded-lg border border-slate-200 bg-white">
-                  <div className="text-xs font-mono text-slate-600">RED FLAG INTERCEPT RATE</div>
-                  <div className="text-3xl font-mono font-bold text-amber-700 mt-2">58.3%</div>
-                  <div className="text-xs text-slate-500 font-mono mt-1">7 of 12 flagged</div>
-                </div>
-
-                <div className="p-5 rounded-lg border border-slate-200 bg-white">
-                  <div className="text-xs font-mono text-slate-600">ATS PARSE INTEGRITY</div>
-                  <div className="text-3xl font-mono font-bold text-slate-900 mt-2">91.7%</div>
-                  <div className="text-xs text-slate-500 font-mono mt-1">11/12 clean formats</div>
-                </div>
-              </div>
-
-              {/* Skill Frequency Distribution */}
-              <div className="p-6 rounded-lg border border-slate-200 bg-white space-y-4">
-                <h3 className="text-sm font-bold text-slate-900">Skill Frequency Across Active Applicant Pool</h3>
-                <div className="space-y-2.5 font-mono text-xs">
-                  {[
-                    { skill: "Python", count: 11, pct: 92 },
-                    { skill: "Docker", count: 6, pct: 50 },
-                    { skill: "FastAPI", count: 5, pct: 42 },
-                    { skill: "AWS", count: 4, pct: 33 },
-                    { skill: "PyTorch (Verified)", count: 2, pct: 17 }
-                  ].map((row) => (
-                    <div key={row.skill} className="space-y-1">
-                      <div className="flex justify-between text-slate-700">
-                        <span>{row.skill}</span>
-                        <span>{row.count} candidates ({row.pct}%)</span>
-                      </div>
-                      <div className="h-2 rounded-full bg-slate-100 overflow-hidden">
-                        <div className="h-full bg-indigo-600 rounded-full" style={{ width: `${row.pct}%` }} />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          )}
+          {activeNav === "analytics" && <Analytics pool={candidatesPool} role={activeRole} />}
 
           {/* ================================================================ */}
           {/* PAGE 7: RECRUITER CHATBOT (Recruiter Chatbot)                  */}
@@ -1686,7 +1620,7 @@ export default function App() {
                 <span className="text-slate-600 flex items-center gap-1.5">
                   <DollarSign className="w-3.5 h-3.5 text-amber-700" /> COMPENSATION BAND:
                 </span>
-                <span className="text-amber-700 font-bold">{selectedCandidate.salaryRange} (INR {selectedCandidate.salaryInr})</span>
+                <span className="text-amber-700 font-bold">{inr(selectedCandidate)}</span>
               </div>
             </div>
 

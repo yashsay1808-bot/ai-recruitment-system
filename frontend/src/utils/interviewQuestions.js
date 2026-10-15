@@ -1,3 +1,4 @@
+import { inr } from "./money";
 /**
  * AI Interview Question Synthesis Engine
  * Builds a tailored interview kit for one candidate: resume verification, role-family system design and
@@ -530,8 +531,8 @@ function logisticsQuestions(candidate, roleTitle) {
       lookFor: "A reasoned, role-specific motivation (not generic), realistic expectations, and growth goals that fit the team.",
     },
     {
-      q: `Your profile suggests a band around ${candidate.salaryRange || "the advertised range"}${
-        candidate.salaryInr ? ` (INR ${candidate.salaryInr})` : ""
+      q: `Your profile suggests a band around ${
+        inr(candidate) === "n/a" ? "the advertised range" : inr(candidate)
       }. What are your compensation expectations, notice period and any constraints on start date or location?`,
       lookFor: "Transparent expectations, flexibility, notice period and relocation or remote constraints, and any competing offers or deadlines.",
     },

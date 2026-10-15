@@ -10,6 +10,7 @@
  * the messages back as `history`. generateChatbotResponse() returns the text only.
  */
 import { buildInterviewKit } from "./interviewQuestions";
+import { inr } from "./money";
 
 /* -------------------------------------------------------------------------------------------- */
 /* Small helpers                                                                                    */
@@ -349,7 +350,7 @@ function profileReply(c, ctx, { pool, seed }) {
     `• **Gaps:** ${missingOf(c).join(", ") || "none against this role"}\n` +
     `• **Evidence:** "${c.evidenceSnippet || "no project evidence captured"}"\n` +
     `• **GitHub:** ${gh(c).score ?? "n/a"}/100, ${risk(c)} risk\n` +
-    `• **Compensation target:** ${c.salaryRange || "n/a"}${c.salaryInr ? ` (INR ${c.salaryInr})` : ""}\n\n` +
+    `• **Compensation target:** ${inr(c)}\n\n` +
     verdictNarrative(c, pool);
   const f = first(c.name);
   return makeReply(text, { intent: "profile", candidateIds: [c.id] }, [
@@ -469,9 +470,9 @@ function salaryReply(c, role) {
   const f = first(c.name);
   return makeReply(
     `**Compensation for ${c.name}**\n\n` +
-      `• **Target:** ${c.salaryRange || "n/a"}${c.salaryInr ? ` (INR ${c.salaryInr})` : ""}\n` +
+      `• **Target:** ${inr(c)}\n` +
       `• **Level:** ${c.level || "n/a"}${c.bandPosPct ? `, positioned at ${c.bandPosPct}% of the band` : ""}\n` +
-      `• **Role budget:** ${role?.salaryRange || "n/a"}${role?.salaryInr ? ` (INR ${role.salaryInr})` : ""}\n\n` +
+      `• **Role budget:** ${inr(role)}\n\n` +
       `Confirm expectations and notice period in the first call.`,
     { intent: "salary", candidateIds: [c.id] },
     [`Should I hire ${f}?`, `Draft outreach email for ${f}`],
@@ -529,7 +530,7 @@ function emailReply(c, kind, { role, recruiterName, recruiterRole, company, seed
     body =
       `**Outreach draft for ${c.name}**\n\n**Subject:** ${subject}\n\n` +
       `Hi ${f},\n\nI'm ${recruiterName}, ${recruiterRole} at ${company}. Your experience with ${skills} caught my attention${c.evidenceSnippet ? `, in particular: "${c.evidenceSnippet}"` : ""}.\n\n` +
-      `We are growing our ${role.title} team (${role.salaryRange || "competitive band"}) and ${c.experienceYears != null ? `your ${c.experienceYears} years of experience` : "your background"} look like a strong match. Would you be open to a 20-minute introductory call this week?\n\n${sign}`;
+      `We are growing our ${role.title} team (${role.salaryInr ? `INR ${role.salaryInr}` : "competitive band"}) and ${c.experienceYears != null ? `your ${c.experienceYears} years of experience` : "your background"} look like a strong match. Would you be open to a 20-minute introductory call this week?\n\n${sign}`;
   }
   const label = kind === "reject" ? "decline" : kind === "invite" ? "invitation" : "outreach";
   return makeReply(body, { intent: `email-${kind}`, candidateIds: [c.id] }, [
@@ -700,7 +701,7 @@ function shortlistReply(pool, n, role) {
   const note = strongCount < top.length ? ` Only ${strongCount} ${strongCount === 1 ? "is" : "are"} Strong Hire, so the rest are Lean Hires that need a screening call.` : "";
   return makeReply(
     `**My shortlist of ${top.length} for ${role.title}:**\n\n` +
-      top.map((c, i) => `${i + 1}. ${line(c)}\n   • ${yrs(c)}; ${skillsOf(c).slice(0, 4).join(", ") || "no verified skills"}\n   • "${c.evidenceSnippet || "no evidence captured"}"\n   • Target: ${c.salaryRange || "n/a"}`).join("\n\n") +
+      top.map((c, i) => `${i + 1}. ${line(c)}\n   • ${yrs(c)}; ${skillsOf(c).slice(0, 4).join(", ") || "no verified skills"}\n   • "${c.evidenceSnippet || "no evidence captured"}"\n   • Target: ${inr(c)}`).join("\n\n") +
       `\n\n${[note.trim(), "Candidates with high GitHub risk were moved down the list."].filter(Boolean).join(" ")}`,
     { intent: "shortlist", candidateIds: top.map((c) => c.id).slice(0, 1), list: { key: "shortlist", ids: top.map((c) => c.id), offset: top.length, shown: top.map((c) => c.id) } },
     [`Should I hire ${first(top[0]?.name)}?`, `Compare ${first(top[0]?.name)} and ${first(top[1]?.name)}`, `Draft outreach email for ${first(top[0]?.name)}`],
@@ -716,7 +717,7 @@ function roleReply(pool, role) {
   return makeReply(
     `**${role.title}**${role.department ? ` (${role.department})` : ""}\n\n` +
       `• **Level:** ${role.level || "n/a"} • **Experience:** ${role.minExperience || "n/a"}\n` +
-      `• **Budget:** ${role.salaryRange || "n/a"}${role.salaryInr ? ` (INR ${role.salaryInr})` : ""}\n` +
+      `• **Budget:** ${inr(role)}\n` +
       `• **Brief:** ${role.description || "no description"}\n` +
       `• **Key skills:** ${skills.slice(0, 10).join(", ")}${skills.length > 10 ? ` (+${skills.length - 10} more)` : ""}\n\n` +
       `**How the pool covers them:** ${coverage.map(({ s, n }) => `${s} ${n}/${pool.length}`).join(", ")}.`,
@@ -728,8 +729,8 @@ function roleReply(pool, role) {
 function salaryRoleReply(pool, role) {
   const top = pool[0];
   return makeReply(
-    `**Compensation for ${role.title}**\n\n• **Budget band:** ${role.salaryRange || "n/a"}${role.salaryInr ? ` (INR ${role.salaryInr})` : ""}\n• **Level:** ${role.level || "n/a"}\n` +
-      (top ? `• **Top candidate:** ${top.name} targets ${top.salaryRange || "n/a"}${top.bandPosPct ? `, about ${top.bandPosPct}% of the band` : ""}\n` : "") +
+    `**Compensation for ${role.title}**\n\n• **Budget band:** ${inr(role)}\n• **Level:** ${role.level || "n/a"}\n` +
+      (top ? `• **Top candidate:** ${top.name} targets ${inr(top)}${top.bandPosPct ? `, about ${top.bandPosPct}% of the band` : ""}\n` : "") +
       `\nAsk about a specific candidate to see their expectation against this band.`,
     { intent: "salary-role", candidateIds: top ? [top.id] : [] },
     top ? [`Compensation for ${first(top.name)}`, "Show the strong hires"] : [],

@@ -107,25 +107,19 @@ class RecruiterChatbot:
                 # Leveling Tier
                 if exp_yrs < 1.5:
                     level = "Junior / Associate Engineer (L3)"
-                    base_usd = (75000, 95000)
                     base_inr_lpa = (7.0, 12.0)
                 elif exp_yrs < 4.0:
                     level = "Mid-Level Engineer (L4)"
-                    base_usd = (105000, 135000)
                     base_inr_lpa = (14.0, 22.0)
                 elif exp_yrs < 7.0:
                     level = "Senior Engineer (L5)"
-                    base_usd = (145000, 185000)
                     base_inr_lpa = (25.0, 38.0)
                 else:
                     level = "Staff / Principal Engineer (L6+)"
-                    base_usd = (195000, 245000)
                     base_inr_lpa = (40.0, 65.0)
 
                 # Score multiplier bonus (strong candidates command top of band)
                 multiplier = 1.05 if overall_score >= 80.0 else (0.95 if overall_score < 60.0 else 1.0)
-                low_usd = int(base_usd[0] * multiplier)
-                high_usd = int(base_usd[1] * multiplier)
                 low_inr = round(base_inr_lpa[0] * multiplier, 1)
                 high_inr = round(base_inr_lpa[1] * multiplier, 1)
 
@@ -134,7 +128,6 @@ class RecruiterChatbot:
                 resp += f"**Years of Experience:** `{exp_yrs} yrs` | **Overall Screening Score:** `{overall_score}%`\n\n"
                 resp += "| Geography / Market | Estimated Base Salary Band | Typical Equity / Bonus |\n"
                 resp += "|---|---|---|\n"
-                resp += f"| **US / Remote Global** | `${low_usd:,} – ${high_usd:,} / yr` | `10% – 15% Bonus + Stock Options` |\n"
                 resp += f"| **India Tech Hub** | `₹{low_inr} – ₹{high_inr} LPA` | `₹1.5L – ₹3L Performance Bonus` |\n\n"
                 resp += f"💡 **Negotiation Strategy:** {c_name} scored `{overall_score}%` against **{job_title}**. "
                 if overall_score >= 75.0:
