@@ -7,6 +7,24 @@
 import mammoth from "mammoth";
 import * as pdfjsLib from "pdfjs-dist/legacy/build/pdf.mjs";
 
+/** Joins the text items of a PDF page, starting a new line whenever the vertical position changes. */
+export function pageItemsToText(items) {
+  let out = "";
+  let lastY = null;
+  for (const it of items) {
+    const y = Array.isArray(it.transform) ? it.transform[5] : null;
+    if (out && lastY !== null && y !== null && Math.abs(y - lastY) > 2.5 && !out.endsWith("\n")) out += "\n";
+    else if (out && !out.endsWith("\n") && !out.endsWith(" ")) out += " ";
+    out += it.str;
+    lastY = y;
+    if (it.hasEOL) {
+      out += "\n";
+      lastY = null;
+    }
+  }
+  return out;
+}
+
 async function extractTextFromFile(file) {
   const name = file.name.toLowerCase();
 
@@ -22,7 +40,7 @@ async function extractTextFromFile(file) {
       for (let i = 1; i <= pdf.numPages; i++) {
         const page = await pdf.getPage(i);
         const textContent = await page.getTextContent();
-        const pageText = textContent.items.map((it) => it.str).join(" ");
+        const pageText = pageItemsToText(textContent.items);
         fullText += pageText + "\n";
       }
       return fullText.trim() || (await file.text());
@@ -52,6 +70,127 @@ async function extractTextFromFile(file) {
   return await file.text();
 }
 
+
+const NAME_NOISE = new Set(["resume", "cv", "curriculum", "vitae", "profile", "final", "updated", "new", "copy", "latest", "application", "candidate", "pdf", "docx"]);
+const SECTION_WORDS = /resume|curriculum|vitae|profile|summary|objective|education|experience|skills|projects|certifications?/i;
+
+const titleCase = (w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase();
+
+/** A short line of 2 to 4 plain words, such as "ASHA RAO" or "Asha Rao". */
+export function looksLikeName(line) {
+  return (
+    line.length < 40 &&
+    /^[A-Za-z][A-Za-z.'-]*(?:\s+[A-Za-z][A-Za-z.'-]*){1,3}$/.test(line) &&
+    !SECTION_WORDS.test(line)
+  );
+}
+
+/** Candidate name: the first line of the resume if it looks like a name, else the words of the file name. */
+export function extractCandidateName(lines, fileName) {
+  const first = lines[0] || "";
+  if (looksLikeName(first)) {
+    const letters = first.replace(/[^A-Za-z]/g, "");
+    return letters === letters.toUpperCase() ? first.split(/\s+/).map(titleCase).join(" ") : first;
+  }
+  const clean = fileName.replace(/\.[^/.]+$/, "");
+  const tokens = clean.split(/[_\-\s]+/).filter((t) => /^[A-Za-z]+$/.test(t) && !NAME_NOISE.has(t.toLowerCase()));
+  const tail = tokens.slice(-2);
+  if (tail.length === 2 && tail.every((t) => /^[A-Z][a-z]+$/.test(t))) return tail.join(" ");
+  if (first && first.length < 40 && !first.includes(":") && !first.includes("@")) return first;
+  return clean.replace(/_/g, " ");
+}
+
+const MONTHS = "jan|feb|mar|apr|may|jun|jul|aug|sep|sept|oct|nov|dec";
+const EXP_HEADING = /^(?:work\s+experience|professional\s+experience|experience|employment(?:\s+history)?|internships?|work\s+history)\b/i;
+const OTHER_HEADING = /^(?:education|academic|projects?|personal\s+projects|technical\s+skills|skills|certifications?|technical\s+activities|achievements|summary|profile|objective|languages|publications|awards)\b/i;
+const EDUCATION_LINE = /b\.?e\b|b\.?tech|m\.?tech|diploma|bachelor|master|ph\.?d|cgpa|gpa|expected|university|college|school|polytechnic|institute/i;
+
+/** Month number since year 0 for "Jan 2024"; a bare year counts as its first month. */
+const monthIndex = (year, mon) => year * 12 + (mon ? MONTHS.split("|").indexOf(mon.slice(0, 3).toLowerCase()) : 0);
+
+/**
+ * Years of experience: an explicit "N years" statement wins; otherwise the date ranges of the experience section
+ * (or, when there is no such section, of the lines that are not about education) are added up without double
+ * counting overlaps. A resume that shows no experience at all counts as 0, not as a default.
+ */
+export function estimateExperienceYears(text, lines, now = new Date()) {
+  const explicit = text.match(/(\d+(?:\.\d+)?)\s*(?:\+)?\s*(?:years|yrs)/i);
+  if (explicit) return parseFloat(explicit[1]);
+
+  let scope = [];
+  const start = lines.findIndex((l) => l.length < 50 && EXP_HEADING.test(l));
+  if (start >= 0) {
+    for (let i = start + 1; i < lines.length; i++) {
+      if (lines[i].length < 50 && OTHER_HEADING.test(lines[i])) break;
+      scope.push(lines[i]);
+    }
+  } else {
+    scope = lines.filter((l) => !EDUCATION_LINE.test(l));
+  }
+
+  const re = new RegExp(
+    `(?:(${MONTHS})[a-z]*\\.?,?\\s*)?((?:19|20)\\d{2})\\s*(?:-|–|—|to)\\s*(?:(${MONTHS})[a-z]*\\.?,?\\s*)?((?:19|20)\\d{2}|present|current)`,
+    "gi",
+  );
+  const spans = [];
+  const nowIdx = now.getFullYear() * 12 + now.getMonth();
+  for (const line of scope) {
+    for (const m of line.matchAll(re)) {
+      const [, m1, y1, m2, y2] = m;
+      const present = /present|current/i.test(y2);
+      const s = monthIndex(parseInt(y1, 10), m1);
+      let e = present ? nowIdx + 1 : monthIndex(parseInt(y2, 10), m2) + (m2 ? 1 : 12);
+      if (!m1 && !m2) e = Math.max(e, s + 6); // year-only ranges count at least half a year
+      if (e > s && s <= nowIdx) spans.push([s, Math.min(e, nowIdx + 1)]);
+    }
+  }
+  spans.sort((a, b) => a[0] - b[0]);
+  let months = 0;
+  let cur = null;
+  for (const [s, e] of spans) {
+    if (!cur || s > cur[1]) {
+      if (cur) months += cur[1] - cur[0];
+      cur = [s, e];
+    } else cur[1] = Math.max(cur[1], e);
+  }
+  if (cur) months += cur[1] - cur[0];
+  if (months > 0) return Math.round((months / 12) * 10) / 10;
+
+  const monthMatch = text.match(/(\d+)\s*(?:months)/i);
+  return monthMatch ? parseFloat((parseInt(monthMatch[1], 10) / 12).toFixed(1)) : 0;
+}
+
+const SKILL_ALIASES = {
+  "scikit-learn": ["scikit-learn", "sklearn", "scikit learn"],
+  "hugging face": ["hugging face", "huggingface"],
+  "rest api": ["rest api", "rest apis", "restful", "rest services"],
+  "ci/cd": ["ci/cd", "ci-cd", "cicd", "github actions", "jenkins", "gitlab ci"],
+  postgresql: ["postgresql", "postgres"],
+  "node.js": ["node.js", "nodejs", "node js"],
+  tailwindcss: ["tailwindcss", "tailwind css", "tailwind"],
+  aws: ["aws", "amazon web services"],
+  "aws s3": ["aws s3", "amazon s3"],
+  gcp: ["gcp", "google cloud"],
+  kubernetes: ["kubernetes", "k8s"],
+  "natural language processing": ["natural language processing", "nlp"],
+  golang: ["golang", "go lang"],
+  "next.js": ["next.js", "nextjs"],
+  "apache spark": ["apache spark", "pyspark"],
+  kafka: ["kafka"],
+  "apache kafka": ["apache kafka", "kafka"],
+  "etl pipelines": ["etl pipelines", "etl pipeline", "etl"],
+  bash: ["bash", "shell scripting"],
+  "explainable ai": ["explainable ai", "xai"],
+};
+const escapeRe = (t) => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+/** True when the skill (or an alias) appears as a whole word or phrase, so "R" or "Go" do not match inside words. */
+export function hasSkill(lowerText, skill) {
+  const key = skill.toLowerCase();
+  const terms = SKILL_ALIASES[key] || [key];
+  return terms.some((t) => new RegExp(`(?<![a-z0-9+#])${escapeRe(t)}(?![a-z0-9+#])`).test(lowerText));
+}
+
 export async function parseUploadedFiles(files, activeRole = { title: "Senior Machine Learning Engineer", skills: [] }) {
   const parsedCandidates = [];
   const roleSkills = activeRole.skills || [];
@@ -77,39 +216,10 @@ export async function parseUploadedFiles(files, activeRole = { title: "Senior Ma
       .filter(Boolean);
 
     // 1. Extract Candidate Name
-    let candidateName = "";
-    const cleanFilename = file.name.replace(/\.[^/.]+$/, "");
-    const parts = cleanFilename.split("_");
-    if (parts.length >= 3) {
-      // If ends with first and last name e.g. "...Nandini_Pandey"
-      const possibleLastName = parts[parts.length - 1];
-      const possibleFirstName = parts[parts.length - 2];
-      if (/^[A-Z][a-z]+$/.test(possibleFirstName) && /^[A-Z][a-z]+$/.test(possibleLastName)) {
-        candidateName = `${possibleFirstName} ${possibleLastName}`;
-      }
-    }
-
-    if (!candidateName && lines.length > 0) {
-      // Use first non-empty line if it looks like a name (short, no colons)
-      const firstLine = lines[0];
-      if (firstLine.length < 40 && !firstLine.includes(":") && !firstLine.includes("@")) {
-        candidateName = firstLine;
-      } else {
-        candidateName = cleanFilename.replace(/_/g, " ");
-      }
-    }
+    const candidateName = extractCandidateName(lines, file.name);
 
     // 2. Extract Experience / Tenure
-    let experienceYears = 3.0;
-    const expMatch = text.match(/(\d+(?:\.\d+)?)\s*(?:\+)?\s*(?:years|yrs)/i);
-    if (expMatch) {
-      experienceYears = parseFloat(expMatch[1]);
-    } else {
-      const monthMatch = text.match(/(\d+)\s*(?:months)/i);
-      if (monthMatch) {
-        experienceYears = parseFloat((parseInt(monthMatch[1], 10) / 12).toFixed(1));
-      }
-    }
+    const experienceYears = estimateExperienceYears(text, lines);
 
     // 3. Extract GitHub Username
     let githubUsername = candidateName.toLowerCase().replace(/\s+/g, "-");
@@ -124,8 +234,7 @@ export async function parseUploadedFiles(files, activeRole = { title: "Senior Ma
     const missingSkills = [];
 
     roleSkills.forEach((skill) => {
-      const sLower = skill.toLowerCase();
-      if (lowerText.includes(sLower)) {
+      if (hasSkill(lowerText, skill)) {
         matchedSkills.push(skill);
       } else {
         missingSkills.push(skill);

@@ -281,7 +281,7 @@ SKILL_ONTOLOGY: Dict[str, Dict] = {
 
     # ------------------ Cloud & DevOps ------------------
     "AWS": {
-        "aliases": ["aws", "amazon web services", "amazon cloud", "ec2", "s3", "lambda", "rds", "cloudformation"],
+        "aliases": ["aws", "amazon web services", "amazon cloud", "ec2", "amazon s3", "aws s3", "aws lambda", "rds", "cloudformation"],
         "category": "Cloud & DevOps"
     },
     "Google Cloud": {
@@ -305,7 +305,7 @@ SKILL_ONTOLOGY: Dict[str, Dict] = {
         "category": "Cloud & DevOps"
     },
     "Terraform": {
-        "aliases": ["terraform", "iac", "infrastructure as code", "ansible"],
+        "aliases": ["terraform", "infrastructure as code", "infrastructure-as-code", "ansible"],
         "category": "Cloud & DevOps"
     },
     "Linux": {

@@ -46,7 +46,7 @@ class ResumeParser:
         "experience": r'(?:work\s+experience|professional\s+experience|experience|employment\s+history|internships?|work\s+history)',
         "skills": r'(?:technical\s+skills|skills|core\s+competencies|technologies|technical\s+expertise|tools\s+&\s+technologies|skills\s+&\s+abilities)',
         "projects": r'(?:projects|personal\s+projects|academic\s+projects|key\s+projects|notable\s+projects)',
-        "certifications": r'(?:certifications?|licenses|courses|achievements|honors|awards\s+&\s+certifications)',
+        "certifications": r'(?:certifications?|licenses|courses|achievements|honors|awards\s+&\s+certifications|(?:technical\s+)?activities\s+&\s+certifications)',
         "summary": r'(?:summary|professional\s+summary|about\s+me|profile|objective|career\s+objective)'
     }
 
@@ -373,20 +373,29 @@ class ResumeParser:
 
         # If not explicitly stated, compute from date ranges e.g. "2021 - 2023", "Jan 2022 to Present"
         if exp_years == 0.0:
+            months = "jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec"
             date_ranges = re.findall(
-                r'(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)?\.?\s*(\d{4})\s*(?:-|–|to)\s*(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)?\.?\s*(\d{4}|present|current)',
+                rf'(?:(?P<m1>{months})[a-z]*\.?\s*)?(?P<y1>\d{{4}})\s*(?:-|–|—|to)\s*(?:(?P<m2>{months})[a-z]*\.?\s*)?(?P<y2>\d{{4}}|present|current)',
                 combined, re.IGNORECASE
             )
+            month_no = {m: i for i, m in enumerate(months.split("|"))}
             current_year = datetime.now().year
             spans = []
 
-            for start, end in date_ranges:
+            for m1, start, m2, end in date_ranges:
                 try:
                     s_yr = int(start)
                     e_yr = current_year if end.lower() in ["present", "current"] else int(end)
                     # Inverted ranges (e.g. 2023 - 2019) are ignored as unreliable
                     if 1990 <= s_yr <= current_year and s_yr <= e_yr:
-                        spans.append((s_yr, max(e_yr, s_yr + 0.5)))
+                        if m1 and m2 and s_yr == e_yr and end.lower() not in ["present", "current"]:
+                            # Short range inside one year with both months ("Jan 2024 - Apr 2024"): count the real months
+                            s_pt = s_yr + month_no[m1.lower()] / 12.0
+                            e_pt = e_yr + (month_no[m2.lower()] + 1) / 12.0
+                            if e_pt > s_pt:
+                                spans.append((s_pt, e_pt))
+                        else:
+                            spans.append((s_yr, max(e_yr, s_yr + 0.5)))
                 except Exception:
                     pass
 
@@ -429,10 +438,30 @@ class ResumeParser:
 
         lines = [line.strip() for line in target_text.split('\n') if line.strip()]
         curr_proj = None
+        bullets = ('•', '-', '*', '1.', '2.', '3.')
+        # Resumes whose projects are written as "Title / sub-title lines / bullets": a new project starts only after
+        # a finished bullet block, and wrapped bullet lines or sub-title lines belong to the current project.
+        has_section = len(proj_text.strip()) > 40  # a real PROJECTS section (not the whole-resume fallback)
+        block_style = has_section and any(l.startswith(bullets) for l in lines)
+        in_bullets = False
+        prev_line = ""
 
         for line in lines:
+            is_bullet = line.startswith(bullets)
+            if block_style and curr_proj:
+                if is_bullet:
+                    in_bullets = True
+                else:
+                    wrapped = in_bullets and (not prev_line.rstrip().endswith(('.', ':', '!', '?')) or line[:1].islower())
+                    if wrapped or not in_bullets:
+                        curr_proj["description"] += line + " "
+                        curr_proj["skills_used"] = sorted(set(curr_proj["skills_used"] + extract_skills_from_text(line)))
+                        prev_line = line
+                        continue
+                    in_bullets = False
+            prev_line = line
             # Bullet point or header detection
-            if len(line) < 70 and not line.startswith(('•', '-', '*', '1.', '2.', '3.')):
+            if len(line) < 70 and not is_bullet:
                 skills_in_line = extract_skills_from_text(line)
                 if curr_proj:
                     projects.append(curr_proj)
@@ -475,6 +504,13 @@ class ResumeParser:
         for cert in known_certs:
             if re.search(rf'\b{re.escape(cert)}\b', target, re.IGNORECASE):
                 found.append(cert)
+
+        # Inline "Certifications: A, B - Issuer (2026)" lines anywhere in the resume
+        for m in re.finditer(r'certifications?\s*:\s*([^|\n]+)', full_text, re.IGNORECASE):
+            for part in re.split(r',\s+(?=[A-Z])', m.group(1)):
+                part = part.strip(' .;')
+                if 6 < len(part) < 90 and part not in found:
+                    found.append(part)
 
         # Also extract individual lines from the certification section
         if cert_text.strip():
