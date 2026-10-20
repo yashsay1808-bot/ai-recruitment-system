@@ -4,7 +4,7 @@ import { useAuth } from "../context/AuthContext";
 import { config } from "../config/env";
 import {
   ROLES,
-  MIN_PASSWORD_LENGTH,
+  PASSWORD_RULE,
   DEMO_ACCOUNT,
   isDemoAccountEnabled,
   isGoogleAuthEnabled,
@@ -348,7 +348,7 @@ export default function AuthCard() {
                   </select>
                 )}
               </Field>
-              <Field label="Password" hint={`At least ${MIN_PASSWORD_LENGTH} characters.`}>
+              <Field label="Password" hint={PASSWORD_RULE}>
                 {(id) => (
                   <PasswordInput id={id} value={form.password} onChange={setField("password")} autoComplete="new-password" />
                 )}

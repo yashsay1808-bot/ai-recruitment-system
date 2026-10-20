@@ -374,7 +374,14 @@ export default function JobHome({
         </div>
 
         {uploadFeedback && (
-          <div role="status" className="mt-4 rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-2 text-sm text-emerald-800">
+          <div
+            role="status"
+            className={`mt-4 rounded-lg border px-3 py-2 text-sm ${
+              uploadFeedback.startsWith("\u2717") || uploadFeedback.includes("Skipped")
+                ? "border-amber-200 bg-amber-50 text-amber-900"
+                : "border-emerald-200 bg-emerald-50 text-emerald-800"
+            }`}
+          >
             {uploadFeedback}
           </div>
         )}

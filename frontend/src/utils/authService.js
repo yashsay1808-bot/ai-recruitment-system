@@ -25,6 +25,14 @@ export const ROLES = [
 ];
 
 export const MIN_PASSWORD_LENGTH = 8;
+export const PASSWORD_RULE = `At least ${MIN_PASSWORD_LENGTH} characters with an uppercase letter, a lowercase letter, a number and a special character.`;
+
+/** null when the password is strong enough, otherwise the message to show. */
+export function passwordProblem(password) {
+  const p = password || "";
+  const ok = p.length >= MIN_PASSWORD_LENGTH && /[a-z]/.test(p) && /[A-Z]/.test(p) && /\d/.test(p) && /[^A-Za-z0-9]/.test(p);
+  return ok ? null : `Password must have ${PASSWORD_RULE.charAt(0).toLowerCase()}${PASSWORD_RULE.slice(1)}`;
+}
 const EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
 const isGmail = (email) => /@gmail\.com$/i.test((email || "").trim());
 
@@ -47,10 +55,7 @@ export function validateSignUp({ name, email, company, role, password }) {
   if (!isGmail(email)) return "Only Gmail addresses (name@gmail.com) can sign up.";
   if (!company?.trim()) return "Enter your company.";
   if (!ROLES.includes(role)) return "Choose your role.";
-  if ((password || "").length < MIN_PASSWORD_LENGTH) {
-    return `Password must be at least ${MIN_PASSWORD_LENGTH} characters.`;
-  }
-  return null;
+  return passwordProblem(password);
 }
 
 /* -------------------------------------------------------------------------------------------- */

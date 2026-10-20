@@ -14,7 +14,7 @@ SIGNUP = {
     "email": "Tester@Gmail.com",
     "company": "Acme",
     "role": "Lead Technical Recruiter",
-    "password": "correct-horse",
+    "password": "Correct-Horse9!",
 }
 
 
@@ -27,7 +27,7 @@ def client():
     app.dependency_overrides.clear()
 
 
-def signin(client, password="correct-horse"):
+def signin(client, password="Correct-Horse9!"):
     return client.post("/auth/signin", json={"email": "tester@gmail.com", "password": password})
 
 
@@ -156,7 +156,7 @@ def test_google_is_idempotent_and_links_existing_password_account(client, google
     db = app.dependency_overrides[get_mongo_db]()
     assert db.users.count_documents({"email": "googler@gmail.com"}) == 1
     # The password still works for the linked account
-    ok = client.post("/auth/signin", json={"email": "googler@gmail.com", "password": "correct-horse"})
+    ok = client.post("/auth/signin", json={"email": "googler@gmail.com", "password": "Correct-Horse9!"})
     assert ok.status_code == 200
 
 
@@ -230,3 +230,10 @@ def test_google_not_configured_returns_503(client, monkeypatch):
     get_settings.cache_clear()
     assert client.post("/auth/google", json={"credential": "tok"}).status_code == 503
     get_settings.cache_clear()
+
+
+def test_signup_requires_upper_lower_digit_and_special_character(client):
+    weak = ["Sh0rt!", "alllowercase1!", "ALLUPPERCASE1!", "NoDigitsHere!", "NoSpecial123Abc"]
+    for pw in weak:
+        assert client.post("/auth/signup", json={**SIGNUP, "password": pw}).status_code == 422, pw
+    assert client.post("/auth/signup", json={**SIGNUP, "password": "Str0ng-Pass!"}).status_code == 201

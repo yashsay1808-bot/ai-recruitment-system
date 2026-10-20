@@ -40,6 +40,20 @@ ROLES = [
     "Technical Interviewer",
 ]
 MIN_PASSWORD_LENGTH = 8
+PASSWORD_RULE = (
+    f"Password must have at least {MIN_PASSWORD_LENGTH} characters with an uppercase letter, "
+    "a lowercase letter, a number and a special character."
+)
+
+
+def _strong_password(p: str) -> bool:
+    return (
+        len(p) >= MIN_PASSWORD_LENGTH
+        and any(c.islower() for c in p)
+        and any(c.isupper() for c in p)
+        and any(c.isdigit() for c in p)
+        and any(not c.isalnum() for c in p)
+    )
 PBKDF2_ITERATIONS = 210_000
 SESSION_DAYS = 7
 MAX_FAILED_LOGINS = 5
@@ -180,11 +194,8 @@ def signup(body: SignUpBody, db: Database = Depends(get_mongo_db)) -> dict:
         raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, "Enter your company.")
     if body.role not in ROLES:
         raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, "Choose your role.")
-    if len(body.password) < MIN_PASSWORD_LENGTH:
-        raise HTTPException(
-            status.HTTP_422_UNPROCESSABLE_ENTITY,
-            f"Password must be at least {MIN_PASSWORD_LENGTH} characters.",
-        )
+    if not _strong_password(body.password):
+        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, PASSWORD_RULE)
 
     salt = secrets.token_bytes(16)
     doc = {

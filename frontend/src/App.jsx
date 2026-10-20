@@ -255,7 +255,17 @@ export default function App() {
       setBatchStageText(`Stage 2/4: Extracting candidate names, experience, and matching skills against ${activeRole.title}...`);
 
       try {
-        const parsed = await parseUploadedFiles(fileList, activeRole);
+        const { candidates: parsed, rejected } = await parseUploadedFiles(fileList, activeRole);
+        const skipped = rejected.length
+          ? ` Skipped ${rejected.length} file${rejected.length > 1 ? "s" : ""}: ${rejected.map((r) => `${r.name} (${r.reason})`).join("; ")}`
+          : "";
+        if (parsed.length === 0) {
+          setIsIngestingBatch(false);
+          setBatchProgress(0);
+          setBatchStageText("");
+          setUploadFeedback(`\u2717 No resumes were loaded.${skipped}`);
+          return;
+        }
         setBatchProgress(80);
         setBatchStageText(`Stage 3/4: Calculating ATS scores and 4-agent Council verdicts for ${parsed.length} candidates...`);
 
@@ -270,7 +280,7 @@ export default function App() {
             setIsIngestingBatch(false);
             setBatchProgress(0);
             setBatchStageText("");
-            setUploadFeedback(`✓ Successfully parsed & indexed ${parsed.length} of your uploaded resumes into the Leaderboard!`);
+            setUploadFeedback(`✓ Successfully parsed & indexed ${parsed.length} of your uploaded resumes into the Leaderboard!${skipped}`);
 
             // Notify in chatbot
             setCopilotMessages((prev) => [

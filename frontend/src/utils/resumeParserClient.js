@@ -191,8 +191,25 @@ export function hasSkill(lowerText, skill) {
   return terms.some((t) => new RegExp(`(?<![a-z0-9+#])${escapeRe(t)}(?![a-z0-9+#])`).test(lowerText));
 }
 
+const RESUME_HEADINGS = /^(?:education|experience|work\s+experience|professional\s+experience|skills|technical\s+skills|projects?|summary|professional\s+summary|objective|profile|certifications?)\b/i;
+
+/**
+ * A resume has a contact detail plus at least two section headings (or three headings on their own), and some
+ * education or date range. Anything else (an invoice, a report, a form) is not screened as a candidate.
+ */
+export function looksLikeResume(text) {
+  if (!text || text.trim().length < 120) return false;
+  const lines = text.split("\n").map((l) => l.trim()).filter(Boolean);
+  const headings = new Set(lines.filter((l) => l.length < 50 && RESUME_HEADINGS.test(l)).map((l) => l.toLowerCase().split(/\s+/)[0]));
+  const contact = /[\w.+-]+@[\w-]+\.[\w.]+/.test(text) || /\+?\d[\d\s()-]{8,}\d/.test(text);
+  const background = /\b(b\.?e\.?|b\.?tech|m\.?tech|bachelor|master|diploma|ph\.?d|cgpa|gpa|university|college)\b/i.test(text) || /(?:19|20)\d{2}\s*(?:-|\u2013|\u2014|to)\s*(?:(?:19|20)\d{2}|present|current)/i.test(text);
+  return headings.size >= 3 || (headings.size >= 2 && (contact || background || (headings.has("experience") && headings.has("skills"))));
+}
+
+/** Returns { candidates, rejected }: files that are not readable resumes are listed in rejected with a reason. */
 export async function parseUploadedFiles(files, activeRole = { title: "Senior Machine Learning Engineer", skills: [] }) {
   const parsedCandidates = [];
+  const rejected = [];
   const roleSkills = activeRole.skills || [];
 
   for (let idx = 0; idx < files.length; idx++) {
@@ -206,8 +223,17 @@ export async function parseUploadedFiles(files, activeRole = { title: "Senior Ma
       continue;
     }
 
+    if (!/\.(pdf|docx|txt|md)$/i.test(file.name)) {
+      rejected.push({ name: file.name, reason: "Unsupported file type. Upload a PDF, DOCX or TXT resume." });
+      continue;
+    }
     if (!text || text.trim().length === 0) {
-      text = `Candidate Application File: ${file.name}`;
+      rejected.push({ name: file.name, reason: "No readable text found (it may be a scanned image)." });
+      continue;
+    }
+    if (!looksLikeResume(text)) {
+      rejected.push({ name: file.name, reason: "This does not look like a resume." });
+      continue;
     }
 
     const lines = text
@@ -329,9 +355,9 @@ export async function parseUploadedFiles(files, activeRole = { title: "Senior Ma
     const ghRisk = isHighRisk ? "HIGH" : isMedRisk ? "MEDIUM" : "LOW";
 
     parsedCandidates.push({
-      id: `CAN-UPL-${String(idx + 1).padStart(3, "0")}`,
+      id: `CAN-UPL-${String(parsedCandidates.length + 1).padStart(3, "0")}`,
       name: candidateName,
-      anonymizedId: `Uploaded #${idx + 1}`,
+      anonymizedId: `Uploaded #${parsedCandidates.length + 1}`,
       fileName: file.name,
       title: activeRole.title,
       experienceYears: experienceYears,
@@ -400,5 +426,5 @@ export async function parseUploadedFiles(files, activeRole = { title: "Senior Ma
     c.rank = index + 1;
   });
 
-  return parsedCandidates;
+  return { candidates: parsedCandidates, rejected };
 }

@@ -85,12 +85,53 @@ describe("uploaded resume parser: PDF text", () => {
 describe("uploaded resume parser: end to end", () => {
   it("parses a text resume into a candidate with the right name, tenure, evidence and flags", async () => {
     const file = new File([SAMPLE], "Asha_Rao_Resume.txt", { type: "text/plain" });
-    const [c] = await parser.parseUploadedFiles([file], role);
+    const { candidates: [c], rejected } = await parser.parseUploadedFiles([file], role);
+    assert.equal(rejected.length, 0);
     assert.equal(c.name, "Asha Rao");
     assert.equal(c.experienceYears, 0.6);
     assert.ok(c.redFlags.includes("EXPERIENCE_DEFICIT"));
     assert.match(c.evidenceSnippet, /reduced dispensing errors by 40%/);
     assert.equal(c.github.username, "asha-rao");
     assert.ok(c.matchedSkills.includes("Python") && c.matchedSkills.includes("Docker"));
+  });
+});
+
+describe("uploaded resume parser: only resumes are accepted", () => {
+  const INVOICE = `INVOICE 2026-0042
+Bill to: Example Traders Pvt. Ltd., Bengaluru
+Item            Qty    Rate     Amount
+Printer paper   10     250      2500
+Toner           2      3200     6400
+Total due: 8900. Payment within 15 days to account number on file. Thank you for your business.
+`.repeat(3);
+
+  it("recognises a resume and rejects an invoice, a short note and a scanned (empty) file", async () => {
+    assert.ok(parser.looksLikeResume(SAMPLE));
+    assert.ok(!parser.looksLikeResume(INVOICE));
+    assert.ok(!parser.looksLikeResume("Meeting notes: call the vendor tomorrow."));
+    const files = [
+      new File([SAMPLE], "Asha_Rao_Resume.txt", { type: "text/plain" }),
+      new File([INVOICE], "invoice_0042.txt", { type: "text/plain" }),
+      new File([""], "scan.txt", { type: "text/plain" }),
+      new File([SAMPLE], "photo.png", { type: "image/png" }),
+    ];
+    const { candidates, rejected } = await parser.parseUploadedFiles(files, role);
+    assert.deepEqual(candidates.map((c) => c.name), ["Asha Rao"]);
+    assert.deepEqual(rejected.map((r) => r.name).sort(), ["invoice_0042.txt", "photo.png", "scan.txt"]);
+    assert.match(rejected.find((r) => r.name === "invoice_0042.txt").reason, /not look like a resume/);
+  });
+
+  it("accepts every .txt resume of the project's own sample sets", async () => {
+    const fs = await import("node:fs");
+    const base = path.resolve(import.meta.dirname, "..", "..", "data");
+    const dirs = ["sample_resumes", "synthetic_resumes_50", "synthetic_resumes_100"];
+    let n = 0;
+    for (const dir of dirs) {
+      for (const f of fs.readdirSync(path.join(base, dir)).filter((x) => x.endsWith(".txt"))) {
+        assert.ok(parser.looksLikeResume(fs.readFileSync(path.join(base, dir, f), "utf8")), `${dir}/${f} rejected`);
+        n += 1;
+      }
+    }
+    assert.ok(n >= 100, `only ${n} files checked`);
   });
 });
