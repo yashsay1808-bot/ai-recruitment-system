@@ -702,6 +702,9 @@ export default function App() {
               handleCopyMasterPrompt={handleCopyMasterPrompt}
               masterPrompt={MASTER_RESUME_PROMPT}
               setActiveNav={setActiveNav}
+              firstName={recruiterFirstName}
+              blind={blindMode}
+              onOpenCandidate={openDeepDive}
             />
           )}
 

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import DashboardOverview from "./DashboardOverview";
 import {
   ArrowRight,
   BarChart3,
@@ -27,9 +28,9 @@ const primaryBtn =
 const outlineBtn =
   "inline-flex items-center justify-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-50 disabled:opacity-60";
 
-function Step({ n, title, hint, action, children }) {
+function Step({ n, title, hint, action, children, id }) {
   return (
-    <section className="rounded-xl border border-slate-200 bg-white p-6">
+    <section id={id} className="scroll-mt-20 rounded-xl border border-slate-200 bg-white p-6">
       <header className="mb-5 flex flex-wrap items-start justify-between gap-3">
         <div className="flex items-start gap-3">
           <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-indigo-600 text-xs font-semibold text-white">
@@ -103,6 +104,9 @@ export default function JobHome({
   handleCopyMasterPrompt,
   masterPrompt,
   setActiveNav,
+  firstName,
+  blind,
+  onOpenCandidate,
 }) {
   const [skillsOpen, setSkillsOpen] = useState(false);
   const skills = activeRole.skills;
@@ -110,12 +114,16 @@ export default function JobHome({
 
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-semibold tracking-tight text-slate-900">Get started</h1>
-        <p className="mt-1 text-sm text-slate-500">
-          Pick the role you are hiring for, load candidates, then review the results.
-        </p>
-      </div>
+      <DashboardOverview
+        firstName={firstName}
+        pool={candidatesPool}
+        activeRole={activeRole}
+        roleCount={jobRoles.length}
+        blind={blind}
+        setActiveNav={setActiveNav}
+        onOpenCandidate={onOpenCandidate}
+        onUpload={() => document.getElementById("intake")?.scrollIntoView({ behavior: "smooth", block: "start" })}
+      />
 
       {/* ------------------------------ Step 1: role ------------------------------ */}
       <Step
@@ -309,6 +317,7 @@ export default function JobHome({
       {/* ------------------------------ Step 2: candidates ------------------------------ */}
       <Step
         n={2}
+        id="intake"
         title="Candidate intake"
         hint="Upload your own resumes, or start from a ready-made pool."
         action={
