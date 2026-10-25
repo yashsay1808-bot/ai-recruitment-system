@@ -34,6 +34,7 @@ so the server uses the **Brevo** HTTPS API (free: 300 e-mails a day).
 
 1. Create a free account at brevo.com and verify a sender address (Senders, Domains and Dedicated IPs -> Senders).
 2. Create an API key (SMTP and API -> API keys).
+(No Brevo? Use the Gmail relay instead: see `docs/gmail-relay.gs`, then set `MAIL_RELAY_URL` and `MAIL_RELAY_SECRET` in Render.)
 3. In Render, open the service -> Environment and add `BREVO_API_KEY` (the key) and `MAIL_FROM` (the verified sender). Save; Render redeploys.
 4. Optional SMS: add `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN` and `TWILIO_FROM`. Users who entered a mobile number at sign-up then also get the code by SMS.
 

@@ -1,6 +1,7 @@
 """Outgoing messages for password reset.
 
-E-mail goes through Brevo's HTTPS API: Render's free plan blocks the SMTP ports, so an SMTP server cannot be used there.
+E-mail goes over HTTPS because Render's free plan blocks the SMTP ports: either a Google Apps Script relay
+(MAIL_RELAY_URL + MAIL_RELAY_SECRET, sends from the owner's Gmail) or Brevo's API.
 SMS (optional) goes through Twilio. Both return False, and send nothing, when their environment variables are not set.
 """
 import base64
@@ -14,8 +15,12 @@ log = logging.getLogger(__name__)
 TIMEOUT = 10
 
 
+def _relay_configured() -> bool:
+    return bool(os.getenv("MAIL_RELAY_URL") and os.getenv("MAIL_RELAY_SECRET"))
+
+
 def email_configured() -> bool:
-    return bool(os.getenv("BREVO_API_KEY") and os.getenv("MAIL_FROM"))
+    return _relay_configured() or bool(os.getenv("BREVO_API_KEY") and os.getenv("MAIL_FROM"))
 
 
 def sms_configured() -> bool:
@@ -25,6 +30,19 @@ def sms_configured() -> bool:
 def send_email(to: str, subject: str, text: str) -> bool:
     if not email_configured():
         return False
+    if _relay_configured():
+        # Apps Script answers a POST with a redirect to its result; urllib re-reads that as a GET, which is what it needs.
+        req = urllib.request.Request(
+            os.environ["MAIL_RELAY_URL"],
+            data=json.dumps({"secret": os.environ["MAIL_RELAY_SECRET"], "to": to, "subject": subject, "text": text}).encode("utf-8"),
+            headers={"content-type": "application/json"},
+            method="POST",
+        )
+        try:
+            return json.loads(urllib.request.urlopen(req, timeout=TIMEOUT * 2).read()).get("ok") is True
+        except Exception as exc:
+            log.warning("Password reset e-mail could not be sent: %s", exc)
+            return False
     payload = {
         "sender": {"name": os.getenv("MAIL_FROM_NAME", "Nexus ATS"), "email": os.environ["MAIL_FROM"]},
         "to": [{"email": to}],

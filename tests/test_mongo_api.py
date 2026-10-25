@@ -339,3 +339,26 @@ def test_forgot_password_says_so_when_e_mail_is_not_set_up(client, monkeypatch):
 
 def test_signup_rejects_an_invalid_phone_number(client):
     assert client.post("/auth/signup", json={**SIGNUP, "phone": "12345"}).status_code == 422
+
+
+def test_mail_relay_counts_as_configured_and_posts_json(monkeypatch):
+    from api import mailer
+
+    for k in ("BREVO_API_KEY", "MAIL_FROM"):
+        monkeypatch.delenv(k, raising=False)
+    monkeypatch.setenv("MAIL_RELAY_URL", "https://script.example/exec")
+    monkeypatch.setenv("MAIL_RELAY_SECRET", "s3cret")
+    seen = {}
+
+    class Resp:
+        def read(self):
+            return b'{"ok": true}'
+
+    def fake_open(req, timeout):
+        seen["body"] = json.loads(req.data)
+        return Resp()
+
+    monkeypatch.setattr(mailer.urllib.request, "urlopen", fake_open)
+    assert mailer.email_configured()
+    assert mailer.send_email("a@gmail.com", "Hi", "code 123456")
+    assert seen["body"] == {"secret": "s3cret", "to": "a@gmail.com", "subject": "Hi", "text": "code 123456"}
