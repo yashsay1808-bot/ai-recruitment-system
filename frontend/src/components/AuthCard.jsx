@@ -93,19 +93,8 @@ function GuardedInput({ noAutofill = false, onFocus, ...props }) {
   );
 }
 
-// Soft indigo glow top-centre, faint slate glow bottom-right, and a dotted grid that fades out from the middle.
-const BACKDROP = {
-  backgroundImage:
-    "radial-gradient(60rem 36rem at 50% -8%, rgb(238 242 255) 0%, transparent 62%)," +
-    "radial-gradient(42rem 30rem at 100% 100%, rgb(241 245 249) 0%, transparent 60%)",
-};
-const DOT_GRID = {
-  backgroundImage: "radial-gradient(rgb(203 213 225) 1px, transparent 1px)",
-  backgroundSize: "24px 24px",
-  WebkitMaskImage: "radial-gradient(ellipse 55% 60% at 50% 40%, black 10%, transparent 75%)",
-  maskImage: "radial-gradient(ellipse 55% 60% at 50% 40%, black 10%, transparent 75%)",
-  opacity: 0.55,
-};
+// Sky-blue gradient with soft clouds (the .sky-clouds rule in index.css).
+const BACKDROP = { backgroundImage: "linear-gradient(180deg, #8dc3fb 0%, #bcdcff 45%, #eaf4ff 100%)" };
 
 function Field({ label, children, hint }) {
   const id = useId();
@@ -310,19 +299,19 @@ export default function AuthCard() {
 
   return (
     <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-slate-50 px-4 py-10" style={BACKDROP}>
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0" style={DOT_GRID} />
+      <div aria-hidden="true" className="sky-clouds pointer-events-none absolute inset-0" />
 
       <div className="relative w-full max-w-[420px]">
         <div className="mb-7 flex flex-col items-center text-center">
-          <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-indigo-600 text-sm font-bold text-white shadow-lg shadow-indigo-600/25 ring-1 ring-inset ring-white/20">
+          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-600 to-sky-400 text-sm font-extrabold text-white shadow-lg shadow-indigo-600/25">
             NX
           </div>
-          <span className="mt-3 text-sm font-semibold tracking-tight text-slate-900">Nexus ATS</span>
-          <span className="mt-0.5 text-xs text-slate-500">Explainable AI recruitment</span>
+          <span className="mt-3 text-base font-extrabold tracking-tight text-slate-900">Nexus ATS</span>
+          <span className="mt-0.5 text-xs font-medium text-slate-700">Explainable AI recruitment</span>
         </div>
 
-        <div className="rounded-2xl border border-slate-200/80 bg-white/90 p-8 shadow-xl shadow-slate-200/50 backdrop-blur-sm">
-          <h1 className="text-xl font-semibold tracking-tight text-slate-900">
+        <div className="rounded-[28px] border border-white/70 bg-white p-8 shadow-2xl shadow-indigo-900/15">
+          <h1 className="text-2xl font-extrabold tracking-tight text-slate-900">
             {isReset ? "Reset your password" : isSignIn ? "Sign in" : "Create your account"}
           </h1>
           <p className="mt-1 text-sm text-slate-500">

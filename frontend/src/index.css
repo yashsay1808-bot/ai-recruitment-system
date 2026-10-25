@@ -1,8 +1,21 @@
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* "Sky" look: every indigo class in the app becomes this royal-blue ramp, and headings turn navy. */
+  --color-indigo-50: #eef6ff;
+  --color-indigo-100: #dcebff;
+  --color-indigo-200: #bcdcff;
+  --color-indigo-300: #8dc3fb;
+  --color-indigo-400: #5ea4f3;
+  --color-indigo-500: #2f6fe0;
+  --color-indigo-600: #0a3cb5;
+  --color-indigo-700: #082f90;
+  --color-indigo-800: #072670;
+  --color-indigo-900: #0b2a6f;
+  --color-slate-900: #0b2a6f;
 }
 
 :root {
@@ -12,27 +25,52 @@
 body {
   margin: 0;
   padding: 0;
-  background: #f8fafc;
-  color: #0f172a;
+  background: #eaf4ff;
+  color: #1f2b45;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* A soft colour wash instead of flat grey, and a little depth on the white cards. */
+/* Soft sky wash behind the app, white rounded cards floating on it. */
 .app-shell {
-  background: linear-gradient(135deg, #eef2ff 0%, #f8fafc 38%, #ecfeff 100%) fixed;
+  background: linear-gradient(180deg, #bcdcff 0%, #dcebff 28%, #f3f9ff 70%, #ffffff 100%) fixed;
 }
 .app-shell main .bg-white.rounded-lg,
 .app-shell main .bg-white.rounded-xl {
-  box-shadow: 0 1px 2px rgb(15 23 42 / 0.05), 0 6px 18px rgb(79 70 229 / 0.07);
+  border-radius: 1.25rem;
+  border-color: transparent;
+  box-shadow: 0 1px 0 rgb(11 42 111 / 0.04), 0 14px 34px rgb(11 42 111 / 0.08);
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 .app-shell main .bg-white.rounded-lg:hover {
-  box-shadow: 0 2px 4px rgb(15 23 42 / 0.06), 0 12px 28px rgb(79 70 229 / 0.12);
+  box-shadow: 0 1px 0 rgb(11 42 111 / 0.04), 0 20px 44px rgb(11 42 111 / 0.13);
 }
 .app-shell aside {
-  background: linear-gradient(180deg, #ffffff 0%, #f5f3ff 100%);
+  background: rgb(255 255 255 / 0.75);
+  backdrop-filter: blur(8px);
+}
+.app-shell header {
+  background: rgb(255 255 255 / 0.85);
+}
+
+/* Primary buttons are pills. */
+button.bg-indigo-600,
+a.bg-indigo-600 {
+  border-radius: 9999px;
+}
+
+/* Clouds along the bottom of the sign-in page. */
+.sky-clouds {
+  background:
+    radial-gradient(70px 60px at 8% 100%, #fff 60%, transparent 62%),
+    radial-gradient(110px 90px at 16% 104%, #fff 60%, transparent 62%),
+    radial-gradient(80px 70px at 26% 102%, #fff 60%, transparent 62%),
+    radial-gradient(90px 70px at 78% 104%, #fff 60%, transparent 62%),
+    radial-gradient(120px 95px at 88% 102%, #fff 60%, transparent 62%),
+    radial-gradient(70px 60px at 97% 100%, #fff 60%, transparent 62%);
+  filter: blur(6px);
+  opacity: 0.9;
 }
 
 #root {
@@ -47,7 +85,7 @@ body {
 }
 
 :focus-visible {
-  outline: 2px solid #4f46e5;
+  outline: 2px solid #0a3cb5;
   outline-offset: 2px;
 }
 

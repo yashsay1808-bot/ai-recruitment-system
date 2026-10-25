@@ -543,11 +543,11 @@ export default function App() {
   // ==========================================================================
   return (
     <div className="app-shell min-h-screen w-full text-slate-900">
-      <div aria-hidden="true" className="h-1 w-full bg-gradient-to-r from-indigo-600 via-violet-500 to-cyan-500" />
+      <div aria-hidden="true" className="h-1 w-full bg-gradient-to-r from-indigo-600 via-sky-400 to-pink-400" />
       {/* ------------------------------ Header ------------------------------ */}
       <header className="sticky top-0 z-40 flex h-14 items-center justify-between gap-4 border-b border-slate-200 bg-white/90 px-6 backdrop-blur">
         <div className="flex items-center gap-2.5">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-600 to-violet-600 text-xs font-bold text-white shadow-md shadow-indigo-600/30">
+          <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-600 to-sky-400 text-xs font-extrabold text-white shadow-md shadow-indigo-600/30">
             NX
           </div>
           <div>
