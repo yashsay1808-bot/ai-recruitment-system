@@ -49,13 +49,19 @@ export const DEMO_ACCOUNT = {
 };
 export const isDemoAccountEnabled = config.seedDemoAccount && !isApiMode(config.authProvider);
 
-export function validateSignUp({ name, email, company, role, password }) {
+/** "" or a plausible mobile number: 10 digits (read as Indian) or +country code and 10 to 14 digits. */
+export const phoneProblem = (phone) => {
+  const p = (phone || "").replace(/[\s().-]/g, "");
+  return !p || /^\d{10}$/.test(p) || /^\+\d{10,14}$/.test(p) ? null : "Enter a valid mobile number, or leave it empty.";
+};
+
+export function validateSignUp({ name, email, company, role, password, phone }) {
   if (!name?.trim()) return "Enter your full name.";
   if (!EMAIL_RE.test(email?.trim() || "")) return "Enter a valid email address.";
   if (!isGmail(email)) return "Only Gmail addresses (name@gmail.com) can sign up.";
   if (!company?.trim()) return "Enter your company.";
   if (!ROLES.includes(role)) return "Choose your role.";
-  return passwordProblem(password);
+  return phoneProblem(phone) || passwordProblem(password);
 }
 
 /* -------------------------------------------------------------------------------------------- */
@@ -116,6 +122,7 @@ async function createLocalUser(form) {
     email,
     company: form.company.trim(),
     role: form.role,
+    phone: (form.phone || "").trim(),
     salt: toHex(salt),
     hash,
     iterations: PBKDF2_ITERATIONS,
@@ -273,7 +280,31 @@ async function signInWithGoogle(credential) {
   return user;
 }
 
-/** Forgot password: a Google sign-in proves the Gmail address, then the new password is saved. */
+const needsServer = () => new AuthError("Reset by e-mail needs the online server. Use \"Reset with Google instead\".");
+
+/** Forgot password, step 1: the server e-mails a 6-digit code (and texts it when the account has a number). */
+async function requestPasswordReset(email) {
+  if (!isApiMode(config.authProvider)) throw needsServer();
+  try {
+    return await api.post("/auth/forgot-password", { email: normEmail(email || "") });
+  } catch (err) {
+    throw asAuthError(err);
+  }
+}
+
+/** Forgot password, step 2: the code from the e-mail plus the new password. */
+async function resetPasswordWithCode({ email, code, password }) {
+  const problem = passwordProblem(password);
+  if (problem) throw new AuthError(problem);
+  if (!isApiMode(config.authProvider)) throw needsServer();
+  try {
+    await api.post("/auth/reset-with-code", { email: normEmail(email || ""), code: (code || "").trim(), password });
+  } catch (err) {
+    throw asAuthError(err);
+  }
+}
+
+/** Forgot password with Google: a Google sign-in proves the Gmail address, then the new password is saved. */
 async function resetPassword({ credential, password }) {
   const problem = passwordProblem(password);
   if (problem) throw new AuthError(problem);
@@ -301,4 +332,4 @@ async function resetPassword({ credential, password }) {
 }
 
 const baseProvider = isApiMode(config.authProvider) ? apiProvider : localProvider;
-export const authService = { ...baseProvider, signInWithGoogle, resetPassword };
+export const authService = { ...baseProvider, signInWithGoogle, resetPassword, requestPasswordReset, resetPasswordWithCode };

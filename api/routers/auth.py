@@ -27,6 +27,7 @@ from pydantic import BaseModel, Field
 from pymongo.database import Database
 from pymongo.errors import DuplicateKeyError
 
+from api import mailer
 from api.mongo import get_mongo_db
 from src.config import get_settings
 
@@ -63,6 +64,9 @@ GOOGLE_TOKENINFO_URL = "https://oauth2.googleapis.com/tokeninfo"
 GOOGLE_ISSUERS = ("accounts.google.com", "https://accounts.google.com")
 
 EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
+RESET_MINUTES = 10  # how long an e-mailed code stays valid
+RESET_MAX_ATTEMPTS = 5  # wrong guesses allowed per code
+RESET_MAX_PER_HOUR = 3  # codes that can be requested per e-mail per hour
 BAD_CREDENTIALS = "Incorrect email or password."
 
 
@@ -72,10 +76,21 @@ class SignUpBody(BaseModel):
     company: str = Field(max_length=120)
     role: str
     password: str = Field(max_length=256)
+    phone: str = Field(default="", max_length=24)  # optional; a reset code is also sent here when SMS is set up
 
 
 class SignInBody(BaseModel):
     email: str = Field(max_length=254)
+    password: str = Field(max_length=256)
+
+
+class ForgotBody(BaseModel):
+    email: str = Field(max_length=254)
+
+
+class ResetCodeBody(BaseModel):
+    email: str = Field(max_length=254)
+    code: str = Field(max_length=12)
     password: str = Field(max_length=256)
 
 
@@ -93,6 +108,20 @@ def _norm_email(email: str) -> str:
 
 def _hash_password(password: str, salt: bytes, iterations: int = PBKDF2_ITERATIONS) -> str:
     return hashlib.pbkdf2_hmac("sha256", password.encode("utf-8"), salt, iterations).hex()
+
+
+def _norm_phone(phone: str) -> Optional[str]:
+    """'' for no number, '+91...' for a valid one, None when it is not a plausible mobile number."""
+    p = re.sub(r"[\s().-]", "", phone or "")
+    if not p:
+        return ""
+    if re.fullmatch(r"\d{10}", p):
+        return "+91" + p  # a bare 10-digit number is read as an Indian mobile number
+    return p if re.fullmatch(r"\+\d{10,14}", p) else None
+
+
+def _code_hash(email: str, code: str) -> str:
+    return hmac.new(get_settings().SECRET_KEY.encode(), f"{email}:{code}".encode(), hashlib.sha256).hexdigest()
 
 
 def _token_hash(token: str) -> str:
@@ -196,9 +225,13 @@ def signup(body: SignUpBody, db: Database = Depends(get_mongo_db)) -> dict:
         raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, "Choose your role.")
     if not _strong_password(body.password):
         raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, PASSWORD_RULE)
+    phone = _norm_phone(body.phone)
+    if phone is None:
+        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, "Enter a valid mobile number, or leave it empty.")
 
     salt = secrets.token_bytes(16)
     doc = {
+        "phone": phone,
         "name": body.name.strip(),
         "email": email,
         "company": body.company.strip(),
@@ -307,6 +340,74 @@ def reset_password(body: ResetBody, db: Database = Depends(get_mongo_db)) -> dic
                   "failedLogins": 0, "lockedUntil": None}},
     )
     db.sessions.delete_many({"userId": user["_id"]})  # a changed password ends the old sessions
+    return {"ok": True}
+
+
+@router.post("/forgot-password")
+def forgot_password(body: ForgotBody, db: Database = Depends(get_mongo_db)) -> dict:
+    """Send a 6-digit code by e-mail (and by SMS when the account has a number and SMS is set up).
+
+    The answer is the same whether or not the e-mail has an account, so nobody can use this to find out who is registered.
+    """
+    if not mailer.email_configured():
+        raise HTTPException(status.HTTP_503_SERVICE_UNAVAILABLE, "Password reset by e-mail is not set up on this server yet.")
+    generic = {"ok": True, "message": f"If an account exists for this e-mail, a 6-digit code has been sent. It is valid for {RESET_MINUTES} minutes."}
+    email = _norm_email(body.email)
+    user = db.users.find_one({"email": email})
+    if user is None:
+        return generic
+
+    now = _now()
+    previous = db.password_resets.find_one({"email": email}) or {}
+    recent = [t for t in (_aware(x) for x in previous.get("requests", [])) if t and now - t < timedelta(hours=1)]
+    if len(recent) >= RESET_MAX_PER_HOUR:
+        return generic
+
+    code = f"{secrets.randbelow(10**6):06d}"
+    db.password_resets.replace_one(
+        {"email": email},
+        {
+            "email": email,
+            "codeHash": _code_hash(email, code),
+            "expiresAt": now + timedelta(minutes=RESET_MINUTES),
+            "purgeAt": now + timedelta(hours=1),  # the document outlives the code so the hourly limit is remembered
+            "attempts": 0,
+            "requests": recent + [now],
+        },
+        upsert=True,
+    )
+    text = f"Your Nexus ATS password reset code is {code}. It is valid for {RESET_MINUTES} minutes. If you did not ask for it, ignore this message."
+    mailer.send_email(email, "Your Nexus ATS password reset code", text)
+    if user.get("phone"):
+        mailer.send_sms(user["phone"], text)
+    return generic
+
+
+@router.post("/reset-with-code")
+def reset_with_code(body: ResetCodeBody, db: Database = Depends(get_mongo_db)) -> dict:
+    """Set a new password with the code that was sent by e-mail or SMS."""
+    email = _norm_email(body.email)
+    bad = HTTPException(status.HTTP_400_BAD_REQUEST, "That code is incorrect or has expired. Ask for a new one.")
+    doc = db.password_resets.find_one({"email": email})
+    if not doc or _aware(doc["expiresAt"]) <= _now() or doc.get("attempts", 0) >= RESET_MAX_ATTEMPTS:
+        raise bad
+    if not _strong_password(body.password):
+        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, PASSWORD_RULE)
+    if not hmac.compare_digest(doc["codeHash"], _code_hash(email, body.code.strip())):
+        db.password_resets.update_one({"_id": doc["_id"]}, {"$inc": {"attempts": 1}})
+        raise bad
+    user = db.users.find_one({"email": email})
+    if user is None:
+        raise bad
+
+    salt = secrets.token_bytes(16)
+    db.users.update_one(
+        {"_id": user["_id"]},
+        {"$set": {"salt": salt.hex(), "hash": _hash_password(body.password, salt), "iterations": PBKDF2_ITERATIONS,
+                  "failedLogins": 0, "lockedUntil": None}},
+    )
+    db.password_resets.delete_one({"_id": doc["_id"]})
+    db.sessions.delete_many({"userId": user["_id"]})
     return {"ok": True}
 
 

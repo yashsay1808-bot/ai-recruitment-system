@@ -37,6 +37,8 @@ def init_mongo(db: Database) -> None:
     db.users.create_index("email", unique=True)
     db.sessions.create_index("tokenHash", unique=True)
     db.sessions.create_index("expiresAt", expireAfterSeconds=0)
+    db.password_resets.create_index("email", unique=True)
+    db.password_resets.create_index("purgeAt", expireAfterSeconds=0)
     db.candidates.create_index([("pool", ASCENDING), ("id", ASCENDING)], unique=True)
 
     for pool in POOLS:

@@ -6,6 +6,7 @@ import {
   ROLES,
   PASSWORD_RULE,
   passwordProblem,
+  phoneProblem,
   DEMO_ACCOUNT,
   isDemoAccountEnabled,
   isGoogleAuthEnabled,
@@ -146,12 +147,22 @@ function PasswordInput({ id, value, onChange, autoComplete, placeholder, noAutof
   );
 }
 
-const EMPTY_SIGN_UP = { name: "", email: "", company: "", role: ROLES[0], password: "" };
+const EMPTY_SIGN_UP = { name: "", email: "", company: "", role: ROLES[0], phone: "", password: "" };
 
 export default function AuthCard() {
-  const { signIn, signUp, signInWithGoogle, resetPassword } = useAuth();
+  const { signIn, signUp, signInWithGoogle, resetPassword, requestPasswordReset, resetPasswordWithCode } = useAuth();
   const [mode, setMode] = useState("signin"); // "signin" | "signup" | "reset"
   const [newPassword, setNewPassword] = useState("");
+  const [resetStep, setResetStep] = useState("email"); // "email" | "code" | "google"
+  const [resetEmail, setResetEmail] = useState("");
+  const [resetCode, setResetCode] = useState("");
+  const [cooldown, setCooldown] = useState(0);
+
+  useEffect(() => {
+    if (cooldown <= 0) return undefined;
+    const t = setTimeout(() => setCooldown((c) => c - 1), 1000);
+    return () => clearTimeout(t);
+  }, [cooldown]);
   const [notice, setNotice] = useState("");
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
@@ -192,7 +203,58 @@ export default function AuthCard() {
     // On success the gate swaps this card out.
   };
 
-  // Forgot password: the Google sign-in proves the Gmail address; the new password was typed before it.
+  const openReset = () => {
+    switchMode("reset");
+    setResetStep("email");
+    setResetEmail(credentials.email);
+    setResetCode("");
+    setNewPassword("");
+  };
+
+  // Forgot password, step 1: e-mail the code. The answer is the same for every address.
+  const handleSendCode = async (e) => {
+    e?.preventDefault();
+    setError("");
+    setNotice("");
+    setBusy(true);
+    try {
+      const res = await requestPasswordReset(resetEmail);
+      setNotice(res.message);
+      setResetStep("code");
+      setCooldown(30);
+    } catch (err) {
+      setError(err.message || "Could not send the code. Please try again.");
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  // Forgot password, step 2: the code from the e-mail and the new password.
+  const handleResetWithCode = async (e) => {
+    e.preventDefault();
+    setError("");
+    setNotice("");
+    const problem = passwordProblem(newPassword);
+    if (problem) {
+      setError(problem);
+      return;
+    }
+    setBusy(true);
+    try {
+      await resetPasswordWithCode({ email: resetEmail, code: resetCode, password: newPassword });
+      setNewPassword("");
+      setResetCode("");
+      setCredentials({ email: resetEmail.trim(), password: "" });
+      setMode("signin");
+      setNotice("Password updated. Sign in with your new password.");
+    } catch (err) {
+      setError(err.message || "Could not reset the password. Please try again.");
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  // Forgot password with Google: the Google sign-in proves the Gmail address; the new password was typed before it.
   const handleReset = async (credential) => {
     setError("");
     const problem = passwordProblem(newPassword);
@@ -216,6 +278,11 @@ export default function AuthCard() {
   const handleSignUp = async (e) => {
     e.preventDefault();
     setError("");
+    const phoneIssue = phoneProblem(form.phone);
+    if (phoneIssue) {
+      setError(phoneIssue);
+      return;
+    }
     setBusy(true);
     try {
       await signUp(form);
@@ -260,7 +327,11 @@ export default function AuthCard() {
           </h1>
           <p className="mt-1 text-sm text-slate-500">
             {isReset
-              ? "Choose a new password, then confirm it is you with Google."
+              ? resetStep === "email"
+                ? "Enter your Gmail address and we will send you a 6-digit code."
+                : resetStep === "code"
+                  ? "Enter the code from your e-mail (or SMS) and choose a new password."
+                  : "Choose a new password, then confirm it is you with Google."
               : isSignIn
                 ? "Welcome back. Sign in to continue to your workspace."
                 : "It only takes a minute."}
@@ -276,7 +347,91 @@ export default function AuthCard() {
             </div>
           )}
 
-          {isReset ? (
+          {isReset && resetStep === "email" ? (
+            <form key="reset-email" onSubmit={handleSendCode} className="mt-5 space-y-4">
+              <Field label="Gmail address">
+                {(id) => (
+                  <input
+                    id={id}
+                    type="email"
+                    value={resetEmail}
+                    onChange={(e) => setResetEmail(e.target.value)}
+                    autoComplete="email"
+                    spellCheck={false}
+                    autoCapitalize="none"
+                    placeholder="you@gmail.com"
+                    required
+                    className={inputClass}
+                  />
+                )}
+              </Field>
+              {error && (
+                <p role="alert" className="text-sm text-rose-600">
+                  {error}
+                </p>
+              )}
+              <button
+                type="submit"
+                disabled={busy}
+                className="w-full rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-medium text-white shadow-sm shadow-indigo-600/20 transition duration-150 hover:bg-indigo-700 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-60"
+              >
+                {busy ? "Sending…" : "Send reset code"}
+              </button>
+              {isGoogleAuthEnabled && (
+                <button type="button" onClick={() => setResetStep("google")} className="w-full text-center text-xs font-medium text-indigo-600 hover:underline">
+                  Reset with Google instead
+                </button>
+              )}
+            </form>
+          ) : isReset && resetStep === "code" ? (
+            <form key="reset-code" onSubmit={handleResetWithCode} className="mt-5 space-y-4">
+              <Field label="6-digit code" hint={`Sent to ${resetEmail}. It is valid for 10 minutes.`}>
+                {(id) => (
+                  <input
+                    id={id}
+                    value={resetCode}
+                    onChange={(e) => setResetCode(e.target.value.replace(/\D/g, "").slice(0, 6))}
+                    inputMode="numeric"
+                    autoComplete="one-time-code"
+                    placeholder="123456"
+                    required
+                    minLength={6}
+                    className={`${inputClass} tracking-[0.4em]`}
+                  />
+                )}
+              </Field>
+              <Field label="New password" hint={PASSWORD_RULE}>
+                {(id) => (
+                  <PasswordInput id={id} value={newPassword} onChange={(e) => setNewPassword(e.target.value)} autoComplete="new-password" />
+                )}
+              </Field>
+              {error && (
+                <p role="alert" className="text-sm text-rose-600">
+                  {error}
+                </p>
+              )}
+              <button
+                type="submit"
+                disabled={busy}
+                className="w-full rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-medium text-white shadow-sm shadow-indigo-600/20 transition duration-150 hover:bg-indigo-700 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-60"
+              >
+                {busy ? "Resetting…" : "Reset password"}
+              </button>
+              <div className="flex items-center justify-between text-xs">
+                <button
+                  type="button"
+                  onClick={handleSendCode}
+                  disabled={busy || cooldown > 0}
+                  className="font-medium text-indigo-600 hover:underline disabled:cursor-not-allowed disabled:text-slate-400 disabled:no-underline"
+                >
+                  {cooldown > 0 ? `Resend code in ${cooldown}s` : "Resend code"}
+                </button>
+                <button type="button" onClick={() => setResetStep("email")} className="font-medium text-slate-500 hover:underline">
+                  Use a different e-mail
+                </button>
+              </div>
+            </form>
+          ) : isReset ? (
             <div key="reset" className="mt-5 space-y-4">
               <Field label="New password" hint={PASSWORD_RULE}>
                 {(id) => (
@@ -321,15 +476,13 @@ export default function AuthCard() {
                 )}
               </Field>
 
-              {isGoogleAuthEnabled && (
-                <button
-                  type="button"
-                  onClick={() => switchMode("reset")}
-                  className="text-xs font-medium text-indigo-600 hover:text-indigo-700 hover:underline"
-                >
-                  Forgot password?
-                </button>
-              )}
+              <button
+                type="button"
+                onClick={openReset}
+                className="text-xs font-medium text-indigo-600 hover:text-indigo-700 hover:underline"
+              >
+                Forgot password?
+              </button>
 
               {error && (
                 <p role="alert" className="text-sm text-rose-600">
@@ -391,6 +544,11 @@ export default function AuthCard() {
                   />
                 )}
               </Field>
+              <Field label="Mobile number (optional)" hint="Used to text you a password-reset code when SMS is switched on.">
+                {(id) => (
+                  <input id={id} type="tel" value={form.phone} onChange={setField("phone")} autoComplete="tel" placeholder="98765 43210" className={inputClass} />
+                )}
+              </Field>
               <Field label="Role">
                 {(id) => (
                   <select id={id} value={form.role} onChange={setField("role")} className={inputClass}>
@@ -422,7 +580,7 @@ export default function AuthCard() {
             </form>
           )}
 
-          {isGoogleAuthEnabled && (
+          {isGoogleAuthEnabled && (!isReset || resetStep === "google") && (
             <div className="mt-6">
               <div className="flex items-center gap-3 text-xs uppercase tracking-wide text-slate-400">
                 <span className="h-px flex-1 bg-slate-200" />

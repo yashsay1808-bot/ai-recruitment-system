@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nexus ATS theme preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=DM+Sans:wght@400;500;700&family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF6EF; --card:#FFFDF9; --ink:#1C1917; --muted:#6B6258; --line:#E7DFD3; --accent:#D9482B; --accent-ink:#fff;
+  --green:#2E7D4F; --amber:#C98A12; --red:#C0392B; --soft:#F3ECDF;
+  --r:12px; --bw:1px; --shadow:0 1px 0 rgba(28,25,23,.04); --head:'Fraunces',serif; --body:'DM Sans',sans-serif; --headw:700;
+}
+[data-theme="sage"]{
+  --bg:#EEF2EA; --card:#FBFCF9; --ink:#1F2D27; --muted:#5E6F66; --line:#D5DFD2; --accent:#2F5D50; --accent-ink:#fff;
+  --green:#3C8B5F; --amber:#C98A3A; --red:#B8523E; --soft:#E2EADD; --r:20px; --shadow:0 10px 30px rgba(47,93,80,.10);
+  --head:'Fraunces',serif; --body:'Instrument Sans',sans-serif; --headw:500;
+}
+[data-theme="bold"]{
+  --bg:#FFF4D6; --card:#FFFFFF; --ink:#111111; --muted:#444; --line:#111111; --accent:#FF5A36; --accent-ink:#111;
+  --green:#14A06B; --amber:#FFB400; --red:#E5322D; --soft:#FFE59A; --r:8px; --bw:2.5px; --shadow:5px 5px 0 #111;
+  --head:'Bricolage Grotesque',sans-serif; --body:'Space Grotesk',sans-serif; --headw:800;
+}
+*{box-sizing:border-box;margin:0}
+body{background:#222;font-family:system-ui,sans-serif;color:#ddd}
+.bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;padding:14px 20px;background:#111;position:sticky;top:0;z-index:5}
+.bar b{color:#fff;margin-right:8px}
+.bar button{border:0;border-radius:99px;padding:8px 16px;font:600 13px system-ui;cursor:pointer;background:#333;color:#eee}
+.bar button.on{background:#fff;color:#111}
+.stage{padding:24px;display:grid;gap:28px}
+.frame{background:var(--bg);color:var(--ink);font-family:var(--body);border-radius:14px;overflow:hidden;max-width:1180px;margin:0 auto;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+h1,h2,h3,.head{font-family:var(--head);font-weight:var(--headw);letter-spacing:-.01em}
+.muted{color:var(--muted)}
+.card{background:var(--card);border:var(--bw) solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);border:var(--bw) solid var(--line);border-color:transparent;border-radius:var(--r);padding:11px 18px;font:700 14px var(--body);cursor:pointer;box-shadow:var(--shadow)}
+[data-theme="bold"] .btn{border-color:#111}
+.btn.ghost{background:transparent;color:var(--ink);border:var(--bw) solid var(--line)}
+.chip{display:inline-block;border:var(--bw) solid var(--line);border-radius:99px;padding:4px 11px;font-size:12px;font-weight:600;background:var(--card)}
+input{width:100%;border:var(--bw) solid var(--line);background:var(--card);border-radius:var(--r);padding:12px 14px;font:15px var(--body);color:var(--ink)}
+label{display:block;font-size:13px;font-weight:700;margin:14px 0 6px}
+/* login */
+.login{display:grid;grid-template-columns:1fr 1fr;min-height:640px}
+.login .l{padding:56px 60px;display:flex;flex-direction:column;justify-content:center}
+.login .r{background:var(--accent);color:var(--accent-ink);padding:56px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+[data-theme="paper"] .login .r{background:#F0E3D0;color:var(--ink)}
+.logo{display:flex;align-items:center;gap:10px;font:700 18px var(--head);margin-bottom:34px}
+.logo i{width:34px;height:34px;border-radius:9px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font:700 13px var(--body);font-style:normal;border:var(--bw) solid transparent}
+[data-theme="bold"] .logo i{border-color:#111;box-shadow:3px 3px 0 #111}
+.login h1{font-size:44px;line-height:1.05;margin-bottom:10px}
+.pitch{font:var(--headw) 40px/1.08 var(--head);max-width:420px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chips .chip{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.4);color:inherit}
+[data-theme="paper"] .chips .chip{background:#fff;border-color:var(--line)}
+[data-theme="bold"] .chips .chip{background:#fff;color:#111;border-color:#111}
+.rings{display:flex;gap:18px;align-items:center}
+.ring{width:70px;height:70px;border-radius:50%;display:grid;place-items:center;font:700 17px var(--head);background:conic-gradient(var(--c) calc(var(--p)*1%), rgba(0,0,0,.12) 0)}
+.ring span{width:54px;height:54px;border-radius:50%;background:var(--card);color:var(--ink);display:grid;place-items:center}
+/* dashboard */
+.app{display:grid;grid-template-columns:230px 1fr}
+.side{padding:22px 16px;border-right:var(--bw) solid var(--line);background:var(--soft)}
+.side .logo{margin-bottom:22px}
+.nav a{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:var(--r);font-weight:600;font-size:14px;color:var(--muted);margin-bottom:4px}
+.nav a.on{background:var(--card);color:var(--ink);border:var(--bw) solid var(--line);box-shadow:var(--shadow)}
+.nav a b{width:8px;height:8px;border-radius:50%;background:var(--dot)}
+.main{padding:26px 30px}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;gap:12px}
+.top h2{font-size:30px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:18px}
+.kpi{padding:16px 18px}
+.kpi small{display:block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.kpi div{font:var(--headw) 34px/1.1 var(--head);margin-top:6px}
+.cand{display:grid;grid-template-columns:76px 1fr auto;gap:16px;align-items:center;padding:16px 18px;margin-bottom:12px;position:relative}
+.cand h3{font-size:19px}
+.tag{display:inline-block;font-size:12px;font-weight:600;border-radius:99px;padding:3px 10px;margin:8px 6px 0 0;background:var(--soft);border:var(--bw) solid var(--line)}
+.tag.no{background:transparent;color:var(--red);border-style:dashed}
+.verdict{font-size:12px;font-weight:800;padding:5px 11px;border-radius:99px;border:var(--bw) solid currentColor}
+.hover{position:absolute;left:96px;top:46px;width:330px;z-index:3;padding:16px}
+.hover ul{padding-left:0;list-style:none;font-size:13px;line-height:1.45}
+.hover li{margin:5px 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:900px){.login{grid-template-columns:1fr}.app{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="bar">
+  <b>Nexus ATS: pick a look</b>
+  <button data-t="paper" class="on">1 · Editorial Paper</button>
+  <button data-t="sage">2 · Calm Sage</button>
+  <button data-t="bold">3 · Bold Flat</button>
+  <span style="margin-left:auto;font-size:12px;color:#aaa">Sample data only. Scroll for the dashboard.</span>
+</div>
+
+<div class="stage" id="stage" data-theme="paper">
+
+  <!-- ============ LOGIN ============ -->
+  <section class="frame login">
+    <div class="l">
+      <div class="logo"><i>NX</i> Nexus ATS</div>
+      <h1>Welcome back.</h1>
+      <p class="muted" style="margin-bottom:18px">Sign in to the recruiter workspace.</p>
+      <label>E-mail</label><input value="you@gmail.com">
+      <label>Password</label><input type="password" value="password123">
+      <div style="display:flex;justify-content:space-between;margin:12px 0 18px;font-size:13px"><span class="muted">Show password</span><b style="color:var(--accent)">Forgot password?</b></div>
+      <span class="btn" style="text-align:center">Sign in</span>
+      <p class="muted" style="text-align:center;margin:14px 0;font-size:13px">or</p>
+      <span class="btn ghost" style="text-align:center">Continue with Google</span>
+      <p class="muted" style="margin-top:18px;font-size:13px">New here? <b style="color:var(--accent)">Create an account</b></p>
+    </div>
+    <div class="r">
+      <div class="chips"><span class="chip">Blind screening</span><span class="chip">Explainable AI</span><span class="chip">Four-agent council</span></div>
+      <div>
+        <p class="pitch">Hiring decisions you can explain.</p>
+        <p style="margin-top:14px;max-width:380px;opacity:.9;font-size:15px;line-height:1.5">Every score comes with a reason: which skills matched, what was missing, and what the review council decided.</p>
+      </div>
+      <div class="rings">
+        <div class="ring" style="--p:88;--c:var(--green)"><span>88</span></div>
+        <div class="ring" style="--p:61;--c:var(--amber)"><span>61</span></div>
+        <div class="ring" style="--p:34;--c:var(--red)"><span>34</span></div>
+        <span style="font-size:13px;opacity:.9;max-width:150px">Strong Hire, Lean Hire, Reject, each with its reasons.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DASHBOARD ============ -->
+  <section class="frame app">
+    <aside class="side">
+      <div class="logo"><i>NX</i> Nexus ATS</div>
+      <nav class="nav">
+        <a style="--dot:#D9482B"><b></b>Job Management</a>
+        <a class="on" style="--dot:#2E7D4F"><b></b>Leaderboard</a>
+        <a style="--dot:#6B5BD6"><b></b>Candidate DeepDive</a>
+        <a style="--dot:#C98A12"><b></b>Comparison</a>
+        <a style="--dot:#1F8FA8"><b></b>Interview Assistant</a>
+        <a style="--dot:#B8523E"><b></b>Analytics</a>
+        <a style="--dot:#555"><b></b>Chatbot</a>
+      </nav>
+    </aside>
+    <div class="main">
+      <div class="top">
+        <div><span class="muted" style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase">Machine Learning Engineer · 35 – 42 LPA</span>
+          <h2>Good morning, Yashaswini</h2></div>
+        <span class="chip">Blind screening</span>
+      </div>
+      <div class="kpis">
+        <div class="card kpi"><small>Screened</small><div>12</div></div>
+        <div class="card kpi"><small>Shortlisted</small><div style="color:var(--green)">5</div></div>
+        <div class="card kpi"><small>Top match</small><div>88.1%</div></div>
+        <div class="card kpi"><small>Red-flagged</small><div style="color:var(--red)">10</div></div>
+      </div>
+
+      <div class="card cand">
+        <div class="ring" style="--p:88;--c:var(--green);width:72px;height:72px"><span style="width:56px;height:56px">88</span></div>
+        <div>
+          <h3>Karthik Menon <span class="chip" style="font-size:11px;vertical-align:middle">#1</span></h3>
+          <span class="muted" style="font-size:13px">Machine Learning Engineer · 4.5 yrs</span><br>
+          <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">FastAPI</span><span class="tag">Docker</span><span class="tag no">no red flags</span>
+        </div>
+        <span class="verdict" style="color:var(--green)">STRONG HIRE</span>
+
+        <div class="card hover">
+          <b>Why this verdict</b>
+          <ul>
+            <li>✓ Council consensus 91.4: above the Strong Hire line of 80.</li>
+            <li>✓ 4.5 years; the role asks for 2+.</li>
+            <li>! Matches 7 of 17 required skills.</li>
+            <li>✓ GitHub check: low risk, score 94/100.</li>
+          </ul>
+          <span class="btn" style="margin-top:8px;padding:8px 14px;font-size:13px">Open full deep dive</span>
+        </div>
+      </div>
+
+      <div class="card cand" style="margin-top:150px">
+        <div class="ring" style="--p:82;--c:var(--green);width:72px;height:72px"><span style="width:56px;height:56px">82</span></div>
+        <div>
+          <h3>Rahul Nair <span class="chip" style="font-size:11px;vertical-align:middle">#2</span></h3>
+          <span class="muted" style="font-size:13px">ML Systems Engineer · 3.8 yrs</span><br>
+          <span class="tag">TensorFlow</span><span class="tag">Kubernetes</span><span class="tag">Docker</span><span class="tag no">no red flags</span>
+        </div>
+        <span class="verdict" style="color:var(--green)">STRONG HIRE</span>
+      </div>
+      <div class="card cand">
+        <div class="ring" style="--p:61;--c:var(--amber);width:72px;height:72px"><span style="width:56px;height:56px">61</span></div>
+        <div>
+          <h3>Siddharth Rao <span class="chip" style="font-size:11px;vertical-align:middle">#3</span></h3>
+          <span class="muted" style="font-size:13px">Backend Engineer · 3 yrs</span><br>
+          <span class="tag">FastAPI</span><span class="tag">Flask</span><span class="tag no">PyTorch missing</span>
+        </div>
+        <span class="verdict" style="color:var(--amber)">LEAN HIRE</span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+document.querySelectorAll('.bar button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.bar button').forEach(x=>x.classList.remove('on')); b.classList.add('on');
+  document.getElementById('stage').dataset.theme=b.dataset.t;
+});
+</script>
+</body>
+</html>

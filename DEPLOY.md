@@ -25,3 +25,16 @@ Note: the SQLite DB on Streamlit Cloud is ephemeral (resets on restart).
 ## 3. Frontend (Vercel)
 1. Vercel → Add New Project → repo → Root Directory `frontend`. Framework preset Vite is auto-detected.
 2. No env vars are required (runs in self-contained local mode). To use the backend, set `VITE_API_BASE_URL` to the Render URL, `VITE_AUTH_PROVIDER=api` and `VITE_CANDIDATES_PROVIDER=api`. Add `VITE_GOOGLE_CLIENT_ID` for Google sign-in.
+
+
+## Forgot-password e-mails
+
+The "Forgot password?" flow e-mails a 6-digit code (valid 10 minutes, 5 tries, 3 codes per hour per address). Render's free plan blocks SMTP,
+so the server uses the **Brevo** HTTPS API (free: 300 e-mails a day).
+
+1. Create a free account at brevo.com and verify a sender address (Senders, Domains and Dedicated IPs -> Senders).
+2. Create an API key (SMTP and API -> API keys).
+3. In Render, open the service -> Environment and add `BREVO_API_KEY` (the key) and `MAIL_FROM` (the verified sender). Save; Render redeploys.
+4. Optional SMS: add `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN` and `TWILIO_FROM`. Users who entered a mobile number at sign-up then also get the code by SMS.
+
+Without these variables the sign-in page shows "Password reset by e-mail is not set up on this server yet", and "Reset with Google instead" still works.

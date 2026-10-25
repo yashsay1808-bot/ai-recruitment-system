@@ -255,3 +255,87 @@ def test_forgot_password_resets_through_google_and_ends_old_sessions(client, goo
 def test_forgot_password_needs_an_existing_account(client, google_ok):
     res = client.post("/auth/reset-password", json={"credential": "tok", "password": "N3w-Passw0rd!"})
     assert res.status_code == 404
+
+
+# ---- forgot password by e-mail code
+# --------------------------------------------------------------------------
+EMAIL = SIGNUP["email"].lower()
+
+
+@pytest.fixture()
+def outbox(monkeypatch):
+    """Turns e-mail on and records what would have been sent."""
+    monkeypatch.setenv("BREVO_API_KEY", "test-key")
+    monkeypatch.setenv("MAIL_FROM", "noreply@example.com")
+    sent = []
+    monkeypatch.setattr(auth_module.mailer, "send_email", lambda to, subject, text: sent.append((to, text)) or True)
+    monkeypatch.setattr(auth_module.mailer, "send_sms", lambda to, text: sent.append((to, text)) or True)
+    return sent
+
+
+def _code(outbox):
+    import re as _re
+    return _re.search(r"code is (\d{6})", outbox[-1][1]).group(1)
+
+
+def test_forgot_password_emails_a_code_that_resets_the_password(client, outbox):
+    client.post("/auth/signup", json=SIGNUP)
+    old = signin(client).json()["token"]
+    res = client.post("/auth/forgot-password", json={"email": EMAIL})
+    assert res.status_code == 200 and "6-digit code" in res.json()["message"]
+    assert outbox[-1][0] == EMAIL
+    code = _code(outbox)
+    # a weak password is refused and does not use up the code
+    assert client.post("/auth/reset-with-code", json={"email": EMAIL, "code": code, "password": "weak"}).status_code == 422
+    assert client.post("/auth/reset-with-code", json={"email": EMAIL, "code": code, "password": "N3w-Passw0rd!"}).status_code == 200
+    assert signin(client).status_code == 401
+    assert signin(client, "N3w-Passw0rd!").status_code == 200
+    assert client.get("/auth/me", headers={"Authorization": f"Bearer {old}"}).status_code == 401
+    # the code works once
+    assert client.post("/auth/reset-with-code", json={"email": EMAIL, "code": code, "password": "An0ther-Pass!"}).status_code == 400
+
+
+def test_forgot_password_does_not_reveal_which_emails_have_accounts(client, outbox):
+    known = client.post("/auth/signup", json=SIGNUP) and client.post("/auth/forgot-password", json={"email": EMAIL})
+    unknown = client.post("/auth/forgot-password", json={"email": "nobody@gmail.com"})
+    assert known.status_code == unknown.status_code == 200 and known.json() == unknown.json()
+    assert [to for to, _ in outbox] == [EMAIL]
+
+
+def test_wrong_codes_are_limited_to_five_tries(client, outbox):
+    client.post("/auth/signup", json=SIGNUP)
+    client.post("/auth/forgot-password", json={"email": EMAIL})
+    good = _code(outbox)
+    wrong = "000000" if good != "000000" else "111111"
+    for _ in range(5):
+        assert client.post("/auth/reset-with-code", json={"email": EMAIL, "code": wrong, "password": "N3w-Passw0rd!"}).status_code == 400
+    # the right code no longer works after five wrong guesses
+    assert client.post("/auth/reset-with-code", json={"email": EMAIL, "code": good, "password": "N3w-Passw0rd!"}).status_code == 400
+
+
+def test_an_expired_code_is_refused(client, outbox):
+    client.post("/auth/signup", json=SIGNUP)
+    client.post("/auth/forgot-password", json={"email": EMAIL})
+    code = _code(outbox)
+    db = app.dependency_overrides[get_mongo_db]()
+    db.password_resets.update_one({"email": EMAIL}, {"$set": {"expiresAt": auth_module._now() - auth_module.timedelta(minutes=1)}})
+    assert client.post("/auth/reset-with-code", json={"email": EMAIL, "code": code, "password": "N3w-Passw0rd!"}).status_code == 400
+
+
+def test_at_most_three_codes_per_hour_and_an_sms_when_the_account_has_a_number(client, outbox):
+    client.post("/auth/signup", json={**SIGNUP, "phone": "98765 43210"})
+    db = app.dependency_overrides[get_mongo_db]()
+    assert db.users.find_one({"email": EMAIL})["phone"] == "+919876543210"
+    for _ in range(5):
+        client.post("/auth/forgot-password", json={"email": EMAIL})
+    assert len([m for m in outbox if m[0] == EMAIL]) == 3
+    assert len([m for m in outbox if m[0] == "+919876543210"]) == 3
+
+
+def test_forgot_password_says_so_when_e_mail_is_not_set_up(client, monkeypatch):
+    monkeypatch.delenv("BREVO_API_KEY", raising=False)
+    assert client.post("/auth/forgot-password", json={"email": EMAIL}).status_code == 503
+
+
+def test_signup_rejects_an_invalid_phone_number(client):
+    assert client.post("/auth/signup", json={**SIGNUP, "phone": "12345"}).status_code == 422
