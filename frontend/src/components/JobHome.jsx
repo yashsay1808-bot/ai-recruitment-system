@@ -329,7 +329,7 @@ export default function JobHome({
                 ? `${uploadedFilesCount} file${uploadedFilesCount === 1 ? "" : "s"} chosen: ${uploadedFilesList
                     .slice(0, 2)
                     .join(", ")}${uploadedFilesList.length > 2 ? "…" : ""}`
-                : "Resumes only: PDF, DOCX or TXT, up to 2 pages each · up to 100 files"}
+                : "Resumes only: PDF, DOCX, TXT or a photo, up to 2 pages each · up to 100 files"}
             </span>
             <span className={`${primaryBtn} mt-1 pointer-events-none`}>Select resume files</span>
             <input type="file" multiple accept=".pdf,.docx,.txt,.md,application/pdf,text/plain,application/vnd.openxmlformats-officedocument.wordprocessingml.document,image/*" onChange={handleFilesSelected} className="sr-only" />

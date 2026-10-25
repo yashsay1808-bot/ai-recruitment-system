@@ -181,9 +181,9 @@ describe("uploaded resume parser: resumes are at most two pages", () => {
     assert.match(rejected[0].reason, /too long/);
   });
 
-  it("tells the user that photos are not read", async () => {
+  it("explains when the text in a photo cannot be read", async () => {
     const photo = new File(["x"], "resume_photo.jpg", { type: "image/jpeg" });
     const { rejected } = await parser.parseUploadedFiles([photo], role);
-    assert.match(rejected[0].reason, /Photos and images are not read/);
+    assert.match(rejected[0].reason, /Could not read the text in this photo/);
   });
 });

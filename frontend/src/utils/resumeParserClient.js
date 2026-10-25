@@ -29,6 +29,8 @@ const MAX_PAGES = 2;
 const MAX_WORDS = 1100; // about two pages; used for DOCX and TXT, whose page count is not known
 
 /** Returns { text, pages }: pages is known for PDFs only. */
+const IMAGE_FILE = /\.(png|jpe?g|webp|bmp|gif)$/i;
+
 async function extractTextFromFile(file) {
   const name = file.name.toLowerCase();
 
@@ -70,7 +72,24 @@ async function extractTextFromFile(file) {
     }
   }
 
-  // 3. Plain Text / Markdown (.txt, .md, .json)
+  // 3. Photos and scans: read the text with OCR (loaded only when a photo is uploaded, about 2 MB on first use).
+  if (IMAGE_FILE.test(name)) {
+    try {
+      const head = new Uint8Array(await file.slice(0, 12).arrayBuffer());
+      const known = [[0x89, 0x50], [0xff, 0xd8], [0x42, 0x4d], [0x47, 0x49], [0x52, 0x49]]; // png, jpeg, bmp, gif, webp
+      if (!known.some(([a, b]) => head[0] === a && head[1] === b)) return { text: "", pages: 1 };
+      const { createWorker } = await import("tesseract.js");
+      const worker = await createWorker("eng");
+      const { data } = await worker.recognize(file);
+      await worker.terminate();
+      return { text: (data.text || "").trim(), pages: 1 };
+    } catch (err) {
+      console.warn("Photo OCR failed:", file.name, err);
+      return { text: "", pages: 1 };
+    }
+  }
+
+  // 4. Plain Text / Markdown (.txt, .md, .json)
   return { text: await file.text(), pages: null };
 }
 
@@ -232,18 +251,17 @@ export async function parseUploadedFiles(files, activeRole = { title: "Senior Ma
       continue;
     }
 
-    if (!/\.(pdf|docx|txt|md)$/i.test(file.name)) {
-      const image = /^image\//.test(file.type) || /\.(png|jpe?g|gif|webp|bmp|heic)$/i.test(file.name);
-      rejected.push({
-        name: file.name,
-        reason: image
-          ? "Photos and images are not read. Upload the resume as a PDF, DOCX or TXT file."
-          : "Unsupported file type. Upload a PDF, DOCX or TXT resume.",
-      });
+    if (!/\.(pdf|docx|txt|md)$/i.test(file.name) && !IMAGE_FILE.test(file.name)) {
+      rejected.push({ name: file.name, reason: "Unsupported file type. Upload a PDF, DOCX, TXT or a photo of the resume." });
       continue;
     }
     if (!text || text.trim().length === 0) {
-      rejected.push({ name: file.name, reason: "No readable text found (it may be a scanned image)." });
+      rejected.push({
+        name: file.name,
+        reason: IMAGE_FILE.test(file.name)
+          ? "Could not read the text in this photo. Use a clear, straight-on, well-lit picture, or upload a PDF."
+          : "No readable text found (it may be a scanned image).",
+      });
       continue;
     }
     if (!looksLikeResume(text)) {
