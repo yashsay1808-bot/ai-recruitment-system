@@ -25,6 +25,8 @@ import { generateChatbotReply } from "./utils/chatbotEngine";
 import { buildInterviewKit, BADGE_CLASSES } from "./utils/interviewQuestions";
 import { inr } from "./utils/money";
 import Analytics from "./components/Analytics";
+import CandidateHover from "./components/CandidateHover";
+import { explainCandidate } from "./utils/explain";
 import { useAuth } from "./context/AuthContext";
 import JobHome from "./components/JobHome";
 import { isApiMode } from "./config/env";
@@ -121,7 +123,7 @@ export default function App() {
   const [newRoleForm, setNewRoleForm] = useState({
     title: "",
     department: "Engineering Org",
-    level: "L4/L5 Senior",
+    level: "L4 Mid-Level",
     minExperience: "3+ Years Production",
     salaryInr: "30 - 38 LPA",
     description: "",
@@ -218,7 +220,7 @@ export default function App() {
       id: newId,
       title: newRoleForm.title.trim(),
       department: newRoleForm.department.trim() || "Engineering Org",
-      level: newRoleForm.level.trim() || "L4/L5 Senior",
+      level: newRoleForm.level.trim() || "L4 Mid-Level",
       minExperience: newRoleForm.minExperience.trim() || "2+ Years Production",
       salaryInr: newRoleForm.salaryInr.trim() || "28 - 36 LPA",
       status: "ACCEPTING CANDIDATES",
@@ -231,12 +233,18 @@ export default function App() {
     setNewRoleForm({
       title: "",
       department: "Engineering Org",
-      level: "L4/L5 Senior",
+      level: "L4 Mid-Level",
       minExperience: "3+ Years Production",
       salaryInr: "30 - 38 LPA",
       description: "",
       skills: "Python, Docker, AWS, CI/CD, REST API"
     });
+  };
+
+  const openDeepDive = (cand) => {
+    setCouncilSelectedCandId(cand.id);
+    setCouncilDebateTurn(0);
+    setActiveNav("deepdive");
   };
 
   // Real In-Browser Resume Ingestion Handler (Parses any uploaded .txt, .pdf, .docx files directly)
@@ -525,7 +533,7 @@ export default function App() {
       "Who is the most experienced candidate?",
       a && b ? `Compare ${tag(a)} and ${tag(b)}` : null,
       a ? `Draft outreach email for ${tag(a)}` : null,
-      "What is the compensation band?"
+      "What is the CTC band?"
     ].filter(Boolean);
   }, [candidatesPool]);
 
@@ -534,11 +542,12 @@ export default function App() {
   // AUTHENTICATED & GUEST PLATFORM (Sidebar Always Present, Exact 7 Pages)
   // ==========================================================================
   return (
-    <div className="min-h-screen w-full bg-slate-50 text-slate-900">
+    <div className="app-shell min-h-screen w-full text-slate-900">
+      <div aria-hidden="true" className="h-1 w-full bg-gradient-to-r from-indigo-600 via-violet-500 to-cyan-500" />
       {/* ------------------------------ Header ------------------------------ */}
       <header className="sticky top-0 z-40 flex h-14 items-center justify-between gap-4 border-b border-slate-200 bg-white/90 px-6 backdrop-blur">
         <div className="flex items-center gap-2.5">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-600 text-xs font-bold text-white">
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-600 to-violet-600 text-xs font-bold text-white shadow-md shadow-indigo-600/30">
             NX
           </div>
           <div>
@@ -613,14 +622,14 @@ export default function App() {
         <aside className="sticky top-14 h-[calc(100vh-3.5rem)] w-64 shrink-0 border-r border-slate-200 bg-white p-3">
           <nav className="space-y-1" aria-label="Main">
             {[
-              { id: "job_management", label: "Job Management", Icon: Target },
-              { id: "leaderboard", label: "Screening Leaderboard", Icon: BarChart3, badge: candidatesPool.length.toString() },
-              { id: "deepdive", label: "Candidate DeepDive", Icon: SearchCode },
-              { id: "comparison", label: "Candidate Comparison", Icon: Swords },
-              { id: "interview", label: "Interview Assistant", Icon: Mic },
-              { id: "analytics", label: "Recruiter Analytics", Icon: LineChart },
-              { id: "chatbot", label: "Recruiter Chatbot", Icon: Bot }
-            ].map(({ id, label, Icon, badge }) => {
+              { id: "job_management", label: "Job Management", Icon: Target, tint: "text-indigo-500" },
+              { id: "leaderboard", label: "Screening Leaderboard", Icon: BarChart3, badge: candidatesPool.length.toString(), tint: "text-emerald-500" },
+              { id: "deepdive", label: "Candidate DeepDive", Icon: SearchCode, tint: "text-violet-500" },
+              { id: "comparison", label: "Candidate Comparison", Icon: Swords, tint: "text-rose-500" },
+              { id: "interview", label: "Interview Assistant", Icon: Mic, tint: "text-amber-500" },
+              { id: "analytics", label: "Recruiter Analytics", Icon: LineChart, tint: "text-cyan-500" },
+              { id: "chatbot", label: "Recruiter Chatbot", Icon: Bot, tint: "text-fuchsia-500" }
+            ].map(({ id, label, Icon, badge, tint }) => {
               const isActive = activeNav === id;
               return (
                 <button
@@ -629,18 +638,18 @@ export default function App() {
                   aria-current={isActive ? "page" : undefined}
                   className={`flex w-full items-center justify-between rounded-lg px-3 py-2 text-sm transition ${
                     isActive
-                      ? "bg-indigo-50 font-medium text-indigo-700"
-                      : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"
+                      ? "bg-gradient-to-r from-indigo-600 to-violet-600 font-medium text-white shadow-md shadow-indigo-600/25"
+                      : "text-slate-600 hover:bg-indigo-50 hover:text-slate-900"
                   }`}
                 >
                   <span className="flex items-center gap-3 whitespace-nowrap">
-                    <Icon className="h-4 w-4 shrink-0" />
+                    <Icon className={`h-4 w-4 shrink-0 ${isActive ? "text-white" : tint}`} />
                     {label}
                   </span>
                   {badge && (
                     <span
                       className={`rounded-md px-1.5 py-0.5 text-[11px] ${
-                        isActive ? "bg-indigo-100 text-indigo-700" : "bg-slate-100 text-slate-500"
+                        isActive ? "bg-white/25 text-white" : "bg-slate-100 text-slate-500"
                       }`}
                     >
                       {badge}
@@ -909,7 +918,9 @@ export default function App() {
                               <div>
                                 <div className="flex items-center gap-2">
                                   <span className="font-bold text-base text-slate-900">
-                                    {blindMode ? cand.anonymizedId : cand.name}
+                                    <CandidateHover cand={cand} role={activeRole} blind={blindMode} onOpen={openDeepDive}>
+                                      {blindMode ? cand.anonymizedId : cand.name}
+                                    </CandidateHover>
                                   </span>
                                   {isRank1 && (
                                     <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 font-bold">
@@ -1020,7 +1031,12 @@ export default function App() {
                       {filteredCandidates.map((c) => (
                         <tr key={c.id} className="hover:bg-slate-100 transition-colors">
                           <td className="py-3.5 px-4 font-sans">
-                            <div className="font-bold text-slate-900">#{c.rank} {blindMode ? c.anonymizedId : c.name}</div>
+                            <div className="font-bold text-slate-900">
+                              #{c.rank}{" "}
+                              <CandidateHover cand={c} role={activeRole} blind={blindMode} onOpen={openDeepDive}>
+                                {blindMode ? c.anonymizedId : c.name}
+                              </CandidateHover>
+                            </div>
                             <div className="text-[11px] font-mono text-slate-600">{c.title}</div>
                           </td>
                           <td className="py-3.5 px-4 font-bold text-emerald-700">{c.matchScore}%</td>
@@ -1058,7 +1074,7 @@ export default function App() {
                     Multi-Agent Consensus Chamber
                   </div>
                   <h1 className="text-2xl font-extrabold tracking-tight mt-0.5">
-                    Candidate DeepDive & Council Dossier
+                    Candidate DeepDive & Explainable AI Dossier
                   </h1>
                   <p className="text-xs text-slate-600 font-mono mt-1">
                     4-agent scorecards, live cross-examination debate, and GitHub repository forensics.
@@ -1108,6 +1124,43 @@ export default function App() {
                   </div>
                 </div>
               </div>
+
+              {/* Explainable AI: the reasons behind the verdict */}
+              {(() => {
+                const ex = explainCandidate(councilCandidate, activeRole);
+                const tone = { good: "text-emerald-700", warn: "text-amber-700", bad: "text-rose-700" };
+                const mark = { good: "\u2713", warn: "!", bad: "\u2715" };
+                return (
+                  <div className="p-6 rounded-xl border border-indigo-200 bg-indigo-50/50">
+                    <div className="text-[11px] font-mono tracking-widest uppercase text-indigo-600 font-bold">Explainable AI</div>
+                    <h3 className="text-lg font-extrabold tracking-tight text-slate-900">Why this verdict?</h3>
+                    <p className="mt-1 text-sm text-slate-600">{ex.verdictText}</p>
+                    <div className="mt-4 grid gap-6 lg:grid-cols-2">
+                      <ul className="space-y-2">
+                        {ex.reasons.map((r, i) => (
+                          <li key={i} className="flex gap-2 text-sm leading-snug">
+                            <span className={`font-bold ${tone[r.tone]}`}>{mark[r.tone]}</span>
+                            <span className="text-slate-700">{r.text}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <div className="space-y-3">
+                        {ex.factors.map((f) => (
+                          <div key={f.label}>
+                            <div className="flex justify-between text-xs text-slate-600">
+                              <span>{f.label}</span>
+                              <span className="font-mono">{f.note}</span>
+                            </div>
+                            <div className="mt-1 h-2.5 overflow-hidden rounded-full bg-white">
+                              <div className="h-full rounded-full bg-indigo-500 transition-all duration-500" style={{ width: `${Math.min(100, f.value)}%` }} />
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })()}
 
               {/* 4 Agent Scorecards */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -1159,7 +1212,7 @@ export default function App() {
                 <div className="p-5 rounded-lg border border-slate-200 bg-white relative overflow-hidden flex flex-col justify-between">
                   <div>
                     <div className="flex justify-between items-center text-xs font-mono">
-                      <span className="font-bold text-indigo-600">SENIORITY & COMP</span>
+                      <span className="font-bold text-indigo-600">SENIORITY & CTC</span>
                       <span className="text-slate-500">20% Weight</span>
                     </div>
                     <div className="text-base font-mono font-bold text-slate-900 mt-2 truncate">
@@ -1628,7 +1681,7 @@ export default function App() {
               </p>
               <div className="pt-2.5 border-t border-slate-200 flex items-center justify-between font-mono">
                 <span className="text-slate-600 flex items-center gap-1.5">
-                  <DollarSign className="w-3.5 h-3.5 text-amber-700" /> COMPENSATION BAND:
+                  <DollarSign className="w-3.5 h-3.5 text-amber-700" /> CTC (INR):
                 </span>
                 <span className="text-amber-700 font-bold">{inr(selectedCandidate)}</span>
               </div>
@@ -1643,7 +1696,7 @@ export default function App() {
                   { name: "Tech Lead", score: selectedCandidate?.council?.techLead?.score ?? 85, note: selectedCandidate?.council?.techLead?.feedback || "Technical review verified." },
                   { name: "Culture & Collab", score: selectedCandidate?.council?.culture?.score ?? 80, note: selectedCandidate?.council?.culture?.feedback || "Culture alignment verified." },
                   { name: "Fair-Hiring Auditor", score: selectedCandidate?.council?.fairAuditor?.score ?? 95, note: selectedCandidate?.council?.fairAuditor?.feedback || "Fairness audit passed." },
-                  { name: "Seniority & Comp", score: selectedCandidate?.council?.seniorityComp?.score ?? 85, note: selectedCandidate?.council?.seniorityComp?.feedback || "Compensation aligned." }
+                  { name: "Seniority & CTC", score: selectedCandidate?.council?.seniorityComp?.score ?? 85, note: selectedCandidate?.council?.seniorityComp?.feedback || "Compensation aligned." }
                 ].map((agent) => (
                   <div key={agent.name} className="p-3.5 rounded-lg border border-slate-200 bg-white text-xs">
                     <div className="flex items-center justify-between font-mono">

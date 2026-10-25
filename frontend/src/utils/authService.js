@@ -273,5 +273,32 @@ async function signInWithGoogle(credential) {
   return user;
 }
 
+/** Forgot password: a Google sign-in proves the Gmail address, then the new password is saved. */
+async function resetPassword({ credential, password }) {
+  const problem = passwordProblem(password);
+  if (problem) throw new AuthError(problem);
+  if (isApiMode(config.authProvider)) {
+    try {
+      await api.post("/auth/reset-password", { credential, password });
+      return;
+    } catch (err) {
+      throw asAuthError(err);
+    }
+  }
+  const claims = decodeJwtPayload(credential || "");
+  const issuerOk = claims && ["accounts.google.com", "https://accounts.google.com"].includes(claims.iss);
+  if (!claims || !issuerOk || claims.aud !== config.googleClientId || claims.exp * 1000 < Date.now()) {
+    throw new AuthError("Google sign-in could not be verified. Please try again.");
+  }
+  const users = readJson(localStorage, USERS_KEY, []);
+  const user = users.find((u) => u.email === normEmail(claims.email || ""));
+  if (!user) throw new AuthError("No account was found for this Gmail address. Create an account first.");
+  const salt = crypto.getRandomValues(new Uint8Array(16));
+  user.salt = toHex(salt);
+  user.iterations = PBKDF2_ITERATIONS;
+  user.hash = await derive(password, salt, PBKDF2_ITERATIONS);
+  if (!writeJson(localStorage, USERS_KEY, users)) throw new AuthError("Could not save the new password (browser storage is unavailable).");
+}
+
 const baseProvider = isApiMode(config.authProvider) ? apiProvider : localProvider;
-export const authService = { ...baseProvider, signInWithGoogle };
+export const authService = { ...baseProvider, signInWithGoogle, resetPassword };

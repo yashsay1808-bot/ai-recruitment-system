@@ -15,6 +15,13 @@ export function inrOnly(c) {
   if (!c || typeof c !== "object") return c;
   const label = inr(c);
   const out = { ...c, salaryRange: label };
+  // "Senior" (and "Staff") are kept only for candidates with 5 or more years of experience.
+  const years = Number(c.experienceYears);
+  if (Number.isFinite(years) && years < 5) {
+    const plain = (t) => (typeof t === "string" ? t.replace(/\b(?:Senior\s+Staff|Senior|Staff)\s+/gi, "") : t);
+    out.title = plain(c.title);
+    out.level = plain(c.level);
+  }
   const fb = c.council?.seniorityComp?.feedback;
   if (hasBand(c) && typeof fb === "string") {
     out.council = { ...c.council, seniorityComp: { ...c.council.seniorityComp, feedback: fb.replace(USD_RANGE, label) } };

@@ -25,6 +25,10 @@ export function pageItemsToText(items) {
   return out;
 }
 
+const MAX_PAGES = 2;
+const MAX_WORDS = 1100; // about two pages; used for DOCX and TXT, whose page count is not known
+
+/** Returns { text, pages }: pages is known for PDFs only. */
 async function extractTextFromFile(file) {
   const name = file.name.toLowerCase();
 
@@ -43,13 +47,13 @@ async function extractTextFromFile(file) {
         const pageText = pageItemsToText(textContent.items);
         fullText += pageText + "\n";
       }
-      return fullText.trim() || (await file.text());
+      return { text: fullText.trim() || (await file.text()), pages: pdf.numPages };
     } catch (err) {
       console.warn("PDF extraction fallback:", file.name, err);
       try {
-        return await file.text();
+        return { text: await file.text(), pages: null };
       } catch {
-        return "";
+        return { text: "", pages: null };
       }
     }
   }
@@ -59,15 +63,15 @@ async function extractTextFromFile(file) {
     try {
       const arrayBuffer = await file.arrayBuffer();
       const result = await mammoth.extractRawText({ arrayBuffer });
-      return (result.value || "").trim();
+      return { text: (result.value || "").trim(), pages: null };
     } catch (err) {
       console.warn("DOCX extraction fallback:", file.name, err);
-      return "";
+      return { text: "", pages: null };
     }
   }
 
   // 3. Plain Text / Markdown (.txt, .md, .json)
-  return await file.text();
+  return { text: await file.text(), pages: null };
 }
 
 
@@ -194,16 +198,20 @@ export function hasSkill(lowerText, skill) {
 const RESUME_HEADINGS = /^(?:education|experience|work\s+experience|professional\s+experience|skills|technical\s+skills|projects?|summary|professional\s+summary|objective|profile|certifications?)\b/i;
 
 /**
- * A resume has a contact detail plus at least two section headings (or three headings on their own), and some
- * education or date range. Anything else (an invoice, a report, a form) is not screened as a candidate.
+ * Five signs of a resume: two section headings, a contact detail, a degree or university, a year range (a work
+ * timeline) and a few technical skills. A document needs at least two of them, plus a heading or a contact detail,
+ * so damaged resumes still pass while an invoice, a report or a form does not.
  */
 export function looksLikeResume(text) {
   if (!text || text.trim().length < 120) return false;
   const lines = text.split("\n").map((l) => l.trim()).filter(Boolean);
-  const headings = new Set(lines.filter((l) => l.length < 50 && RESUME_HEADINGS.test(l)).map((l) => l.toLowerCase().split(/\s+/)[0]));
+  const headings = new Set(lines.filter((l) => l.length < 50 && RESUME_HEADINGS.test(l)).map((l) => l.toLowerCase().split(/\s+/)[0])).size;
   const contact = /[\w.+-]+@[\w-]+\.[\w.]+/.test(text) || /\+?\d[\d\s()-]{8,}\d/.test(text);
-  const background = /\b(b\.?e\.?|b\.?tech|m\.?tech|bachelor|master|diploma|ph\.?d|cgpa|gpa|university|college)\b/i.test(text) || /(?:19|20)\d{2}\s*(?:-|\u2013|\u2014|to)\s*(?:(?:19|20)\d{2}|present|current)/i.test(text);
-  return headings.size >= 3 || (headings.size >= 2 && (contact || background || (headings.has("experience") && headings.has("skills"))));
+  const background = /\b(b\.?e\.?|b\.?tech|m\.?tech|bachelor|master|diploma|ph\.?d|cgpa|gpa|university|college)\b/i.test(text);
+  const timeline = /(?:19|20)\d{2}\s*(?:-|\u2013|\u2014|to)\s*(?:(?:19|20)\d{2}|present|current)/i.test(text);
+  const tech = new Set(text.toLowerCase().match(/\b(python|java|sql|docker|kubernetes|aws|react|git|linux|pytorch|tensorflow|machine learning|ci\/cd|node\.js|fastapi|flask)\b/g) || []).size >= 3;
+  const signs = Math.min(headings, 2) + [contact, background, timeline, tech].filter(Boolean).length;
+  return headings >= 3 || (signs >= 2 && (headings >= 1 || contact));
 }
 
 /** Returns { candidates, rejected }: files that are not readable resumes are listed in rejected with a reason. */
@@ -215,16 +223,23 @@ export async function parseUploadedFiles(files, activeRole = { title: "Senior Ma
   for (let idx = 0; idx < files.length; idx++) {
     const file = files[idx];
     let text = "";
+    let pages = null;
 
     try {
-      text = await extractTextFromFile(file);
+      ({ text, pages } = await extractTextFromFile(file));
     } catch (err) {
       console.warn("Failed to extract text from file:", file.name, err);
       continue;
     }
 
     if (!/\.(pdf|docx|txt|md)$/i.test(file.name)) {
-      rejected.push({ name: file.name, reason: "Unsupported file type. Upload a PDF, DOCX or TXT resume." });
+      const image = /^image\//.test(file.type) || /\.(png|jpe?g|gif|webp|bmp|heic)$/i.test(file.name);
+      rejected.push({
+        name: file.name,
+        reason: image
+          ? "Photos and images are not read. Upload the resume as a PDF, DOCX or TXT file."
+          : "Unsupported file type. Upload a PDF, DOCX or TXT resume.",
+      });
       continue;
     }
     if (!text || text.trim().length === 0) {
@@ -233,6 +248,14 @@ export async function parseUploadedFiles(files, activeRole = { title: "Senior Ma
     }
     if (!looksLikeResume(text)) {
       rejected.push({ name: file.name, reason: "This does not look like a resume." });
+      continue;
+    }
+    const words = text.split(/\s+/).filter(Boolean).length;
+    if ((pages && pages > MAX_PAGES) || (!pages && words > MAX_WORDS)) {
+      rejected.push({
+        name: file.name,
+        reason: pages ? `The resume has ${pages} pages; the maximum is ${MAX_PAGES}.` : `The resume is too long (about ${words} words); the maximum is ${MAX_PAGES} pages.`,
+      });
       continue;
     }
 
@@ -403,7 +426,7 @@ export async function parseUploadedFiles(files, activeRole = { title: "Senior Ma
         },
         seniorityComp: {
           score: Math.floor(matchScore * 0.9),
-          feedback: `Target compensation aligned with INR ${activeRole.salaryInr}.`
+          feedback: `Target CTC aligned with INR ${activeRole.salaryInr}.`
         }
       },
       debateSnippet: [

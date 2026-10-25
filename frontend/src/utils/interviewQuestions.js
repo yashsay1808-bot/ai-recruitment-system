@@ -533,7 +533,7 @@ function logisticsQuestions(candidate, roleTitle) {
     {
       q: `Your profile suggests a band around ${
         inr(candidate) === "n/a" ? "the advertised range" : inr(candidate)
-      }. What are your compensation expectations, notice period and any constraints on start date or location?`,
+      }. What are your CTC expectations, notice period and any constraints on start date or location?`,
       lookFor: "Transparent expectations, flexibility, notice period and relocation or remote constraints, and any competing offers or deadlines.",
     },
   ];

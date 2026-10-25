@@ -164,7 +164,7 @@ export default function JobHome({
 
           <dl className="mt-4 grid grid-cols-1 gap-4 border-t border-slate-200 pt-4 sm:grid-cols-3">
             <Fact label="Minimum tenure" value={activeRole.minExperience} />
-            <Fact label="Compensation (INR)" value={activeRole.salaryInr} />
+            <Fact label="CTC (INR per annum)" value={activeRole.salaryInr} />
           </dl>
 
           <div className="mt-4 border-t border-slate-200 pt-4">
@@ -329,10 +329,10 @@ export default function JobHome({
                 ? `${uploadedFilesCount} file${uploadedFilesCount === 1 ? "" : "s"} chosen: ${uploadedFilesList
                     .slice(0, 2)
                     .join(", ")}${uploadedFilesList.length > 2 ? "…" : ""}`
-                : "PDF, DOCX or TXT · up to 100 files, parsed in your browser"}
+                : "Resumes only: PDF, DOCX or TXT, up to 2 pages each · up to 100 files"}
             </span>
             <span className={`${primaryBtn} mt-1 pointer-events-none`}>Select resume files</span>
-            <input type="file" multiple accept=".txt,.pdf,.docx,.md" onChange={handleFilesSelected} className="sr-only" />
+            <input type="file" multiple accept=".pdf,.docx,.txt,.md,application/pdf,text/plain,application/vnd.openxmlformats-officedocument.wordprocessingml.document,image/*" onChange={handleFilesSelected} className="sr-only" />
           </label>
 
           <div className="flex flex-col gap-3">

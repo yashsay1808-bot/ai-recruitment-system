@@ -5,6 +5,7 @@ import { config } from "../config/env";
 import {
   ROLES,
   PASSWORD_RULE,
+  passwordProblem,
   DEMO_ACCOUNT,
   isDemoAccountEnabled,
   isGoogleAuthEnabled,
@@ -13,7 +14,7 @@ import {
 const GSI_SRC = "https://accounts.google.com/gsi/client";
 
 // Renders Google's official "Sign in with Google" button and hands the returned ID token to onCredential.
-function GoogleSignIn({ onCredential, onError }) {
+function GoogleSignIn({ onCredential, onError, label = "signin_with" }) {
   const holder = useRef(null);
   const handler = useRef(onCredential);
 
@@ -32,7 +33,7 @@ function GoogleSignIn({ onCredential, onError }) {
       window.google.accounts.id.renderButton(holder.current, {
         theme: "outline",
         size: "large",
-        text: "signin_with",
+        text: label,
         shape: "rectangular",
         width: 320,
       });
@@ -53,7 +54,7 @@ function GoogleSignIn({ onCredential, onError }) {
     return () => {
       cancelled = true;
     };
-  }, [onError]);
+  }, [onError, label]);
 
   return <div ref={holder} className="flex min-h-[44px] justify-center" />;
 }
@@ -148,8 +149,9 @@ function PasswordInput({ id, value, onChange, autoComplete, placeholder, noAutof
 const EMPTY_SIGN_UP = { name: "", email: "", company: "", role: ROLES[0], password: "" };
 
 export default function AuthCard() {
-  const { signIn, signUp, signInWithGoogle } = useAuth();
-  const [mode, setMode] = useState("signin"); // "signin" | "signup"
+  const { signIn, signUp, signInWithGoogle, resetPassword } = useAuth();
+  const [mode, setMode] = useState("signin"); // "signin" | "signup" | "reset"
+  const [newPassword, setNewPassword] = useState("");
   const [notice, setNotice] = useState("");
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
@@ -190,6 +192,27 @@ export default function AuthCard() {
     // On success the gate swaps this card out.
   };
 
+  // Forgot password: the Google sign-in proves the Gmail address; the new password was typed before it.
+  const handleReset = async (credential) => {
+    setError("");
+    const problem = passwordProblem(newPassword);
+    if (problem) {
+      setError(problem);
+      return;
+    }
+    setGoogleBusy(true);
+    try {
+      await resetPassword({ credential, password: newPassword });
+      setNewPassword("");
+      setMode("signin");
+      setNotice("Password updated. Sign in with your new password.");
+    } catch (err) {
+      setError(err.message || "Could not reset the password. Please try again.");
+    } finally {
+      setGoogleBusy(false);
+    }
+  };
+
   const handleSignUp = async (e) => {
     e.preventDefault();
     setError("");
@@ -216,6 +239,7 @@ export default function AuthCard() {
 
   const setField = (key) => (e) => setForm((f) => ({ ...f, [key]: e.target.value }));
   const isSignIn = mode === "signin";
+  const isReset = mode === "reset";
 
   return (
     <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-slate-50 px-4 py-10" style={BACKDROP}>
@@ -232,10 +256,14 @@ export default function AuthCard() {
 
         <div className="rounded-2xl border border-slate-200/80 bg-white/90 p-8 shadow-xl shadow-slate-200/50 backdrop-blur-sm">
           <h1 className="text-xl font-semibold tracking-tight text-slate-900">
-            {isSignIn ? "Sign in" : "Create your account"}
+            {isReset ? "Reset your password" : isSignIn ? "Sign in" : "Create your account"}
           </h1>
           <p className="mt-1 text-sm text-slate-500">
-            {isSignIn ? "Welcome back. Sign in to continue to your workspace." : "It only takes a minute."}
+            {isReset
+              ? "Choose a new password, then confirm it is you with Google."
+              : isSignIn
+                ? "Welcome back. Sign in to continue to your workspace."
+                : "It only takes a minute."}
           </p>
 
           {notice && (
@@ -248,7 +276,21 @@ export default function AuthCard() {
             </div>
           )}
 
-          {isSignIn ? (
+          {isReset ? (
+            <div key="reset" className="mt-5 space-y-4">
+              <Field label="New password" hint={PASSWORD_RULE}>
+                {(id) => (
+                  <PasswordInput id={id} value={newPassword} onChange={(e) => setNewPassword(e.target.value)} autoComplete="new-password" />
+                )}
+              </Field>
+              {error && (
+                <p role="alert" className="text-sm text-rose-600">
+                  {error}
+                </p>
+              )}
+              <p className="text-xs text-slate-500">Use the Google account that has the same Gmail address as your account.</p>
+            </div>
+          ) : isSignIn ? (
             <form key="signin" onSubmit={handleSignIn} className="mt-5 space-y-4">
               <Field label="Corporate email">
                 {(id) => (
@@ -278,6 +320,16 @@ export default function AuthCard() {
                   />
                 )}
               </Field>
+
+              {isGoogleAuthEnabled && (
+                <button
+                  type="button"
+                  onClick={() => switchMode("reset")}
+                  className="text-xs font-medium text-indigo-600 hover:text-indigo-700 hover:underline"
+                >
+                  Forgot password?
+                </button>
+              )}
 
               {error && (
                 <p role="alert" className="text-sm text-rose-600">
@@ -374,15 +426,15 @@ export default function AuthCard() {
             <div className="mt-6">
               <div className="flex items-center gap-3 text-xs uppercase tracking-wide text-slate-400">
                 <span className="h-px flex-1 bg-slate-200" />
-                or
+                {isReset ? "then confirm with Google" : "or"}
                 <span className="h-px flex-1 bg-slate-200" />
               </div>
               <div className="mt-4">
-                <GoogleSignIn onCredential={handleGoogle} onError={setError} />
+                <GoogleSignIn key={mode} label={isReset ? "continue_with" : "signin_with"} onCredential={isReset ? handleReset : handleGoogle} onError={setError} />
               </div>
               {googleBusy && (
                 <p role="status" className="mt-3 rounded-lg bg-indigo-50 px-3 py-2 text-center text-xs text-indigo-800">
-                  Signing you in with Google… The server may need up to a minute to wake up. Please wait.
+                  {isReset ? "Updating your password…" : "Signing you in with Google…"} The server may need up to a minute to wake up. Please wait.
                 </p>
               )}
               <p className="mt-2 text-center text-xs text-slate-500">Only @gmail.com accounts are accepted.</p>
@@ -391,7 +443,7 @@ export default function AuthCard() {
         </div>
 
         <p className="mt-5 text-center text-sm text-slate-500">
-          {isSignIn ? "Don't have an account?" : "Already have an account?"}{" "}
+          {isReset ? "Remembered it?" : isSignIn ? "Don't have an account?" : "Already have an account?"}{" "}
           <button
             type="button"
             onClick={() => switchMode(isSignIn ? "signup" : "signin")}

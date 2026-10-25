@@ -283,6 +283,33 @@ def google_signin(body: GoogleBody, db: Database = Depends(get_mongo_db)) -> dic
     return _issue_session(db, user)
 
 
+class ResetBody(BaseModel):
+    credential: str = Field(max_length=4096)
+    password: str = Field(max_length=256)
+
+
+@router.post("/reset-password")
+def reset_password(body: ResetBody, db: Database = Depends(get_mongo_db)) -> dict:
+    """Forgot password: Google proves that the caller owns the Gmail address, then a new password is stored.
+
+    Every account is a Gmail address, so no reset e-mail (and no mail server) is needed.
+    """
+    claims = verify_google_credential(body.credential)
+    if not _strong_password(body.password):
+        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, PASSWORD_RULE)
+    user = db.users.find_one({"email": _norm_email(claims["email"])})
+    if user is None:
+        raise HTTPException(status.HTTP_404_NOT_FOUND, "No account was found for this Gmail address. Create an account first.")
+    salt = secrets.token_bytes(16)
+    db.users.update_one(
+        {"_id": user["_id"]},
+        {"$set": {"salt": salt.hex(), "hash": _hash_password(body.password, salt), "iterations": PBKDF2_ITERATIONS,
+                  "failedLogins": 0, "lockedUntil": None}},
+    )
+    db.sessions.delete_many({"userId": user["_id"]})  # a changed password ends the old sessions
+    return {"ok": True}
+
+
 @router.get("/me")
 def me(session: dict = Depends(current_session), db: Database = Depends(get_mongo_db)) -> dict:
     user = db.users.find_one({"_id": session["userId"]})

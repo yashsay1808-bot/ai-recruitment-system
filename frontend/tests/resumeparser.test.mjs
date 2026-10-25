@@ -135,3 +135,55 @@ Total due: 8900. Payment within 15 days to account number on file. Thank you for
     assert.ok(n >= 100, `only ${n} files checked`);
   });
 });
+
+/** A minimal valid PDF whose pages each carry the same lines of text. */
+function makePdf(pageCount, lines) {
+  const esc = (t) => t.replace(/[\\()]/g, (m) => "\\" + m);
+  const body = lines.map((l, i) => `BT /F1 10 Tf 40 ${780 - i * 14} Td (${esc(l)}) Tj ET`).join("\n");
+  const objs = [];
+  const kids = Array.from({ length: pageCount }, (_, i) => `${4 + i * 2} 0 R`).join(" ");
+  objs.push("<< /Type /Catalog /Pages 2 0 R >>");
+  objs.push(`<< /Type /Pages /Kids [${kids}] /Count ${pageCount} >>`);
+  objs.push("<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>");
+  for (let i = 0; i < pageCount; i++) {
+    objs.push(`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents ${5 + i * 2} 0 R >>`);
+    objs.push(`<< /Length ${body.length} >>\nstream\n${body}\nendstream`);
+  }
+  let out = "%PDF-1.4\n";
+  const offsets = [];
+  objs.forEach((o, i) => {
+    offsets.push(out.length);
+    out += `${i + 1} 0 obj\n${o}\nendobj\n`;
+  });
+  const xref = out.length;
+  out += `xref\n0 ${objs.length + 1}\n0000000000 65535 f \n` + offsets.map((o) => String(o).padStart(10, "0") + " 00000 n \n").join("");
+  out += `trailer\n<< /Size ${objs.length + 1} /Root 1 0 R >>\nstartxref\n${xref}\n%%EOF`;
+  return out;
+}
+
+describe("uploaded resume parser: resumes are at most two pages", () => {
+  const resumeLines = SAMPLE.split("\n").map((l) => l.replace(/[^\x20-\x7e]/g, "-")).slice(0, 18);
+
+  it("accepts a two-page PDF and rejects a three-page PDF", async () => {
+    const two = new File([makePdf(2, resumeLines)], "two_pages.pdf", { type: "application/pdf" });
+    const three = new File([makePdf(3, resumeLines)], "three_pages.pdf", { type: "application/pdf" });
+    const { candidates, rejected } = await parser.parseUploadedFiles([two, three], role);
+    assert.deepEqual(candidates.length, 1, JSON.stringify(rejected));
+    assert.equal(rejected.length, 1);
+    assert.equal(rejected[0].name, "three_pages.pdf");
+    assert.match(rejected[0].reason, /3 pages; the maximum is 2/);
+  });
+
+  it("rejects a TXT resume that is far longer than two pages", async () => {
+    const long = new File([SAMPLE + "\n" + "Delivered a measurable improvement in the team's delivery process. ".repeat(160)], "long.txt", { type: "text/plain" });
+    const { candidates, rejected } = await parser.parseUploadedFiles([long], role);
+    assert.equal(candidates.length, 0);
+    assert.match(rejected[0].reason, /too long/);
+  });
+
+  it("tells the user that photos are not read", async () => {
+    const photo = new File(["x"], "resume_photo.jpg", { type: "image/jpeg" });
+    const { rejected } = await parser.parseUploadedFiles([photo], role);
+    assert.match(rejected[0].reason, /Photos and images are not read/);
+  });
+});

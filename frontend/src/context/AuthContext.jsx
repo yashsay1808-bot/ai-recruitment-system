@@ -39,6 +39,8 @@ export function AuthProvider({ children }) {
     return u;
   }, []);
 
+  const resetPassword = useCallback((args) => authService.resetPassword(args), []);
+
   // Creating an account deliberately does NOT sign the user in.
   const signUp = useCallback((form) => authService.signUp(form), []);
 
@@ -54,8 +56,8 @@ export function AuthProvider({ children }) {
   }, []);
 
   const value = useMemo(
-    () => ({ user, isAuthenticated: Boolean(user), status, signIn, signInWithGoogle, signUp, signOut }),
-    [user, status, signIn, signInWithGoogle, signUp, signOut],
+    () => ({ user, isAuthenticated: Boolean(user), status, signIn, signInWithGoogle, resetPassword, signUp, signOut }),
+    [user, status, signIn, signInWithGoogle, resetPassword, signUp, signOut],
   );
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }

@@ -141,7 +141,7 @@ describe("chatbot: questions about the pool", () => {
 
   it("covers the role, the compensation band and score definitions", () => {
     assert.match(ask(chat, "what is the compensation band?").text, /Budget band/);
-    assert.match(ask(chat, `what salary does ${b.name} expect`).text, /Compensation for/);
+    assert.match(ask(chat, `what salary does ${b.name} expect`).text, /CTC for/);
     assert.match(ask(chat, "tell me about the role").text, /How the pool covers them/);
     assert.match(ask(chat, "what is the ATS score?").text, /ATS score:/);
   });
@@ -242,5 +242,50 @@ describe("money is shown in INR only", () => {
     assert.match(ask(conversation(pool), `what is the compensation for ${strong.name}?`).text, /INR \d/);
     const questions = interview.buildInterviewKit(strong, role).map((k) => k.q).join(" ");
     assert.doesNotMatch(questions, /\$\s?\d|\bUSD\b/);
+  });
+});
+
+describe("chatbot: general recruitment questions, and only those", () => {
+  const chat = () => conversation(pool12);
+  it("answers general hiring questions that are not about a candidate", () => {
+    assert.match(ask(chat(), "what is CTC?").text, /Cost to Company/);
+    assert.match(ask(chat(), "what is LPA").text, /lakhs per annum/i);
+    assert.match(ask(chat(), "how does notice period work?").text, /30 to 90 days/);
+    assert.match(ask(chat(), "tips to write a good job description").text, /5 to 8 must-have skills/);
+    assert.match(ask(chat(), "explain the STAR method for behavioural questions").text, /Situation, Task, Action, Result/);
+    assert.match(ask(chat(), "how to negotiate an offer").text, /band/i);
+  });
+  it("declines questions that are not about recruitment", () => {
+    for (const q of ["tell me a joke", "what is the weather today", "who won the cricket match", "give me a biryani recipe"]) {
+      assert.match(ask(chat(), q).text, /only help with recruitment/, q);
+    }
+  });
+  it("still treats skills and candidate questions normally", () => {
+    assert.doesNotMatch(ask(chat(), "who has game development experience").text, /only help with recruitment/);
+    const strong = pool12.find((c) => c.verdict === "STRONG_HIRE");
+    assert.match(ask(chat(), `what is the CTC for ${strong.name}?`).text, new RegExp(strong.name.split(" ")[0]));
+  });
+});
+
+describe("'Senior' only for 5+ years", () => {
+  it("roles: a Senior title or level always asks for 5+ years", async () => {
+    const { DEFAULT_JOB_ROLES } = await import("../src/data/jobRoles.js");
+    for (const r of DEFAULT_JOB_ROLES) {
+      if (/senior/i.test(`${r.title} ${r.level}`)) assert.ok(parseFloat(r.minExperience) >= 5, `${r.title}: ${r.minExperience}`);
+    }
+  });
+  it("candidates: titles and levels say Senior only from 5 years of experience", async () => {
+    const { inrOnlyPool } = await import("../src/utils/money.js");
+    for (const name of ["core12", "benchmark50", "benchmark100"]) {
+      for (const c of inrOnlyPool(loadPool(name))) {
+        if (c.experienceYears < 5) assert.doesNotMatch(`${c.title} ${c.level}`, /senior|staff/i, `${c.id} ${c.title} / ${c.level} (${c.experienceYears} yrs)`);
+      }
+    }
+  });
+  it("the word compensation does not appear in the visible CTC answers", () => {
+    const strong = pool12.find((c) => c.verdict === "STRONG_HIRE");
+    const text = ask(conversation(pool12), `what is the CTC for ${strong.name}?`).text;
+    assert.match(text, /CTC for/);
+    assert.doesNotMatch(text, /Compensation for/);
   });
 });

@@ -11,6 +11,7 @@
  */
 import { buildInterviewKit } from "./interviewQuestions";
 import { inr } from "./money";
+import { generalRecruitmentReply, isOffTopic, OFF_TOPIC_REPLY } from "./recruitmentKnowledge";
 
 /* -------------------------------------------------------------------------------------------- */
 /* Small helpers                                                                                    */
@@ -350,7 +351,7 @@ function profileReply(c, ctx, { pool, seed }) {
     `• **Gaps:** ${missingOf(c).join(", ") || "none against this role"}\n` +
     `• **Evidence:** "${c.evidenceSnippet || "no project evidence captured"}"\n` +
     `• **GitHub:** ${gh(c).score ?? "n/a"}/100, ${risk(c)} risk\n` +
-    `• **Compensation target:** ${inr(c)}\n\n` +
+    `• **CTC target:** ${inr(c)}\n\n` +
     verdictNarrative(c, pool);
   const f = first(c.name);
   return makeReply(text, { intent: "profile", candidateIds: [c.id] }, [
@@ -369,7 +370,7 @@ function whyReply(c, { pool, seed }) {
         ["Tech lead", council.techLead],
         ["Culture & collaboration", council.culture],
         ["Fair-hiring auditor", council.fairAuditor],
-        ["Seniority & compensation", council.seniorityComp],
+        ["Seniority & CTC", council.seniorityComp],
       ]
         .filter(([, a]) => a)
         .map(([label, a]) => `  - ${label} (${a.score ?? "?"}/100): "${a.feedback || "no comment"}"`)
@@ -469,7 +470,7 @@ function githubReply(c, { seed }) {
 function salaryReply(c, role) {
   const f = first(c.name);
   return makeReply(
-    `**Compensation for ${c.name}**\n\n` +
+    `**CTC for ${c.name}**\n\n` +
       `• **Target:** ${inr(c)}\n` +
       `• **Level:** ${c.level || "n/a"}${c.bandPosPct ? `, positioned at ${c.bandPosPct}% of the band` : ""}\n` +
       `• **Role budget:** ${inr(role)}\n\n` +
@@ -722,18 +723,18 @@ function roleReply(pool, role) {
       `• **Key skills:** ${skills.slice(0, 10).join(", ")}${skills.length > 10 ? ` (+${skills.length - 10} more)` : ""}\n\n` +
       `**How the pool covers them:** ${coverage.map(({ s, n }) => `${s} ${n}/${pool.length}`).join(", ")}.`,
     { intent: "role" },
-    ["Show the strong hires", "Who has the required skills?", "What is the compensation band?"],
+    ["Show the strong hires", "Who has the required skills?", "What is the CTC band?"],
   );
 }
 
 function salaryRoleReply(pool, role) {
   const top = pool[0];
   return makeReply(
-    `**Compensation for ${role.title}**\n\n• **Budget band:** ${inr(role)}\n• **Level:** ${role.level || "n/a"}\n` +
+    `**CTC for ${role.title}**\n\n• **Budget band:** ${inr(role)}\n• **Level:** ${role.level || "n/a"}\n` +
       (top ? `• **Top candidate:** ${top.name} targets ${inr(top)}${top.bandPosPct ? `, about ${top.bandPosPct}% of the band` : ""}\n` : "") +
       `\nAsk about a specific candidate to see their expectation against this band.`,
     { intent: "salary-role", candidateIds: top ? [top.id] : [] },
-    top ? [`Compensation for ${first(top.name)}`, "Show the strong hires"] : [],
+    top ? [`CTC for ${first(top.name)}`, "Show the strong hires"] : [],
   );
 }
 
@@ -767,7 +768,7 @@ const SUGGESTION_BANK = [
   "Which candidates have high GitHub risk?",
   "Give me a shortlist of 3",
   "Tell me about the role",
-  "What is the compensation band?",
+  "What is the CTC band?",
   "Candidates with 5+ years of experience",
   "Who has the required skills?",
 ];
@@ -840,6 +841,11 @@ function answer({ query, candidatesPool: pool, activeRole: role, recruiterName, 
     const n = nameSample(0);
     const m = nameSample(1);
     return makeReply(`Here is what I can do:\n\n${HELP_GROUPS.map((g) => `• ${g.replaceAll("{n}", n).replaceAll("{m}", m)}`).join("\n")}\n\nI answer only from the loaded candidates and the active role, so nothing is invented.`, { intent: "help" }, SUGGESTION_BANK.slice(0, 4));
+  }
+
+  /* --- outside recruitment --- */
+  if (isOffTopic(lower) && !pool.some((c) => lower.includes(norm(c.name)))) {
+    return makeReply(OFF_TOPIC_REPLY, { intent: "offtopic" }, ["Give me a pool overview", "What is CTC?", "How do I write a good job description?", "Show the strong hires"]);
   }
 
   /* --- pagination --- */
@@ -947,6 +953,12 @@ function answer({ query, candidatesPool: pool, activeRole: role, recruiterName, 
   /* --- glossary --- */
   if (/\b(what (is|are|does)|explain|meaning of|define|how (is|are) .* (calculated|computed))\b/.test(lower) && /\b(ats|match score|hybrid|council|verdict|fair auditor|red flags?|github score|strong hire|lean hire)\b/.test(lower)) {
     return glossaryReply(lower);
+  }
+
+  /* --- general recruitment know-how (not about one candidate) --- */
+  if (!subject) {
+    const know = generalRecruitmentReply(lower);
+    if (know) return makeReply(know, { intent: "knowledge" }, ["Give me a pool overview", "Show the strong hires", "Tell me about the role"]);
   }
 
   /* --- role questions --- */

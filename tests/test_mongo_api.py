@@ -237,3 +237,21 @@ def test_signup_requires_upper_lower_digit_and_special_character(client):
     for pw in weak:
         assert client.post("/auth/signup", json={**SIGNUP, "password": pw}).status_code == 422, pw
     assert client.post("/auth/signup", json={**SIGNUP, "password": "Str0ng-Pass!"}).status_code == 201
+
+
+def test_forgot_password_resets_through_google_and_ends_old_sessions(client, google_ok):
+    client.post("/auth/signup", json={**SIGNUP, "email": "googler@gmail.com"})
+    old = client.post("/auth/signin", json={"email": "googler@gmail.com", "password": SIGNUP["password"]}).json()["token"]
+    # a weak new password is refused, the old one still works
+    assert client.post("/auth/reset-password", json={"credential": "tok", "password": "weakpass"}).status_code == 422
+    assert client.post("/auth/signin", json={"email": "googler@gmail.com", "password": SIGNUP["password"]}).status_code == 200
+    # a strong one replaces it
+    assert client.post("/auth/reset-password", json={"credential": "tok", "password": "N3w-Passw0rd!"}).status_code == 200
+    assert client.post("/auth/signin", json={"email": "googler@gmail.com", "password": SIGNUP["password"]}).status_code == 401
+    assert client.post("/auth/signin", json={"email": "googler@gmail.com", "password": "N3w-Passw0rd!"}).status_code == 200
+    assert client.get("/auth/me", headers={"Authorization": f"Bearer {old}"}).status_code == 401
+
+
+def test_forgot_password_needs_an_existing_account(client, google_ok):
+    res = client.post("/auth/reset-password", json={"credential": "tok", "password": "N3w-Passw0rd!"})
+    assert res.status_code == 404
