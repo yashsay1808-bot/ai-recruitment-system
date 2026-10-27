@@ -37,6 +37,10 @@ async function extractTextFromFile(file) {
   // 1. PDF File Text Extraction
   if (name.endsWith(".pdf")) {
     try {
+      // The browser needs pdf.js's worker file; Node (the tests) does not. Vite bundles the ?url import.
+      if (typeof window !== "undefined" && !pdfjsLib.GlobalWorkerOptions.workerSrc) {
+        pdfjsLib.GlobalWorkerOptions.workerSrc = (await import("pdfjs-dist/legacy/build/pdf.worker.min.mjs?url")).default;
+      }
       const arrayBuffer = await file.arrayBuffer();
       const loadingTask = pdfjsLib.getDocument({
         data: new Uint8Array(arrayBuffer)
