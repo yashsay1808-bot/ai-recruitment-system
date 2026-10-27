@@ -77,9 +77,9 @@ export default function DashboardOverview({ firstName, pool, activeRole, roleCou
 
   return (
     <div className="space-y-5">
-      <div className="grid items-stretch gap-5 lg:grid-cols-[1.1fr_1fr]">
+      <div className="grid grid-cols-[minmax(0,1fr)] items-stretch gap-5 lg:grid-cols-[1.1fr_1fr]">
         <div className="flex flex-col justify-center py-2">
-          <h1 className="text-4xl font-extrabold leading-[1.05] tracking-tight text-slate-900 sm:text-5xl">
+          <h1 className="text-3xl font-extrabold leading-[1.08] tracking-tight text-slate-900 sm:text-5xl">
             Hello {firstName}, let&apos;s find your next hire.
           </h1>
           <p className="mt-4 max-w-lg text-base leading-relaxed text-slate-600">

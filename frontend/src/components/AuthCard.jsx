@@ -307,7 +307,6 @@ export default function AuthCard() {
             NX
           </div>
           <span className="mt-3 text-base font-extrabold tracking-tight text-slate-900">Nexus ATS</span>
-          <span className="mt-0.5 text-xs font-medium text-slate-700">Explainable AI recruitment</span>
         </div>
 
         <div className="rounded-[28px] border border-white/70 bg-white p-8 shadow-2xl shadow-indigo-900/15">

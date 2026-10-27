@@ -131,17 +131,17 @@ export default function JobHome({
         title="Active role"
         hint="The vacancy candidates are scored against."
         action={
-          <div className="flex flex-wrap items-center gap-2">
+          <div className="flex w-full flex-wrap items-center gap-2 sm:w-auto">
             <label className="sr-only" htmlFor="role-select">
               Change role
             </label>
-            <div className="relative">
+            <div className="relative w-full sm:w-auto">
               <Briefcase className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
               <select
                 id="role-select"
                 value={activeRoleId}
                 onChange={(e) => setActiveRoleId(e.target.value)}
-                className="appearance-none rounded-lg border border-slate-300 bg-white py-2 pl-9 pr-9 text-sm text-slate-900 outline-none transition hover:border-slate-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+                className="w-full appearance-none sm:w-auto rounded-lg border border-slate-300 bg-white py-2 pl-9 pr-9 text-sm text-slate-900 outline-none transition hover:border-slate-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
               >
                 {jobRoles.map((r) => (
                   <option key={r.id} value={r.id}>

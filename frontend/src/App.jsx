@@ -29,7 +29,6 @@ import CandidateHover from "./components/CandidateHover";
 import { explainCandidate } from "./utils/explain";
 import { useAuth } from "./context/AuthContext";
 import JobHome from "./components/JobHome";
-import { isApiMode } from "./config/env";
 import { candidatesService, POOLS, INITIAL_POOL } from "./utils/candidatesService";
 import { parseUploadedFiles } from "./utils/resumeParserClient";
 
@@ -103,7 +102,6 @@ export default function App() {
   const { user, signOut } = useAuth();
   const recruiterName = user.name;
   const recruiterFirstName = user.name.split(" ")[0];
-  const backendConfigured = isApiMode("api");
 
   const [toastMessage, setToastMessage] = useState("");
   const showToast = (msg) => {
@@ -545,19 +543,18 @@ export default function App() {
     <div className="app-shell min-h-screen w-full text-slate-900">
       <div aria-hidden="true" className="h-1 w-full bg-gradient-to-r from-indigo-600 via-sky-400 to-pink-400" />
       {/* ------------------------------ Header ------------------------------ */}
-      <header className="sticky top-0 z-40 flex h-14 items-center justify-between gap-4 border-b border-slate-200 bg-white/90 px-6 backdrop-blur">
+      <header className="sticky top-0 z-40 flex h-14 items-center justify-between gap-2 border-b border-slate-200 bg-white/90 px-3 backdrop-blur sm:gap-4 sm:px-6">
         <div className="flex items-center gap-2.5">
           <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-600 to-sky-400 text-xs font-extrabold text-white shadow-md shadow-indigo-600/30">
             NX
           </div>
           <div>
-            <div className="text-sm font-semibold leading-none text-slate-900">Nexus ATS</div>
-            <div className="mt-0.5 text-[11px] text-slate-500">Explainable AI recruitment</div>
+            <div className="text-base font-extrabold leading-none text-slate-900">Nexus ATS</div>
           </div>
         </div>
 
         {/* Global search */}
-        <div className="mx-4 max-w-md flex-1 md:mx-8">
+        <div className="mx-4 hidden max-w-md flex-1 md:mx-8 md:block">
           <div className="relative flex items-center rounded-lg border border-slate-300 bg-white transition focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-100">
             <Search className="ml-3 h-4 w-4 shrink-0 text-slate-400" />
             <input
@@ -574,7 +571,7 @@ export default function App() {
           </div>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="ml-auto flex items-center gap-2 sm:gap-3">
           <button
             onClick={() => setBlindMode(!blindMode)}
             aria-pressed={blindMode}
@@ -617,10 +614,10 @@ export default function App() {
         </div>
       </header>
 
-      <div className="flex">
+      <div className="flex flex-col md:flex-row">
         {/* ------------------------------ Sidebar ------------------------------ */}
-        <aside className="sticky top-14 h-[calc(100vh-3.5rem)] w-64 shrink-0 border-r border-slate-200 bg-white p-3">
-          <nav className="space-y-1" aria-label="Main">
+        <aside className="sticky top-14 z-30 w-full shrink-0 overflow-x-auto border-b border-slate-200 bg-white p-2 md:h-[calc(100vh-3.5rem)] md:w-64 md:overflow-x-visible md:border-b-0 md:border-r md:p-3">
+          <nav className="flex gap-1 md:block md:space-y-1" aria-label="Main">
             {[
               { id: "job_management", label: "Job Management", Icon: Target, tint: "text-indigo-500" },
               { id: "leaderboard", label: "Screening Leaderboard", Icon: BarChart3, badge: candidatesPool.length.toString(), tint: "text-emerald-500" },
@@ -636,7 +633,7 @@ export default function App() {
                   key={id}
                   onClick={() => setActiveNav(id)}
                   aria-current={isActive ? "page" : undefined}
-                  className={`flex w-full items-center justify-between rounded-lg px-3 py-2 text-sm transition ${
+                  className={`flex shrink-0 items-center justify-between gap-2 rounded-lg px-3 py-2 text-sm transition md:w-full ${
                     isActive
                       ? "bg-gradient-to-r from-indigo-600 to-violet-600 font-medium text-white shadow-md shadow-indigo-600/25"
                       : "text-slate-600 hover:bg-indigo-50 hover:text-slate-900"
@@ -662,7 +659,7 @@ export default function App() {
         </aside>
 
         {/* ------------------------------ Main ------------------------------ */}
-        <main className="mx-auto max-w-7xl flex-1 space-y-6 px-6 py-6 lg:px-10">
+        <main className="mx-auto w-full min-w-0 max-w-7xl flex-1 space-y-6 px-4 py-6 sm:px-6 lg:px-10">
 
           {/* ================================================================ */}
           {/* PAGE 1: JOB MANAGEMENT (Job Management & Sign In Portal)       */}
@@ -753,7 +750,7 @@ export default function App() {
               </div>
 
               {/* TELEMETRY STRIP */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div className="p-5 rounded-lg border border-slate-200 bg-white relative overflow-hidden">
                   <div className="text-[11px] font-mono uppercase tracking-wider text-slate-600 font-bold">
                     Candidates screened
@@ -773,26 +770,6 @@ export default function App() {
                   </div>
                   <div className="text-xs text-slate-700 font-medium mt-1 truncate">
                     {blindMode ? topMatchCandidate.anonymizedId : topMatchCandidate.name}
-                  </div>
-                </div>
-
-                <div className="p-5 rounded-lg border border-slate-200 bg-white relative overflow-hidden">
-                  <div className="text-[11px] font-mono uppercase tracking-wider text-slate-600 font-bold mb-2.5">
-                    Model status
-                  </div>
-                  <div className="space-y-1.5 font-mono text-[10px]">
-                    <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-white border border-slate-200 text-slate-700 w-full">
-                      <span className="w-1.5 h-1.5 rounded-full bg-indigo-600" />
-                      <span>Engine · TF-IDF + BM25</span>
-                    </div>
-                    <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-white border border-slate-200 text-slate-600 w-full">
-                      <span className="w-1.5 h-1.5 rounded-full bg-slate-400" />
-                      <span>Local council · offline</span>
-                    </div>
-                    <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-white border border-slate-200 text-slate-600 w-full">
-                      <span className="w-1.5 h-1.5 rounded-full bg-slate-400" />
-                      <span>{backendConfigured ? "Backend · configured" : "Backend · local mode"}</span>
-                    </div>
                   </div>
                 </div>
 
